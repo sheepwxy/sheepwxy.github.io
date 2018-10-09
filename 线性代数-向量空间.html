@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="机器学习,线性代数," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="向量空间是线性代数里最重要的概念，没有之一。它是后续许多知识的基础，也是帮助我们理解线性代数本质的重要工具。">
+<meta name="keywords" content="机器学习,线性代数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性代数 | 向量空间">
+<meta property="og:url" content="http://iamwxy.com/线性代数-向量空间.html">
+<meta property="og:site_name" content="吴旭阳的博客">
+<meta property="og:description" content="向量空间是线性代数里最重要的概念，没有之一。它是后续许多知识的基础，也是帮助我们理解线性代数本质的重要工具。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan2.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan3.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/rowspace.png">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/example.png">
+<meta property="og:updated_time" content="2018-08-21T11:02:02.307Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="线性代数 | 向量空间">
+<meta name="twitter:description" content="向量空间是线性代数里最重要的概念，没有之一。它是后续许多知识的基础，也是帮助我们理解线性代数本质的重要工具。">
+<meta name="twitter:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/线性代数-向量空间.html"/>
+
+
+
+
+
+  <title>线性代数 | 向量空间 | 吴旭阳的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">吴旭阳的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/线性代数-向量空间.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴旭阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">线性代数 | 向量空间</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T22:35:16+08:00">
+                2018-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/线性代数-向量空间.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/线性代数-向量空间.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>向量空间是线性代数里最重要的概念，没有之一。它是后续许多知识的基础，也是帮助我们理解线性代数本质的重要工具。</p>
+<a id="more"></a>
+<h4 id="向量空间概念"><a href="#向量空间概念" class="headerlink" title="向量空间概念"></a>向量空间概念</h4><p>空间在此指的是某种集合，<strong>空间存在的基础是需要满足规则</strong>。向量空间这样是一个集合，集合内的元素是向量，且集合内的向量相加和数乘之后仍在本集合内。即<strong>向量空间对加法和数乘封闭</strong>。</p>
+<p>几个引申：</p>
+<ul>
+<li>向量空间内必须有零向量。证：取空间内一向量$v$,进行数乘和加法$1v+(-1)v=0$,得证。</li>
+<li>二维空间、三维空间是向量空间。证略。</li>
+<li>所有过原点的直线以及零向量是二维空间的向量子空间。过原点的平面，过原点的直线以及零点是三维空间的向量子空间。</li>
+</ul>
+<h4 id="列空间和零空间"><a href="#列空间和零空间" class="headerlink" title="列空间和零空间"></a>列空间和零空间</h4><p>向量空间内向量的加法和数乘有一种更经典的描述手段：线性组合。现在我们取列向量进行线性组合，其所有线性组合就构成了一个重要的向量空间，列空间。</p>
+<h5 id="列空间"><a href="#列空间" class="headerlink" title="列空间"></a>列空间</h5><p>取一个列向量属于$R^4$空间的例子，(注：列向量有四个分量，所以属于四维空间),下面方程组$Ax=b$,$A$的列空间是$R^4$的子空间，事实上，取<strong>三个</strong>列向量线性组合，永远得不到四维空间。</p>
+<script type="math/tex; mode=display">\begin{bmatrix}
+ {1}&{2}&{3}\\
+ {4}&{5}&{6}\\
+ {7}&{8}&{9}\\
+ {4}&{1}&{5}
+ \end{bmatrix}
+ \begin{bmatrix}
+ {x_1}\\
+ {x_2}\\
+ {x_3}\end{bmatrix}=
+ \begin{bmatrix} 
+ {b_1}\\
+ {b_2}\\
+ {b_3}\\
+ {b_4}\end{bmatrix}</script><p>  现在将抽象概念和实际应用结合在一起。来分析方程组$Ax=b$是否对任意b都有解。直观的感觉来看，四个方程有三个未知数，大多数情况无解。但也有情况有解，即b是A的各列的线性组合时，此时b在A的列空间里，Ax=b有解。 </p>
+<p>继续考虑，如果对这三列线性组合，它们是组成四维空间里的三维子空间，还是更小的空间？在本例中，去掉列三是没影响的。因为列三可以通过线性组合出来，所以它不做贡献。因此这里是四维空间$R^4$的二维子空间(没错，实际的几何形状就是个平面)。</p>
+<h5 id="零空间"><a href="#零空间" class="headerlink" title="零空间"></a>零空间</h5><p> 我们仍然用上文的矩阵举例。令$b=0,Ax = 0$我们关注x向量，x在此例中是$R^3$的子空间(注：x有三个分量)。列空间是$R^4$的子空间，在本例中零向量在零空间里，$(1,1,-1)$也是解。综合起来既是$c(1,1,-1)$, 用图像来表示的话是一条直线，即这里的零空间是$R^3$的一维子空间，即是一条直线。</p>
+<p>$Ax=0$的解构成一个子空间。证明： 对于一个解$x$和$x_1$, 其对加法和数乘封闭。<br> $Ax = 0$且$Ax_1=0$. 则$A(x+x_1)=0$,$A(kx)=0$</p>
+<p>假设改变了b，从而导致所有的解x中不包含零向量的话，解x就不可能是向量空间，这些解组成一个不过原点的平面，或者不过原点的直线。我们始终是强调应该过原点的。</p>
+<h4 id="Ax-0-主变量-特解"><a href="#Ax-0-主变量-特解" class="headerlink" title="Ax = 0 主变量 特解"></a>Ax = 0 主变量 特解</h4><p>一般通过对A矩阵进行消元求解，如下图,矩阵A是长方形矩阵,对其进行消元。注意在消元过程中零空间不变，改变的是列空间。  <img src="/线性代数-向量空间/xiaoyuan.PNG"></p>
+<p>第二个本应是主元的位置此时是0，这说明第二列和它前面的列线性相关。<br>最后得到阶梯形式的矩阵U，主元的数量是2，这就是矩阵的秩。有主元（红框）的列是主列，其他是自由列。自由对应计算是可以对对应的x任意分配数据，一般是0,1。另外指，它可以由主列组合起来。</p>
+<p>消元后变成Ux = 0寻找主列。对自由列，先随意选取两个数字（1,0）  然后进行回带，算出解，再取（0,1）算 出解。因为分配了特定值，所以是特解。再通过线性组合就得到了该方程的全部解。</p>
+<p>指的注意的是，U还能继续简化 在MATLAB中用矩阵rref可以完成这个问题。我们交汇主行和主列，能得到一个单位阵，不在交汇中的列称为自由列。原方程组Ax=0，中间方程组Ux =0，最后Rx=0<br><img src="/线性代数-向量空间/xiaoyuan2.PNG"></p>
+<p>我们再用代数推导一下这个过程<br><img src="/线性代数-向量空间/xiaoyuan3.PNG"></p>
+<h4 id="Ax-b-解的结构-算法"><a href="#Ax-b-解的结构-算法" class="headerlink" title="Ax = b  解的结构 算法"></a>Ax = b  解的结构 算法</h4><ul>
+<li><p>解的结构：唯一解还是无穷多解。</p>
+</li>
+<li><p>有解b要满足的条件：b属于A的列空间（是A中各列的线性组合）</p>
+</li>
+<li><p>算法：第一步，求特殊解。将所有自由变量设为0（因为可以随便选，选0是最方便的），解出主变量。<br>第二步，加上零空间的所有向量。 </p>
+</li>
+<li><p>最终解：特征解+所有零空间的解（通解）。</p>
+</li>
+</ul>
+<p>对于上文例子，有两个自由变量，所以解的形式 $x* +{c_1}{x_1}+{c_2}{x_2}$,解的图像是过原点的平面（零空间）平移得来的，AX=b的解空间不是向量空间</p>
+<h4 id="秩与解的关系"><a href="#秩与解的关系" class="headerlink" title="秩与解的关系"></a>秩与解的关系</h4><p>秩r为m*n的矩阵A，当前秩被定义为主元的个数。从主行的角度看，r必然小于等于m，从主列的角度看，r也必然小于等于n。</p>
+<h5 id="列满秩"><a href="#列满秩" class="headerlink" title="列满秩"></a>列满秩</h5><p>列满秩表示r = n。它的应用场景可以直观理解为那种长条矩阵。这对方程的解意味着，每一列都有主元，那么主变量n个，自由变量0个，因为没有其他自由变量可以赋值，零空间中只有零向量。则对于Ax=b的解要么只有一个特解，要么无解（b在零空间时才有一个解）。下面举一个例子。</p>
+<p>[1  2  2  5 ；3  1  1  1] 两列线性无关，其秩是2，其行最简形式是[1  0  0  0；0  1  0  0],零空间只有零向量。对于Ax = b，4个方程，2个未知数，不可能任何情况都有解的，b在其线性组合内时才有解。</p>
+<h5 id="行满秩"><a href="#行满秩" class="headerlink" title="行满秩"></a>行满秩</h5><p>行满秩表示为r = m，此时有m个主元，每一行都有主元，消元时不会出现零行，则可以得出对任意b，Ax=b都有解。</p>
+<p>一开始有n个变量，有r（m）个主变量，所以自由变量是n-r（n-m）个。其行最简形，前r列是主列，组成了单元矩阵。<strong>因为总有零空间去处理，一般是无数解。</strong></p>
+<h5 id="满秩方阵"><a href="#满秩方阵" class="headerlink" title="满秩方阵"></a>满秩方阵</h5><p>r = m = n, 满秩方阵，这是一个可逆方阵。其行最简形R= I真正好的矩阵化简后得到单位阵。其零空间只有零向量，b任何条件不需要满足，这种情况肯定有解，且解唯一。</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>矩阵的秩决定了方程组解的数目，秩r包含了所有的信息。</p>
+<ul>
+<li>r = m = n  满秩方阵。行最简形为R=I，有一个唯一解。</li>
+<li>r = n &lt; m  列满秩，行最简形$R=\begin{bmatrix} {I}\\{0}\end{bmatrix}$此时无解或者唯一个解（取决于b在不在那个列空间中）</li>
+<li>r =  m &lt; n  行满秩。 行最简形 $R= \begin{bmatrix} {I}&amp;{F}\end{bmatrix}$。总有解，因为最下面没有零行，所以有唯一解或者无穷多解。因为总有零空间去处理，一般应该是无穷多解。</li>
+<li>r &lt; m 且 r &lt; n 行最简形。$R=\begin{bmatrix}{I}&amp;{F}\\{0}&amp;{0}\end{bmatrix}$无解或者无穷解。</li>
+</ul>
+<h4 id="线性相关性"><a href="#线性相关性" class="headerlink" title="线性相关性"></a>线性相关性</h4><p>首先要说明的是，我们说向量组是线性无关的，而不是矩阵线性无关。我们说向量组的基，而不是矩阵的基。</p>
+<h5 id="线性无关"><a href="#线性无关" class="headerlink" title="线性无关"></a>线性无关</h5><p><strong>定义</strong><br>如果不存在线性组合结果为零的组合，向量组线性无关</p>
+<p><strong>扩展1</strong><br>如果向量组中存在一个零向量，它们不可能线性无关。证明略。</p>
+<p><strong>扩展2</strong><br>平面内任意三个向量都是线性相关的。<br><strong>证明</strong>代数法。构造一个矩阵A，各列分别是平面内向量，构造一个2X3的矩阵，对于这个矩阵我们可以找到自由变量， 因而存在列向量C$[c_1,c_2,c_3]$有非零解，使得$AC=0$换句话说，向量组是否线性相关，和零空间是否有零向量之外的向量有关。</p>
+<p><strong>与零空间的关系</strong><br>向量组线性无关，零空间里只有零向量。线性相关，则零空间内存在一些向量c。</p>
+<p><strong>与秩的关系</strong><br>列向量组线性无关时，秩就是n，所有列都是主列。自由列的本质是对主列的一种组合， 在线性相关时，秩小于n，有自由变量，有相应的非零组合，零空间里有其他向量。</p>
+<h5 id="生成空间"><a href="#生成空间" class="headerlink" title="生成空间"></a>生成空间</h5><p><strong>定义</strong><br>$v_1,v_2…v_n$ S指的是包含这些向量所有线性组合的最小一个空间。我们关注这样的向量组，既可以生成空间，又是线性无关，这样的一组向量称为基。</p>
+<p><strong>基的定义</strong><br>指的是一系列向量（个数足够又不太多），特性一：线性无关。特性二：能生成整个空间。 </p>
+<p><strong>example1</strong><br>给一组三维空间的基 ，$(1，0，0) (0，1，0) (0，0，1)$，它们线性无关，因为单位阵乘以特定向量得到0的情况只有一种，就是乘以一个零向量。即单位阵的零空间只有零向量。 </p>
+<p><strong>example2</strong><br>$(1，1，2)(2，2，5)$不能形成三维空间，其是列空间的基，形成R3中的一个平面。需要再加一个特定向量才能形成三维空间，但不能加$[3,3,7]$，因为加入之后三者共面，只要取不在这平面上的任意向量就像，比如[3,4,8] 。  想确定确定它们构成基，可以把它们组合成矩阵消元，看是否都是主列。</p>
+<p><strong>example3</strong><br>如果空间是$R^n$，则形成这个空间所需要的基向量的个数是n个。 $R^n$空间的n个向量如果想构成基，那这个$n*n$的矩阵要满足可逆条件。</p>
+<p><strong>维数的定义</strong><br>对于特定空间，比如$R^3、R^n$列空间、零空间，其基向量的个数都相同。个数表示此空间的大小。称之为<strong>维数</strong>。维数等于矩阵秩的数目，等于主列的数目。</p>
+<p>零空间的维数是自由变量的数目。已知秩r，m*n矩阵，即维数n-r</p>
+<h4 id="四个基本子空间-核心章节"><a href="#四个基本子空间-核心章节" class="headerlink" title="四个基本子空间(核心章节)"></a>四个基本子空间(核心章节)</h4><p>四个基本子空间：零空间$N(A)$，列空间$C(A)$，行空间$R(A)$= $C(A^T)$,A转置的零空间$N(AT)$，又称为A的左零空间。这里可以专门处理列空间。以下假设A是m*n矩阵。则有如下结论。 </p>
+<ul>
+<li>行空间在n维实空间里，维数是r，一组基是行最简形的前r行(秩数行)。</li>
+<li>零空间在n维实空间里，维数是n-r，一组基是特殊解。(特殊解是在零空间中，每个自由变量可以得到一个特殊解)</li>
+<li>列空间在m维实空间里，维数是r，一组基是r的主列。</li>
+<li>左零空间在m维实空间,维数是m-r，一组基是特殊解</li>
+</ul>
+<p>它们的关系如下图所示，这里把空间画成垂直的是有特别的含义的，代表着正交，互相垂直的两个空间，维数之和又和行数、列数一一对应，相当于行空间和零空间分割了n维空间，真是奇妙。<br><img src="/线性代数-向量空间/rowspace.png"></p>
+<p>以下图为核心进行分析<img src="/线性代数-向量空间/example.png"></p>
+<p><strong>行空间</strong><br>经过初等行变换后，形成单位阵，自由列，全零行的组合，注意R的列空间和A的列空间不同（R是A转变的），但行空间不发生改变（改变后的最简形的行也是线性组合得出来的），所以其基是前r列。</p>
+<p><strong>左零空间</strong><br>$A^T<em>y=0$ ，y就在左零空间里。两边转置，$y^T</em>A=0^T$，$y^T$是一个行向量，因此也叫做左零空间。由A求最简形R，一般做法是构造矩阵[A,I]对前面一部分消元，得到R，I记录了行变换，变成了E。所有这些初等行变化等价于左乘一个E，即$EA = R$。对照左零空间的变换式，想找的是让行空间产生全零的向量，而这个向量可以通过E得到，进而得到左零空间的维数，在本个例子，它是E的最后一行，这个左零空间维数是1。</p>
+<p>不必掌握四个空间的推导，我的习惯是掌握列空间和零空间的定义，另外两个空间只是对应的转置而已。</p>
+<h4 id="矩阵空间-待续"><a href="#矩阵空间-待续" class="headerlink" title="矩阵空间(待续)"></a>矩阵空间(待续)</h4>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    老肥羊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/线性代数-向量空间.html" title="线性代数 | 向量空间">http://iamwxy.com/线性代数-向量空间.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+            <a href="/tags/线性代数/" rel="tag"># 线性代数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/在路上.html" rel="next" title="走路">
+                <i class="fa fa-chevron-left"></i> 走路
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/登楼.html" rel="prev" title="登楼">
+                登楼 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="老肥羊" />
+            
+              <p class="site-author-name" itemprop="name">老肥羊</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量空间概念"><span class="nav-number">1.</span> <span class="nav-text">向量空间概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列空间和零空间"><span class="nav-number">2.</span> <span class="nav-text">列空间和零空间</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#列空间"><span class="nav-number">2.1.</span> <span class="nav-text">列空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#零空间"><span class="nav-number">2.2.</span> <span class="nav-text">零空间</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ax-0-主变量-特解"><span class="nav-number">3.</span> <span class="nav-text">Ax = 0 主变量 特解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ax-b-解的结构-算法"><span class="nav-number">4.</span> <span class="nav-text">Ax = b  解的结构 算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#秩与解的关系"><span class="nav-number">5.</span> <span class="nav-text">秩与解的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#列满秩"><span class="nav-number">5.1.</span> <span class="nav-text">列满秩</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#行满秩"><span class="nav-number">5.2.</span> <span class="nav-text">行满秩</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#满秩方阵"><span class="nav-number">5.3.</span> <span class="nav-text">满秩方阵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">5.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性相关性"><span class="nav-number">6.</span> <span class="nav-text">线性相关性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#线性无关"><span class="nav-number">6.1.</span> <span class="nav-text">线性无关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#生成空间"><span class="nav-number">6.2.</span> <span class="nav-text">生成空间</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四个基本子空间-核心章节"><span class="nav-number">7.</span> <span class="nav-text">四个基本子空间(核心章节)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵空间-待续"><span class="nav-number">8.</span> <span class="nav-text">矩阵空间(待续)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老肥羊</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">115.3k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1533566116000', 
+            owner: 'sheepwxy',
+            repo: 'tjwxy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'e56c250e2cc5d67d8f0ec6973f7a1cf032529e73',
+            
+                client_id: '0b21c5c1820d4915dd21'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

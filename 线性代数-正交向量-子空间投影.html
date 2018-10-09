@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="机器学习,线性代数," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="子空间投影是理解正交的重要途径，后者又是整个线性代数的核心概念之一。投影也可以帮助我们更深入的理解优化过程。本章的核心概念就是投影，这是以前被我忽视的重要章节。">
+<meta name="keywords" content="机器学习,线性代数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性代数 | 正交向量  子空间投影">
+<meta property="og:url" content="http://iamwxy.com/线性代数-正交向量-子空间投影.html">
+<meta property="og:site_name" content="吴旭阳的博客">
+<meta property="og:description" content="子空间投影是理解正交的重要途径，后者又是整个线性代数的核心概念之一。投影也可以帮助我们更深入的理解优化过程。本章的核心概念就是投影，这是以前被我忽视的重要章节。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影/touying.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影/touying2.png">
+<meta property="og:updated_time" content="2018-08-30T05:48:03.182Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="线性代数 | 正交向量  子空间投影">
+<meta name="twitter:description" content="子空间投影是理解正交的重要途径，后者又是整个线性代数的核心概念之一。投影也可以帮助我们更深入的理解优化过程。本章的核心概念就是投影，这是以前被我忽视的重要章节。">
+<meta name="twitter:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影/touying.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/线性代数-正交向量-子空间投影.html"/>
+
+
+
+
+
+  <title>线性代数 | 正交向量  子空间投影 | 吴旭阳的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">吴旭阳的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/线性代数-正交向量-子空间投影.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴旭阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">线性代数 | 正交向量  子空间投影</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-21T14:57:25+08:00">
+                2018-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/线性代数-正交向量-子空间投影.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/线性代数-正交向量-子空间投影.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>子空间投影是理解正交的重要途径，后者又是整个线性代数的核心概念之一。投影也可以帮助我们更深入的理解优化过程。本章的核心概念就是投影，这是以前被我忽视的重要章节。<br><a id="more"></a></p>
+<h4 id="正交向量"><a href="#正交向量" class="headerlink" title="正交向量"></a>正交向量</h4><h5 id="正交"><a href="#正交" class="headerlink" title="正交"></a>正交</h5><p>正交是垂直的另一个说法，一般指在n维空间里垂直。其数学表达式可记为向量x和向量y的点乘等于$x^Ty=0$。</p>
+<p>证明：x向量的模的平方，即边长的平方是$x^Tx$。则由勾股定理</p>
+<script type="math/tex; mode=display">||x||^2+||y||^2=||x+y||^2</script><script type="math/tex; mode=display">x^Tx+y^Ty=(x+y)^T(x+y)=x^x+y^y+x^Ty+y^Tx</script><p>解之得$x^Ty=0$,得证。</p>
+<h5 id="子空间正交"><a href="#子空间正交" class="headerlink" title="子空间正交"></a>子空间正交</h5><p>设两个子空间S和T正交，则S中每个向量s和T中每个向量t都正交。</p>
+<p><strong>引申1</strong><br>零向量与任何向量都相交。证略。</p>
+<p><strong>引申2</strong><br>如果两个空间在某个向量处相交，那么这两个子空间一定不正交（除非这个相交向量是零向量。</p>
+<p><strong>引申3</strong><br><strong>行空间正交于零空间</strong>。它们的秩，将一个空间分成两个相互正交的子空间（回顾上一篇）。<br><strong>证明</strong>：$Ax = 0$。考虑矩阵乘法的行列相乘的运算法则，则可得正交关系。对于行空间里存在着的线性组合，通过简单的运算也可以证明正交。</p>
+<p> <strong>引申4</strong><br>在三维空间里，一条过原点直线和另一条过原点直线。不能组成零空间和行空间。<br><strong>证明</strong>：行空间和零空间的维数和起来应该是三维的。</p>
+<p><strong>引申5</strong><br>正交有自己的几何意义，可以按照三维空间构建自己对几何意义的直觉。<br>行空间和零空间互相是对方的的正交补。行空间的正交补，包含<strong>所有</strong>与它垂直的向量，而不是部分。这也就是说，此时的零空间包含了全部与它正交的向量，而不止是部分。</p>
+<h4 id="求解一个无解方程组的解"><a href="#求解一个无解方程组的解" class="headerlink" title="求解一个无解方程组的解"></a>求解一个无解方程组的解</h4><p><strong>本章的核心问题：如何求一个无解方程组$Ax = b$（当A是长方矩阵时，比如m&gt;n，方程个数大于变量个数）的解。</strong></p>
+<p>这种形式有很多实际应用，比如测量，每一行数据可以当做一条测量记录，一共有m次测量。实际计算时可以不断去除方程，对应为去除坏的测量数据等，直到剩下一个可逆矩阵，但这种方法不完美，因为我们较难判断数据的好坏，因此倾向于使用所有的数据。    </p>
+<p>通过一个简单的变换。$A^TAx = A^Tb$，坏方程会变成好方程，会变成可解的方程。注意解发生了改变，原先方程组可能是无解的，现在有解了。</p>
+<p>需要注意的是$A^TA$是一个方阵，也是对称阵，但不一定是可逆的，一般有$rank(A^TA)=rank(A)$。(比如两个秩1矩阵相乘，得到的还是秩1矩阵).当A的零空间有且仅有零向量时，即A的各列线性无关时，$A^TA$才是可逆的。</p>
+<p>对该做法的解释会在下一节。</p>
+<h4 id="子空间投影"><a href="#子空间投影" class="headerlink" title="子空间投影"></a>子空间投影</h4><p>在原学习视频上，这一节被称为可名留青史的一节课。<strong>所谓投影，就是找到在某个标准上的最近点，这个最近是广义上的最近，泛指最符合标准，误差最小等。</strong>这里蕴含着一种最优化的思想。</p>
+<h5 id="二维投影举例"><a href="#二维投影举例" class="headerlink" title="二维投影举例"></a>二维投影举例</h5><p>下面以向量b在向量a上投影举例，示意图如下。</p>
+<p>其中向量E为误差向量，其与向量a垂直;向量p是投影向量，假设$p=xa$，$x$为一标量参数;P代表着最终的投影矩阵。<br><img src="/线性代数-正交向量-子空间投影/touying.PNG"></p>
+<script type="math/tex; mode=display">a^TE=0 (1) \ \ \ \ \ \ \ E=b-p=b-xa (2)</script><script type="math/tex; mode=display">a^T(b-xa)=0 (3)\ \ \ \ \ \ \  a^Tb=xa^Ta (4)</script><script type="math/tex; mode=display">x=\frac{a^Tb}{a^Ta}(5)\ \ \ \  p=ax=a\frac{a^Tb}{a^Ta} = \frac{aa^T}{a^Ta}b=Pb(6)</script><script type="math/tex; mode=display">P=\frac{aa^T}{a^Ta}(7)</script><p>整理一下投影问题，求投影p本质是求一个投影矩阵作用于指定的向量。在当前例子里，投影矩阵是P，向量是b。$p = Pb$ 。如果a是n维，那么根据P的求法所示：P是一个$n*n$的矩阵。</p>
+<h5 id="投影矩阵P的性质"><a href="#投影矩阵P的性质" class="headerlink" title="投影矩阵P的性质"></a>投影矩阵P的性质</h5><ul>
+<li>P的列空间是过a的直线，因为$Pb=p$，对P矩阵中列的组合落在了直线a上。</li>
+<li>投影矩阵是秩1矩阵。$aa^T$是一列乘以一行的形式，因而是秩1矩阵。</li>
+<li>P是对称矩阵。$P^T = P$</li>
+<li>$P^n = P$ 证明： 想象进行多次投影，它的结果和进行一次投影的结果没有差别。</li>
+</ul>
+<h5 id="对投影的深入理解"><a href="#对投影的深入理解" class="headerlink" title="对投影的深入理解"></a>对投影的深入理解</h5><p>我们依然从$Ax = b$入手理解，它可能无解，所以要找到最相似的解。&lt;/font color=blue&gt;<em>问题的矛盾在于向量Ax总在A的列空间里，但是b不一定在A的列空间里，所以需要微调b，让它尽量满足这个情况。因此取 $A\hat{x}=p$，p是b在A的列空间上的投影。</em>&lt;/font&gt;之所以选投影，是因为投影是能满足要求的”误差”最小的。</p>
+<p>接下来看三维空间的例子，把向量p投影在平面上。（之后可以推广到n维）</p>
+<p>平面用两个向量$a_1$和$a_2$生成，它是由这两个向量分别作为列生成的矩阵的列空间A。接下来让b在A上投影，如果向量b就在平面A上面（在列空间里），那么不用做特殊处理。若b不在A平面上，就要有一个误差向量$e=(b-p)$来解决问题，目标就是找到那个最接近b的p。</p>
+<p>误差向量e垂直于平面A，投影p是基向量的组合。即$e=b-p$   $e\bot A$    $p=Ax$，求出x，就是求出投影向量p在A平面上合适的列组合。根据$e\bot a_1$     $e\bot a_2$可得到两个方程，解方程就可以求出x的两个分量。推导过程如下</p>
+<script type="math/tex; mode=display">p=Ax=a_1x_1+a_2x_2 (1)\ \ \ \  e=b-p=b-Ax (2)</script><script type="math/tex; mode=display">a_1^T(b-Ax)=0 (3)\ \ \ \ \ a_2^T(b-Ax)=0 (4)</script><script type="math/tex; mode=display">\begin{bmatrix} a_1^T\\ a_2^T\end{bmatrix}(b-Ax)=0 \rightarrow A^T(b-Ax)=0 \rightarrow A^Tb=A^TAx (5)</script><script type="math/tex; mode=display">x = (A^TA)^{-1}A^Tb\ \ \ p=Ax=A(A^TA)^{-1}A^Tb (6)</script><p>这个结果和二维的结果及其相似，关注以下几个点</p>
+<ul>
+<li>由于$A^TA$是n维矩阵，所以不采用除法，而采用逆的计算。请记住二维和n维的结论。</li>
+<li>$(A^TA)^{-1}$不能展开，因为A不一定是可逆矩阵。</li>
+<li>如果A是一个n*n可逆矩阵，那么其列空间就是整个n维空间。向量在内部投影就是向量本身，投影矩阵是单位阵。</li>
+<li>思考$Pb=0$的逻辑，b的投影是0，说明b垂直于A的列空间，说明b是$A^T$的零空间，即$A^Tb=0$,则$Pb=A(A^TA)^{-1}A^Tb=0$</li>
+<li>如此再观察b的投影，其可以分别投影到A的列空间和$A^T$的零空间，即A的左零空间中，投影矩阵分别是P和I-p。<img src="/线性代数-正交向量-子空间投影/touying2.png">
+<h4 id="投影矩阵和最小二乘法"><a href="#投影矩阵和最小二乘法" class="headerlink" title="投影矩阵和最小二乘法"></a>投影矩阵和最小二乘法</h4>最小二乘法是极其重要的。下面来举一个简单例子，在二维平面上有一些点，现在想寻找能拟合这些点的最优直线。这个“最优”其实就可以理解为误差最小，最小二乘法把这个误差定义为原始点到拟合直线上相应点的误差的平方和。<br><script type="math/tex">Ax=b \ \ \ A^TAx=A^Tb</script> 这是最小二乘法的核心，通过乘以一个A的转置得到了可解的情况。需要注意的是，只有当A各列线性无关时，$A^TA$才是可逆的，证明如下。<blockquote>
+<p>令$A^TAx=0$,进行一个小的技巧变换，可得$x^TA^TAx=0 \rightarrow (Ax)^TAx=0$, 根据长度和模的概念有，$Ax=0$,又因为A的各列线性无关，所以x只可能是零向量，则$A^TA$是可逆的。</p>
+</blockquote>
+</li>
+</ul>
+<p>关于最小二乘法的扩展有非常多的资料，这就不在本书的讨论范围内了。(这一节理论上有很多内容，但是我讲不清楚，这也许是因为我这节本学的就不清楚)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    老肥羊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/线性代数-正交向量-子空间投影.html" title="线性代数 | 正交向量  子空间投影">http://iamwxy.com/线性代数-正交向量-子空间投影.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+            <a href="/tags/线性代数/" rel="tag"># 线性代数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/R语言学习笔记二-绘图.html" rel="next" title="R语言学习笔记二 | 绘图">
+                <i class="fa fa-chevron-left"></i> R语言学习笔记二 | 绘图
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/科研感悟.html" rel="prev" title="科研感悟">
+                科研感悟 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="老肥羊" />
+            
+              <p class="site-author-name" itemprop="name">老肥羊</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#正交向量"><span class="nav-number">1.</span> <span class="nav-text">正交向量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#正交"><span class="nav-number">1.1.</span> <span class="nav-text">正交</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#子空间正交"><span class="nav-number">1.2.</span> <span class="nav-text">子空间正交</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求解一个无解方程组的解"><span class="nav-number">2.</span> <span class="nav-text">求解一个无解方程组的解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子空间投影"><span class="nav-number">3.</span> <span class="nav-text">子空间投影</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#二维投影举例"><span class="nav-number">3.1.</span> <span class="nav-text">二维投影举例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#投影矩阵P的性质"><span class="nav-number">3.2.</span> <span class="nav-text">投影矩阵P的性质</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对投影的深入理解"><span class="nav-number">3.3.</span> <span class="nav-text">对投影的深入理解</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#投影矩阵和最小二乘法"><span class="nav-number">4.</span> <span class="nav-text">投影矩阵和最小二乘法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老肥羊</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">115.3k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1534834645000', 
+            owner: 'sheepwxy',
+            repo: 'tjwxy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'e56c250e2cc5d67d8f0ec6973f7a1cf032529e73',
+            
+                client_id: '0b21c5c1820d4915dd21'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

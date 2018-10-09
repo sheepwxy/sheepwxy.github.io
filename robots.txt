@@ -1,0 +1,23 @@
+#hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: https://sheepwxy.github.io/search.xml
+Sitemap: https://sheepwxy.github.io/sitemap.xml
+Sitemap: https://sheepwxy.github.io/baidusitemap.xml
+Sitemap: https://yanziiz.coding.me/search.xml
+Sitemap: https://yanziiz.coding.me/sitemap.xml
+Sitemap: https://yanziiz.coding.me/baidusitemap.xml
+Sitemap: https://iamwxy.com/search.xml
+Sitemap: https://iamwxy.com/sitemap.xml
+Sitemap: https://iamwxy.com/baidusitemap.xml

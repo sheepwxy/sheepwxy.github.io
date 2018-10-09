@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="机器学习,线性代数," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本节我们来探讨各种线性代数中重要矩阵的性质。">
+<meta name="keywords" content="机器学习,线性代数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性代数 | 重要矩阵">
+<meta property="og:url" content="http://iamwxy.com/线性代数-对称矩阵.html">
+<meta property="og:site_name" content="吴旭阳的博客">
+<meta property="og:description" content="本节我们来探讨各种线性代数中重要矩阵的性质。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-08T15:16:22.701Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="线性代数 | 重要矩阵">
+<meta name="twitter:description" content="本节我们来探讨各种线性代数中重要矩阵的性质。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/线性代数-对称矩阵.html"/>
+
+
+
+
+
+  <title>线性代数 | 重要矩阵 | 吴旭阳的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">吴旭阳的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/线性代数-对称矩阵.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴旭阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">线性代数 | 重要矩阵</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-03T21:35:05+08:00">
+                2018-10-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/线性代数-对称矩阵.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/线性代数-对称矩阵.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本节我们来探讨各种线性代数中重要矩阵的性质。<br><a id="more"></a></p>
+<h4 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h4><p>对称矩阵是最重要的矩阵，了解一个新矩阵一般都要从从特征值和特征向量开始。</p>
+<p><strong>特征向量垂直</strong><br>实对称矩阵的特征值也是实数，其特征向量是正交的(垂直的)。如果特征值互不相同，那么每个特征值的特征向量各自在一条线上，而且线垂直。特征向量空间是一维的，且互相垂直的。但如果特征值相同，有一整个平面的特征量，可以从中挑选出垂直的特征向量。</p>
+<p><strong>对称矩阵分解</strong><br>$A = S\lambda S^{-1}$，矩阵的分解，S是特征向量矩阵，$\lambda$是特征值矩阵。</p>
+<p>在对称情况下，S是特征向量，是列向量，可以化为标准正交向量，则用Q表示。</p>
+<script type="math/tex; mode=display">A=Q\lambda Q^{-1}=Q\lambda Q^T \\ A^T=Q\lambda Q^{-1}=Q^T \lambda Q</script><p>数学上这被称作谱理论。力学上称之为主轴定理。</p>
+<script type="math/tex; mode=display">A=Q\lambda Q^T=[q_1,q_2, \dots] \begin{bmatrix}
+\lambda_1&\dots&0\\
+\ &\ddots& \  \\
+0 & \ & \lambda_n
+\end{bmatrix}
+\begin{bmatrix} q_1^T\\q_2^T\\ \vdots \end{bmatrix} \\= \lambda_1q_1q_1^T+\lambda_2q_2q_2^T+\dots</script><p>观察上文公式，对于$q_1q_1^T$。列向量乘以行向量得到的矩阵是投影矩阵。（这里的q是单位向量，所以不用再除以$q^Tq$）因此我们得到结论。<strong>每一个对称矩阵都是一些互相垂直的投影矩阵的组合</strong>。 </p>
+<p><strong>特征值为实数的证明</strong><br>证明特征值为 实数的过程中用到了对称矩阵的性质和假设条件，注意其中$x^Tx$的应用。<br>证明：</p>
+<script type="math/tex; mode=display">Ax=\lambda x  \rightarrow \overline{Ax}= \overline{\lambda x}  \rightarrow  \overline{x}^T\overline{ A}^T=\overline{ x}^T\overline{\lambda} \\
+\overline{x}^T\overline{ A}^Tx=\overline{ x}^T\overline{\lambda}x \rightarrow \overline{x}^T \lambda x=\overline{ x}^T\overline{\lambda}x \rightarrow \overline{\lambda} = \lambda</script><p>由此可得到虚部是零，特征值为实数。，另外请注意在消去过程中。$\overline{ x}^Tx$ 乘积消去了虚数，所以乘积是整的平方值，因而可以放心消去。</p>
+<p>如果是复数矩阵，想喝对称实矩阵具有<strong>实特征值且特征向量垂直的有优良性质</strong>。除了得满足对称特性外，还得满足共轭条件，即$A=\overline{A}^T$</p>
+<p><strong>对称矩阵的小应用</strong><br>给定对称矩阵，可以推算特征值是正是负的问题。例子如计算50阶矩阵，直接计算50阶的方程相当困难，但matlab可以通过简单的计算确定主元的正负。 <strong>对于对称矩阵，主元符号和特征值的符号保持一致。</strong>  </p>
+<p>另外，对称矩阵主元和特征值并不相同，主元的乘积等于特征值的乘积，因为它们都是行列式的值。</p>
+<p><strong>如果将一个矩阵平移7个单位矩阵，再看结果的正负，就应该能知道哪些大于7，哪些小于7了。</strong></p>
+<p>统计学(Statistics)一词，源自于意大利文Stato，其词根兼有”国家”和“情况”的意义，统计学其实就是国情学。</p>
+<p>1662年格朗特写了《观察》一书，在统计学史上占据了一个突出的地位</p>
+<h4 id="复数矩阵（傅里叶矩阵）"><a href="#复数矩阵（傅里叶矩阵）" class="headerlink" title="复数矩阵（傅里叶矩阵）"></a>复数矩阵（傅里叶矩阵）</h4><p><strong>傅里叶变换意义</strong><br>快速傅里叶变换又称作FFT， 通常n阶方阵要计算$n^2$次，但FFT可以帮助计算减少到$nlogn$次。</p>
+<p><strong>复数向量的模长</strong><br>求在$n$维复空间($c$空间)里的给定列向量$z$的模长，$z=[z_1, z_2 ,\dots]$  。列向量$z$的共轭向量可以用$z^H$表示，读作艾尔米特。内积$z^Hz=|z_1|^2+…$ 是模长的平方。 </p>
+<p><strong>复数矩阵的对称</strong><br>对称矩阵定义$A^T=A$，但其只针对实矩阵。对于复矩阵对称$A^H=A$, 叫做艾尔米塔矩阵。矩阵的特征值是实数，特征向量相互垂直。 </p>
+<p><strong>复数正交矩阵</strong><br>构造相互垂直的向量，$q_i^Hq_j$，i不等于j时，值为0，相等时值等于1。以上述向量做列构造一个$Q$矩阵，称为酉矩阵则$Q^HQ=I$，酉矩阵是n阶方阵，列向量是正交单位向量，傅里叶矩阵也是酉矩阵。</p>
+<p><strong>构造傅里叶矩阵</strong><br>假如n是6，$w^6=1,w=e^\frac{2\pi}{6}$,  在单位圆的60度处，其乘方是$w=e^\frac{2\pi}{3}$,是在120度处 ，也在上图的单位圆上,以此构造傅里叶矩阵$F_6$。 令n等于4，$w=e^\frac{2\pi}{4}$，逆时针旋转90度。则依次平方是$i,-1， -i，1$ 。分别对应$w，w^2，w^3， w^4$ 。  得到一个傅里叶矩阵$F_4$（每个元素的指数等于行序数乘以列序数）.</p>
+<p><strong>傅里叶变换</strong><br>向量左乘$F_4$,对应傅里叶变换。左乘$F_4^{-1}$，对应的是傅里叶逆变换。由于可以把它分解为稀疏矩阵，它们的逆计算都非常快捷。该矩阵各列都正交（利用复数内积可求 ）。但并不是标准正交的，可以把矩阵乘以一个1/2.  之后就有$F_4^HF_4=I$</p>
+<p><strong>FFT性质</strong><br>$F_{2n}$和$F_n$存在联系，举例$F_{64}$和$F_{32}$。$w_{64}^2=w^{32}$前者包含两个后者以及零矩阵，为了构造出这个等式，需要找到两侧的修正矩阵 。右侧是一个置换矩阵，上半部分的奇数列和下半部分的偶数列阵，它能把偶数分量的向量$x_0,x_2$全部排在奇数列$x_1,x_3$前面。对角阵D由w的幂组成。接下来可以继续递归分解$F_{32}$</p>
+<script type="math/tex; mode=display">\begin{bmatrix} 1&1&1&1\\1&i&-1&-i\\1&-1&1&-1\\1&-i&-1&i \end{bmatrix}=\begin{bmatrix} I&D\\I&-D \end{bmatrix} \begin{bmatrix} 1&1&&\\1&i&&\\&&1&i\\&&1&i \end{bmatrix} \begin{bmatrix} 1&&&\\&&1&\\&1&&\\&&&1 \end{bmatrix}</script><h4 id="正定矩阵"><a href="#正定矩阵" class="headerlink" title="正定矩阵"></a>正定矩阵</h4><p>正定矩阵把主元，行列式，特征值，不稳定性融合在一起。$x^TAx &gt; 0$</p>
+<p> 以下每一条都是正定性的完备判断条件,前提都首先是对称矩阵。</p>
+<ul>
+<li>所有的特征值都大于0 </li>
+<li>所有的行列式大于0   </li>
+<li>所有的主元大于0x</li>
+<li>$x^TAx&gt;0$  这也是对正定性的定义。</li>
+<li>$x^TAx&gt;=0$，这是对半正定的定义</li>
+</ul>
+<p>观察下面的半正定矩阵例子$A$，我们对它进行$x^TAx$处理。</p>
+<script type="math/tex; mode=display">\begin{bmatrix} x_1&x_2\end{bmatrix}\begin{bmatrix} 2&6\\6&18 \end{bmatrix}\begin{bmatrix} x_1\\x_2 \end{bmatrix}=2x_1^2+12x_1x_2+18x_2^2=\\(\sqrt{2}x_1+3\sqrt{2}x_2)^2=ax_1^2+2bx_1x_2+cx_2^2</script><p>对于该矩阵A，特征值是0和20，只有一个主元2</p>
+<p>正定矩阵来自最小二乘法，最小二乘法的关键在于$A^TA$，大量的物理问题需要用长方形矩阵描述。而对于正定有三个推论</p>
+<ul>
+<li>如果A正定，那它是对称的。</li>
+<li>只要原矩阵是正定的，那么逆矩阵也是正定的（特征值是倒数）。</li>
+<li>如果A正定，B正定，那么A+B是正定（利用定义证明）。</li>
+</ul>
+<p>假设A是$m*n$长方形矩阵。那么$A^TA$既是方阵，也是对称的。且 $x^TA^TAx=(Ax)^TAx$是非负的，向量长度的平方大于等于0。判断等于零向量的条件，矩阵A各列线性无关，则零空间里不存在零向量以外的向量，确保$A^TA$的正定。<br>如果正定，最小二乘方程将存在最优解。另外，这也为数值计算提供了便利，不需要进行行交换，也不用担心主元小于等于0。</p>
+<h4 id="相似矩阵"><a href="#相似矩阵" class="headerlink" title="相似矩阵"></a>相似矩阵</h4><p>假设A和B是相似矩阵，它们都是n阶方阵，那么存在某个可逆矩阵M，使得$B = M^{-1}AM$</p>
+<p>假设$A$具有线性无关的特征向量，存在特征向量矩阵$S$，则$S^{-1}AS = \lambda$，这说明A相似$\lambda$，S是特殊的$M$，如果换了$M$，则$\lambda$将变成其他相似的B矩阵。我们可以把这样的矩阵归为一类：任意两个互为相似的矩阵，任意两个矩阵通过M存在一定联系，这些矩阵中最特别的是这个对角阵。</p>
+<p>相似矩阵具有相同的特征值， <strong>但不具有相同特征向量。</strong>这个矩阵系列都相似于对角阵$\lambda$，可以轻易构造特征值相同的三角阵，它也属于这个阵列。证明如下：</p>
+<script type="math/tex; mode=display">Ax = \lambda x \ \ \ B=M^{-1}AM \\
+Ax=AMM^{-1}x=\lambda MM^{-1}x \\
+M^{-1}AMM^{-1}x=\lambda M^{-1}x\\
+BM^{-1}x=\lambda M^{-1}x \ \ \ Bx=\lambda x</script><p>如果特征值重复，那么特征向量可能不再是线性无关的 ，矩阵可能无法对角化。</p>
+<p>比如一类矩阵的特征值是4和4，其中一种情况，$\begin{bmatrix}4&amp;0 \ 0&amp;4\end{bmatrix}$,进行相似矩阵的计算结果还是原矩阵，它只和自己相似 。</p>
+<p>$\begin{bmatrix}4&amp;1 \ 0&amp;4\end{bmatrix}$，这个矩阵不能对角化，如果能对角化，它就相似于上面的矩阵，产生矛盾。它只有一个特征向量。包括这个矩阵在内的一个大家族，是最接近对角阵的形式，但是一个无法对角化的矩阵，定义为若尔当矩阵。无法对角化，但又最像对角阵。</p>
+<p>对于之前无法对角化的矩阵，可 以通过一种特殊的方法，完成近似的对角化，即若尔当标准型。一般矩阵很难化简为若尔当标准型，因为它依赖于矩阵特征值完全相等。  如下所示的矩阵也不能对角化，理由同上。</p>
+<script type="math/tex; mode=display">\begin{bmatrix}4&1 \\ 0&4\end{bmatrix} \rightarrow
+\begin{bmatrix}5&1 \\ -1&3\end{bmatrix} \rightarrow
+\begin{bmatrix}4&0 \\ 17&4\end{bmatrix} \rightarrow
+\begin{bmatrix}a&0\\ m&8-a\end{bmatrix}\\
+det = 16, trace = 8</script><p><em>若尔当矩阵</em></p>
+<script type="math/tex; mode=display">\begin{bmatrix}\lambda&1&0&0 \\ 0&\lambda&1&0\\
+0&0&\lambda&1\\0&0&0&\lambda\end{bmatrix}</script><p>若尔当块，$J_i$表示$i$阶的若尔当块，对角线上是同一个数，下面全是0，上面都是1，每个若尔当块只有一个特征向量。对上例而言，两个块大小不一样，因此两个方阵并不相似。</p>
+<p>每个方阵$A$都相似于一个若尔当阵$J$，就是由若尔当块构成的矩阵，特征值位于对角线上，上面还有一些1，若尔当块的数量等于特征向量的个数（每一块对应一个特征向量）假设矩阵A具有不同的特征值，具有n个，那它就是一个可对角化的矩阵，$J$就是$\lambda$，</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    老肥羊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/线性代数-对称矩阵.html" title="线性代数 | 重要矩阵">http://iamwxy.com/线性代数-对称矩阵.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+            <a href="/tags/线性代数/" rel="tag"># 线性代数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/线性代数-特征值、特征向量.html" rel="next" title="线性代数 | 特征值、特征向量">
+                <i class="fa fa-chevron-left"></i> 线性代数 | 特征值、特征向量
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/自动驾驶测试与验证的挑战.html" rel="prev" title="自动驾驶测试与验证的挑战">
+                自动驾驶测试与验证的挑战 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="老肥羊" />
+            
+              <p class="site-author-name" itemprop="name">老肥羊</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#对称矩阵"><span class="nav-number">1.</span> <span class="nav-text">对称矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复数矩阵（傅里叶矩阵）"><span class="nav-number">2.</span> <span class="nav-text">复数矩阵（傅里叶矩阵）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正定矩阵"><span class="nav-number">3.</span> <span class="nav-text">正定矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相似矩阵"><span class="nav-number">4.</span> <span class="nav-text">相似矩阵</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老肥羊</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">115.3k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1538573705000', 
+            owner: 'sheepwxy',
+            repo: 'tjwxy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'e56c250e2cc5d67d8f0ec6973f7a1cf032529e73',
+            
+                client_id: '0b21c5c1820d4915dd21'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

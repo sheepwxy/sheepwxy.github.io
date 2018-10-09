@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="自动驾驶,总结,测试," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一篇关于自动驾驶测试的文献翻译。">
+<meta name="keywords" content="自动驾驶,总结,测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动驾驶测试与验证的挑战">
+<meta property="og:url" content="http://iamwxy.com/自动驾驶测试与验证的挑战.html">
+<meta property="og:site_name" content="吴旭阳的博客">
+<meta property="og:description" content="一篇关于自动驾驶测试的文献翻译。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-05T14:59:33.460Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自动驾驶测试与验证的挑战">
+<meta name="twitter:description" content="一篇关于自动驾驶测试的文献翻译。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/自动驾驶测试与验证的挑战.html"/>
+
+
+
+
+
+  <title>自动驾驶测试与验证的挑战 | 吴旭阳的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">吴旭阳的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/自动驾驶测试与验证的挑战.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴旭阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">自动驾驶测试与验证的挑战</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T22:01:03+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/自动驾驶测试与验证的挑战.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/自动驾驶测试与验证的挑战.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一篇关于自动驾驶测试的文献翻译。</p>
+<a id="more"></a>
+<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>一般来说软件测试常常只是寻找bug，而不是通过精密的实验来保证产品质量。一个相比简单的系统级的测试，即测试—失败—补丁（改进）—测试更好的方法已经开始大规模部署在无人驾驶汽车上。ISO26262的v模型建立了一个框架，该框架将每种类型的测试与相应的设计或需求文档联系起来，但该模式在处理自动驾驶汽车面临的各种新测试问题时会遇到挑战。本文根据自主车辆的V模型确定了测试中的五个主要挑战领域:驾驶员不在环、复杂需求、非确定性算法、归纳学习算法和故障操作系统。</p>
+<p>有希望在这些不同的挑战领域中实现的通用解决方案包括:使用逐步减少约束的操作场景进行分阶段部署，使用观测器/执行器架构把复杂的自动驾驶功能从相对简单的安全功能分离出来，采用故障注入来执行更多的的边缘案例测试。尽管为高等级的自动驾驶算法提供安全认证安全仍然存在重大的挑战，但似乎可以采用现有的软件安全方法来构建系统和与其相对应的设计过程。</p>
+<h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h4><p>最近自动驾驶汽车成为一个热门话题，不过实际上它们背后的技术已经发展了几十年了，最早可追溯到自动化公路系统项目。从这些早期的示范算起，自动驾驶技术已经发展了成熟的驾驶员辅助系统(ADAS)。像自动车道保持和智能巡航控制也已经是许多车辆的标准了。除此之外，现在还有许多处于不同的发展阶段的不同级别的自动驾驶车辆项目。</p>
+<p>如果有人相信所谓专家的话，那么无人驾驶汽车好像呼之欲出。但事实上，搞传统汽车行业的都知道，在拥有专业的安全驾驶人员的情况下，制造几辆车以在合理且有利的条件下运行，与在不受约束的世界里运行数百万辆车之间，有着巨大的鸿沟。</p>
+<p>有人会说，（自动驾驶汽车）成功的示范和几千公里(甚至几十万公里)的成功驾驶里程意味着自动驾驶技术基本上已经做好全面部署的准备。但是，很难仅仅从这样的测试就能得出这足以确保安全性的结论。实际上，至少有一些开发人员已经在做更多相关的测试工作，但问题是还需要做多少工作，以及我们如何才能知道现在的车辆已经足够安全到可以上路了呢？</p>
+<p>在本文中，我们将探讨一些正在等待开发人员解决的挑战，这些开发人员正试图开发完全自主的L4级别车辆并进行大规模部署。因此，我们跳过了过去可能采用的半自动化方法，即在这种情形下，司机根本不用负责操作车辆。对研究对象我们进行了进一步限制了范围，只考虑在ISO26262v框架内设计和验证的车辆。采取这种限制的原因是这是一种可接受的确保安全的框架。</p>
+<p>完全基于计算机的系统应该是不安全的，这是一个可以确认的，除非你有令人信服的相反论点来论证。总之，自动驾驶汽车不能被认为是安全的，除非它们能被显示符合或可以被映射到ISO26262或其他一些合适的、被广泛接受的软件安全标准。</p>
+<h4 id="完全测试的不可行性"><a href="#完全测试的不可行性" class="headerlink" title="完全测试的不可行性"></a>完全测试的不可行性</h4><p>人们早就知道不可能彻底地测试系统以确保系统的可靠性（冗余）。例如，假设有一个100万辆汽车的车队每天运行一个小时。如果安全目标是这个车队每1000天发生一次灾难性的计算故障，即每次发生灾难性故障之间的平均时间应该为10亿小时，这与飞机的允许故障率相当。</p>
+<p>为了验证发生灾难性事故的频率，最少得进行长达十亿小时的测试，更有甚者也可能是几倍的时间，重复多次测试可以达到统计学意义。但即使这样，这也是假定测试环境是基于真实世界部署的，具有高度代表性的并且导致错误的环境部署以随机的、独立的方式出现。</p>
+<p>但是，建造一个足够大的、能够在具有代表性的测试环境中运行数十亿小时而又不会危及公众的车队是不切实际的。因此，我们需要替代的验证方法，可能包括模拟仿真、故障注入、面向不断增加的车队规模的自适应、在非极端工况中获得组件的实际工作状况以及人工评审等方法。（组件级的测试也发挥了作用，但是为物理硬件设备积累十亿小时的部署前测试仍然是不切实际的)</p>
+<p>考虑到自主系统的测试比日常软件系统的测试更困难，这会让事情会变得更糟。</p>
+<p>对于相对非关键的计算系统来说，可以将测试作为确认其安全级别的主要依据。这是因为低严重程度和低暴露性的故障相比灾难性故障更容易发生。例如，如果每1000小时发生一次特定类型的故障是可以接受的(因为这种故障会导致最低成本的事故或轻微的中断)，那么通过数千小时的测试，就可以可靠地验证该故障的故障率。这并不是说对这些系统而言，所有的（必要）保证软件质量的步骤可以放着不管了，而是一个合适的测试和故障监控策略可能能够验证一个事实，即如果平均故障间隔时间要求相对宽松的话，一个质量合适的组件确实已经被确认为拥有一个可以接受的低故障率。</p>
+<h4 id="作为起点的V模型"><a href="#作为起点的V模型" class="headerlink" title="作为起点的V模型"></a>作为起点的V模型</h4><p>因为系统级测试不能完成上述工作，我们需要更多相关测试，这正是创建更健壮的安全软件的开发框架的意义所在。V软件开发模型长期以来一直适用于汽车。它是20多年前纳入MISRA指导方针的发展参考模型之一。最近，它被推广为构成ISO26262基础的参考模型。</p>
+<p>通常，V模型表示一个有条理的创建过程和验证过程。V的左侧包括从需求到设计再到实现的过程。在每个步骤中，系统被划分为并行处理的典型的子系统（例如，有一组系统需求，但是每个子系统都有单独的设计)。V的右侧迭代地验证和验证越来越大的系统，它是从小的组件过渡到到系统级的评估的一个过程。虽然ISO2626262对这个模型进行了详细的阐述，但是我们这里保留一些通用的框架，以方便讨论拓展。</p>
+<p>尽管ISO 26262和它的V框架已经明朗了在确保汽车安全方面的公认做法，但在将全自动车辆的技术映射到V方法这方面依然有很多挑战。</p>
+<h4 id="驾驶员不在环"><a href="#驾驶员不在环" class="headerlink" title="驾驶员不在环"></a>驾驶员不在环</h4><p>在全自动驾驶汽车中，最明显的挑战可能就是司机不再真正驾驶汽车。这意味着，根据定义，不能再指望司机在运行过程中为车辆提供控制输入。</p>
+<h5 id="可控性挑战"><a href="#可控性挑战" class="headerlink" title="可控性挑战"></a>可控性挑战</h5><p>对于低完整性设备来说，典型的汽车安全可能取决于驾驶员的控制能力。例如，在一个高级驱动辅助系统(ADAS)中，如果一个软件故障导致一个潜在的危险情况，司机可能会被期望越过软件功能直接将车辆恢复到安全状态。司机有时候也被希望能把汽车从严重的机械故障中恢复过来，比如轮胎爆裂等问题。换句话说，在人类驾驶的汽车中，司机会负责采取正确的纠正措施。但在现在这种情况下，司机没有能力采取纠正措施，也就是说车辆缺乏可控性，因此必须设计更高的汽车安全完整性水平，或汽车安全完整性等级。</p>
+<p>一款完全自动化驾驶的汽车不指望司机处理特殊情况。当故障发生时和出现超出指定的操作条件能处理的情况时，计算机系统必须被指定为故障的处理者。与ADAS系统相比，让计算机负责异常处理会显著增加自动化的复杂性。组合的ADAS系统技术如车道保持和智能巡航控制，似乎非常接近全自动操作，然而，完全自动驾驶的车辆必须处理所有可能出现的问题，它具有更高的复杂性。因为，现在确实已经没有接管方向盘和踩刹车的司机了。</p>
+<h5 id="自主架构方法"><a href="#自主架构方法" class="headerlink" title="自主架构方法"></a>自主架构方法</h5><p>在ISO2626262环境下的自主体系结构方法中，让计算机负责管理需要以下两种评估风险的策略之一。</p>
+<p>一种策略是将风险评估的可控性部分设置为C3，即难以控制或无法控制。如果严重程度和暴露度很低，这可能是一个可行的选择。但是，在严重程度中等或高的情况下，系统必须设计成更高的汽车安全完整性水平(汽车安全完整性等级)。(有人可能会认为应该有更高的可控性分类C4，因为自动化系统有可能采取主动的危险行动，而不是简单地不能提供安全功能。)但我们假设现有的C3就足够了。</p>
+<p>另一种处理潜在的汽车高安全完整性等级自主功能的方法是使用分解，具体方法要接着观测器/执行器架构和冗余的组合。观测/执行器架构是指主要功能为：一个模块(执行器)负责执行，而另一个模块(监视器)执行验收测试或其他行为验证。如果执行器行为不当，观测器会关闭整个功能(两个模块)，从而形成一个故障静默系统。</p>
+<p>如果观测器/执行器对(图2)设计正确，那么只要观测器有足够高的汽车安全完整性等级并检测所有可能的故障，执行器就可以设计成低汽车安全完整性等级。(还要求检测观测器中的潜在故障，以避免损坏的观测器未能检测到驱动器故障的问题。)如果可以使观测器比执行器简单得多，则可以减少观测器的规模，并允许将大部分复杂功能放置到较低的汽车安全完整性等级执行器中，这种体系结构模式是相当有利。</p>
+<p>观测器/执行器对的优点和缺点都是它创建了一个故障静默构建块(如果有错误，它就会关闭)。异构冗余的使用，即观测器和执行器的使用是为了防止由于执行器故障而发出危险的命令。<br>至少，提供故障操作行为需要更多的冗余(即多个观测/执行器对)，并且需要满足多样性，从而使同一模式的软件设计故障不会造成整个系统故障。这对于避免出现Arianne5航班501的丢失这样的情况是很重要的，这是由于主系统和备份系统都出现了相同的未处理异常操作条件而导致的故障。</p>
+<p>应该指出的是，因为例如实现不同的组件时有脆弱性等问题，实现多样性并不一定是简单的，对于非自主软件也是如此。还需要注意的是，故障/执行器对的故障沉默需求是基于故障独立性的假设。<br>一个关键的点是无论采用什么方法，总需要有一种方法来检测当自主功能不正常工作的状态(无论是由于硬件故障、软件故障，还是需求缺陷)，并以某种方式把系统转移到一个安全的状态。</p>
+<h4 id="复杂的需求"><a href="#复杂的需求" class="headerlink" title="复杂的需求"></a>复杂的需求</h4><p>V开发模型的一个基本特征是，V的右侧提供了一种可追溯的方式来检查左侧的结果(验证和验证)。但是，这种检查的概念是基于一个假设，即需求实际上是已知的，正确的、完整的、明确指定的。这种假设给自动驾驶汽车带来了挑战。</p>
+<h5 id="需求挑战"><a href="#需求挑战" class="headerlink" title="需求挑战"></a>需求挑战</h5><p>如前所述，从控制系统中去掉司机意味着软件必须能处理异常，包括天气、环境危害和设备故障。会有很多不同类型的故障，从恶劣天气(洪水、雾、雪、烟，龙卷风)，违反交通规则(错误的方向公路上一个汽车，其他司机闯红灯，被偷走的交通标志),到当地驾驶约定（靠左行驶），动物危害(蝗灾、鹿、犰狳)。</p>
+<p>任何一个开了足够长时间车的人，都会有自己的故事，他们会讲述他们在路上看到过的怪异事件。总的来说，车辆数目多的话很可能会经历所有这类事件，甚至更多。更糟糕的是，恶性事件和驾驶条件的组合可能会出现，而在经典的书面需求规范中，这些组合实在是太多了。如果这些组合的结果可能是无害的，那么可能不需要涵盖所有这种极其罕见的组合，但是需求应该清楚地知道什么是系统设计范围内的要处理的故障，什么不是。因此，以列举所有系统需求的文档为起点的经典V进程似乎不太可能以狭义的方式扩展到自动车辆异常处理系统上，至少在不久的将来会一直是这样。</p>
+<h5 id="操作概念的方法"><a href="#操作概念的方法" class="headerlink" title="操作概念的方法"></a>操作概念的方法</h5><p>管理需求的复杂性的一种方法是约束操作概念并进行需求的分阶段扩展。这已经由开发人员完成了，他们可能会在特定的地理区域集中进行道路测试（例如，仅在硅谷的高速公路上进行白天的驾驶，因为那里的降水有限，天气寒冷)。采用约束概念的想法可以从多个维度扩展</p>
+<p>典型的可以利用限制操作概念轴（维度）包括:</p>
+<ul>
+<li>道路可达:限制到达的高速公路，共乘车道，农村道路、郊区，封闭校园，城市街道，等。</li>
+<li>可见性:白天，晚上，雾，霾、吸烟，雨，雪</li>
+<li>车载环境:在一个封闭的车库内没有其他车辆移动，仅允许自动驾驶的车道，非自动驾驶车辆上的标记应答器等。</li>
+<li>外部环境:基础设施的支持，预先规划的道路，由人驾驶的汽车</li>
+<li>速度:较低的速度可能产生更小的故障后果和更大的恢复空间</li>
+</ul>
+<p>虽然上述自由度仍然有很多组合(当然还有更多的组合是不可想象的)，但是从可能的操作概念中进行选择的目的不是增加复杂性，而是减少复杂性。减少需求的复杂性可以通过在特定的情况下应用自主系统来实现，在这些情况下的需求应该是完全被理解的(并确保对这些有效的操作条件的识别是正确的)</p>
+<p>因此，限制操作概念成为一种引导策略，用于在逐渐复杂的操作中部署更复杂的技术能力。一旦确定对某一特定业务概念的需求有了充分的了解，就会有更多类似的需求。随着时间的推移，可以添加操作概念来扩展允许的自动化场景的范围。但这并不能完全消除复杂需求的问题，但是它可以帮助减轻组合爆炸的需求和例外情况。</p>
+<h5 id="安全需求和约束条件"><a href="#安全需求和约束条件" class="headerlink" title="安全需求和约束条件"></a>安全需求和约束条件</h5><p>即使使用了受限的操作概念，使用传统的与安全相关的需求方法似乎也是不切实际的。这种方法或多或少是按以下这种方式进行的：首先创建功能需求。在执行了一些风险评估过程后，对安全性相关的需求进行评注(annotation)。将这些与安全相关的需求分配给安全关键子系统。设计安全关键子系统以满足分配的需求。最后，通过重复循环来找到并减少不在预期内的紧急子系统表现。</p>
+<p>对安全关键需求进行评注对于自主应用程序来说可能不切实际，这里至少有两个原因。</p>
+<p>一个原因是，许多需求可能只与部分安全相关，并且与功能性能密不可分。例如，当汽车行驶时，使用停车制动的许多条件可能是一组初始(基础)需求。然而这些需求的某些方面实际上是安全的关键，而这些方面在很大程度上是受其他交互功能的紧急影响。考虑停车制动的情况，停车制动很可能被许多功能需求所描述。但是让我们来简化问题，在减速模式中唯一安全的关键操作可能是在其他需求的紧急交互下必须避免在减速过程中锁住车轮。</p>
+<p>用于识别安全相关需求的需求注释可能失败的第二个原因是，在使用机器学习技术时是不可能进行评注的。这是因为需求采用了一组训练数据的形式，这些数据列举了一组输入值和正确的系统输出。这些通常不是传统需求的形式，因此需要对需求管理和验证采用不同的方法。</p>
+<p>与其试图在安全性和非安全性子系统之间分配功能需求，不如创建一组严格与安全性相关的独立的、并行的需求集。这些需求的形式往往是约束条件，它们指定了安全所需的系统状态。这种方法可以解决性能和优化问题(最短路径是什么?或者最优燃料消耗的速度是多少?)从安全的角度来看(我们会撞上什么东西吗?)</p>
+<p>使用这种方法可以将需求集划分为V模型的两个部分。第一组的需求将是一组非安全相关的功能需求，这可能是传统的格式或一种非传统的格式如机器学习训练集。</p>
+<p>第二组需求将是一组纯粹的安全需求，它们完全明确地定义了安全对于系统的意义，相对独立于最优系统行为的细节。这种需求可以采取安全操作信封的形式，适用于不同的操作模式，系统可以自由地在操作信封内优化其性能。显然，这样的信封至少可以在某些情况下使用(例如，执行速度限制或设置最小的跟随距离。这个概念是相当笼统的，但也说明这可能是未来的工作。</p>
+<p>采用一组与功能需求正交的安全需求的一个令人信服的理由是，这种方法可以清晰地映射到观测/执行器体系结构上。功能需求可以分配给低汽车安全完整性等级执行器功能块，而安全需求可以分配给高汽车安全完整性等级监视器。这个想法作为监视器/执行器设计模式的一部分已经被非正式地使用多年了。我们建议将这种方法提升为一种主要的策略，用于设计自动车辆的设计、需求和安全案例，而不是降级为一种详细的实现冗余策略。</p>
+<h4 id="非确定性和统计算法"><a href="#非确定性和统计算法" class="headerlink" title="非确定性和统计算法"></a>非确定性和统计算法</h4><p>自动驾驶车辆使用的一些技术本质上是统计的。一般来说，它们往往是不确定的(不可重复的)，并且可能只在一个概率可以被分配的情况下给出基于概率正确的答案。验证这样的系统会带来一些挑战，这些挑战通常不会出现在更确定的、传统的汽车控制系统中</p>
+<h5 id="随机系统的挑战"><a href="#随机系统的挑战" class="headerlink" title="随机系统的挑战"></a>随机系统的挑战</h5><p>随机系统非确定性计算的挑战包括一些算法，如规划算法，它们可能通过对许多随机选择的候选者的结果进行排名来工作。由于该算法的核心操作是基于随机生成，因此很难进行复制。虽然在单元测试中使用可重复的伪随机数流等技术可能有帮助，但是在集成系统中创建完全确定的行为可能是不现实的，尤其是当初始条件的微小变化导致系统行为的发散状态时。这意味着，尽管尝试使用名义上相同的测试用例，但每一辆车测试都可能导致不同的结果。</p>
+<p>成功的感知算法也往往是概率的。例如，证据网格框架(evidence grid framework)将来自单个、不确定的传感器读数的扩散累积，使得机器人对周围环境越来越能建立一个更加详细的地图。这种方法产生一个对象存在的可能性，但是时候不能完全保证的。此外，这些算法基于先前的传感器物理模型(如多路径返回)和噪声模型本身就是概率性的，对环境条件的微小变化敏感。</p>
+<p>除了对环境的几何建模之外，其他算法还从感知到的数据中提取标签。其中突出的例子包括行人检测。这样的系统即使在无噪声数据的情况下，也可能出现潜在的不可预测的故障模式。例如，视觉系统可能难以消除由于阴影而产生的颜色变化，而且在大型反射表面的存在中，视觉系统很难确定物体的位置。(公平地说，这些对人类来说都是挑战。)此外，任何分类过程都显示了假阴性和假阳性之间的权衡，其中一个的数量越少，另一个的数量就越多。测试的含义是这样的算法不会在百分之百的时间内有效，而且根据构造的不同，它们可能会报告一个特定的情况是真实的，而这个情况实际是真实的可能性只是中等。</p>
+<h5 id="测试中的非决定论"><a href="#测试中的非决定论" class="headerlink" title="测试中的非决定论"></a>测试中的非决定论</h5><p>处理测试中的非决定论很困难至少有两个原因。</p>
+<p>第一个是很难实施特定的边缘情况。这是因为，只有当系统接收到来自世界的非常特定的输入序列时，系统才可能以激活边缘情况的方式运行。由于前面讨论过的一些因素，例如计时器对输入的微小变化的响应可能存在显著差异，因此很难设计出一种情况，在这种情况下，环境可靠地提供适当的条件来运行特定所需的测试用例。作为一个简单的例子，车辆可能更喜欢在宽阔的道路上行驶更迂回的路线，而不是在一条狭窄的巷子里走捷径。为了评估在狭窄的巷道中导航的性能，测试人员需要设计一种使宽阔的巷道对计划者没有吸引力的情况。但是，这样做需要对测试计划给予额外的成本，并且可能(手动地)将车辆移动到它通常不会进入的情况以强制执行所需的响应。</p>
+<p>测试中不确定性的第二个困难是很难评估测试结果是否正确，因为对于一个给定的测试用例来说，没有唯一的正确系统行为。因此，正确性标准可能必须采用与前面讨论的安全信封类似的形式，如果最终系统状态在可接受的测试通行信封内，则测试通过。一般情况下可能需要多个测试来建立信任。<br>概率系统行为对验证提出了类似的挑战，因为通过一次测试并不意味着每次都能通过测试。事实上，有了概率行为我们可能会认为至少某些类型的测试会在一定程度上失败。因此，测试可能不是为了确定行为是否正确，而是为了验证行为的统计特征是否被精确地指定(例如，假阴性检出率不大于相关安全参数中假定的检出率)。比起简单的功能验证，这可能需要更多的测试，特别是如果问题中的行为是关键的安全部分且在预期中会有极低的失败率。</p>
+<p>从概率系统中获得极高的性能可能需要多个子系统在发生完全独立的故障时有低的失败率。例如，可以将复合雷达和视觉系统结合起来，以确保在极低的概率范围内没有遗漏的障碍物。这种方法不仅适用于传感模式，而且也适用于规划和执行中的其他各种算法方案。如果这样的方法是成功的，那么很有可能失败的概率非常低，以至于测试验证复合性能几乎是不可行的。例如，如果两个系统必须每十亿次检测就会遗漏一次障碍，那么必须运行数十亿次有代表性的测试来验证这种性能。为了验证复合不同算法的低故障率，可以尝试分别验证每种算法更频繁的允许故障率。但这是不够的。我们还必须验证失败之间独立的假设，这很可能必须基于分析和测试才能进行。</p>
+<h4 id="机器学习系统"><a href="#机器学习系统" class="headerlink" title="机器学习系统"></a>机器学习系统</h4><p>只有在正确地做出一系列复杂的感知和控制决策的情况下，自动驾驶汽车才有可能采取正确的行为。要实现这一目标，通常需要对参数进行适当的调整，包括从每个相机镜头的校准模型，到为避免高速公路上的障碍而转向或停车的风险的适当加权。这里的挑战是找到校准模型或权重的比值，从而使某些误差函数最小化。近年来，大多数机器人应用都转向机器学习来实现这一点，因为多维优化的复杂性使得手工工作不太可能产生理想的性能水平。</p>
+<p>机器学习方法的细节有很多，例如，有监督学习、强化学习等，但总之所有这些方法都涉及归纳学习，在归纳学习中，训练集被用来推导一个模型。</p>
+<p>例如，考虑在单目图像中检测行人的情况。使用一组大型图像训练集，分类器可以学习一种决策规则，该规则将行人在一组单独的图像验证集中被检测到的概率降至最低。为了我们的目的，一个基本要素是训练集实际上是系统的需求集合，而规则是系统设计的结果。(机器学习算法本身和分类器算法都比传统的验证技术更容易修改。然而，这些都是通用的软件引擎，最终的系统行为是由用于学习的训练数据决定的。)</p>
+<p>可以尝试通过创建一组训练数据的需求来回避训练集数据形成实际需求的问题。但这最终只是将同样的挑战推到了一个抽象层次上。需求不应是典型V系统本身的一组功能需求，而是以一组训练数据或收集训练数据集的计划的形式</p>
+<h5 id="验证归纳学习的挑战"><a href="#验证归纳学习的挑战" class="headerlink" title="验证归纳学习的挑战"></a>验证归纳学习的挑战</h5><p>归纳学习方法的性能可以通过从收集的总体数据集中保留一些样本并使用这些样本进行验证来测试。假设有以下这种情况，如果把训练集作为系统需求(V的左边)看，可以用一组独立的验证数据来确保满足测试的需求(V的右边)。训练数据不能有意外的相关性与所需的行为，否则系统将过拟合。类似地，验证数据必须独立于训练数据，并且在除所需的特性之外的所有方面都与训练数据不同，否则在验证过程中会检测到过拟合。当然目前尚不清楚如何论证机器学习系统没有产生过拟合。</p>
+<p>机器学习在实践中的一个重要限制是，如果使用带标签的数据，每个数据点都可能很昂贵。(创建标签必须由某人或某物来完成。无监督学习技术也是可能的，但需要一个巧妙的映射来解决特定的问题。此外，如果训练集有问题或所学习的规则有问题，那么就需要收集更多的验证数据并用于验证更新的系统。这是必要的，因为即使对训练数据做一个小的更改，也会产生一个完全不同的学习规则集。</p>
+<p>由于自主系统的需求非常复杂，很可能会出现一些罕见的边缘案例，在那里学习将会发生问题。然而，由于它们的稀缺性，收集描述这种不寻常情况的数据可能是昂贵的，而且很难衡量。(模拟和合成数据可以帮助解决这一问题，但在模拟数据中存在偏差的风险，以及对仿真工件的过度拟合。)</p>
+<p>验证机器学习的另一个问题是，一般来说，人类不能直观地理解过程。例如，卷积神经网络的内部结构可能不能让人类观察者更直观地了解已经学会的决策规则。虽然可能有一些特殊的情况，但一般来说，机器学习的易读性问题即能够用人类的术语解释系统的行为这个问题还没有解决办法。这使得除了昂贵的蛮力测试之外很难预测的技术如何应用于机器学习系统的验证。(也许有些组织确实有资源进行广泛的蛮力测试。但即使在这种情况下，训练数据的准确性、有效性和代表性也必须被证明为是安全论证的一部分。)</p>
+<p>由于机器学习系统的易读性一般较差，而且由于过度拟合的危险是真实存在的，因此在这样的系统中存在着严重影响安全性的失效模式。特别值得关注的是在训练集数据中出现的偶然相关性，但人类往往注意不到这种相关性。例如，考虑使用经过训练的可变形部件模型来检测图像中的行人的方法，这在现实世界的数据集中已被证明是相当有效的。如果训练数据集中没有(或很少)行人坐轮椅的图像，那么这样的系统很可能会将行人的标签与用两条腿走路的人错误地联系起来。</p>
+<h5 id="归纳学习的解决方案"><a href="#归纳学习的解决方案" class="headerlink" title="归纳学习的解决方案"></a>归纳学习的解决方案</h5><p>归纳学习怎么进行测试是很困难的。首先是黑天鹅问题，故事是这样的，在18世纪末之前，在欧洲观察到的所有的天鹅都是白色的，因此一个使用归纳逻辑的观察者会得出结论，所有的天鹅都是白色的。然而，这名观察者在访问澳大利亚时，会经历这种信念的挑战，因为那里有大量的黑天鹅。换句话说，如果系统没有看到一个特殊的情况，它就不能学习这个情况。这是对归纳学习方法的一个基本限制。此外，由于机器学习严重缺乏易读性，人类审查员很难或不可能想象在这样一个系统中出现类似黑天鹅的偏差。</p>
+<p>验证一个归纳学习系统似乎是一个极具挑战性的问题。我们可能会使用广泛的测试，但需要保证黑天鹅数据随机独立到达率的假设，并对相应大小的数据集进行测试。如果有足够的资源，这可能是可行的，但是总会有新的黑天鹅，所以需要对大量的操作场景和输入值进行概率评估，以确保系统故障的低水平。</p>
+<p>另一种验证归纳学习系统到高汽车安全完整性等级水平的方法是将一种基于归纳的低汽车安全完整性等级算法配对，该算法将命令发送给执行器，并使用基于高汽车安全完整性等级演绎的监视器。这将回避驱动算法的大部分验证问题，因为控制执行器的诱导算法的失败将被基于演绎生成的安全信封等概念的非感应监视器捕获。因此，执行器算法失败将是一个可用性问题(假定有足够的故障转移能力，系统安全关闭)，而不是安全问题。</p>
+<h4 id="关键任务的操作需求"><a href="#关键任务的操作需求" class="headerlink" title="关键任务的操作需求"></a>关键任务的操作需求</h4><p>现在让我们回到先前讨论过的地方，即计算机最终控制着车辆，而不是控制着人。这意味着至少部分车辆必须是基于故障操作而不是面对故障停止。</p>
+<h5 id="故障操作系统设计的挑战"><a href="#故障操作系统设计的挑战" class="headerlink" title="故障操作系统设计的挑战"></a>故障操作系统设计的挑战</h5><p>故障操作系统设计已经在航空航天和其他环境中成功地完成了几十年，但是由于以下几个原因仍然是困难的。第一个原因是显而易见的，即必须提供冗余，以便当一个组件失败时，另一个组件可以接管。实现这一点需要至少两个独立的、冗余的故障停止行为子系统。</p>
+<p>实现故障操作系统反过来需要至少三个冗余的故障任意组件，以便在发出不正确的输出而不是在组件级别发出静默失败的情况下确定故障源。对于必须容忍任意错误故障的系统，根据相关的故障模型，可能需要一个具有4个冗余组件的复杂容错系统。</p>
+<p>冗余的结构变化取决于设计方法，和可能包括配置如三冗余系统成员(在这种情况下，成员必须确保不被一个单点故障)，或两个二对二系统，或者使用四台电脑。这些方法除了引入的明显开销之外，还存在一个测试问题，即如何确保故障检测和恢复工作的有效性，确保故障的独立性，并确保在驱动任务开始时所有冗余组件都是无故障的。冗余似乎不太可能被避免，但为了确保安全，可能会降低提供足够冗余的复杂性和成本</p>
+<p>在典型的故障操作系统(如飞机)中，所有冗余部件本质上都是相同的，它都能够执行扩展任务。例如，商用飞机通常配置两个喷气发动机，每个喷气发动机至少有一个双冗余计算机控制。如果一台发动机上的两台计算机由于持续的交叉检测故障而关闭，那么就会有第二个独立的引擎来维持飞机的飞行。即便如此，对引擎可靠性的要求还是非常严格的，因为在第一个引擎故障后，飞机可能需要飞行几个小时才能到达最近的机场。这就对每个引擎提出了显著的可靠性要求，从而增加了组件成本。</p>
+<p>虽然汽车是出了名的价格敏感的，但它们也有一个优势，即故障转移任务的时间可以很短(例如，把车停在路边，或者在必要时停在一条旅游线路上)，故障转移任务的持续时间是以秒而不是小时为单位度量的。此外，用于停止车辆的故障转移任务可能比完全自主操作的功能要少得多。这可以简化需求复杂性、计算冗余、传感器需求和验证需求。(作为一个简单的例子，故障转移任务控制系统可能不支持变道，这极大地简化了传感器需求和控制算法)因此，设计一个具有故障停止主控制器和更简单的故障操作故障转移控制器的自动车辆可能在硬件成本和设计/验证成本方面都具有吸引力。</p>
+<p>它也可能不是基于完全的自主系统，而是就是完全的自主系统，在完全的自主系统中有一个检测器.这将使故障探测器本身拥有高水平，但可能允许正常的自主功能为低汽车安全完整性等级。这种方法可以很好地映射到主自主系统的监视/执行器体系结构。故障转移的自主性也必须以安全的方式设计，并根据其复杂性和计算的可靠性需求采用适当的体系结构方法。如果仅持续几秒钟的短暂故障转移任务中发生故障的可能性足够低，那么甚至可以使用单通道故障转移系统。</p>
+<h4 id="非技术性因素"><a href="#非技术性因素" class="headerlink" title="非技术性因素"></a>非技术性因素</h4><p>在部署自动驾驶时遇到的一些挑战是非技术性的，例如经常提到的责任问题(当发生事故时谁负责赔偿?)以及法律通常如何对待所有权、操作、维护和其他方面的车辆的问题。深入研究这个问题显然超出了本文的范围。然而，对非技术挑战的决议很可能对技术解决方案产生影响。例如，对事故重建数据的自主系统可能有法律要求，需要对这些数据的来源进行仔细的分析，以确保正确使用这些数据。举个简单的例子，假设雷达探测概率为95%，那么它的输出可能仍然会被记录在系统中，以判断是否检测到障碍物，表面上这意味着探测的确定性。</p>
+<p>重要的是要确保法分析考虑到，仅仅因为雷达没有探测到行人，并不意味着行人不在那里(例如95%检测可能意味着每20个行人中就有一个不会被检测到)。</p>
+<p>看起来，由于自动车辆的固有复杂性，以及无法通过测试证明完备性，开发人员必须以保证案例的形式创建安全保证参数。这样的保证论证对于维护和解释系统的完整性是必要的，并且它能够可靠地解释系统对不可避免的危险情况的反应。确保证据的完整性是应该解决的一个特殊问题，因为借此可确定由于发生特殊情况而造成的事故是否是不可避免的。其他需要关注的重要的问题是，事故是否由系统需求的缺陷、合理可预见和可避免的设计缺陷、实施的缺陷或其他原因引起的。</p>
+<h4 id="故障注入"><a href="#故障注入" class="headerlink" title="故障注入"></a>故障注入</h4><p>从前面的讨论中可以明显看出，传统的功能测试在面对一个完整的系统时会遇到困难，尤其是在不寻常的操作条件下，很难去执行异常的组合。虽然测试人员可以定义一些非名义上的测试用例，但由于异常、操作场景和其他相关因素的组合爆炸，该测试的可扩展性存在问题。</p>
+<p>此外，研究还表明，即使是非常优秀的设计人员，在相对简单的软件系统中，也经常会出现盲点和错过异常情况。</p>
+<p>故障注入和鲁棒性测试是在异常情况下评估系统性能的较为成熟的技术，在测试异常情况响应时可以避免设计人员和测试人员的盲点。传统的故障注入包括将位翻转插入到内存和通信网络中。最近的技术增加了抽象的层次，包括基于数据类型的故障字典，并确保了故障的代表性。这些技术已经被成功地用于自动驾驶汽车的缺陷的发现和特征。</p>
+<p>这是一种很有希望帮助验证自主性的方法，它在组件的抽象级别执行故障注入，作为试图伪造安全性声明的策略的一部分。这不仅涉及到对主要传感器输入的对象进行模拟，还涉及到插入异常条件以测试系统的健壮性(例如，在映射中插入无效数据)。执行此类故障注入的目的不是验证功能，而是通过探查不可预见的情况激活弱点。这种故障注入也可以ISO 26262过程中跨层执行。</p>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>根据V过程开发的安全自主车辆会遇到很多大挑战。但是为了确保车辆是安全的，仍然需要遵循ISO26262v流程，或者证明一套同样严格的流程和技术实践。假设应用了V过程，有一下三种看起来比较有意义的方法。</p>
+<h5 id="分阶段部署"><a href="#分阶段部署" class="headerlink" title="分阶段部署"></a>分阶段部署</h5><p>在不受限制的真实环境中(包括特殊情况)，开发和部署一辆自动驾驶汽车来处理所有可能的场景组合似乎是不切实际的。当下正如在汽车系统中常见的那样，基于当前开发人员实践的分阶段部署方法似乎是一种更为合理的方法。</p>
+<p>可以将分阶段部署绑定到V流程，通过指定良好的操作概念来限制操作范围，从而限制必要的需求范围。这会包括环境、系统和操作约束的限制，这些限制必须用于满足于实现自主操作。验证这些操作约束是否被执行是确保安全性的重要部分，在V过程中它必须显示为一组包括操作需求、验证和潜在运行时的机制。</p>
+<p>例如，在运行时监控不仅需要监控系统状态是否允许自主授权，而且需要假设关于安全的操作场景参数实际上是否满足，以及操作场景的系统实际上是否认为它是被满足的。</p>
+<p>需要特别注意的受限操作概念的一个方面是，需要确保在操作场景突然失效时维护安全性，例如，由于意外的天气事件或基础设施故障引起的操作场景失效。当系统偏移在允许的自主操作场景之外时，异常转换机制需要成功地执行系统恢复或故障转移任务， </p>
+<p>目前尚不清楚的是，分阶段部署方法是否为实现自主驾驶提供一条完整的道路。但是，这样的方法至少提供了一种方法来取得进展，而且带来了一些好处，与此同时因为系统看到了更多的现实世界的情况。这种方法帮我们对困难的边界情况和未预料到的情况有更多的了解。</p>
+<h5 id="监控-执行机构"><a href="#监控-执行机构" class="headerlink" title="监控/执行机构"></a>监控/执行机构</h5><p>使用监控/执行机构架构是一种常见的方法，可以帮助减轻自动车辆安全的许多挑战。正如所讨论的，这种架构风格能满足很高的复杂性需求(只有监视器本质上是完美的)，并部署归纳算法(通过限制对执行器的使用，并使用基于演绎的监视器)。此外，使用故障转移任务策略可以允许自主系统监视器检测主系统故障，而不必确保故障操作行为。更简单、高度完整性的故障转移自主系统可以使车辆到达安全状态。这样的系统可能具有足够短的故障转移任务，只要能够确保在启动故障转移任务时整个系统是无故障的，就可以使故障转移操作的冗余最小化。</p>
+<h5 id="故障注入-1"><a href="#故障注入-1" class="headerlink" title="故障注入"></a>故障注入</h5><p>为了确保系统的可靠性，单独的故障注入测试是不可行的。自动驾驶汽车增加了这一问题的复杂困难性，因为自动驾驶汽车能自动对高度复杂的环境做出反应，并引入诸如机器学习等难以测试和测试费用高昂的技术。因此由于缺乏人驾驶监督，自动驾驶系统必须有一个很高的汽车安全完整性等级。制作普通的系统测试，似乎很难获得对合理的水平的保证。故障注入可以作为验证策略的一部分发挥相当的作用，验证策略包括传统的测试和非测试验证。特别是当故障注入应用于多个抽象级别，而不仅仅是在电气连接器的层面上时，这一点就显得尤为重要。</p>
+<h4 id="未来工作"><a href="#未来工作" class="headerlink" title="未来工作"></a>未来工作</h4><p>本文讨论了如何在基于ISO 26262的V框架内实现自动车辆安全的保障。但是，事实上使用架构模式(如监视/执行器方法)和通过故障注入进行验证将限制操作性能。换句话说，我们可能需要通过收束自动驾驶汽车的功能，以适应当下的测试技术的限制。如果想放宽这些限制，需要在以下方面取得进展：描述与预期操作环境相符的机器学习训练数据的覆盖范围，对基于异常驾驶条件的安全需求有信心，以及能够验证带有冗余的归纳系统中故障的独立性。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    老肥羊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/自动驾驶测试与验证的挑战.html" title="自动驾驶测试与验证的挑战">http://iamwxy.com/自动驾驶测试与验证的挑战.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
+            <a href="/tags/测试/" rel="tag"># 测试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/线性代数-对称矩阵.html" rel="next" title="线性代数 | 重要矩阵">
+                <i class="fa fa-chevron-left"></i> 线性代数 | 重要矩阵
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/统计入门-概率统计简史.html" rel="prev" title="统计入门 | 数理统计学简史">
+                统计入门 | 数理统计学简史 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="老肥羊" />
+            
+              <p class="site-author-name" itemprop="name">老肥羊</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引言"><span class="nav-number">2.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完全测试的不可行性"><span class="nav-number">3.</span> <span class="nav-text">完全测试的不可行性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作为起点的V模型"><span class="nav-number">4.</span> <span class="nav-text">作为起点的V模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#驾驶员不在环"><span class="nav-number">5.</span> <span class="nav-text">驾驶员不在环</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可控性挑战"><span class="nav-number">5.1.</span> <span class="nav-text">可控性挑战</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自主架构方法"><span class="nav-number">5.2.</span> <span class="nav-text">自主架构方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂的需求"><span class="nav-number">6.</span> <span class="nav-text">复杂的需求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#需求挑战"><span class="nav-number">6.1.</span> <span class="nav-text">需求挑战</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#操作概念的方法"><span class="nav-number">6.2.</span> <span class="nav-text">操作概念的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安全需求和约束条件"><span class="nav-number">6.3.</span> <span class="nav-text">安全需求和约束条件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非确定性和统计算法"><span class="nav-number">7.</span> <span class="nav-text">非确定性和统计算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#随机系统的挑战"><span class="nav-number">7.1.</span> <span class="nav-text">随机系统的挑战</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#测试中的非决定论"><span class="nav-number">7.2.</span> <span class="nav-text">测试中的非决定论</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#机器学习系统"><span class="nav-number">8.</span> <span class="nav-text">机器学习系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#验证归纳学习的挑战"><span class="nav-number">8.1.</span> <span class="nav-text">验证归纳学习的挑战</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#归纳学习的解决方案"><span class="nav-number">8.2.</span> <span class="nav-text">归纳学习的解决方案</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关键任务的操作需求"><span class="nav-number">9.</span> <span class="nav-text">关键任务的操作需求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#故障操作系统设计的挑战"><span class="nav-number">9.1.</span> <span class="nav-text">故障操作系统设计的挑战</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非技术性因素"><span class="nav-number">10.</span> <span class="nav-text">非技术性因素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#故障注入"><span class="nav-number">11.</span> <span class="nav-text">故障注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结论"><span class="nav-number">12.</span> <span class="nav-text">结论</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#分阶段部署"><span class="nav-number">12.1.</span> <span class="nav-text">分阶段部署</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#监控-执行机构"><span class="nav-number">12.2.</span> <span class="nav-text">监控/执行机构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#故障注入-1"><span class="nav-number">12.3.</span> <span class="nav-text">故障注入</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#未来工作"><span class="nav-number">13.</span> <span class="nav-text">未来工作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老肥羊</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">115.3k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1538748063000', 
+            owner: 'sheepwxy',
+            repo: 'tjwxy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'e56c250e2cc5d67d8f0ec6973f7a1cf032529e73',
+            
+                client_id: '0b21c5c1820d4915dd21'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="自动驾驶,总结," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="博观而约取，厚积而薄发。这是我很喜欢的一句话。 我的目标是成为自动驾驶工程师，而不是科学家。想成为工程师，工程能力和足够的知识储备是不可或缺的。实际上，在掌握专业知识的基础上，足够广的知识面、旺盛的好奇心、超快的学习速度才是一个人的核心竞争力。另外，知识面宽广和专精一处并不是矛盾的事，有自己的专业研究方向不一定意味着把其他领域的路限死。 这篇博客是我一年来在网上搜集到的各种自动驾驶学习资源，内容包">
+<meta name="keywords" content="自动驾驶,总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动驾驶学习资源整理">
+<meta property="og:url" content="http://iamwxy.com/自动驾驶学习资源整理.html">
+<meta property="og:site_name" content="吴旭阳的博客">
+<meta property="og:description" content="博观而约取，厚积而薄发。这是我很喜欢的一句话。 我的目标是成为自动驾驶工程师，而不是科学家。想成为工程师，工程能力和足够的知识储备是不可或缺的。实际上，在掌握专业知识的基础上，足够广的知识面、旺盛的好奇心、超快的学习速度才是一个人的核心竞争力。另外，知识面宽广和专精一处并不是矛盾的事，有自己的专业研究方向不一定意味着把其他领域的路限死。 这篇博客是我一年来在网上搜集到的各种自动驾驶学习资源，内容包">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-18T09:02:26.355Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自动驾驶学习资源整理">
+<meta name="twitter:description" content="博观而约取，厚积而薄发。这是我很喜欢的一句话。 我的目标是成为自动驾驶工程师，而不是科学家。想成为工程师，工程能力和足够的知识储备是不可或缺的。实际上，在掌握专业知识的基础上，足够广的知识面、旺盛的好奇心、超快的学习速度才是一个人的核心竞争力。另外，知识面宽广和专精一处并不是矛盾的事，有自己的专业研究方向不一定意味着把其他领域的路限死。 这篇博客是我一年来在网上搜集到的各种自动驾驶学习资源，内容包">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/自动驾驶学习资源整理.html"/>
+
+
+
+
+
+  <title>自动驾驶学习资源整理 | 吴旭阳的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">吴旭阳的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/自动驾驶学习资源整理.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴旭阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">自动驾驶学习资源整理</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T22:07:25+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/自动驾驶学习资源整理.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/自动驾驶学习资源整理.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>博观而约取，厚积而薄发。这是我很喜欢的一句话。</p>
+<p>我的目标是成为自动驾驶工程师，而不是科学家。想成为工程师，工程能力和足够的知识储备是不可或缺的。实际上，在掌握专业知识的基础上，足够广的知识面、旺盛的好奇心、超快的学习速度才是一个人的核心竞争力。另外，知识面宽广和专精一处并不是矛盾的事，有自己的专业研究方向不一定意味着把其他领域的路限死。</p>
+<p>这篇博客是我一年来在网上搜集到的各种自动驾驶学习资源，内容包括学术论文，书本，开源项目，甚至微信公众号等等等。在学习的过程中，我每次找到好的资源都会高兴一阵子，每次遇到不好的资源半途而废就会不开心。一年下来，去粗取精，大致有以下的结果。</p>
+<a id="more"></a>
+<h4 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h4><h5 id="自动驾驶（汽车）类"><a href="#自动驾驶（汽车）类" class="headerlink" title="自动驾驶（汽车）类"></a>自动驾驶（汽车）类</h5><ul>
+<li>智车科技 |  从学术界转载较多，眼光总体不错</li>
+<li>厚势 | 关注自动驾驶市场新闻，穿插有跟自动驾驶各方面相关的论文，与智车科技有相似之处</li>
+<li>智东西 | 我平常很少看这个公众号，但他们做了一系列很棒的公开课，可在里面找到资源</li>
+<li>Apollo开发者社区 |  有Apollo项目的教程推送</li>
+<li>泡泡机器人SLAM | 关注SLAM领域的研究</li>
+<li>机器视觉 | 排版垃圾，但是内容丰富接地气，包含各种有关机器视觉学习的讨论</li>
+<li>新智驾 | 偏重于自动驾驶市场新闻</li>
+<li>高工智能汽车 | 偏重于自动驾驶市场新闻</li>
+<li>自动驾驶说 | 偏重于自动驾驶产品设计，大概是因为负责运营者是一位产品经理</li>
+<li>佐思汽车研究 | 偶尔会有内容质量比较高的咨询报告放出</li>
+</ul>
+<h5 id="人工智能类"><a href="#人工智能类" class="headerlink" title="人工智能类"></a>人工智能类</h5><ul>
+<li>新智元 |  包含人工智能的市场信息，基础知识，论文研读均有涉猎</li>
+<li>量子位 | 定位与新智元基本相似</li>
+<li>机器之心 | 更偏重于研究前沿，学习资源，这是质量最高的一个人工智能公众号</li>
+<li>七月在线实验室 | 偏向于人工智能学习资源以及开源收集和，同时关注具体的就业面试问题</li>
+</ul>
+<h5 id="招聘就业"><a href="#招聘就业" class="headerlink" title="招聘就业"></a>招聘就业</h5><ul>
+<li>毕马威招聘</li>
+<li>图森未来</li>
+<li>罗兰贝格管理咨询</li>
+<li>依图科技</li>
+</ul>
+<h4 id="书本"><a href="#书本" class="headerlink" title="书本"></a>书本</h4><ul>
+<li>《The DARPA Urban Challenge》| 看自动驾驶相关论文时，发现他们的文献综述大多都在讲DARPA，应该都是取自这本书的各种论文。这本书由参与2009城市DARPA挑战赛的队伍所写论文集合而成，相当于创世纪著作了。在新技术层出不穷的当下，这本书也依然非常有价值。</li>
+<li>《第一本无人驾驶书》 |  作为入门是很好的书，覆盖了自动驾驶研究领域的方方面面，深度虽不足，但广度足够，可以阅读此书以获得一个总体认识。</li>
+<li>《HandBook of  Intelligent Vehicles》 |  如你所见，这是一本手册，不可能阅读完的，近乎1700页的论文合集，主要由几个section组成，每个section关注自动驾驶汽车的一个方面，像是《第一本无人驾驶书》的全面增强版。</li>
+<li>《Probabilistic Robotics  概率机器人》|  机器人领域的经典著作，SLAM研究的经典与权威</li>
+<li>《2017中国自动驾驶产业研究报告》|  准确来说，这是一篇研究报告，对当前国内外自动驾驶市场做了一个非常细致的研究，对把握当前大局很有用处。</li>
+</ul>
+<h4 id="自动驾驶相关学术会议-非原创"><a href="#自动驾驶相关学术会议-非原创" class="headerlink" title="自动驾驶相关学术会议(非原创)"></a>自动驾驶相关学术会议(非原创)</h4><p>这是论文的入口了，日常最新文章和学术资源可以在这里寻找。</p>
+<h5 id="机器人领域"><a href="#机器人领域" class="headerlink" title="机器人领域"></a>机器人领域</h5><ul>
+<li>IFRR RSS | 文章理论创新性，实验验证完备性要求都很高</li>
+<li>IROS | 规模（千人左右）和影响力仅次于ICRA的顶级国际会议</li>
+<li>ICRA | 该领域规模（千人以上）和影响力最大的顶级国际会议。<h5 id="计算机视觉领域"><a href="#计算机视觉领域" class="headerlink" title="计算机视觉领域"></a>计算机视觉领域</h5></li>
+<li>CVPR | 世界顶级的计算机视觉会议，被认为有着很强的影响力和很高的排名</li>
+<li>ICCV | 文录用率非常低，是三大会议中公认级别最高的 (另外两个是CVPR和ECCV)</li>
+<li>ECCV | 三大顶会之一<h5 id="自动驾驶领域"><a href="#自动驾驶领域" class="headerlink" title="自动驾驶领域"></a>自动驾驶领域</h5></li>
+<li>IEEE IV | 总感觉质量稍微差了那么一点意思</li>
+<li>ITSC | IEEE智能交通系统学会的年度旗舰会议，偏向于交通场景的研究</li>
+<li>ICEVS<h5 id="人工智能会议"><a href="#人工智能会议" class="headerlink" title="人工智能会议"></a>人工智能会议</h5></li>
+<li>AAAI </li>
+<li>IJCAI</li>
+</ul>
+<h4 id="论文-未完待续"><a href="#论文-未完待续" class="headerlink" title="论文(未完待续)"></a>论文(未完待续)</h4><h5 id="视觉"><a href="#视觉" class="headerlink" title="视觉"></a>视觉</h5><h5 id="激光雷达"><a href="#激光雷达" class="headerlink" title="激光雷达"></a>激光雷达</h5><h5 id="决策规划"><a href="#决策规划" class="headerlink" title="决策规划"></a>决策规划</h5><h5 id="仿真"><a href="#仿真" class="headerlink" title="仿真"></a>仿真</h5><h5 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h5><h4 id="仿真平台"><a href="#仿真平台" class="headerlink" title="仿真平台"></a>仿真平台</h4><ul>
+<li>Prescan</li>
+<li>VTD</li>
+<li>Carla</li>
+<li>Arisim</li>
+<li>Apollo</li>
+</ul>
+<h4 id="基础-核心-能力"><a href="#基础-核心-能力" class="headerlink" title="基础(核心)能力"></a>基础(核心)能力</h4><p>这会是内容最多的一部分，也是塑造竞争力的核心一部分。</p>
+<h5 id="语言-未完待续"><a href="#语言-未完待续" class="headerlink" title="语言(未完待续)"></a>语言(未完待续)</h5><ul>
+<li>C++</li>
+<li>Python</li>
+<li>其他(任何一门需要使用的语言)</li>
+</ul>
+<h5 id="算法和数据结构"><a href="#算法和数据结构" class="headerlink" title="算法和数据结构"></a>算法和数据结构</h5><ul>
+<li>算法。斯坦福的算法第四讲，是最好的算法学习资源。书本、教程、视频、习题一应俱全。书本里在讲解算法时都用到了易学的配图，这一系列教程采用的语言是java，学习起来相对较简单，且在学习这门语言的过程中可以掌握面向对象编程的精髓。具体介绍，请参考<a href="https://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%AD%A6%E4%B9%A0-%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88.html#more">算法第四版</a></li>
+<li>数据结构。<a href="https://www.bilibili.com/video/av22774520?from=search&amp;seid=16662640465822532291" target="_blank" rel="noopener">清华邓俊辉数据结构</a>。一个资源足够了。</li>
+</ul>
+<h5 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h5><p>想要做开发还是要使用Linux系统，原因不再赘述。Ubuntu作为Linux一个发行版相对其他版本上手会更容易些，资源整理如下表。</p>
+<ul>
+<li>关于Ubuntu，以前的博客做过一些资源整理，参见<a href="https://iamwxy.com/Ubuntu%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86.html">Ubuntu学习整理</a></li>
+<li><a href="http://cn.linux.vbird.org/" target="_blank" rel="noopener">鸟哥的Linux私房菜</a>。语言风趣，例子丰富，基础知识和扩展知识(服务器)都有涉及，优先推荐</li>
+<li><a href="http://www.runoob.com/linux/linux-tutorial.html" target="_blank" rel="noopener">Linux菜鸟教程</a>。以实际使用为教程原则，不绕弯，直击本质。</li>
+</ul>
+<h5 id="数学知识"><a href="#数学知识" class="headerlink" title="数学知识"></a>数学知识</h5><ul>
+<li>线性代数(矩阵论)</li>
+<li>高等数学</li>
+<li>统计学(概率论)</li>
+<li>优化相关(凸优化)</li>
+</ul>
+<p>(远远的未完待续)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    老肥羊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/自动驾驶学习资源整理.html" title="自动驾驶学习资源整理">http://iamwxy.com/自动驾驶学习资源整理.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/词的顿悟.html" rel="next" title="词的顿悟">
+                <i class="fa fa-chevron-left"></i> 词的顿悟
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/同济智能汽车研究所-公众号数据分析.html" rel="prev" title="同济智能汽车研究所 | 公众号数据分析">
+                同济智能汽车研究所 | 公众号数据分析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="老肥羊" />
+            
+              <p class="site-author-name" itemprop="name">老肥羊</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#微信公众号"><span class="nav-number">1.</span> <span class="nav-text">微信公众号</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自动驾驶（汽车）类"><span class="nav-number">1.1.</span> <span class="nav-text">自动驾驶（汽车）类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#人工智能类"><span class="nav-number">1.2.</span> <span class="nav-text">人工智能类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#招聘就业"><span class="nav-number">1.3.</span> <span class="nav-text">招聘就业</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#书本"><span class="nav-number">2.</span> <span class="nav-text">书本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动驾驶相关学术会议-非原创"><span class="nav-number">3.</span> <span class="nav-text">自动驾驶相关学术会议(非原创)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#机器人领域"><span class="nav-number">3.1.</span> <span class="nav-text">机器人领域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算机视觉领域"><span class="nav-number">3.2.</span> <span class="nav-text">计算机视觉领域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自动驾驶领域"><span class="nav-number">3.3.</span> <span class="nav-text">自动驾驶领域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#人工智能会议"><span class="nav-number">3.4.</span> <span class="nav-text">人工智能会议</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#论文-未完待续"><span class="nav-number">4.</span> <span class="nav-text">论文(未完待续)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#视觉"><span class="nav-number">4.1.</span> <span class="nav-text">视觉</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#激光雷达"><span class="nav-number">4.2.</span> <span class="nav-text">激光雷达</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#决策规划"><span class="nav-number">4.3.</span> <span class="nav-text">决策规划</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#仿真"><span class="nav-number">4.4.</span> <span class="nav-text">仿真</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#软件工程"><span class="nav-number">4.5.</span> <span class="nav-text">软件工程</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#仿真平台"><span class="nav-number">5.</span> <span class="nav-text">仿真平台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础-核心-能力"><span class="nav-number">6.</span> <span class="nav-text">基础(核心)能力</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#语言-未完待续"><span class="nav-number">6.1.</span> <span class="nav-text">语言(未完待续)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#算法和数据结构"><span class="nav-number">6.2.</span> <span class="nav-text">算法和数据结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#系统"><span class="nav-number">6.3.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数学知识"><span class="nav-number">6.4.</span> <span class="nav-text">数学知识</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老肥羊</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">115.3k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1536761245000', 
+            owner: 'sheepwxy',
+            repo: 'tjwxy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'e56c250e2cc5d67d8f0ec6973f7a1cf032529e73',
+            
+                client_id: '0b21c5c1820d4915dd21'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
