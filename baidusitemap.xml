@@ -4,6 +4,44 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2-%E4%B8%89.html</loc>
+    <lastmod>2018-10-17T12:47:04.330Z</lastmod>
+    <data>
+        <display>
+        <title>统计|数理统计简史(三)</title>
+        <pubTime>2018-10-17T12:22:02.000Z</pubTime>
+        
+        <tag>读书</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>数据科学</tag>
+         
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E5%85%B7%E9%9C%80%E6%B1%82.html</loc>
+    <lastmod>2018-10-15T15:22:00.598Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶仿真工具需求</title>
+        <pubTime>2018-10-15T15:22:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.html</loc>
     <lastmod>2018-10-14T15:33:37.420Z</lastmod>
     <data>
@@ -285,9 +323,9 @@
         <title>跳出舒适区</title>
         <pubTime>2018-09-25T15:40:52.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -410,9 +448,9 @@
         <title>英语学习记录</title>
         <pubTime>2018-07-29T14:23:55.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -499,9 +537,9 @@
         <title>自动驾驶仿真 | Unity</title>
         <pubTime>2018-09-04T14:52:53.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>自动驾驶仿真</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -611,9 +649,9 @@
         
         <tag>随笔</tag>
          
-        <tag>总结</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -719,11 +757,11 @@
         <title>自动驾驶仿真整理</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
+        <tag>自动驾驶仿真</tag>
+         
         <tag>自动驾驶</tag>
          
         <tag>总结</tag>
-         
-        <tag>自动驾驶仿真</tag>
          
          
            
@@ -795,11 +833,11 @@
         <title>R语言学习笔记二 | 绘图</title>
         <pubTime>2018-08-20T14:46:01.000Z</pubTime>
         
+        <tag>工具</tag>
+         
         <tag>高效学习</tag>
          
         <tag>数据可视化</tag>
-         
-        <tag>工具</tag>
          
          
            
@@ -816,11 +854,11 @@
         <title>R语言学习笔记</title>
         <pubTime>2018-08-16T02:29:27.000Z</pubTime>
         
+        <tag>工具</tag>
+         
         <tag>高效学习</tag>
          
         <tag>数据可视化</tag>
-         
-        <tag>工具</tag>
          
          
            
@@ -1011,9 +1049,9 @@
         <title>数据可视化 | 开篇</title>
         <pubTime>2018-07-20T10:53:18.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>数据可视化</tag>
+         
+        <tag>总结</tag>
          
         <tag>数据科学</tag>
          
@@ -1395,9 +1433,9 @@
         <title>数据可视化 | 工具</title>
         <pubTime>2018-08-04T05:32:56.000Z</pubTime>
         
-        <tag>数据可视化</tag>
-         
         <tag>工具</tag>
+         
+        <tag>数据可视化</tag>
          
          
            
@@ -1490,9 +1528,9 @@
         <title>AirSim配置</title>
         <pubTime>2018-07-07T06:42:25.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>自动驾驶仿真</tag>
+         
+        <tag>工具</tag>
          
          
            
