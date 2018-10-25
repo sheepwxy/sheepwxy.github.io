@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E2%80%9C%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80.html</loc>
-    <lastmod>2018-10-21T15:55:16.789Z</lastmod>
+    <loc>http://iamwxy.com/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.html</loc>
+    <lastmod>2018-10-24T15:46:59.207Z</lastmod>
     <data>
         <display>
-        <title>博客搭建基础</title>
-        <pubTime>2018-10-21T15:50:47.000Z</pubTime>
+        <title>每日学习记录</title>
+        <pubTime>2018-10-12T15:59:59.000Z</pubTime>
         
-        <tag>工具</tag>
+        <tag>总结</tag>
          
          
            
@@ -22,15 +22,15 @@
     
   <url>
     <loc>http://iamwxy.com/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%9B%E9%98%B6.html</loc>
-    <lastmod>2018-10-21T15:52:59.839Z</lastmod>
+    <lastmod>2018-10-24T15:41:30.487Z</lastmod>
     <data>
         <display>
         <title>博客搭建进阶</title>
-        <pubTime>2018-10-21T15:50:20.000Z</pubTime>
+        <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -40,14 +40,31 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.html</loc>
-    <lastmod>2018-10-21T14:13:55.411Z</lastmod>
+    <loc>http://iamwxy.com/%E8%AF%BB%E4%B9%A6%E4%B8%8E%E5%90%AC%E6%AD%8C.html</loc>
+    <lastmod>2018-10-24T15:40:42.453Z</lastmod>
     <data>
         <display>
-        <title>每日学习记录</title>
-        <pubTime>2018-10-12T15:59:59.000Z</pubTime>
+        <title>读书与听歌</title>
+        <pubTime>2018-08-31T15:30:50.000Z</pubTime>
         
-        <tag>总结</tag>
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E2%80%9C%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80.html</loc>
+    <lastmod>2018-10-21T15:55:16.789Z</lastmod>
+    <data>
+        <display>
+        <title>博客搭建基础</title>
+        <pubTime>2018-10-21T15:50:47.000Z</pubTime>
+        
+        <tag>工具</tag>
          
          
            
@@ -700,9 +717,9 @@
         <title>自动驾驶仿真 | Unity</title>
         <pubTime>2018-09-04T14:52:53.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -739,23 +756,6 @@
         <pubTime>2018-09-02T15:21:26.000Z</pubTime>
         
         <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%AF%BB%E4%B9%A6%E4%B8%8E%E5%90%AC%E6%AD%8C.html</loc>
-    <lastmod>2018-09-01T14:12:43.172Z</lastmod>
-    <data>
-        <display>
-        <title>读书与听歌</title>
-        <pubTime>2018-08-31T15:30:50.000Z</pubTime>
-        
-        <tag>笔记</tag>
          
          
            
@@ -920,11 +920,11 @@
         <title>自动驾驶仿真整理</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
          
         <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -1235,11 +1235,11 @@
         
         <tag>自动驾驶</tag>
          
+        <tag>机器学习</tag>
+         
         <tag>测试</tag>
          
         <tag>深度学习</tag>
-         
-        <tag>机器学习</tag>
          
          
            
