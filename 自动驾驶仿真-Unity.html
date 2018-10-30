@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="自动驾驶,自动驾驶仿真," />
+  <meta name="keywords" content="自动驾驶仿真,自动驾驶," />
 
 
 
@@ -122,14 +122,14 @@
 
 
 <meta name="description" content="关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，参见此处。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。">
-<meta name="keywords" content="自动驾驶,自动驾驶仿真">
+<meta name="keywords" content="自动驾驶仿真,自动驾驶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶仿真 | Unity">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶仿真-Unity.html">
 <meta property="og:site_name" content="吴旭阳的博客">
 <meta property="og:description" content="关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，参见此处。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-10T12:12:58.401Z">
+<meta property="og:updated_time" content="2018-10-30T12:47:22.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶仿真 | Unity">
 <meta name="twitter:description" content="关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，参见此处。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">写于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T22:52:53+08:00">
-                2018-09-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T22:52:53+08:00">
+                2018-10-28
               </time>
             
 
@@ -397,29 +397,30 @@
 
       
         <p>关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，<a href="http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E6%95%B4%E7%90%86.html">参见此处</a>。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。<br><a id="more"></a></p>
-<h4 id="为什么要做一个新的模拟器"><a href="#为什么要做一个新的模拟器" class="headerlink" title="为什么要做一个新的模拟器"></a>为什么要做一个新的模拟器</h4><p>市面上有一些优秀的商业软件，如Prescan，VTD等，但它们非常昂贵。已有的开源项目，因为它们往往不是基于现代引擎开发的，因而它的图形和通用软件环境可能有些过时。自己搭建起一个仿真平台需要注意以下几点：</p>
+<h4 id="为什么要做一个新的模拟器"><a href="#为什么要做一个新的模拟器" class="headerlink" title="为什么要做一个新的模拟器"></a><font color="blue">为什么要做一个新的模拟器</font></h4><p>市面上有一些优秀的商业软件，如Prescan，VTD等，但它们非常昂贵。也已有一些开源项目，但它们往往不是基于现代引擎开发的，因而它的图形和通用软件环境可能有些过时。所以就自己搭建一个吧，搭建时需要注意以下几点：</p>
 <ul>
-<li>不要重复造轮子，要学会利用现代游戏引擎</li>
-<li>要利用成熟的3D游戏工作流、技术、硬件和社区</li>
-<li>开源(广泛的贡献和发布)</li>
-<li>要有可扩展性(从dorm room 到完整的模拟器配置)</li>
+<li>不要重复造轮子，要在游戏引擎的基础上构建</li>
+<li>要利用成熟的3D游戏工作流、技术、硬件和技术社区</li>
+<li>开源</li>
+<li>要有可扩展性</li>
 <li>要模块化(包括各种输入输出设备，AI，传感器等)</li>
 <li>能足够灵活进行原型设计，驱动评估，自动测试</li>
 </ul>
-<h4 id="为什么选择Unity"><a href="#为什么选择Unity" class="headerlink" title="为什么选择Unity"></a>为什么选择Unity</h4><ul>
+<h4 id="为什么选择Unity"><a href="#为什么选择Unity" class="headerlink" title="为什么选择Unity"></a><font color="blue">为什么选择Unity</font></h4><p>因为它是Unity，就是这么简单，好吧，我们认真来说，因为Unity</p>
+<ul>
 <li>版本迭代稳定，目前已到第四版本</li>
-<li>久经考验，有众多游戏和开源项目使用的是Unity</li>
-<li>集成有动画，粒子系统，导航网格，物理等各种功能</li>
-<li>有包括物理引擎的硬件加速</li>
-<li>可以使用C#，MONO等成熟的脚本</li>
+<li>已经有很多基于Unity的项目，有众多游戏和开源项目使用的都是Unity</li>
+<li>集成有动画、粒子系统、导航网格、物理、occlusion等各种功能</li>
+<li>可以使用C#，Mono等成熟的脚本</li>
 <li>可以在win/Linux/Mac等多平台上使用</li>
 <li>有良好的社区氛围(众多开发者和素材)</li>
 <li>有好的文档支持，包括但不限于官方文档，论坛，第三方教程，youtube等</li>
-<li>成为第一个用于创新硬件产品的平台(Oculus Rift, Hydra Razer, Leap)</li>
-<li>优质授权条款(免费/低成本)</li>
+<li>是创新硬件产品的首选平台(Oculus Rift一种虚拟现实设备, Hydra Razer体感控制器, Leap)</li>
+<li>免费/价格较低</li>
 <li>不开源，但是可扩展(编写脚本，low level dll等)</li>
 </ul>
-<h4 id="资源-环境搭建"><a href="#资源-环境搭建" class="headerlink" title="资源 环境搭建"></a>资源 环境搭建</h4><h5 id="地形构建"><a href="#地形构建" class="headerlink" title="地形构建"></a>地形构建</h5><p>对自动驾驶仿真来说，这一项优先级较低</p>
+<h4 id="为什么建立在游戏平台上"><a href="#为什么建立在游戏平台上" class="headerlink" title="为什么建立在游戏平台上"></a><font color="blue">为什么建立在游戏平台上</font></h4><p>游戏是3D软件中最先进的一种形式，它会不断挑战极限，不断为引擎加速迭代代码。功能如可编程着色器、物理引擎、预照明、导航网格、动画混合系统都是等等都是游戏引擎支持的，或者可以让以实时帧率运行。游戏产业也推动了硬件创新，比如英特尔的GPU开发、罗技G27车轮、TrackIR头部跟踪器、Leap手势传感器、Oculus Rift和低延迟传感器等输入控制器硬件。利用这种低成本的硬件进行模拟也将允许更多的观众访问功能合理、价格合理的模拟器。</p>
+<h4 id="资源-环境搭建"><a href="#资源-环境搭建" class="headerlink" title="资源 环境搭建"></a><font color="blue">资源 环境搭建</font></h4><h5 id="地形构建"><a href="#地形构建" class="headerlink" title="地形构建"></a>地形构建</h5><p>对自动驾驶仿真来说，这一项优先级较低</p>
 <ul>
 <li>Terrain Toolkit，<a href="http://www.youtube.com/watch?v=YnO9RtarzHE" target="_blank" rel="noopener">Youtube视频</a> </li>
 <li>WorldComposer,可以从真实环境中构建数据<h5 id="城市-建筑物-构建"><a href="#城市-建筑物-构建" class="headerlink" title="城市(建筑物)构建"></a>城市(建筑物)构建</h5></li>
@@ -476,7 +477,12 @@
 <li>闪电和纹理(有疑问，不懂)</li>
 <li>各种天气的声音</li>
 </ul>
-<h4 id="车辆-amp-物理-动力学"><a href="#车辆-amp-物理-动力学" class="headerlink" title="车辆&amp;物理(动力学)"></a>车辆&amp;物理(动力学)</h4><h4 id="NPC触发"><a href="#NPC触发" class="headerlink" title="NPC触发"></a>NPC触发</h4><h4 id="传感器仿真"><a href="#传感器仿真" class="headerlink" title="传感器仿真"></a>传感器仿真</h4><h4 id="数据记录"><a href="#数据记录" class="headerlink" title="数据记录"></a>数据记录</h4><p>可能的坑还是很多的，希望有能用得上的地方，这个坑得花点时间才能填上。</p>
+<h4 id="车辆-amp-物理-动力学"><a href="#车辆-amp-物理-动力学" class="headerlink" title="车辆&amp;物理(动力学)"></a>车辆&amp;物理(动力学)</h4><h4 id="NPC触发"><a href="#NPC触发" class="headerlink" title="NPC触发"></a>NPC触发</h4><h4 id="传感器仿真"><a href="#传感器仿真" class="headerlink" title="传感器仿真"></a>传感器仿真</h4><p>仿真自动驾驶时，传感器仿真是不可或缺的，radar、Lidar、</p>
+<h4 id="数据记录"><a href="#数据记录" class="headerlink" title="数据记录"></a>数据记录</h4><h4 id="其他的开源项目"><a href="#其他的开源项目" class="headerlink" title="其他的开源项目"></a>其他的开源项目</h4><ul>
+<li>C.I.T.Y. Simulator in Unity</li>
+<li>CASA</li>
+</ul>
+<p>当前的几大车企也都有自己的驾驶模拟实验室，各自服务于不同的研究工作。比如Stanford REVS/CHIme。研究的最初目标是为了处理下面个现象。人类可能会过度信任自动驾驶汽车，人机共驾其实是一种非常危险的状况。因此建立这个实验室去研究人机长时间共驾时以及驾驶任务切换时的驾驶员状态。此外还有Toyoto、University of Leeds</p>
 
       
     </div>
@@ -512,9 +518,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
-          
             <a href="/tags/自动驾驶仿真/" rel="tag"># 自动驾驶仿真</a>
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
           
         </div>
       
@@ -527,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/心有时候会变老.html" rel="next" title="心有时候会变老">
-                <i class="fa fa-chevron-left"></i> 心有时候会变老
+              <a href="/书评-《数学之美》.html" rel="next" title="书评 | 《数学之美》">
+                <i class="fa fa-chevron-left"></i> 书评 | 《数学之美》
               </a>
             
           </div>
@@ -537,8 +543,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/从搭建博客想到的.html" rel="prev" title="从搭建博客想到的">
-                从搭建博客想到的 <i class="fa fa-chevron-right"></i>
+              <a href="/自动驾驶仿真工具需求.html" rel="prev" title="自动驾驶仿真工具需求">
+                自动驾驶仿真工具需求 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -627,7 +633,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">87</span>
+                  <span class="site-state-item-count">88</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -673,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要做一个新的模拟器"><span class="nav-number">1.</span> <span class="nav-text">为什么要做一个新的模拟器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么选择Unity"><span class="nav-number">2.</span> <span class="nav-text">为什么选择Unity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源-环境搭建"><span class="nav-number">3.</span> <span class="nav-text">资源 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#地形构建"><span class="nav-number">3.1.</span> <span class="nav-text">地形构建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#城市-建筑物-构建"><span class="nav-number">3.2.</span> <span class="nav-text">城市(建筑物)构建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#路网-道路-构建"><span class="nav-number">3.3.</span> <span class="nav-text">路网(道路)构建</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建模-具体建筑物、车辆等"><span class="nav-number">4.</span> <span class="nav-text">建模(具体建筑物、车辆等)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流架构"><span class="nav-number">5.</span> <span class="nav-text">交通流架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一些online资源网站"><span class="nav-number">5.1.</span> <span class="nav-text">一些online资源网站</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于交通流仿真的书"><span class="nav-number">5.2.</span> <span class="nav-text">关于交通流仿真的书</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非Unity的交通流仿真工具"><span class="nav-number">5.3.</span> <span class="nav-text">非Unity的交通流仿真工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Unity自带的交通流工具"><span class="nav-number">5.4.</span> <span class="nav-text">Unity自带的交通流工具</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#天气天时架构"><span class="nav-number">6.</span> <span class="nav-text">天气天时架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#天时特点"><span class="nav-number">6.1.</span> <span class="nav-text">天时特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#天气特点"><span class="nav-number">6.2.</span> <span class="nav-text">天气特点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#车辆-amp-物理-动力学"><span class="nav-number">7.</span> <span class="nav-text">车辆&amp;物理(动力学)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NPC触发"><span class="nav-number">8.</span> <span class="nav-text">NPC触发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器仿真"><span class="nav-number">9.</span> <span class="nav-text">传感器仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据记录"><span class="nav-number">10.</span> <span class="nav-text">数据记录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要做一个新的模拟器"><span class="nav-number">1.</span> <span class="nav-text">为什么要做一个新的模拟器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么选择Unity"><span class="nav-number">2.</span> <span class="nav-text">为什么选择Unity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么建立在游戏平台上"><span class="nav-number">3.</span> <span class="nav-text">为什么建立在游戏平台上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源-环境搭建"><span class="nav-number">4.</span> <span class="nav-text">资源 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#地形构建"><span class="nav-number">4.1.</span> <span class="nav-text">地形构建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#城市-建筑物-构建"><span class="nav-number">4.2.</span> <span class="nav-text">城市(建筑物)构建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#路网-道路-构建"><span class="nav-number">4.3.</span> <span class="nav-text">路网(道路)构建</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建模-具体建筑物、车辆等"><span class="nav-number">5.</span> <span class="nav-text">建模(具体建筑物、车辆等)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流架构"><span class="nav-number">6.</span> <span class="nav-text">交通流架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一些online资源网站"><span class="nav-number">6.1.</span> <span class="nav-text">一些online资源网站</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于交通流仿真的书"><span class="nav-number">6.2.</span> <span class="nav-text">关于交通流仿真的书</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非Unity的交通流仿真工具"><span class="nav-number">6.3.</span> <span class="nav-text">非Unity的交通流仿真工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Unity自带的交通流工具"><span class="nav-number">6.4.</span> <span class="nav-text">Unity自带的交通流工具</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#天气天时架构"><span class="nav-number">7.</span> <span class="nav-text">天气天时架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#天时特点"><span class="nav-number">7.1.</span> <span class="nav-text">天时特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#天气特点"><span class="nav-number">7.2.</span> <span class="nav-text">天气特点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#车辆-amp-物理-动力学"><span class="nav-number">8.</span> <span class="nav-text">车辆&amp;物理(动力学)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NPC触发"><span class="nav-number">9.</span> <span class="nav-text">NPC触发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器仿真"><span class="nav-number">10.</span> <span class="nav-text">传感器仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据记录"><span class="nav-number">11.</span> <span class="nav-text">数据记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他的开源项目"><span class="nav-number">12.</span> <span class="nav-text">其他的开源项目</span></a></li></ol></div>
             
 
           </div>
@@ -707,7 +713,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">124.2k </span>
+    <span title="Site words total count">127.4k </span>
   
 </div>
 
@@ -890,7 +896,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1536072773000', 
+            id: '1540738373000', 
             owner: 'sheepwxy',
             repo: 'tjwxy.github.io',
             

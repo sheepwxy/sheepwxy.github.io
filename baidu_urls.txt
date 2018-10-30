@@ -1,10 +1,12 @@
+http://iamwxy.com/自动驾驶仿真工具需求.html
+http://iamwxy.com/自动驾驶仿真-Unity.html
+http://iamwxy.com/书评-《数学之美》.html
+http://iamwxy.com/每日学习记录.html
 http://iamwxy.com/博客搭建进阶.html
 http://iamwxy.com/“博客搭建基础.html
 http://iamwxy.com/“ROS安装简史.html
 http://iamwxy.com/统计-数理统计简史-三.html
-http://iamwxy.com/自动驾驶仿真工具需求.html
 http://iamwxy.com/表达能力（二）.html
-http://iamwxy.com/每日学习记录.html
 http://iamwxy.com/我很忙吗.html
 http://iamwxy.com/人的梦想，是不会结束的.html
 http://iamwxy.com/线性代数-奇异值分解、线性变换.html
@@ -16,5 +18,3 @@ http://iamwxy.com/线性代数-对称矩阵.html
 http://iamwxy.com/线性代数-特征值、特征向量.html
 http://iamwxy.com/统计学-正态分布、测量.html
 http://iamwxy.com/统计学习-相关性.html
-http://iamwxy.com/统计学习-基础概念回顾.html
-http://iamwxy.com/统计学-高斯分布.html
