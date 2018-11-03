@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%B8%AD%E7%9A%84%E9%BB%91%E5%A4%A9%E9%B9%85%E9%97%AE%E9%A2%98-%E6%B5%85%E8%B0%88Edge-Case-%E8%BE%B9%E7%BC%98%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.html</loc>
+    <lastmod>2018-11-01T02:36:16.692Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例</title>
+        <pubTime>2018-11-01T02:36:16.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%C2%96%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E3%80%8A%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E3%80%8B.html</loc>
+    <lastmod>2018-10-31T14:49:48.092Z</lastmod>
+    <data>
+        <display>
+        <title>读书笔记 | 《如何阅读一本书》</title>
+        <pubTime>2018-08-18T13:36:01.000Z</pubTime>
+        
+        <tag>读书</tag>
+         
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.html</loc>
     <lastmod>2018-10-30T14:26:30.533Z</lastmod>
     <data>
@@ -38,25 +72,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%C2%96%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E3%80%8A%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E3%80%8B.html</loc>
-    <lastmod>2018-10-30T14:01:24.754Z</lastmod>
-    <data>
-        <display>
-        <title>读书笔记 | 《如何阅读一本书》"</title>
-        <pubTime>2018-08-18T13:36:01.000Z</pubTime>
-        
-        <tag>读书</tag>
-         
-        <tag>总结</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-Unity.html</loc>
     <lastmod>2018-10-30T12:47:22.412Z</lastmod>
     <data>
@@ -64,9 +79,9 @@
         <title>自动驾驶仿真 | Unity</title>
         <pubTime>2018-10-28T14:52:53.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -102,9 +117,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -960,11 +975,11 @@
         <title>自动驾驶仿真整理</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
          
         <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -1036,11 +1051,11 @@
         <title>R语言学习笔记二 | 绘图</title>
         <pubTime>2018-08-20T14:46:01.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>高效学习</tag>
          
         <tag>数据可视化</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -1057,11 +1072,11 @@
         <title>R语言学习笔记</title>
         <pubTime>2018-08-16T02:29:27.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>高效学习</tag>
          
         <tag>数据可视化</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -1256,11 +1271,11 @@
         
         <tag>自动驾驶</tag>
          
+        <tag>机器学习</tag>
+         
         <tag>测试</tag>
          
         <tag>深度学习</tag>
-         
-        <tag>机器学习</tag>
          
          
            
@@ -1562,9 +1577,9 @@
         <title>数据可视化 | 工具</title>
         <pubTime>2018-08-04T05:32:56.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>数据可视化</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -1638,9 +1653,9 @@
         <title>AirSim配置</title>
         <pubTime>2018-07-07T06:42:25.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>工具</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
