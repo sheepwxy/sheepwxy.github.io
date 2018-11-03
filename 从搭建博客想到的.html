@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="高效学习,随笔," />
+  <meta name="keywords" content="随笔,高效学习," />
 
 
 
@@ -122,7 +122,7 @@
 
 
 <meta name="description" content="我有好多事情都是学到一半就停了。也许是逃避事情后期的难处?也许是性格里就想四处看看学学？也许就是单纯的没有耐心和执行力。 但不管如何，我再也不想这样了。">
-<meta name="keywords" content="高效学习,随笔">
+<meta name="keywords" content="随笔,高效学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从搭建博客想到的">
 <meta property="og:url" content="http://iamwxy.com/从搭建博客想到的.html">
@@ -362,6 +362,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/从搭建博客想到的.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/从搭建博客想到的.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -444,9 +454,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/高效学习/" rel="tag"># 高效学习</a>
-          
             <a href="/tags/随笔/" rel="tag"># 随笔</a>
+          
+            <a href="/tags/高效学习/" rel="tag"># 高效学习</a>
           
         </div>
       
@@ -499,6 +509,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -774,6 +791,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1536240715000', 
+            owner: 'sheepwxy',
+            repo: 'tjwxy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'e56c250e2cc5d67d8f0ec6973f7a1cf032529e73',
+            
+                client_id: '0b21c5c1820d4915dd21'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
