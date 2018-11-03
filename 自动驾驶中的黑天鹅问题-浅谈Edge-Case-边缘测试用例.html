@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="同济大学,自动驾驶仿真，汽车学院，同济智能汽车研究所，高效学习，机器学习，生活随笔，线性代数，自动驾驶，深度学习，SLAM，自动驾驶测试" />
+  <meta name="keywords" content="自动驾驶,深度学习,机器学习,自动驾驶测试," />
 
 
 
@@ -121,17 +121,18 @@
 
 
 
-<meta name="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta name="description" content="以下是黑天鹅事件的百度百科 “黑天鹅”事件是指满足以下三个特点的事件：它具有意外性；它产生重大影响；虽然它具有意外性，但人的本性促使我们在事后为它的发生编造理由，并且或多或少认为它是可解释和可预测的。">
+<meta name="keywords" content="自动驾驶,深度学习,机器学习,自动驾驶测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶中的黑天鹅问题-浅谈Edge-Case-边缘测试用例.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta property="og:description" content="以下是黑天鹅事件的百度百科 “黑天鹅”事件是指满足以下三个特点的事件：它具有意外性；它产生重大影响；虽然它具有意外性，但人的本性促使我们在事后为它的发生编造理由，并且或多或少认为它是可解释和可预测的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-01T02:36:16.692Z">
+<meta property="og:updated_time" content="2018-11-03T12:45:09.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例">
-<meta name="twitter:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta name="twitter:description" content="以下是黑天鹅事件的百度百科 “黑天鹅”事件是指满足以下三个特点的事件：它具有意外性；它产生重大影响；虽然它具有意外性，但人的本性促使我们在事后为它的发生编造理由，并且或多或少认为它是可解释和可预测的。">
 
 
 
@@ -395,7 +396,28 @@
       
 
       
-        
+        <p>以下是黑天鹅事件的百度百科</p>
+<p>“黑天鹅”事件是指满足以下三个特点的事件：它具有意外性；它产生重大影响；虽然它具有意外性，但人的本性促使我们在事后为它的发生编造理由，并且或多或少认为它是可解释和可预测的。<br><a id="more"></a></p>
+<p>黑天鹅事件具体展开可叙述的点很多，总的来说，它是一种经验陷阱，人类的大脑过分依赖于因果关系和简化，只能看到最显而易见的东西。但现实是一个复杂系统，原因往往没那么简单，要对经验之谈保持警惕。黑天鹅事件也会导致预测误区，在制定计划过程中往往需要注意不确定性来源。</p>
+<p>自动驾驶中的黑天鹅问题，本质上也是一种<strong>经验陷阱</strong>和<strong>预测误区</strong>。长久以来，所有的欧洲人都确信天鹅都是白色的，这是一个牢不可破的信念，直到在澳大利亚发现了第一只黑天鹅。如果群体没见过一件事情，那就倾向于这件事情不存在。这个问题在基于深度学习的自动驾驶系统中会被无限放大。</p>
+<p>深度学习在自动驾驶中的应用范围很广，可以换个说法，自动驾驶就是深度学习发挥自己价值的主要战场之一。深度学习主要用在自动驾驶的感知和决策上，在基于视觉的感知层面表现尤其出色。</p>
+<p>深度学习是由数据喂出来的，无监督的、有监督的，但本质上都是从数据中总结出既有模式，如果在训练深度学习算法时就没有加入某类数据，深度学习的框架就无法获取对特定特征的认识，在遇到特殊对象时，就无法有效识别，而且这种情况是无法通过改善神经网络结构而得到改善的，这得从数据源头解决。</p>
+<p>我们常说，对于人工智能，数据就是一切，大致分两层意思，其一，大量的数据可以让神经网络避开欠拟合、过拟合等问题，提高系统的鲁棒性。第二，大量的数据包含对于此领域各种能想象到的、不能想象到的模式，可以用来避免黑天鹅问题。</p>
+<p>那么如何避免黑天鹅问题呢？</p>
+<p>对于传统的黑天鹅问题，想要规避它，主要有以下几个手段。</p>
+<ul>
+<li>第一，反精准预测。指不再追求过度的确定性，而是关注由此事件带来的利弊，并针对利弊来做好相应的准备。</li>
+<li>第二，避免负面黑天鹅事件，追寻正面的、积极的黑天鹅事件。即在面对新的、特殊的机会时，一定要抓住，常规事件可以一直做，正面的黑天鹅没了就没了。</li>
+<li>第三，运用杠铃策略。杠铃两头重、中间轻。就是对确定性大的事实给与更多资源，对于确定性小的事情反而可以做极端决策。</li>
+</ul>
+<p>对自动驾驶来说，这些手段有什么指导意义呢？</p>
+<ul>
+<li>首先应该在意识上认识黑天鹅的重要性，认识不到黑天鹅是极其愚昧的，忽略黑天鹅的存在是极其愚昧的，对自动驾驶来说，尤其如此。</li>
+<li>做好针对黑天鹅的决策，端到端的自动驾驶系统是不可以落地的，必须做冗余，以深度学习系统作为制定决策的依据之一，深度学习解决不了的黑天鹅可以被其他系统解决。</li>
+<li>从源头数据集解决问题，发挥头脑风暴，尽可能穷举edge case，即边缘测试用例。虽然穷举的难度很大，但可以从信息论的角度制定出edge case的抽象特征，再通过收束世界模型的维度，从而提高edge case的覆盖性。</li>
+<li>依然从数据源这一点解决问题，我们可以针对已有的一些数据做一些改进，进而提高数据的多样性。比如我们可以对数据进行翻转、卷积等操作，再以这些数据重新训练神经网络；再比如可以通过GAN把一些极端天气特征迁移到数据集上，重新训练神经网络。</li>
+</ul>
+
       
     </div>
     
@@ -428,6 +450,18 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+            <a href="/tags/深度学习/" rel="tag"># 深度学习</a>
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+            <a href="/tags/自动驾驶测试/" rel="tag"># 自动驾驶测试</a>
+          
+        </div>
+      
 
       
       
@@ -446,6 +480,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/武侠与我.html" rel="prev" title="武侠与我">
+                武侠与我 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -524,7 +562,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">89</span>
+                  <span class="site-state-item-count">90</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -537,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -588,7 +626,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">127.4k </span>
+    <span title="Site words total count">129.2k </span>
   
 </div>
 

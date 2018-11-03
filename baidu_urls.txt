@@ -1,3 +1,4 @@
+http://iamwxy.com/武侠与我.html
 http://iamwxy.com/自动驾驶中的黑天鹅问题-浅谈Edge-Case-边缘测试用例.html
 http://iamwxy.com/自动驾驶仿真工具需求.html
 http://iamwxy.com/自动驾驶仿真-Unity.html
@@ -17,4 +18,3 @@ http://iamwxy.com/统计入门-概率统计简史.html
 http://iamwxy.com/自动驾驶测试与验证的挑战.html
 http://iamwxy.com/线性代数-对称矩阵.html
 http://iamwxy.com/线性代数-特征值、特征向量.html
-http://iamwxy.com/统计学-正态分布、测量.html
