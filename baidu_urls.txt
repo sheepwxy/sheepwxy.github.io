@@ -1,9 +1,13 @@
+http://iamwxy.com/每日学习记录.html
+http://iamwxy.com/自动驾驶的终极问题-安全.html
+http://iamwxy.com/自动驾驶传感器-视觉传感器-三.html
+http://iamwxy.com/“自动驾驶传感器-视觉传感器-二.html
+http://iamwxy.com/“自动驾驶传感器-视觉传感器-一.html
 http://iamwxy.com/武侠与我.html
 http://iamwxy.com/自动驾驶中的黑天鹅问题-浅谈Edge-Case-边缘测试用例.html
 http://iamwxy.com/自动驾驶仿真工具需求.html
 http://iamwxy.com/自动驾驶仿真-Unity.html
 http://iamwxy.com/书评-《数学之美》.html
-http://iamwxy.com/每日学习记录.html
 http://iamwxy.com/博客搭建进阶.html
 http://iamwxy.com/“博客搭建基础.html
 http://iamwxy.com/“ROS安装简史.html
@@ -14,7 +18,3 @@ http://iamwxy.com/人的梦想，是不会结束的.html
 http://iamwxy.com/线性代数-奇异值分解、线性变换.html
 http://iamwxy.com/统计-数理统计简史-二.html
 http://iamwxy.com/统计-数理统计简史-一.html
-http://iamwxy.com/统计入门-概率统计简史.html
-http://iamwxy.com/自动驾驶测试与验证的挑战.html
-http://iamwxy.com/线性代数-对称矩阵.html
-http://iamwxy.com/线性代数-特征值、特征向量.html
