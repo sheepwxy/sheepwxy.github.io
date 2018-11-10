@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="信息论,脑洞," />
+  <meta name="keywords" content="自动驾驶,传感器," />
 
 
 
@@ -121,18 +121,21 @@
 
 
 
-<meta name="description" content="西游记里面有段很能表现孙悟空的性格。">
-<meta name="keywords" content="信息论,脑洞">
+<meta name="description" content="在很自动驾驶从业者看来，激光雷达是想实现高级别自动驾驶所不可或缺的传感器。接下来对激光雷达做一点简要介绍。">
+<meta name="keywords" content="自动驾驶,传感器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信息论随笔一">
-<meta property="og:url" content="http://iamwxy.com/信息论随笔一.html">
+<meta property="og:title" content="自动驾驶传感器 | 激光雷达(一)">
+<meta property="og:url" content="http://iamwxy.com/自动驾驶传感器-激光雷达-一.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="西游记里面有段很能表现孙悟空的性格。">
+<meta property="og:description" content="在很自动驾驶从业者看来，激光雷达是想实现高级别自动驾驶所不可或缺的传感器。接下来对激光雷达做一点简要介绍。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-13T13:50:01.609Z">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶传感器-激光雷达-一/lidar.png">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶传感器-激光雷达-一/tof.png">
+<meta property="og:updated_time" content="2018-11-10T02:30:27.736Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="信息论随笔一">
-<meta name="twitter:description" content="西游记里面有段很能表现孙悟空的性格。">
+<meta name="twitter:title" content="自动驾驶传感器 | 激光雷达(一)">
+<meta name="twitter:description" content="在很自动驾驶从业者看来，激光雷达是想实现高级别自动驾驶所不可或缺的传感器。接下来对激光雷达做一点简要介绍。">
+<meta name="twitter:image" content="http://iamwxy.com/自动驾驶传感器-激光雷达-一/lidar.png">
 
 
 
@@ -162,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="http://iamwxy.com/信息论随笔一.html"/>
+  <link rel="canonical" href="http://iamwxy.com/自动驾驶传感器-激光雷达-一.html"/>
 
 
 
 
 
-  <title>信息论随笔一 | 吴旭阳的博客</title>
+  <title>自动驾驶传感器 | 激光雷达(一) | 吴旭阳的博客</title>
   
 
 
@@ -319,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/信息论随笔一.html">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/自动驾驶传感器-激光雷达-一.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="老肥羊">
@@ -336,7 +339,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">信息论随笔一</h2>
+          <h2 class="post-title" itemprop="name headline">自动驾驶传感器 | 激光雷达(一)</h2>
         
 
         <div class="post-meta">
@@ -348,8 +351,8 @@
               
                 <span class="post-meta-item-text">写于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-08T23:17:16+08:00">
-                2018-07-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-10T10:10:01+08:00">
+                2018-11-10
               </time>
             
 
@@ -367,8 +370,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/信息论随笔一.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/信息论随笔一.html" itemprop="commentsCount"></span>
+                <a href="/自动驾驶传感器-激光雷达-一.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/自动驾驶传感器-激光雷达-一.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -396,21 +399,29 @@
       
 
       
-        <p>西游记里面有段很能表现孙悟空的性格。</p>
-<a id="more"></a>
-<blockquote>
-<p>孙悟空说：常言道：『皇帝轮流做，明年到我家。』只教他搬出去，将天宫让於我，便罢了。</p>
-</blockquote>
-<p>这兴衰之事，谁也讲不准。昨日你庙堂之上，持天子之剑号令天下，动静间千里之外也有感。今日就有江湖之雄，握屠龙宝刀，杀人溅血也不过五步之间。</p>
-<p><strong>不仅政治如此……什么不是这样呢？</strong></p>
-<p>现在伸出你的手，观察一下你的手指。别的不论，单说这根大拇指，就有一段荡气回肠的兴衰史。</p>
-<p>在以前，大拇指是尊贵的象征，就看清剧里的那些王公贵族，玉扳指在哪儿？在大拇哥儿上。单看形体，大拇指也是手指中最特殊的，以手的自然姿势握姿来说，大拇指似将军，其余四指就是并排的兵。这也是以前大拇指地位高的一个可能解释。</p>
-<p>可是后来大拇指的地位就没落了，究其原因是没人再用物件儿来区分阶层。那现在呢，人家无名指或者中指上往往是有戒指的，还有爱的意义。食指呢，人是最灵活的指头，不信你敲桌面看哪根手指敲的最快。再说小指，纤细精巧，实际作用没什么，但也比大拇指蠢蠢呆呆的好看。大拇指成了地位最低的手指，大拇哥很伤心。</p>
-<p>所幸大拇指的命中贵人出现了。触摸屏智能手机迎来了自己的时代。现在的我正在双手打字，两只大拇指在屏幕上上下翻飞，一串串信息就从我的大脑通过一系列复杂的变化过一会儿就要进入到了你的大脑里。躺着刷微博刷其他就更不用提。如果现在把某些人的大拇指剁了，短时间内甚至能摧毁他的交流系统。除非他能找回先前的交流方式。</p>
-<p>说到交流方式，口语文化——书面文化——口语文化的兴衰史也很有看头。远古人类的交流毫无疑问是口语文化占主导的，随着语言和文字的发明，思想不会随着声音的传播只在空气中存留几秒就迅速衰减，它有办法被保留下来了，这是文化的起源，人之为人的精神基础。再之后，书面文化牢牢占据着世界的主流，信息的传播，留存，变异都离不开“书”这个载体。到互联网的发展又是一变，它把世界缩小了，音带传出来的思想振动不会只传几百米，它可以传遍整个地球。口语文化又想重新拿回它失去的领地，在我看来，它至少能重新打回一半天下。</p>
-<p>说了这么多，我到底想说什么呢？<br>哲学上说，“波浪式前进，螺旋式上升”<br>数学上说，“万物都可以由傅里叶转换成正弦波”<br>也有人说，“人生不如意十之七八，但我们今天的所有努力都是为了那十分之一二的开怀大笑。”</p>
-<p>是不是有点太悲观？那引用海贼王的一句话</p>
-<p>他们开着宴会，大声的欢笑，过去的痛苦之所以能坚持下去，就是因为这一天一定会到来。</p>
+        <p>在很自动驾驶从业者看来，激光雷达是想实现高级别自动驾驶所不可或缺的传感器。接下来对激光雷达做一点简要介绍。<br><a id="more"></a></p>
+<h4 id="激光雷达基本介绍"><a href="#激光雷达基本介绍" class="headerlink" title="激光雷达基本介绍"></a>激光雷达基本介绍</h4><p>激光产生的原理是受激辐射。它的方向性、单色性、相干性表现都非常好，因而适用于测距。现在应用于激光雷达的激光波长主要有<strong>905nm和1550nm</strong>两种。前者接近于可见光的波长，有损害人眼视网膜的可能性，因而其发射功率受到严格限制。1550nm的激光远在可见光范围之外，在不伤害人眼的前提下其发射功率得到了极大提高。</p>
+<p>激光雷达又称LiDAR，它是一种通过发射激光（探测信号）并探测回波（反射信号）来或得被测物体的相关信息的雷达系统。</p>
+<p>激光雷达是一种主动传感器，它不依赖于外界环境的光学条件和被测物体的辐射特性，它通过发射一束激光，之后主动探测经被测物体反射回来的回波信号。通过检测从发射到返回的时间，可以获得被测对象的距离，也可以通过多普勒效应和反射强度信息获取被测物体的速率信息和材料信息。</p>
+<p>目前的激光雷达主要有两种类型，<strong>扫描式激光雷达和非扫描式激光雷达</strong>。前者又可以分为机械式旋转激光雷达、固态激光雷达、基于MEMS的激光雷达以及相控阵激光雷达。目前应用于自主泊车系统上的主要是机械式旋转激光雷达。</p>
+<h4 id="激光雷达优缺点"><a href="#激光雷达优缺点" class="headerlink" title="激光雷达优缺点"></a>激光雷达优缺点</h4><p>激光雷达系统作为一种典型的主动传感器，其相对于视觉传感器和超声波雷达等有自己的优势。</p>
+<ol>
+<li>激光雷达拥有极高的分辨率，它工作于光学波段，相比超声波雷达有更高数量级的信息，具体来说，激光雷达拥有更高的距离分辨率、角分辨率和速度分辨率。</li>
+<li>激光雷达对光照和色彩等拥有极强的鲁棒性，因而它基本不会受到复杂的光线背景的影响。激光雷达获取的信息量也比较丰富，可直接获取的信息有距离和反射强度，通过简单的计算就可以获角度、速度等相关信息。</li>
+<li>激光雷达还能生成目标多维度图像，相比较视觉传感器，它更容易获得物体的三维模型。</li>
+</ol>
+<p>但激光雷达也有自己的劣势，主要列举如下。</p>
+<ol>
+<li>激光雷达不能维持全天候的工作，由于受感知过程中传播过程的影响，激光雷达很容易受到大气条件以及工作环境的烟尘的影响。</li>
+<li>激光雷达所能表现的特征维度终究是有限，这会给认知过程带来极大挑战。</li>
+<li>激光雷达所产生的信息数量众多，这给数据存储以及信息传输带来极大的挑战。</li>
+<li>激光雷达的造价是极其昂贵的，其离大规模落地应用还有相当一段距离。</li>
+</ol>
+<h4 id="激光雷达工作原理"><a href="#激光雷达工作原理" class="headerlink" title="激光雷达工作原理"></a>激光雷达工作原理</h4><h5 id="点云形成"><a href="#点云形成" class="headerlink" title="点云形成"></a>点云形成</h5><p>按照探测原理，激光雷达可分为单线（二维）激光雷达和多线（三维）激光雷达两种，由于单线激光雷达只能在二维平面上获得深度信息，其应用场景是比较单一的，它可用于探测有一定高度的障碍物，如树木、墙壁、行人这一类，但无法有效探测低矮障碍物和不规则物体。其只能起到探测功能，不能提供识别功能。而三维激光雷达可以采用多线数据，通过整合处理获得整个空间的信息。本节用于分析的激光雷达是多线旋转式激光雷达。 </p>
+<img src="/自动驾驶传感器-激光雷达-一/lidar.png">
+<p>如图所示，在实际工作过程中，激光雷达每条线上都配备了使用高采样率的单个发射器和接收器，通过发射激光光束的时间差来确定距离，角度信息通过激光雷达旋转组件水平旋转获得，以此可建立在建立二维平面上的极坐标系。单个发射器也可以上下偏转通过俯仰角度的不同可获取第三维信息：高度信息。例如Velodyne的64线激光雷达系统垂直视角为26.8度。</p>
+<h5 id="激光测距技术"><a href="#激光测距技术" class="headerlink" title="激光测距技术"></a>激光测距技术</h5><p>激光测距技术。从技术原理分，主要有三角法激光雷达、TOF系列激光雷达、相位法激光雷达等三种。三角法激光雷达一般用于小距离测量，其主要应用于室内环境，但也有部分车厂用基于此方法的激光雷达来替代超声波雷达实现自动泊车。相位法激光雷达理论上拥有更好的性能，但目前由于技术局限性还未形规模落地产品。TOF（Time Of Flight，飞行时间）激光雷达目前是主流，机械旋转式和固态激光雷达中的大多数都属于此列。它通过计算激光光源到被测物体的飞行时间来进行测距。这一技术方向中是最有希望在汽车市场先行落地。</p>
+<p>原理示意如下所示，光源发出由激光器调成的光脉冲，在遇到环境对象后反射，利用感光器接收反射回来的光线并得到数据。之后通过计算得到距离数据。<br><img src="/自动驾驶传感器-激光雷达-一/tof.png"><br>TOF法目前主要有两种分类，脉冲调制技术和相位调制技术。前者通过检测目标反射脉冲激光过程的时间来获取距离信息，常用于机器人和自动驾驶。后者则是调制激光连续波的强度，通过检测相位差来获取距离信息，该方法的主要应用场景是测风、测速。</p>
 
       
     </div>
@@ -431,7 +442,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://iamwxy.com/信息论随笔一.html" title="信息论随笔一">http://iamwxy.com/信息论随笔一.html</a>
+    <a href="http://iamwxy.com/自动驾驶传感器-激光雷达-一.html" title="自动驾驶传感器 | 激光雷达(一)">http://iamwxy.com/自动驾驶传感器-激光雷达-一.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -446,9 +457,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/信息论/" rel="tag"># 信息论</a>
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
           
-            <a href="/tags/脑洞/" rel="tag"># 脑洞</a>
+            <a href="/tags/传感器/" rel="tag"># 传感器</a>
           
         </div>
       
@@ -461,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/AirSim配置.html" rel="next" title="AirSim配置">
-                <i class="fa fa-chevron-left"></i> AirSim配置
+              <a href="/每日学习记录.html" rel="next" title="每日学习记录">
+                <i class="fa fa-chevron-left"></i> 每日学习记录
               </a>
             
           </div>
@@ -470,10 +481,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/信息论随笔二.html" rel="prev" title="信息论随笔二">
-                信息论随笔二 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -532,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -588,6 +604,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#激光雷达基本介绍"><span class="nav-number">1.</span> <span class="nav-text">激光雷达基本介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#激光雷达优缺点"><span class="nav-number">2.</span> <span class="nav-text">激光雷达优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#激光雷达工作原理"><span class="nav-number">3.</span> <span class="nav-text">激光雷达工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#点云形成"><span class="nav-number">3.1.</span> <span class="nav-text">点云形成</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#激光测距技术"><span class="nav-number">3.2.</span> <span class="nav-text">激光测距技术</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -799,7 +831,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1531063036000', 
+            id: '1541815801000', 
             owner: 'sheepwxy',
             repo: 'tjwxy.github.io',
             
