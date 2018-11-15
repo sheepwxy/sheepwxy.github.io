@@ -4,6 +4,82 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E4%B9%A0.html</loc>
+    <lastmod>2018-11-15T15:42:32.834Z</lastmod>
+    <data>
+        <display>
+        <title>人生中第一次实习</title>
+        <pubTime>2018-11-15T14:14:39.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E6%8E%A7%E5%88%B6%E7%AF%87.html</loc>
+    <lastmod>2018-11-15T14:11:33.772Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶 | 控制篇</title>
+        <pubTime>2018-11-14T12:45:23.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
+         
+        <tag>DARPA</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.html</loc>
+    <lastmod>2018-11-15T14:11:25.929Z</lastmod>
+    <data>
+        <display>
+        <title>每日学习记录</title>
+        <pubTime>2018-11-15T15:59:59.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E8%A7%84%E5%88%92%E7%AF%87.html</loc>
+    <lastmod>2018-11-15T14:04:20.610Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶 | 规划篇</title>
+        <pubTime>2018-11-13T13:36:34.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
+         
+        <tag>DARPA</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E6%8D%89%E8%9E%83%E8%9F%B9.html</loc>
     <lastmod>2018-11-11T14:02:20.403Z</lastmod>
     <data>
@@ -114,23 +190,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.html</loc>
-    <lastmod>2018-11-09T15:54:51.865Z</lastmod>
-    <data>
-        <display>
-        <title>每日学习记录</title>
-        <pubTime>2018-11-09T15:59:59.000Z</pubTime>
-        
-        <tag>总结</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E2%80%9C%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BC%A0%E6%84%9F%E5%99%A8-%E8%A7%86%E8%A7%89%E4%BC%A0%E6%84%9F%E5%99%A8-%E4%BA%8C.html</loc>
     <lastmod>2018-11-09T15:54:50.948Z</lastmod>
     <data>
@@ -193,11 +252,11 @@
         <title>自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例</title>
         <pubTime>2018-11-01T02:36:16.000Z</pubTime>
         
+        <tag>机器学习</tag>
+         
         <tag>自动驾驶</tag>
          
         <tag>深度学习</tag>
-         
-        <tag>机器学习</tag>
          
         <tag>自动驾驶测试</tag>
          
@@ -216,9 +275,9 @@
         <title>读书笔记 | 《如何阅读一本书》</title>
         <pubTime>2018-08-18T13:36:01.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>总结</tag>
+         
+        <tag>读书</tag>
          
          
            
@@ -360,9 +419,9 @@
         <title>自动驾驶学习 | 算法第四版</title>
         <pubTime>2018-09-17T15:15:27.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -489,9 +548,9 @@
         <title>统计|数理统计简史(三)</title>
         <pubTime>2018-10-17T12:22:02.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>总结</tag>
+         
+        <tag>读书</tag>
          
         <tag>数据科学</tag>
          
@@ -584,9 +643,9 @@
         <title>统计 | 数理统计简史(二)</title>
         <pubTime>2018-10-06T06:31:08.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>总结</tag>
+         
+        <tag>读书</tag>
          
         <tag>数据科学</tag>
          
@@ -607,9 +666,9 @@
         <title>统计 | 数理统计简史(一)</title>
         <pubTime>2018-10-06T06:30:14.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>总结</tag>
+         
+        <tag>读书</tag>
          
         <tag>数据科学</tag>
          
@@ -630,9 +689,9 @@
         <title>统计入门 | 数理统计学简史</title>
         <pubTime>2018-10-05T15:24:55.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>总结</tag>
+         
+        <tag>读书</tag>
          
         <tag>数据科学</tag>
          
@@ -729,11 +788,11 @@
         <title>自动驾驶测试与验证的挑战</title>
         <pubTime>2018-10-05T14:01:03.000Z</pubTime>
         
+        <tag>总结</tag>
+         
         <tag>自动驾驶</tag>
          
         <tag>测试</tag>
-         
-        <tag>总结</tag>
          
          
            
@@ -892,9 +951,9 @@
         <title>自动驾驶学习资源整理</title>
         <pubTime>2018-09-12T14:07:25.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -945,9 +1004,9 @@
         <title>从搭建博客想到的</title>
         <pubTime>2018-09-06T13:31:55.000Z</pubTime>
         
-        <tag>高效学习</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -1021,9 +1080,9 @@
         
         <tag>总结</tag>
          
-        <tag>高效学习</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -1131,9 +1190,9 @@
         
         <tag>自动驾驶仿真</tag>
          
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -1186,9 +1245,9 @@
         <title>信息论随笔五</title>
         <pubTime>2018-08-19T09:46:00.000Z</pubTime>
         
-        <tag>脑洞</tag>
-         
         <tag>信息论</tag>
+         
+        <tag>脑洞</tag>
          
          
            
@@ -1264,11 +1323,11 @@
         <title>DARPA论文总结</title>
         <pubTime>2018-08-13T09:17:18.000Z</pubTime>
         
+        <tag>总结</tag>
+         
         <tag>自动驾驶</tag>
          
         <tag>读书</tag>
-         
-        <tag>总结</tag>
          
         <tag>DARPA</tag>
          
@@ -1287,11 +1346,11 @@
         <title>BOSS无人车 | DARPA论文</title>
         <pubTime>2018-08-14T16:34:22.000Z</pubTime>
         
+        <tag>总结</tag>
+         
         <tag>自动驾驶</tag>
          
         <tag>读书</tag>
-         
-        <tag>总结</tag>
          
         <tag>DARPA</tag>
          
@@ -1310,9 +1369,9 @@
         <title>自动驾驶高精度地图总结</title>
         <pubTime>2018-07-30T14:25:26.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -1423,13 +1482,13 @@
         <title>DeepTest-面向深度学习的测试</title>
         <pubTime>2018-08-02T02:47:54.000Z</pubTime>
         
+        <tag>机器学习</tag>
+         
         <tag>自动驾驶</tag>
          
         <tag>测试</tag>
          
         <tag>深度学习</tag>
-         
-        <tag>机器学习</tag>
          
          
            
@@ -1514,9 +1573,9 @@
         <title>谈古龙</title>
         <pubTime>2018-07-19T12:15:22.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>读书</tag>
          
          
            
@@ -1677,9 +1736,9 @@
         <title>Ubuntu学习整理</title>
         <pubTime>2018-08-09T08:19:21.000Z</pubTime>
         
-        <tag>机器学习</tag>
-         
         <tag>总结</tag>
+         
+        <tag>机器学习</tag>
          
          
            
@@ -1769,9 +1828,9 @@
         <title>信息论随笔二</title>
         <pubTime>2018-07-09T15:21:23.000Z</pubTime>
         
-        <tag>脑洞</tag>
-         
         <tag>信息论</tag>
+         
+        <tag>脑洞</tag>
          
          
            
@@ -1788,9 +1847,9 @@
         <title>信息论随笔一</title>
         <pubTime>2018-07-08T15:17:16.000Z</pubTime>
         
-        <tag>脑洞</tag>
-         
         <tag>信息论</tag>
+         
+        <tag>脑洞</tag>
          
          
            
