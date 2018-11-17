@@ -131,7 +131,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://iamwxy.com/自动驾驶-控制篇/control.png">
 <meta property="og:image" content="http://iamwxy.com/自动驾驶-控制篇/roles.png">
-<meta property="og:updated_time" content="2018-11-15T14:11:33.772Z">
+<meta property="og:updated_time" content="2018-11-17T11:53:29.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶 | 控制篇">
 <meta name="twitter:description" content="自动驾驶系统的运动控制控制，是将意图转化为行动的过程。">
@@ -411,11 +411,32 @@
 <script type="math/tex; mode=display">\dot{x}(t) = A(t)x(t) + B(t)u(t)y(t) = C(t)x(t) + D(t)u(t)</script><p>自动驾驶系统的观测结果大多是非线性的，需要先通过线性化系统的状态空间方程，来获得非线性系统的线性模型。</p>
 <script type="math/tex; mode=display">\dot{x}(t) = f ( x(t), u(t) )y(t) = h(x(t), u(t))</script><p>双自由度控制器也适用于非线性系统。前馈用于产生参考轨迹，反馈用于补偿扰动和误差,通过对参考轨迹$x_r(t)$进行线性化处理，可以得到线性化的动态误差。</p>
 <script type="math/tex; mode=display">\delta \dot{x}(t) = A(t)\delta x(t) + B(t)\delta  u(t)\delta y(t) = C(t)\delta x(t) + D(t)\delta u(t)</script><p>其中A B C D是合适的雅可比矩阵。如果存在可设计为产生参考输入$u_r(t)$的轨迹生成过程，使$u_r(t)$生成满足系统非线性系统动力学的可行轨迹，则可配置状态空间控制器对线性化误差动力学进行反馈补偿。</p>
-<h4 id="基于模型的预测控制"><a href="#基于模型的预测控制" class="headerlink" title="基于模型的预测控制"></a>基于模型的预测控制</h4><p>自治系统需要运动模型来进行规划和预测，模型也可以用于控制执行。</p>
+<h4 id="基于模型的预测控制-MPC控制"><a href="#基于模型的预测控制-MPC控制" class="headerlink" title="基于模型的预测控制-MPC控制"></a>基于模型的预测控制-MPC控制</h4><p>自治系统需要运动模型来进行规划和预测，模型也可以用于控制执行。</p>
 <p>一种利用系统建模来优化前向时间范围的控制方法在文献中通常被称为模型预测控制(MPC)。<br>MPC的基本结构如下图所示。<br><br>模型预测控制，将最优控制的性能与鲁棒控制的鲁棒性相结合。预测是在短时间范围内进行的，称为预测范围，模型预测控制器的目标是在预测范围内计算最优解。模型和控制器可以在线改变以适应不同的条件。模型预测控制在工业过程控制应用中取得了巨大的成功，这主要是由于其简单的概念和用输入约束和非线性处理复杂过程模型的能力。</p>
-<p>模型预测控制还有其他一些吸引人的特性，比如设计多变量反馈控制器对它而言是比较简单的。<br>它还可以方便地指定控制器必须执行的系统输入、状态和输出。MPC还允许指定一个目标函数来优化控制工作。<br>MPC还可以处理时间延迟，拒绝测量和未测量干扰，并利用以前存储的预期信息。这个特性对于例如遵循固定的路径等重复的任务非常有用。MPC实现了优化和反馈调整，模拟了自然过程，其也被广泛应用于汽车应用[264]。</p>
+<p>模型预测控制还有其他一些吸引人的特性，比如设计多变量反馈控制器对它而言是比较简单的。<br>它还可以方便地指定控制器必须执行的系统输入、状态和输出。MPC还允许指定一个目标函数来优化控制工作。<br>MPC还可以处理时间延迟，拒绝测量和未测量干扰，并利用以前存储的预期信息。这个特性对于例如遵循固定的路径等重复的任务非常有用。MPC实现了优化和反馈调整，模拟了自然过程，其也被广泛应用于汽车应用。</p>
 <p>为了提高燃油经济性、排放和安全性能，整个车辆系统的运行必须在整个运行范围内达到最佳状态。<br>然而，在汽车系统中应用模型预测控制器与在过程控制行业中所面临的挑战不同。在过程控制行业中，采样时间相对较长，可用的计算资源也比较充足。汽车进程的采样周期为几毫秒，由于空间限制，可用的计算资源数量有限。</p>
 <p>因此，处理器速度和内存的进步以及新算法的开发对于推动MPC在汽车行业的更广泛应用非常重要。<br>MPC已经应用于多种汽车控制应用，包括牵引控制、制动和转向、车道保持等。模型预测技术也被应用于各种工程的轨迹跟踪问题。</p>
+<p> <strong>轨迹生成与追踪</strong><br>已知路径信息的轨迹生成方法有两种。<br>第一种方法是使用优化方法同时生成和跟踪轨迹，另一种方法是解耦轨迹生成和跟踪。前者将生成和执行/跟踪任务集成到一个优化问题中。这种方法通常用于最优时间应用，例如在中。由于处理能力有限，实时运行优化问题是一个挑战，在复杂环境下进行规划可能并不十分有利。</p>
+<h4 id="轨迹生成"><a href="#轨迹生成" class="headerlink" title="轨迹生成"></a><strong>轨迹生成</strong></h4><p>轨迹生成的问题是找到一个完整的控制输入$u(t)$，它对应于某个期望状态的轨迹$x(t)$。<br>轨迹生成问题可以为两点边值问题。<br>边界条件通常包括初始状态$x(t_0) = x_0$和最终目标状态$x(t _) = x_f$，系统动力学$\dot{x} = f (x, u)$作为附加约束。对于满足边界条件的给定状态的轨迹x(t)，如果没有控制输入u(t)，则定义为不可行的轨迹。</p>
+<p>轨迹是限定在一定时间间隔内的运动的表示。<br>这可以是在区间上对状态向量的详细描述$x(t)|(t_0, t &lt; t _f)$上的状态向量的描述，或者是在一个区间上输入向量的描述。$u(t) | (t_0, t &lt; t_f)$.</p>
+<p>自动驾驶汽车的轨迹生成问题可以通过多种技术来解决。讲述轨迹生成的文献通常可以分为两种方法:(i)基于传感器的方法和(ii)基于动力学的方法。<br>第一种方法更倾向于机器人领域。几十年来，机器人研究人员一直在解决轨迹生成问题，该问题已被应用于工业机器人和自主移动机器人。基于传感器的方法通常集中在对环境的感知集成，而不考虑车辆动力学。</p>
+<p>另一种方法更多地基于车辆动力学。文献中提出了各种轨迹的优化方法，如遗传算法的应用，梯度下降法等。<br>对车辆动力学和控制的深入理解可以推动突破自动驾驶车辆的极限。<br>轨迹生成和跟踪的研究也被应用于半自主车辆，用于更先进的驾驶员辅助系统。</p>
+<p>应该在充分考虑自动驾驶汽车的目标之后，在基于传感器的方法和基于动力学的方法之间寻找一个平衡。</p>
+<h4 id="轨迹跟踪"><a href="#轨迹跟踪" class="headerlink" title="轨迹跟踪"></a>轨迹跟踪</h4><p>在这一节中，将综述可用的路径和轨迹跟踪方法。<br>我们认为路径是计划从起始姿态移动到目标姿态的几何表示，而轨迹还包括运动的速度信息。</p>
+<p>目前最流行的两种轨迹跟踪方法是</p>
+<ul>
+<li>几何方法</li>
+<li><p>基于模型的方法</p>
+<h5 id="基于模型的几何路径跟踪"><a href="#基于模型的几何路径跟踪" class="headerlink" title="基于模型的几何路径跟踪"></a>基于模型的几何路径跟踪</h5><p>从基于模型的路径跟踪方法中派生出来的控制器使用车辆的<strong>运动学和/或动力学模型</strong>。</p>
+</li>
+<li><p>基于运动学模型的控制器在低速应用中表现良好，但误差随着车速和路径曲率的增大而增大。</p>
+</li>
+<li>基于动态模型的控制器在高速公路自动驾驶等高速驾驶应用中往往表现良好，但在车辆快速加速、减速和大曲率路径时。基于模型的方法要求路径是连续的，对扰动和大的横向偏移不具有鲁棒性</li>
+</ul>
+<h5 id="基于几何的路径跟踪"><a href="#基于几何的路径跟踪" class="headerlink" title="基于几何的路径跟踪"></a>基于几何的路径跟踪</h5><p>几何路径跟踪算法利用简单的几何关系推导出转向控制律。这些技术利用前视距离来测量车辆前方的误差，就模型复杂度而言可从简单的圆弧计算到更为复杂的几何定理，如矢量跟踪方法。</p>
+<p>最流行的几何路径跟踪算法之一是纯追踪路径跟踪算法。纯追踪路径跟踪算法是在距离车辆当前位置一定前视距离的路径上寻点。该算法相对简单，易于实现，对干扰和较大的横向误差具有较强的鲁棒性。该算法的输入也是路径点，而不是平滑曲线，因此不太容易受到离散化相关问题的影响。如果所选的前向距离不合适，特别是在速度较高的情况下，当前向距离增加时(通常将前向距离设置为与速度相关的递增函数)，该算法仍存在角切（ corner cutting corner cutting）和稳态误差问题</p>
+<p>为了避免路径生成的方式受到限制，路径应该以分段线性方式表示，根据这一原理，具有连续的一阶和二阶导数的平滑轨迹，例如贝塞尔曲线，应该表示为密集点序列，从而能够应用更广泛的潜在跟踪算法。一个点通过线性路径段连接到路径中的下一个点。为了尽可能地逼近连续路径，必须对连续路径进行更密集的离散化。<br>离散节点包含在有序列表中,按顺序和路径点追踪。</p>
+<p>纯算法具有一个可调参数,超前距离$L_{fw}$。阿克曼转向几何,该算法定义了一个虚拟的圆弧连接锚点(rear acle)和跟踪点。<br>&lt;未完待续。。。&gt;</p>
 
       
     </div>
@@ -614,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#传统控制"><span class="nav-number">1.</span> <span class="nav-text">传统控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态空间控制"><span class="nav-number">2.</span> <span class="nav-text">状态空间控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于模型的预测控制"><span class="nav-number">3.</span> <span class="nav-text">基于模型的预测控制</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#传统控制"><span class="nav-number">1.</span> <span class="nav-text">传统控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态空间控制"><span class="nav-number">2.</span> <span class="nav-text">状态空间控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于模型的预测控制-MPC控制"><span class="nav-number">3.</span> <span class="nav-text">基于模型的预测控制-MPC控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轨迹生成"><span class="nav-number">4.</span> <span class="nav-text">轨迹生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轨迹跟踪"><span class="nav-number">5.</span> <span class="nav-text">轨迹跟踪</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基于模型的几何路径跟踪"><span class="nav-number">5.1.</span> <span class="nav-text">基于模型的几何路径跟踪</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于几何的路径跟踪"><span class="nav-number">5.2.</span> <span class="nav-text">基于几何的路径跟踪</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -648,7 +669,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">141.9k </span>
+    <span title="Site words total count">145.9k </span>
   
 </div>
 

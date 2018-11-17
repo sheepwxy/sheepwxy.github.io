@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="早期的自动驾驶汽车(SDVs)本质上是半自主的，因为它们的设计功能通常仅限于执行车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种更全面的规划框架，其可以使SDV能够处理广泛的城市驾驶场景。">
+<meta name="description" content="早期的自动驾驶汽车(SDVs)本质上是自动的，因为它们的设计功能通常仅限于车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种现在也能被广泛使用的规划框架，它可以让自动驾驶汽车有能力处理多样的城市驾驶场景。 自动驾驶汽车的表现相比人类司机差距很大，在DARPA挑战赛中，35只队伍中，只有6支队伍完赛,尽管如 此,这一具有里程碑意义的比赛也证明了在城市环境中">
 <meta name="keywords" content="自动驾驶,总结,DARPA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶 | 规划篇">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶-规划篇.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="早期的自动驾驶汽车(SDVs)本质上是半自主的，因为它们的设计功能通常仅限于执行车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种更全面的规划框架，其可以使SDV能够处理广泛的城市驾驶场景。">
+<meta property="og:description" content="早期的自动驾驶汽车(SDVs)本质上是自动的，因为它们的设计功能通常仅限于车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种现在也能被广泛使用的规划框架，它可以让自动驾驶汽车有能力处理多样的城市驾驶场景。 自动驾驶汽车的表现相比人类司机差距很大，在DARPA挑战赛中，35只队伍中，只有6支队伍完赛,尽管如 此,这一具有里程碑意义的比赛也证明了在城市环境中">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-15T14:04:20.610Z">
+<meta property="og:updated_time" content="2018-11-17T10:15:35.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶 | 规划篇">
-<meta name="twitter:description" content="早期的自动驾驶汽车(SDVs)本质上是半自主的，因为它们的设计功能通常仅限于执行车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种更全面的规划框架，其可以使SDV能够处理广泛的城市驾驶场景。">
+<meta name="twitter:description" content="早期的自动驾驶汽车(SDVs)本质上是自动的，因为它们的设计功能通常仅限于车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种现在也能被广泛使用的规划框架，它可以让自动驾驶汽车有能力处理多样的城市驾驶场景。 自动驾驶汽车的表现相比人类司机差距很大，在DARPA挑战赛中，35只队伍中，只有6支队伍完赛,尽管如 此,这一具有里程碑意义的比赛也证明了在城市环境中">
 
 
 
@@ -396,13 +396,22 @@
       
 
       
-        <p>早期的自动驾驶汽车(SDVs)本质上是半自主的，因为它们的设计功能通常仅限于执行车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种更全面的规划框架，其可以使SDV能够处理广泛的城市驾驶场景。<br><a id="more"></a><br>自动驾驶汽车的性能离人类司机还有差距，在DARPA挑战赛中，在35只队伍中，只有六支队伍完赛,尽管如此,这一具有里程碑意义的比赛也证明了在城市环境中无人驾驶的可行性(42185 188)，也揭示了在研究自动驾驶是急需解决的挑战。</p>
-<p>Boss, DUC, Junior, the second place entry，和Odin, the third place entry，以及其他许多人，使用了类似的三级层次规划框架，包括mission planner, behavioral planner, and motion planner.。</p>
-<p>第四名的Talos据说使用了一个带导航器和一个运动计划器的两级计划器，导航器基本上同时执行任务计划器和行为计划器的功能。</p>
-<p>任务规划人员或路线规划人员考虑的是高层次的目标，例如分配取丢任务，以及应该采取哪些道路来完成任务。</p>
-<p>行为规划人员(或决策者)会做出一些特别的决定，以适当地与其他代理交互并遵守规则限制，从而产生局部目标，例如，改变车道、超车或通过交叉路口。</p>
-<p>运动规划器(或局部规划)生成适当的路径和或一系列动作以实现局部目标，最典型的目标是在达到目标区域的同时避免障碍物碰撞。从DUC开始，尽管分层的划分有些模糊，但自动驾驶汽车整体上仍然继承了这里描述的三级层次结构。</p>
-<p>&lt;未完待续。。。&gt;</p>
+        <p>早期的自动驾驶汽车(SDVs)本质上是自动的，因为它们的设计功能通常仅限于车道跟踪、自适应巡航控制和其他一些基本功能。2007年DARPA城市挑战赛(DUC)展示了一种现在也能被广泛使用的规划框架，它可以让自动驾驶汽车有能力处理多样的城市驾驶场景。</p>
+<p>自动驾驶汽车的表现相比人类司机差距很大，在DARPA挑战赛中，35只队伍中，只有6支队伍完赛,尽管如 此,这一具有里程碑意义的比赛也证明了在城市环境中实现无人驾驶的可行性，也揭示了在研究自动驾驶是急需解决的挑战。<br><a id="more"></a></p>
+<h4 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h4><p>Boss, Junior, Odin, 是DARPA大赛的前三甲，除了它们，还有其他许多队伍，使用了类似的三层规划框架，包括<strong>任务规划器（全局规划器）、行为规划器动作规划器（mission planner, behavioral planner, and motion planner.）</strong>。第四名的Talos据说使用了两层规划器：一个导航器和一个运动规划期，导航器基本上同时执行任务规划器和行为规划器的功能。</p>
+<p><strong>任务规划器或路线规划器（route planner）</strong>关注的是高层次的目标，例如分配、取\丢任务，以及决定应该采取哪些道路来完成驾驶任务。</p>
+<p><strong>行为规划器或决策者（decision maker）</strong>会做出做出一些决策，进而遵守规则限制，并和其他交通参与者交互，并产生相应的局部目标，例如，改变车道、超车或通过交叉路口。</p>
+<p><strong>运动规划器或局部规划器（local planning）</strong>生成适当的路径和或一系列动作以实现局部目标，举例来说，最典型的目标是达到目标区域的同时避免障碍物碰撞。从DUC开始，尽管分层的划分有些模糊，但自动驾驶汽车整体上仍然继承了这里描述的三级层次结构。</p>
+<h4 id="Mission-Planning"><a href="#Mission-Planning" class="headerlink" title="Mission Planning"></a>Mission Planning</h4><p>任务规划，或者说路径规划，或者称全局规划，通常通过在一个<strong>反映道路/路径网络连接的有向图网络上进行图搜索</strong>。DUC中提供了路网定义文件(RNDF—Road Network Definition File )作为先验信息。RNDF用图的节点和边表示可通过的路段，除此之外，它还包含诸如停止标志的位置、车道宽度和停车位位置等信息。RNDF是竞赛组织者手动生成的，但是现在正在进行相应研究，目标是通过自动化过程，通过直接感知基础设施(例如道路边界)直接，甚至通过对车辆运动的推断，生成存储在路网图(RNG])的更丰富的信息。</p>
+<p>不管RNG是否是手动生成的，搜寻路径这个问题都是通过分配相对应的权重，这个权重会和比如某个特定路段的距离相一致，这之后应用图搜索算法来解决的。Dijkstra s[194]或A*[195]等经典算法对于较小的邻域是有效的，但在大型网络上需要更高效率的方法，这些方法可以在下面这篇调查论文中得到了详细描述。《Bast, H.; Delling, D.; Goldberg, A.; Müller-Hannemann, M.; Pajor, T.; Sanders, P.; Wagner, D.; Werneck, R.F.Route planning in transportation networks. arXiv 2015, arXiv:1504.05140》</p>
+<h4 id="Behavioral-Planning"><a href="#Behavioral-Planning" class="headerlink" title="Behavioral Planning"></a>Behavioral Planning</h4><p>行为规划人员负责制定决策，以确保车辆遵守规定的道路规则，并以符合习惯的、安全的方式与其他参与者进行互动。这可以通过结合局部目标设立、障碍物设置、调整可驾驶区域边界和/或基于成本的区域启发式调整来实现。</p>
+<p>在获得特定的已感知到的驾驭语义场景后，大多数DUC车辆都是通过有着不同复杂度的<strong>有限状态机(FSMs)</strong>来做出决策的。<br>“优先观察者”（ precedence observer ）和“间隙观察者”（ precedence observer ）这两个术语被创造出来，用来分类 用于检查状态转换所需的某些逻辑条件的函数。其中，优先观察者用于检查与车辆相关的规则是否允许车辆继续前进，间隙观察者检查被检测到的障碍物进入指定的感兴趣区域的最短时间，以确保其他交通参与者的安全通行。</p>
+<p>例如,当接近一个停车标志时,SDV必在停止线前完全停车来确保<strong>predence observer</strong>，等待在十字路口的其他静止车辆按顺序离开,并通过通过测量沿着它预期路径行进的话的碰撞时间(迎面而来的交通可能没有在十字路口停止)进而确保<strong>clearance observer</strong></p>
+<p>这种性质的有限状态机是有限的，因为它们是为一定数量的特定情况手工设计的。</p>
+<p>在FSM结构中没有明确描述的情况下，车辆也可能会表现出非预期的行为，如果没有有效的死锁保护的话，车辆可能会发现自己处于活跃状态，甚至是死锁状态。</p>
+<p>最近的研究工作试图改进大型决策结构中的组织，从而管理更大的规则集[198 200]。<br>也有一些工作尝试在决策结构中寻求可证明的保证（ <strong>provable assurances</strong> ），以保证遵守规则集。</p>
+<h4 id="Motion-Planning"><a href="#Motion-Planning" class="headerlink" title="Motion Planning"></a>Motion Planning</h4><p>运动规划是一个应用非常广泛的研究领域，比如制造、医疗、应急响应、安全/监视、农业和交通运输等领域。<br>在移动机器人领域，运动规划指的是进行一系列决策行动以达到特定目标的过程，这通常是在避免与障碍物碰撞时进行的。<br>运动规划者通常是根据他们的计算效率和完整性（compeltness）进行比较和评估。<br>计算效率指的是进程运行时间，以及如何根据配置空间的维数进行缩放。<br>如果算法在有限的时间内终止，则认为该算法是完整的，当存在一个解时，该算法总是返回一个解，并表明在其他情况下不存在解。</p>
+<p>运动规划问题已被证明具有极大的计算复杂性，尤其是在高维空间中。为了保证完整性，可能需要对所有可能的路径进行彻底搜索，这使得许多方法在高维配置空间中陷入维数的困境;随着搜索空间维度的增加，对所有被占据的障碍物空间的表示和对无障碍物点的检测变得越来越困难。运动规划背后的核心思想是通过将连续空间模型转换为离散模型来克服这一挑战[206]。<br>目前存在两类实现这种转变的方法:(1)<strong>组合规划</strong>，建立了一个离散的表示法，准确地表示原始问题。哪个建立了一个离散的表示法，准确地表示原始问题（2）<strong>基于采样的规划</strong>，利用碰撞检测模块对来自配置空间的样本进行离散搜索。</p>
 
       
     </div>
@@ -455,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/自动驾驶传感器-激光雷达-二.html" rel="next" title="自动驾驶传感器 | 激光雷达(二)">
-                <i class="fa fa-chevron-left"></i> 自动驾驶传感器 | 激光雷达(二)
+              <a href="/捉螃蟹.html" rel="next" title="捉螃蟹">
+                <i class="fa fa-chevron-left"></i> 捉螃蟹
               </a>
             
           </div>
@@ -526,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -583,6 +601,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#背景介绍"><span class="nav-number">1.</span> <span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mission-Planning"><span class="nav-number">2.</span> <span class="nav-text">Mission Planning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Behavioral-Planning"><span class="nav-number">3.</span> <span class="nav-text">Behavioral Planning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Motion-Planning"><span class="nav-number">4.</span> <span class="nav-text">Motion Planning</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -610,7 +644,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">141.9k </span>
+    <span title="Site words total count">145.9k </span>
   
 </div>
 
