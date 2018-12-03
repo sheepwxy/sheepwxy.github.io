@@ -4,14 +4,97 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E6%84%9F%E7%9F%A5%E7%AF%87.html</loc>
+    <lastmod>2018-12-02T13:25:30.709Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶 | 感知篇</title>
+        <pubTime>2018-12-02T13:25:30.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E4%B9%A0.html</loc>
+    <lastmod>2018-12-02T13:21:15.935Z</lastmod>
+    <data>
+        <display>
+        <title>人生中第一次实习</title>
+        <pubTime>2018-11-27T14:14:39.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2.html</loc>
+    <lastmod>2018-12-02T12:43:33.748Z</lastmod>
+    <data>
+        <display>
+        <title>我为什么要写博客</title>
+        <pubTime>2018-12-02T10:19:02.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E6%8D%89%E8%9E%83%E8%9F%B9.html</loc>
+    <lastmod>2018-12-02T12:36:22.772Z</lastmod>
+    <data>
+        <display>
+        <title>捉螃蟹</title>
+        <pubTime>2018-11-30T14:01:32.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E6%AF%8F%E6%97%A5%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95.html</loc>
-    <lastmod>2018-11-25T15:36:43.866Z</lastmod>
+    <lastmod>2018-12-02T12:22:22.232Z</lastmod>
     <data>
         <display>
         <title>每日学习记录</title>
         <pubTime>2018-11-24T15:59:59.000Z</pubTime>
         
         <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%B8%8B%E9%9B%A8.html</loc>
+    <lastmod>2018-12-02T12:20:57.681Z</lastmod>
+    <data>
+        <display>
+        <title>下雨</title>
+        <pubTime>2018-11-29T08:20:15.000Z</pubTime>
+        
+        <tag>随笔</tag>
          
          
            
@@ -31,57 +114,6 @@
         <tag>自动驾驶</tag>
          
         <tag>总结</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2.html</loc>
-    <lastmod>2018-11-18T12:40:44.627Z</lastmod>
-    <data>
-        <display>
-        <title>我为什么要写博客</title>
-        <pubTime>2018-11-18T10:19:02.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E4%B9%A0.html</loc>
-    <lastmod>2018-11-17T13:12:52.155Z</lastmod>
-    <data>
-        <display>
-        <title>人生中第一次实习</title>
-        <pubTime>2018-11-15T14:14:39.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E6%8D%89%E8%9E%83%E8%9F%B9.html</loc>
-    <lastmod>2018-11-17T12:14:00.642Z</lastmod>
-    <data>
-        <display>
-        <title>捉螃蟹</title>
-        <pubTime>2018-11-11T14:01:32.000Z</pubTime>
-        
-        <tag>随笔</tag>
          
          
            
@@ -366,9 +398,9 @@
         <title>自动驾驶仿真工具需求</title>
         <pubTime>2018-10-30T15:22:00.000Z</pubTime>
         
-        <tag>测试</tag>
-         
         <tag>自动驾驶仿真</tag>
+         
+        <tag>测试</tag>
          
          
            
@@ -385,9 +417,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -826,9 +858,9 @@
         
         <tag>自动驾驶</tag>
          
-        <tag>测试</tag>
-         
         <tag>总结</tag>
+         
+        <tag>测试</tag>
          
          
            
@@ -1021,9 +1053,9 @@
         <title>从搭建博客想到的</title>
         <pubTime>2018-09-06T13:31:55.000Z</pubTime>
         
-        <tag>随笔</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>随笔</tag>
          
          
            
@@ -1095,11 +1127,11 @@
         <title>科研感悟</title>
         <pubTime>2018-08-22T13:48:34.000Z</pubTime>
         
-        <tag>随笔</tag>
-         
         <tag>总结</tag>
          
         <tag>高效学习</tag>
+         
+        <tag>随笔</tag>
          
          
            
@@ -1207,9 +1239,9 @@
         
         <tag>自动驾驶</tag>
          
-        <tag>自动驾驶仿真</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -1406,9 +1438,9 @@
         <title>信息论随笔四</title>
         <pubTime>2018-08-12T11:51:39.000Z</pubTime>
         
-        <tag>随笔</tag>
-         
         <tag>总结</tag>
+         
+        <tag>随笔</tag>
          
          
            
@@ -1590,9 +1622,9 @@
         <title>谈古龙</title>
         <pubTime>2018-07-19T12:15:22.000Z</pubTime>
         
-        <tag>随笔</tag>
-         
         <tag>读书</tag>
+         
+        <tag>随笔</tag>
          
          
            
@@ -1753,26 +1785,9 @@
         <title>Ubuntu学习整理</title>
         <pubTime>2018-08-09T08:19:21.000Z</pubTime>
         
-        <tag>机器学习</tag>
-         
         <tag>总结</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E4%B8%8B%E9%9B%A8.html</loc>
-    <lastmod>2018-08-07T14:15:55.005Z</lastmod>
-    <data>
-        <display>
-        <title>下雨</title>
-        <pubTime>2018-07-28T08:20:15.000Z</pubTime>
-        
-        <tag>随笔</tag>
+        <tag>机器学习</tag>
          
          
            
