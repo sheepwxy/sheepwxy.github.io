@@ -4,13 +4,19 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E6%84%9F%E7%9F%A5%E7%AF%87.html</loc>
-    <lastmod>2018-12-02T13:25:30.709Z</lastmod>
+    <loc>http://iamwxy.com/%E6%8B%9B%E8%81%98%E9%9C%80%E6%B1%82-%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E7%A8%8B%E5%B8%88.html</loc>
+    <lastmod>2018-12-09T15:38:55.706Z</lastmod>
     <data>
         <display>
-        <title>自动驾驶 | 感知篇</title>
-        <pubTime>2018-12-02T13:25:30.000Z</pubTime>
+        <title>招聘需求 | 自动驾驶仿真工程师</title>
+        <pubTime>2018-12-09T13:59:14.000Z</pubTime>
         
+        <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶仿真</tag>
+         
+        <tag>就业信息</tag>
+         
          
            
         </display>
@@ -20,7 +26,7 @@
     
   <url>
     <loc>http://iamwxy.com/%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E4%B9%A0.html</loc>
-    <lastmod>2018-12-02T13:21:15.935Z</lastmod>
+    <lastmod>2018-12-09T12:54:38.755Z</lastmod>
     <data>
         <display>
         <title>人生中第一次实习</title>
@@ -28,6 +34,21 @@
         
         <tag>随笔</tag>
          
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E6%84%9F%E7%9F%A5%E7%AF%87.html</loc>
+    <lastmod>2018-12-02T13:25:30.709Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶 | 感知篇</title>
+        <pubTime>2018-12-02T13:25:30.000Z</pubTime>
+        
          
            
         </display>
@@ -398,9 +419,9 @@
         <title>自动驾驶仿真工具需求</title>
         <pubTime>2018-10-30T15:22:00.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>测试</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -858,9 +879,9 @@
         
         <tag>自动驾驶</tag>
          
-        <tag>总结</tag>
-         
         <tag>测试</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -1053,9 +1074,9 @@
         <title>从搭建博客想到的</title>
         <pubTime>2018-09-06T13:31:55.000Z</pubTime>
         
-        <tag>高效学习</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -1129,9 +1150,9 @@
         
         <tag>总结</tag>
          
-        <tag>高效学习</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -1785,9 +1806,9 @@
         <title>Ubuntu学习整理</title>
         <pubTime>2018-08-09T08:19:21.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>机器学习</tag>
+         
+        <tag>总结</tag>
          
          
            
