@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="同济大学,自动驾驶仿真，汽车学院，同济智能汽车研究所，高效学习，机器学习，生活随笔，线性代数，自动驾驶，深度学习，SLAM，自动驾驶测试" />
+  <meta name="keywords" content="自动驾驶,总结," />
 
 
 
@@ -121,17 +121,18 @@
 
 
 
-<meta name="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta name="description" content="感知是指一个自主系统从环境中收集信息和提取相关知识的能力。环境感知是指发展对环境的上下文理解，如障碍物的位置、路标的检测、数据的语义分类等。 定位是指机器人根据环境确定其位置的能力。">
+<meta name="keywords" content="自动驾驶,总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶 | 感知篇">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶-感知篇.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta property="og:description" content="感知是指一个自主系统从环境中收集信息和提取相关知识的能力。环境感知是指发展对环境的上下文理解，如障碍物的位置、路标的检测、数据的语义分类等。 定位是指机器人根据环境确定其位置的能力。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-02T13:25:30.709Z">
+<meta property="og:updated_time" content="2018-12-10T13:13:06.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶 | 感知篇">
-<meta name="twitter:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta name="twitter:description" content="感知是指一个自主系统从环境中收集信息和提取相关知识的能力。环境感知是指发展对环境的上下文理解，如障碍物的位置、路标的检测、数据的语义分类等。 定位是指机器人根据环境确定其位置的能力。">
 
 
 
@@ -347,8 +348,8 @@
               
                 <span class="post-meta-item-text">写于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T21:25:30+08:00">
-                2018-12-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T21:25:30+08:00">
+                2018-12-10
               </time>
             
 
@@ -395,7 +396,51 @@
       
 
       
-        
+        <p>感知是指一个自主系统从环境中收集信息和提取相关知识的能力。环境感知是指发展对环境的上下文理解，如障碍物的位置、路标的检测、数据的语义分类等。</p>
+<p>定位是指机器人根据环境确定其位置的能力。<br><a id="more"></a></p>
+<h4 id="环境感知"><a href="#环境感知" class="headerlink" title="环境感知"></a>环境感知</h4><p>环境感知是实现自动驾驶汽车的一项基本功能，它为汽车提供有关驾驶环境的关键信息，包括自由行驶区域和周围障碍物的位置、速度，甚至是对其未来状态的预测。<br>基于所实现的传感器，环境感知任务可以通过LIDARs、相机或这两种设备之间的融合来处理。其他一些传统方法也可能涉及使用短距离/远程雷达和超声波传感器。</p>
+<p>无论传感器是如何实现的，感知任务的两个关键元素是(i)路面提取和(ii)道路目标检测</p>
+<h5 id="LIDAR"><a href="#LIDAR" class="headerlink" title="LIDAR"></a>LIDAR</h5><p>激光雷达是一种光探测和测距装置，每秒以设定的模式发送出去数以百万计的光脉冲。通过它的旋转轴，它能够创建一个动态的、三维的环境地图。激光雷达是目前大多数自动驾驶车辆目标检测的核心技术。</p>
+<p>在真实场景中，激光雷达返回的点从来都不是完美的。<br>激光雷达点云处理的难点在于扫描点稀疏、缺失点和无组织模式（unorganized patterns)。周边环境也增加了挑战，因为反射回来的表面可能是任意和不稳定的。有时，甚至人类都很难从扫描点的可视化中感知有用的信息。</p>
+<h6 id="representation表示"><a href="#representation表示" class="headerlink" title="representation表示"></a>representation表示</h6><p>激光雷达输出的是物体反射回来的稀疏三维点，每个点代表物体相对于激光雷达的三维表面位置。通常使用三种主要的点表示形式，即<strong>点云、特征和网格</strong>。</p>
+<p><strong>基于点云的方法</strong>直接使用原始传感器数据进行进一步处理。这种方法提供了更好的环境表示，但代价是增加了处理时间和降低了内存效率。为了缓解这种情况，通常对原始点云应用基于体素的过滤机制（voxel-based filtering mechanism）来减少点的数量。</p>
+<p><strong>基于特征的方法</strong>首先从点云中提取参数特征，然后利用提取的特征表示环境。常用的特征包括直线和曲面。<br>这种方法内存效率最高，但它通常过于抽象，其准确性取决于点云的性质，因为并不是所有的环境特性都可以通过特征达到很好地近似。</p>
+<p><strong>基于网格的方法</strong>将空间离散成小网格，每个小网格都填充了来自点云的信息，从而建立了一个点邻域（point neighborhood）。这种方法是内存高效的，且不依赖于预定义的特性。然而，确定离散化的大小并不容易。<br>常用自适应八叉树来指导粗网格到细网格的分割。</p>
+<h6 id="分割算法"><a href="#分割算法" class="headerlink" title="分割算法"></a>分割算法</h6><p>对于三维点云信息的感知，通常分为两个步骤:<strong>分割和分类</strong>。有些方法可能包括第三步，时间统整（intergation），以提高准确性和一致性。</p>
+<p>点云分割是把点聚类到多个同质组的过程,而分类识别是确定各分割集群的类别,例如,自行车,汽车,行人,路面,等等。</p>
+<p>三维点云分割的算法可以分为五个分类:<strong>基于边缘的,基于区域的，基于属性的,基于模型的,和基于图的</strong>。在此基础上，还有一种基于深度学习算法的分类方法。</p>
+<p><strong>基于边缘的方法</strong>主要适用于具有较强人工边缘特征的对象，如道路路缘。但是它并不是一种有效的自然场景检测方法，而且容易受到噪声的影响。为了提高鲁棒性，可以计算主点的海拔梯度（ elevation gradients of principal points ），并采用梯度滤波器滤除波动点。</p>
+<p><strong>基于区域的方法</strong>利用区域增长机制，根据欧几里得距离或表面法线等标准对邻域点进行聚类。在大多数情况下，这个过程从生成一些种子点开始，然后根据预定义的标准从这些点生成区域。与基于边缘的方法相比，该方法更具有通用性和实用性。同时由于考虑了邻域信息，避免了局部视图问题。</p>
+<p>当前提出了一种基于扫描线的局部最低点识别算法，并以这些点为种子，根据坡度和高程生长为地面段。另外，学术界还提出了一种基于点邻域平整度和法向量的特征，用于树木和非平面区域的生长。</p>
+<p>为了提高算法的鲁棒性，学术界提出了一种自适应欧几里得聚类算法。另外还有一种根据每束激光连续扫描环的距离差推导出来的不均匀属性作为生长准则，它更有能力检测小障碍物，对地面坡度、车辆俯仰和滚动的存在不那么敏感。</p>
+<p>在文献中，一些研究人员还研究了如何通过更多的启发法来有效地生成种子点，从而使它们能够引导更有效和更健壮的区域生长过程。</p>
+<p>Vieira等人在选择种子点之前，首先根据曲率将尖锐边缘的点去掉，因为好的种子点通常是在区域内部，而不是在区域边界。</p>
+<p>也有学者首先每个点的法线进行估计,然后选择残差最小的点作为初始种子点。<br>进一步的研究选择的局部平面（local plane）,而不是法线,每一点是提取后和相应的计算之后得到分数,种子的选择是基于分数。</p>
+<p>多阶段种子生成方法。利用共面点的相干性和邻近性，将非空体按邻近性分组，这些片段作为下一个分割过程的种子。最后根据平面连接和交叉点合并邻域共面点段。</p>
+<p>基于区域的分割方法在文献中得到了广泛的应用，但分割结果过于依赖于种子点的选择。选择错误的点可能导致分割不充分和效率低下，种子点的不同选择通常导致不同的分割。此外，所有基于区域的方法都需要大量的计算资源，既耗费时间又耗费内存。</p>
+<p><strong>基于模型的方法</strong>，也称为参数化方法，首先将这些点拟合到预定义的模型中。这些模型，有平面、球面、圆锥和圆柱，通常可以用一种封闭的数学形式有效而紧凑地表示。<br>这些特定模型的离群值被聚集成一个部分。</p>
+<p>大多数基于模型的方法都是用来分割地平面的。文献中应用最广泛的两种模型拟合算法是RANSAC (Random Sample Consensus)和HT (Hough Transform)基于模型的方法与这两种算法具有相同的优缺点。</p>
+<p>RANSAC算法能实现对点云中的地平面进行分割。然而，对于非平面的路面，如起伏的道路、上坡、下坡、驼峰等，这种模型拟合方法是不够的。为了减少这些缺陷，Oniga等人将平面拟合成二次型，而不是基于RANSAC的平面形式。然后设计了一个区域生长过程来优化二次平面。</p>
+<p>Asvadi等人将车辆前方空间划分为若干等距(5 m)条，基于最小二乘法进行拟合，每条条对应一个平面。<br>学者们还提出了一种基于分段的地表估计方法，该方法由切片、gating、平面拟合和验证四个步骤组成。<br>分割步骤将车辆前面的空间分割成激光雷达点数量大致相等的区域，而门控步骤基于四分位间距法剔除每个区域的离群值。然后对每个切片区域进行RANSAC平面拟合，找到所有的分段平面，最后通过检查连续平面之间的法向和高度差进行验证。</p>
+<p>HT模型拟合方法也可以在文献中找到，适用于不同的模型，如平面、柱体、球体。可以将三维HT应用于点水平和法向量识别点云中的平面结构，也可以用其来检测点云中的柱面。与传统的需要5维霍夫空间的方法相比，该方法降低了时间和空间复杂度。</p>
+<p>如上所述，基于模型的平面提取方法在文献中已有较好的建立。通常情况下，这些方法是分割的第一步，用于去除底面（ground plane），而其他方法，如区域增长，是用于聚类剩下的点。</p>
+<p>然而，基于模型的方法的主要缺点是它没有考虑到邻居和上下文信息，因此它可能会强制随机点进入一个特定的模型。此外，分割对点云密度、位置精度和噪声都很敏感。</p>
+<p><strong>基于属性的方法</strong>通常采用两步方法，第一步是计算每个点的属性，第二步是根据相关属性对点进行聚类。<br>，这组方法允许更多的线索被整合到顶部空间信息的中。然而，分割的成功与否也很大程度上取决于派生的隐藏属性。</p>
+<p>基于属性的方法首先计算每个点的最优邻域大小。在主成分分析的基础上，考虑了相邻信息的影响，提出了基于主成分分析的几何特征。然后利用LIBSVM将几何特征作为输入，为每个点分配三种类型的属性(线性、平面和球面)。最后，设计分割规则，根据相关属性对点进行聚类。</p>
+<p><strong>基于图的方法</strong>，将点云转换为图结构，每个点作为顶点/节点，相邻点之间的连接作为图边缘。<br>基于图的方法在图像语义分割中具有很强的优势，它可以将局部和全局的线索、邻域信息、上下文、平滑度等自定义特征融入到图像的表达中，对整个图像的分割进行全局优化。</p>
+<p>图像分割中的图形切割方法，在点云的内容上，通常采用CRF(条件随机场)或MRF(马尔可夫随机场)的形式，优化通常采用最小-最大流切割算法或其变体。</p>
+<p>在最近的研究中，学者首先创建了k近邻图，之后根据背景补偿函数对每个节点进行赋值，增加了硬前景约束，并通过mincut实现了前景和背景分割。</p>
+<p>也有学者采用基于图形的方法，利用基于局部凹凸度度量的统一通用准则分割地面和物体。</p>
+<p>与其他方法相比，基于图的方法由于具有上述的全局特征，在处理复杂场景时具有更强的鲁棒性。<br>这些方法的主要问题是通常需要更多的时间来计算，特别是对于优化部分。</p>
+<p><strong>基于机器学习的算法</strong> 随着计算机视觉中机器学习算法的发展，一些研究者也在研究如何将通常应用于二维图像的机器学习架构应用到三维点云中进行分割和检测。可以通过随机森林分类器，将每个点分类为一个语义类。</p>
+<p>基于轻量级的三维特征对分类器进行了训练。然后，通过检测语义结构的差异，对个体立面进行分类。为了提高存储效率和分割精度，现在常用一种基于三维卷积的八叉树网络。</p>
+<p>它利用点云的稀疏性，集中内存分配和计算，以便在不影响分辨率的情况下实现更深层次的网络。该算法是近年来发展起来的，存在一些关键的实际问题，难以实现实时操作。然而，它们确实为点云分割问题提供了新的见解。如检测算法所示，它们可以提供一个统一的管道，将分割和检测过程结合起来。</p>
+<h6 id="检测算法"><a href="#检测算法" class="headerlink" title="检测算法"></a>检测算法</h6><p>分割完成后，每个簇需要被分类到不同的对象中。每个簇中嵌入的信息主要来自空间关系和点的激光雷达强度，在目标识别中应用非常有限。因此，大多数算法将利用计算机视觉上的检测问题，通过一些融合机制，待会展示。然而，也有一些其他的研究工作在探索从点云数据进行目标识别的可能性</p>
+<p>其中一种算法是对于每个线段，生成所有表面法向量高度值的直方图，如果最后一个线段包含最多的投票，则将该线段分类为ground。这种算法不能区分地面上的物体。</p>
+<p>Zhang等提出了一种基于SVM (Support Vector Machine, Support Vector Machine)的分类器，将集群划分为地面、植被、建筑、电线和车辆。共推导出13个特征作为SVM分类器的输入。但是，该分类器仍然非常粗糙，对于自动驾驶汽车的应用还不够实用。</p>
+<p>与前面提到的机器学习算法相比，最近开发的机器学习算法更加通用和健壮，因为它们能够识别更多类别的对象。<strong>VoxNet</strong>实现了一个三维卷积神经网络可以对三维点云进行分类(占用网格/体积表示)。<strong>三维卷积深度信念网络</strong>，从原始CAD数据中学习复杂三维形状在不同对象类别和任意姿态下的分布。</p>
+<p>但是对于三维网络，计算和内存需求随着三维点云的输入尺寸的增大而增大。上述方法只能在303个体素的阶数下操作，能够充分利用三维物体丰富细致的几何特征。<br>如分割部分所述，八叉树网络是处理三维点云的一种更有效的架构。其将输入集群的分辨率从$30^3$阶提高到$256^3$阶</p>
+
       
     </div>
     
@@ -428,6 +473,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
+        </div>
+      
 
       
       
@@ -437,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/我为什么要写博客.html" rel="next" title="我为什么要写博客">
-                <i class="fa fa-chevron-left"></i> 我为什么要写博客
+              <a href="/自动驾驶仿真系统设计-一.html" rel="next" title="自动驾驶仿真系统设计(一)">
+                <i class="fa fa-chevron-left"></i> 自动驾驶仿真系统设计(一)
               </a>
             
           </div>
@@ -446,10 +499,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/招聘需求-自动驾驶仿真工程师.html" rel="prev" title="招聘需求 | 自动驾驶仿真工程师">
-                招聘需求 | 自动驾驶仿真工程师 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -508,8 +557,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -565,6 +623,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境感知"><span class="nav-number">1.</span> <span class="nav-text">环境感知</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#LIDAR"><span class="nav-number">1.1.</span> <span class="nav-text">LIDAR</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#representation表示"><span class="nav-number">1.1.1.</span> <span class="nav-text">representation表示</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#分割算法"><span class="nav-number">1.1.2.</span> <span class="nav-text">分割算法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#检测算法"><span class="nav-number">1.1.3.</span> <span class="nav-text">检测算法</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -592,7 +666,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">152.2k </span>
+    <span title="Site words total count">156.1k </span>
   
 </div>
 
@@ -775,7 +849,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1543757130000', 
+            id: '1544448330000', 
             owner: 'sheepwxy',
             repo: 'tjwxy.github.io',
             
@@ -1151,6 +1225,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
