@@ -124,14 +124,14 @@
 <meta name="description" content="感知是指一个自主系统从环境中收集信息和提取相关知识的能力。环境感知是指发展对环境的上下文理解，如障碍物的位置、路标的检测、数据的语义分类等。 定位是指机器人根据环境确定其位置的能力。">
 <meta name="keywords" content="自动驾驶,总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自动驾驶 | 感知篇">
+<meta property="og:title" content="自动驾驶 | 感知篇（上）">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶-感知篇.html">
 <meta property="og:site_name" content="吴旭阳的博客">
 <meta property="og:description" content="感知是指一个自主系统从环境中收集信息和提取相关知识的能力。环境感知是指发展对环境的上下文理解，如障碍物的位置、路标的检测、数据的语义分类等。 定位是指机器人根据环境确定其位置的能力。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T12:37:17.194Z">
+<meta property="og:updated_time" content="2018-12-18T14:14:53.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自动驾驶 | 感知篇">
+<meta name="twitter:title" content="自动驾驶 | 感知篇（上）">
 <meta name="twitter:description" content="感知是指一个自主系统从环境中收集信息和提取相关知识的能力。环境感知是指发展对环境的上下文理解，如障碍物的位置、路标的检测、数据的语义分类等。 定位是指机器人根据环境确定其位置的能力。">
 
 
@@ -168,7 +168,7 @@
 
 
 
-  <title>自动驾驶 | 感知篇 | 吴旭阳的博客</title>
+  <title>自动驾驶 | 感知篇（上） | 吴旭阳的博客</title>
   
 
 
@@ -336,7 +336,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">自动驾驶 | 感知篇</h2>
+          <h2 class="post-title" itemprop="name headline">自动驾驶 | 感知篇（上）</h2>
         
 
         <div class="post-meta">
@@ -442,33 +442,6 @@
 <p>Zhang等提出了一种基于SVM (Support Vector Machine, Support Vector Machine)的分类器，将集群划分为地面、植被、建筑、电线和车辆。共推导出13个特征作为SVM分类器的输入。但是，该分类器仍然非常粗糙，对于自动驾驶汽车的应用还不够实用。</p>
 <p>与前面提到的机器学习算法相比，最近开发的机器学习算法更加通用和健壮，因为它们能够识别更多类别的对象。<strong>VoxNet</strong>实现了一个三维卷积神经网络可以对三维点云进行分类(占用网格/体积表示)。<strong>三维卷积深度信念网络</strong>，从原始CAD数据中学习复杂三维形状在不同对象类别和任意姿态下的分布。</p>
 <p>但是对于三维网络，计算和内存需求随着三维点云的输入尺寸的增大而增大。上述方法只能在303个体素的阶数下操作，能够充分利用三维物体丰富细致的几何特征。<br>如分割部分所述，八叉树网络是处理三维点云的一种更有效的架构。其将输入集群的分辨率从$30^3$阶提高到$256^3$阶。</p>
-<h4 id="视觉"><a href="#视觉" class="headerlink" title="视觉"></a>视觉</h4><p>自动驾驶汽车环境感知系统中的视觉系统通常包括道路检测和道路目标检测。道路检测包括车道线标记检测和路面检测两大类。道路目标检测主要包括车辆检测和行人检测。就方法而论，包括传统的基于人工提取的特征的方法。也包括最近发展起来的深度学习方法。</p>
-<h5 id="车道线标志检测"><a href="#车道线标志检测" class="headerlink" title="车道线标志检测"></a>车道线标志检测</h5><p>车道线标记检测是识别道路上的车道线标记，并根据检测到的线估计车辆的姿态。这些信息可以作为车辆位置反馈给车辆控制系统。</p>
-<p>由于各种各样的不确定性在现实交通道路状况和道路奇点（singularities）这仍然是一个具有挑战性的问题, <strong>这其中可能包括来自汽车和树木的阴影,光照条件的变化,破损的路面标志,和其他标记,如方向箭头,警示文字和斑马线等</strong>。</p>
-<p>大多数车道线检测算法都有三个共同的步骤:</p>
-<ul>
-<li>车道线特征提取，可通过边缘检测或颜色检测，或通过SVM等学习算法或boost分类算法;</li>
-<li>将像素拟合到不同的模型中，如直线、抛物线、双曲线，甚至锯齿线;</li>
-<li>基于拟合模型估计车辆姿态。<br>在车辆位姿估计前还可能存在一个步骤，即利用连续性，基于当前帧中的检测结果通过卡尔曼滤波和粒子滤波等滤波机制指导下一步搜索。</li>
-</ul>
-<h6 id="车道线特征提取"><a href="#车道线特征提取" class="headerlink" title="车道线特征提取"></a>车道线特征提取</h6><p>其是识别属于车道线标记的像素，剔除非车道线标记像素。文献中的大多数方法都是基于以下观察，即车道标记与道路路面对比较大。</p>
-<p><strong>基于梯度的算法</strong>。有局部对称阈值的Sobel边缘检测器、自适应阈值化和梯度增强转换等。但是这些算法对噪声敏感，在杂波和阴影中会出现大量的离群值。此外，这些算法视角局限于局部视图，忽略了车道线标记(细长明亮结构)的形状特征。</p>
-<p><strong>基于图像梯度的一些对噪声不敏感的高级变体</strong>例如，可控滤波器是基于二维高斯函数的二阶导数的，脊检测器基于一阶导数的张量场构造的。当梯度的方向与假定的车道线方向偏离太多时，这两种方法都可以得到梯度方向的响应，有助于去除离群值。</p>
-<p>另一组算法试图从不同的角度检测车道线标记，<strong>沿图像行搜索图像低-高-低强度模式</strong>。这种类型最常见的算法是box filter(也称为top-hat filter)或其他形式的变体，它们比上述算法更可靠。简而言之，这种算法用某种形式的阶跃滤波器对图像进行卷积，选择高响应像素作为每一行图像的车道候选线。这通常能够提取车道线标记的中轴而不是边缘。为了使这种算法能够正常工作，必须根据图像中车道线标记宽度精确地调整其尺度或步长，以防止过不足滤波。否则，原始图像不得不通过反向透视映射(IPM)进行转换，以补偿相机的透视效果。因此，这也需要一个很好的相机俯仰角(或视角)的估计。同时，需要进行插值来弥补IPM图像中缺失的像素。随着观测距离的增大，插值越来越不准确。为了解决这一问题，有学者提供了一种自适应机制，可以在原有宽度测量的基础上在线更新步长。</p>
-<p>上述车道线提取算法的另一个常见缺点是无法将车道线标记与其他道路标记(如警示信文字等)区分开来。这些道路标记有时会导致严重的估计错误。</p>
-<h6 id="模型拟合"><a href="#模型拟合" class="headerlink" title="模型拟合"></a>模型拟合</h6><p>它是从车道线检测结果中提取车道的高级表示的过程。根据所使用的模型，车辆姿态可以从拟合模型中得到，该模型还可用于指导下一帧车道线检测，以提高连续性。</p>
-<p>文献中提出过多种道路模型。包括参数化模型和半参数化模型，后者主要由B-Snake、Cubic、active contours等样条构成。这些模型的优点是更加灵活，可以覆盖各种路面形状。然而，它们的计算要求更高，也更复杂。另外，它们对控制点选择要求比较高。由于没有单一的模型可以覆盖所有类型的道路形状，因此也需要考虑在线选型。</p>
-<h6 id="时间集成步骤-time-intergration-step"><a href="#时间集成步骤-time-intergration-step" class="headerlink" title="时间集成步骤(time intergration step)"></a>时间集成步骤(time intergration step)</h6><p>是利用以前的信息来指导当前图像中的搜索。它增强了连续图像之间的平滑性和连续性。可以提高车辆姿态估计的精度，防止错误检测故障的发生。</p>
-<p>大多数提出的方法是基于统计的。一般用卡尔曼滤波或粒子滤波。粒子滤波更加可靠，尤其是在车辆振动或非平坦路面引起的连续图像之间的突变情况下。</p>
-<p>一般来说，粒子滤波可以直接应用到图像(或像素)、车道线模型和车辆。</p>
-<ul>
-<li>每个粒子都包含图像中控制点的位置，用于三次样条拟合。</li>
-<li>每个粒子可以代表车道线模型参数，参数的变化被简单地假设为服从高斯分布。</li>
-<li>每个粒子可以在代表在真实世界坐标系中车辆的位置，再一次，车辆的运动被简单地假设为高斯函数。</li>
-</ul>
-<p>由于连续图像之间的变化纯粹是由车辆运动引起的，有学者提供了一种更加直观直观的方法，将粒子滤波应用于运动车辆，并考虑其显式动力学模型。</p>
-<h6 id="基于车道线模型估计车辆的横向位置和运动方向"><a href="#基于车道线模型估计车辆的横向位置和运动方向" class="headerlink" title="基于车道线模型估计车辆的横向位置和运动方向"></a>基于车道线模型估计车辆的横向位置和运动方向</h6><p>要将这些信息从2D图像恢复到3D现实世界，需要深度信息。在大多数方法中，我们假设相机的高度不变，路面平坦，深度就是由相机的视角或俯仰角度。IPM就是一个典型的例子，但它对俯仰角的估计噪声非常敏感，对俯仰角的估计噪声影响很大。因此，在视差图像能够有效、准确地构造的前提下，采用立体摄像机进行深度恢复是一种更加可靠、直接的方法。但是路面的低纹理对获取视差图像提出了处理挑战。这也是立体视觉在这一研究领域没有得到广泛应用的主要原因。</p>
-<p>有学者使用密集映射来获取视差，也有采用极大后验-马尔可夫随机场(MAP-MRF)方法来获取视差。然而，这两种方法都不是很有效，而且容易受到平滑噪声的影响。为了缓解这些不足，也有人提出了一种基于车道线模型的对应匹配算法。</p>
 
       
     </div>
@@ -489,7 +462,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://iamwxy.com/自动驾驶-感知篇.html" title="自动驾驶 | 感知篇">http://iamwxy.com/自动驾驶-感知篇.html</a>
+    <a href="http://iamwxy.com/自动驾驶-感知篇.html" title="自动驾驶 | 感知篇（上）">http://iamwxy.com/自动驾驶-感知篇.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -528,6 +501,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/自动驾驶-感知篇（下）.html" rel="prev" title="自动驾驶 | 感知篇（下）">
+                自动驾驶 | 感知篇（下） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -615,7 +592,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">104</span>
+                  <span class="site-state-item-count">105</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -661,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#LIDAR"><span class="nav-number">1.</span> <span class="nav-text">LIDAR</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#representation表示"><span class="nav-number">1.1.</span> <span class="nav-text">representation表示</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#基于点云的方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">基于点云的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于特征的方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">基于特征的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于网格的方法"><span class="nav-number">1.1.3.</span> <span class="nav-text">基于网格的方法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分割算法"><span class="nav-number">1.2.</span> <span class="nav-text">分割算法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#基于边缘的方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">基于边缘的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于区域的方法"><span class="nav-number">1.2.2.</span> <span class="nav-text">基于区域的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于模型的方法"><span class="nav-number">1.2.3.</span> <span class="nav-text">基于模型的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于属性的方法"><span class="nav-number">1.2.4.</span> <span class="nav-text">基于属性的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于图的方法"><span class="nav-number">1.2.5.</span> <span class="nav-text">基于图的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于机器学习的算法"><span class="nav-number">1.2.6.</span> <span class="nav-text">基于机器学习的算法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#检测算法"><span class="nav-number">1.3.</span> <span class="nav-text">检测算法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视觉"><span class="nav-number">2.</span> <span class="nav-text">视觉</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#车道线标志检测"><span class="nav-number">2.1.</span> <span class="nav-text">车道线标志检测</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#车道线特征提取"><span class="nav-number">2.1.1.</span> <span class="nav-text">车道线特征提取</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#模型拟合"><span class="nav-number">2.1.2.</span> <span class="nav-text">模型拟合</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#时间集成步骤-time-intergration-step"><span class="nav-number">2.1.3.</span> <span class="nav-text">时间集成步骤(time intergration step)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于车道线模型估计车辆的横向位置和运动方向"><span class="nav-number">2.1.4.</span> <span class="nav-text">基于车道线模型估计车辆的横向位置和运动方向</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#LIDAR"><span class="nav-number">1.</span> <span class="nav-text">LIDAR</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#representation表示"><span class="nav-number">1.1.</span> <span class="nav-text">representation表示</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#基于点云的方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">基于点云的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于特征的方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">基于特征的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于网格的方法"><span class="nav-number">1.1.3.</span> <span class="nav-text">基于网格的方法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分割算法"><span class="nav-number">1.2.</span> <span class="nav-text">分割算法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#基于边缘的方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">基于边缘的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于区域的方法"><span class="nav-number">1.2.2.</span> <span class="nav-text">基于区域的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于模型的方法"><span class="nav-number">1.2.3.</span> <span class="nav-text">基于模型的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于属性的方法"><span class="nav-number">1.2.4.</span> <span class="nav-text">基于属性的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于图的方法"><span class="nav-number">1.2.5.</span> <span class="nav-text">基于图的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#基于机器学习的算法"><span class="nav-number">1.2.6.</span> <span class="nav-text">基于机器学习的算法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#检测算法"><span class="nav-number">1.3.</span> <span class="nav-text">检测算法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -695,7 +672,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">158.0k </span>
+    <span title="Site words total count">161.8k </span>
   
 </div>
 
