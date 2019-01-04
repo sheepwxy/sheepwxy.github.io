@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://iamwxy.com/2018%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.html</loc>
+    <lastmod>2019-01-04T13:32:55.865Z</lastmod>
+    <data>
+        <display>
+        <title>2018年终总结</title>
+        <pubTime>2019-01-04T03:08:28.000Z</pubTime>
+        
+        <tag>年终总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/leetcode-%E5%BC%80%E7%AF%87%E6%9D%82%E8%B0%88.html</loc>
-    <lastmod>2018-12-24T07:49:13.684Z</lastmod>
+    <lastmod>2018-12-24T08:42:44.140Z</lastmod>
     <data>
         <display>
         <title>leetcode | 开篇杂谈</title>
@@ -123,9 +140,9 @@
         <title>自动驾驶仿真系统设计(一)</title>
         <pubTime>2018-12-10T08:05:41.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -142,9 +159,9 @@
         <title>招聘需求 | 自动驾驶仿真工程师</title>
         <pubTime>2018-12-09T13:59:14.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
         <tag>就业信息</tag>
          
@@ -421,9 +438,9 @@
         
         <tag>自动驾驶</tag>
          
-        <tag>机器学习</tag>
-         
         <tag>深度学习</tag>
+         
+        <tag>机器学习</tag>
          
         <tag>自动驾驶测试</tag>
          
@@ -478,9 +495,9 @@
         <title>自动驾驶仿真 | Unity</title>
         <pubTime>2018-10-28T14:52:53.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -497,9 +514,9 @@
         <title>自动驾驶仿真工具需求</title>
         <pubTime>2018-10-30T15:22:00.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>测试</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -516,9 +533,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -1336,11 +1353,11 @@
         <title>自动驾驶仿真整理</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>自动驾驶</tag>
          
         <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -1632,11 +1649,11 @@
         
         <tag>自动驾驶</tag>
          
-        <tag>机器学习</tag>
-         
         <tag>测试</tag>
          
         <tag>深度学习</tag>
+         
+        <tag>机器学习</tag>
          
          
            
