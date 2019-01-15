@@ -1,8 +1,8 @@
+http://iamwxy.com/每日学习记录.html
 http://iamwxy.com/2018年终总结.html
 http://iamwxy.com/leetcode-开篇杂谈.html
 http://iamwxy.com/亦师亦友亦情人.html
 http://iamwxy.com/自动驾驶-感知篇（下）.html
-http://iamwxy.com/每日学习记录.html
 http://iamwxy.com/自动驾驶-感知篇.html
 http://iamwxy.com/自动驾驶仿真系统设计-一.html
 http://iamwxy.com/招聘需求-自动驾驶仿真工程师.html
