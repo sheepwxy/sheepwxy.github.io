@@ -1,6 +1,5 @@
 http://iamwxy.com/统计学习-书摘-赤裸裸的统计.html
 http://iamwxy.com/近期思考.html
-http://iamwxy.com/每日学习记录.html
 http://iamwxy.com/2018年终总结.html
 http://iamwxy.com/leetcode-开篇杂谈.html
 http://iamwxy.com/亦师亦友亦情人.html
@@ -18,3 +17,4 @@ http://iamwxy.com/自动驾驶-规划篇.html
 http://iamwxy.com/自动驾驶传感器-激光雷达-二.html
 http://iamwxy.com/自动驾驶传感器-激光雷达-一.html
 http://iamwxy.com/自动驾驶的终极问题-安全.html
+http://iamwxy.com/自动驾驶传感器-视觉传感器-三.html
