@@ -124,15 +124,17 @@
 <meta name="description" content="统计学的意义不是做无数次高深的数学运算，而在于更好的洞察社会现象背后的成因。就当科普书看呀。">
 <meta name="keywords" content="统计学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="统计学习 | 书摘 | 赤裸裸的统计学(二)">
+<meta property="og:title" content="统计学习 | 书摘 | 赤裸裸的统计学(二)">
 <meta property="og:url" content="http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html">
 <meta property="og:site_name" content="吴旭阳的博客">
 <meta property="og:description" content="统计学的意义不是做无数次高深的数学运算，而在于更好的洞察社会现象背后的成因。就当科普书看呀。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-23T14:11:17.965Z">
+<meta property="og:image" content="http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二/compare.png">
+<meta property="og:updated_time" content="2019-04-01T14:24:18.372Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="统计学习 | 书摘 | 赤裸裸的统计学(二)">
+<meta name="twitter:title" content="统计学习 | 书摘 | 赤裸裸的统计学(二)">
 <meta name="twitter:description" content="统计学的意义不是做无数次高深的数学运算，而在于更好的洞察社会现象背后的成因。就当科普书看呀。">
+<meta name="twitter:image" content="http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二/compare.png">
 
 
 
@@ -168,7 +170,7 @@
 
 
 
-  <title>统计学习 | 书摘 | 赤裸裸的统计学(二) | 吴旭阳的博客</title>
+  <title>统计学习 | 书摘 | 赤裸裸的统计学(二) | 吴旭阳的博客</title>
   
 
 
@@ -336,7 +338,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">统计学习 | 书摘 | 赤裸裸的统计学(二)</h2>
+          <h2 class="post-title" itemprop="name headline">统计学习 | 书摘 | 赤裸裸的统计学(二)</h2>
         
 
         <div class="post-meta">
@@ -415,6 +417,35 @@
 <li>假设检验：先假设一个结论，然后通过统计分析对其进行支持与反驳，如果我们证明零假设不成立，相当于承认了其反面情况与真实更为接近。</li>
 <li>在实际进行研究时，往往是提出一个零假设，并希望去推翻它</li>
 <li>推翻零假设的门槛一般是0.05，即显著性水平至少达到0.05，即如果某个零假设成立的概率还不足0.05的话，我们就可以说自己推翻了零假设。</li>
+<li>经典套路。“有女朋友一般就有sex life，显著性水平为0.05”，那么（1）在一个大型数据集里，一个既定事实是，有无女朋友对男性是否有sex-life的影响很大。（2）零假设就是，“男性有女友对sex life没有影响”（3）如果这个有无女友对sex-life的影响，如果是巧合，这个概率值就是我们所说的显著性水平</li>
+<li>如果两个变量之间不存在统计学意义上的相关性，那么事情就需要用误差解释</li>
+<li>ex: 样本是59个自闭症孩子和38个正常孩子；先借助抽样的公式计算实验组与对照组的标准误差，算出置信区间；观察到置信区间没有重合的地方。我们假设：（1）假如两个样本抽取自同一个群里，最好结果是平均值之差为零。（2）中心极限定理告诉我们，二个平均值（样本平均值与总体平均值）之间的差会呈现正态分布（3）假如两个样本来自同一个群体，那有0.68的概率两个平均值之间的差小于一个标准误差 </li>
+<li>单尾、双尾假设检验</li>
+</ol>
+<h4 id="第十一章-民意测验与误差幅度"><a href="#第十一章-民意测验与误差幅度" class="headerlink" title="第十一章 民意测验与误差幅度"></a>第十一章 民意测验与误差幅度</h4><ol>
+<li>民意调查观察的是百分比而不是平均数 </li>
+<li>百分比的标准误差$s = sqrt(p(1-p) / n)$</li>
+</ol>
+<h4 id="第十二章-回归分析与线性关系"><a href="#第十二章-回归分析与线性关系" class="headerlink" title="第十二章 回归分析与线性关系"></a>第十二章 回归分析与线性关系</h4><h4 id="第十三章-回归错误"><a href="#第十三章-回归错误" class="headerlink" title="第十三章 回归错误"></a>第十三章 回归错误</h4><ol>
+<li>用回归方程来分析非线性关系</li>
+<li>相关关系不等同于因果关系</li>
+<li>不要弄错因果的倒置，因果关系也有可能是双向的，所以这里的关键在于，不要选择被结果影响的解释变量</li>
+<li>忘记或遗漏相关解释变量会影响最终结果，比如在玩高尔夫时的年龄问题</li>
+<li>有些变量是高度相关的，比如探究吸毒对SAT成绩的影响，吸食海洛因的一般也会吸食可卡因</li>
+<li>脱离数据进行判断。把统计结果随意推广</li>
+<li>数据矿，数据变量过多。比如整个班级抛硬币实验，当你引入大量无关变量时，就会冲淡显著性</li>
+<li>设计一个好的方程式，想清楚考虑哪些变量，应该从哪里收集数据；回归分析应该以观察样本为立足点：为什么方程式中需要有这些解释变量，通过其他学科领域是否也能解释这个分析结果；</li>
+</ol>
+<h4 id="第十四章-项目评估与反现实"><a href="#第十四章-项目评估与反现实" class="headerlink" title="第十四章 项目评估与反现实"></a>第十四章 项目评估与反现实</h4><ol>
+<li>因果倒置新例：警察数量与犯罪率之间的关系，可能是更多警察能降低犯罪率或者是高犯罪率导致警察数量增多；医生数量和病人数量的问题，随着医生增多，病人数量也许可能下降，但也可能是因为医生聚集，使得病人集中来治病。</li>
+<li>项目评估就是用来探索和测试某些介入手段的因果作用</li>
+<li>评估警察和犯罪率的关系，可以引入恐袭数据这种“外生变量”，当恐袭级别高时，警察增多，理论上犯罪率不变，但其实犯罪率下降，这相当于一种“隔离治疗”</li>
+<li><strong>随机控制实验</strong>。如典型的医学实验（人的变量过于复杂，需要随机控制）；大小班教学益处（大班、小班的成因是复杂的）</li>
+<li><strong>自然实验</strong>。用一些自然历史数据进行分析。探究教育对寿命的关系，因素太多，选取纵向上的基于时间的历史数据不能满足需求，但可以选取历史数据中要求完成六年教育和要求七年教育的两个州，这是由历史巧合形成的。</li>
+<li><strong>非对等对照实验</strong>。人的优秀到底是进名牌大学带来的，还是自己本身比较优秀呢？这不能用随机试验来做。DNA可以考虑在申请学校时，可以申多所，放弃名校的去了一般学校的最终优秀程度和名校的差不多，这就说明优秀是本来就优秀，不是大学给的。</li>
+<li><strong>差分类差分实验</strong>。首先比较政策前后结果差别，这结果差别可能是多种影响因素的结果，这时候可以分析相似对象但无政策的结果。 形成差分实验。 <img src="/统计学习-书摘-赤裸裸的统计学-二/compare.png"></li>
+<li>不连续分析实验。将那些刚好符合介入或治疗条件的对象，以及以毫厘之差错失治疗机会的对象进行比较，比如判断补习班的作用，可以选成绩中等的人，一部分恰好到补习班，一部分恰好不到，接着分析差别</li>
+<li>关键是要找到方法模拟反现实</li>
 </ol>
 
       
@@ -436,7 +467,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html" title="统计学习 | 书摘 | 赤裸裸的统计学(二)">http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html</a>
+    <a href="http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html" title="统计学习 | 书摘 | 赤裸裸的统计学(二)">http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -610,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-数据与偏见"><span class="nav-number">1.</span> <span class="nav-text">第八章 数据与偏见</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-中心极限定理"><span class="nav-number">2.</span> <span class="nav-text">第九章 中心极限定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-统计推断与假设检验"><span class="nav-number">3.</span> <span class="nav-text">第十章 统计推断与假设检验</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第八章-数据与偏见"><span class="nav-number">1.</span> <span class="nav-text">第八章 数据与偏见</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第九章-中心极限定理"><span class="nav-number">2.</span> <span class="nav-text">第九章 中心极限定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十章-统计推断与假设检验"><span class="nav-number">3.</span> <span class="nav-text">第十章 统计推断与假设检验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十一章-民意测验与误差幅度"><span class="nav-number">4.</span> <span class="nav-text">第十一章 民意测验与误差幅度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十二章-回归分析与线性关系"><span class="nav-number">5.</span> <span class="nav-text">第十二章 回归分析与线性关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十三章-回归错误"><span class="nav-number">6.</span> <span class="nav-text">第十三章 回归错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第十四章-项目评估与反现实"><span class="nav-number">7.</span> <span class="nav-text">第十四章 项目评估与反现实</span></a></li></ol></div>
             
 
           </div>
@@ -644,7 +675,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">158.2k </span>
+    <span title="Site words total count">159.4k </span>
   
 </div>
 
