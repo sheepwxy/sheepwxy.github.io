@@ -1,3 +1,4 @@
+http://iamwxy.com/转载-新理解矩阵（一）.html
 http://iamwxy.com/书摘-复杂-米歇尔.html
 http://iamwxy.com/近期思考.html
 http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html
@@ -8,8 +9,8 @@ http://iamwxy.com/leetcode-开篇杂谈.html
 http://iamwxy.com/亦师亦友亦情人.html
 http://iamwxy.com/自动驾驶-感知篇（下）.html
 http://iamwxy.com/自动驾驶-感知篇.html
-http://iamwxy.com/自动驾驶仿真系统设计-一.html
 http://iamwxy.com/一个自动驾驶仿真系统设计框架.html
+http://iamwxy.com/自动驾驶仿真系统设计-一.html
 http://iamwxy.com/招聘需求-自动驾驶仿真工程师.html
 http://iamwxy.com/我为什么要写博客.html
 http://iamwxy.com/捉螃蟹.html
@@ -17,4 +18,3 @@ http://iamwxy.com/下雨.html
 http://iamwxy.com/人生中第一次实习.html
 http://iamwxy.com/自动驾驶学习资源整理.html
 http://iamwxy.com/自动驾驶-控制篇.html
-http://iamwxy.com/自动驾驶-规划篇.html
