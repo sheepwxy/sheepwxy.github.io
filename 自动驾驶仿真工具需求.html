@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="自动驾驶仿真在我看来主要有两个目的，其一是用在开发阶段，即训练相关算法。其二是用来测试已有算法，概括来说即软件在环、硬件在环、驾驶员在环、车辆在环等。 现在常用的自动驾驶仿真工具有Prescan、VTD、Carla等。">
+<meta name="description" content="2018.10.30 初稿 2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 <meta name="keywords" content="自动驾驶仿真,测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶仿真工具需求">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶仿真工具需求.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="自动驾驶仿真在我看来主要有两个目的，其一是用在开发阶段，即训练相关算法。其二是用来测试已有算法，概括来说即软件在环、硬件在环、驾驶员在环、车辆在环等。 现在常用的自动驾驶仿真工具有Prescan、VTD、Carla等。">
+<meta property="og:description" content="2018.10.30 初稿 2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-30T11:30:03.515Z">
+<meta property="og:updated_time" content="2019-04-28T05:59:57.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶仿真工具需求">
-<meta name="twitter:description" content="自动驾驶仿真在我看来主要有两个目的，其一是用在开发阶段，即训练相关算法。其二是用来测试已有算法，概括来说即软件在环、硬件在环、驾驶员在环、车辆在环等。 现在常用的自动驾驶仿真工具有Prescan、VTD、Carla等。">
+<meta name="twitter:description" content="2018.10.30 初稿 2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 
 
 
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">写于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-30T23:22:00+08:00">
-                2018-10-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-28T23:22:00+08:00">
+                2019-04-28
               </time>
             
 
@@ -396,23 +396,22 @@
       
 
       
-        <p>自动驾驶仿真在我看来主要有两个目的，其一是用在开发阶段，即训练相关算法。其二是用来测试已有算法，概括来说即软件在环、硬件在环、驾驶员在环、车辆在环等。 现在常用的自动驾驶仿真工具有Prescan、VTD、Carla等。<br><a id="more"></a><br>再看仿真，从词义上就可以看到，没有<strong>“真”</strong>是不行的。仿真的需求首要就是对真实性的需求。没有真实性的<strong>坏数据</strong>无法训练出实用的算法，在进行自动驾驶测试时也没有可靠性。再来看<strong>“仿”</strong>这个词，仿真毕竟是一个现实世界到计算机虚拟空间的映射，在转化过程中性质已经完全转变了，因此仿真必须在掌握相关过程工作原理表现其关键特征维度。从另外一个方面来讲，表现所有特征维度是不可能的，理论有缺陷，对计算资源的要求太高，未来在有限的资源范围内做出高仿真场景应该是相关软件迭代的方向。</p>
-<p>接下来让我们从<strong>“真”</strong>设想一个理想的完美的自动驾驶仿真工具应该有什么特点，有哪些具体的实现方法。 </p>
-<h4 id="静态场景建模"><a href="#静态场景建模" class="headerlink" title="静态场景建模 "></a><font color="blue">静态场景建模 </font></h4><p>静态场景有不同的真实程度，51VR的L1级别环境是简单的同质化设计，L2等级会基于数据库进行一些分割以及渲染，L3等级的渲染甚至会考虑整体上光能量的守恒，L4等级就是用来提供自动驾驶场景，<a href="http://www.51hitech.com/" target="_blank" rel="noopener">demo视频</a> </p>
-<p>让我们想想一个典型的交通静态场景需要什么，全局性的<strong>天气条件、光线</strong>，好的仿真工具需要有强大的图形渲染能力来渲染由这些环境，甚至对于自动驾驶仿真来说，渲染能力几乎决定了一切。</p>
-<p>非全局性的环境因素有<strong>道路、交通设施（交通标志、标识牌、红绿灯）、建筑物、篱笆护栏等等</strong>。对于他们，我们需要期待什么呢？</p>
-<p>首先需要明确的是，对于建模而言，开放的权限多少和方便程度是矛盾的，依然是以Prescan和VTD举例，Prescan的GUI做的很好，道路也根据特性被封装成了几个小模块，实际进行道路建模时只需要drag出来，再修改属性就可以，但是对一些形状相对特殊的路段，Prescan就无能无力了。VTD则给与建模者足够的权限，但建模工作是比较巨大的。所以我理想的建模场景是，<strong>既有封装好的基于GUI拖曳使用的模型库，又需要开放足够的底层设计接口。</strong></p>
-<p>其次，有很多其他领域的成熟建模软件，自动驾驶需要开放一些典型接口。比如Prescan就支持SktechUp等建筑学软件，也支持导入其他文件类型，这对环境建模是极其有利的，在这一方面，VTD的相对效果差一些。</p>
-<p>另外，自动驾驶仿真软件也需要支持一些业内的标准，如用于生成高精度地图的OpenDrive，标标准场景标准OpenScenrio，以及OpenCRG等。这些会是未来产业的标准，需要多花时间、</p>
-<h4 id="传感器模型"><a href="#传感器模型" class="headerlink" title="传感器模型"></a><font color="blue">传感器模型</font></h4><p>传感器模型作为感知的重要部分，也是不可或缺的。我理想中的自动驾驶仿真软件传感器模型应该具有以下几个特点。</p>
+        <h4 id="2018-10-30-初稿"><a href="#2018-10-30-初稿" class="headerlink" title="2018.10.30 初稿 "></a><font color="green">2018.10.30 初稿 </font></h4><h4 id="2019-04-28-第一次修改"><a href="#2019-04-28-第一次修改" class="headerlink" title="2019.04.28 第一次修改 "></a><font color="green">2019.04.28 第一次修改 </font></h4><p>自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。<br><a id="more"></a><br>再看仿真，从词义上就可以看到，没有<strong>“真”</strong>是不行的。仿真的需求首要就是对真实性的需求。没有真实性的<strong>坏数据</strong>无法训练出适用于真实环境的算法，在进行自动驾驶测试时也没有可靠性。再来看<strong>“仿”</strong>这个字，仿真本事上是实现现实世界到计算机虚拟空间的映射，在转化过程中性质已经完全转变成其他维度，掌握具体过程的工作原理可帮助我们表征出关键特征维度。但从另外一个方面来讲，表现出真实环境中所有特征维度也是不现实的，建模成本过高。未来在有限的资源范围内做出高仿真场景应该是相关软件迭代的方向。</p>
+<p>接下来让我们从<strong>“真”</strong>的角度进行一番思考。</p>
+<h4 id="静态场景建模"><a href="#静态场景建模" class="headerlink" title="静态场景建模 "></a><font color="blue">静态场景建模 </font></h4><p>静态场景有不同的真实程度，51VR的L1级别环境是简单的同质化设计，L2等级会基于数据库进行一些分割以及渲染，L3等级的渲染甚至会考虑整体上光能量的守恒，以下是<a href="http://www.51hitech.com/" target="_blank" rel="noopener">demo视频</a> </p>
+<p>一个典型的交通静态场景需要什么，全局性的因素有<strong>天气条件、光线</strong>等，好的仿真工具首先需要有强大的图形渲染能力来渲染这些环境。对于自动驾驶视觉仿真来说，CG渲染能力几乎决定了一切。</p>
+<p>非全局性的环境因素有<strong>道路、交通设施（交通标志、标识牌、红绿灯）、建筑物、篱笆护栏等等</strong>。对于他们，我们需要考虑它们的形状、表面材质、反射率等属性。换句话说，感知系统在工作过程中需要考虑的因素都应该被我们主动建模出来。</p>
+<p>另外，对于建模而言，开放的权限大小和方便程度是矛盾的，以Prescan和VTD举例，Prescan的GUI做的很好，道路根据特性被参数化并封装成了几个小模块，实际进行道路建模时只需要drag出来模块，再修改属性就可以，但一些形状相对特殊的路段，由于不能Prescan的约束，所以就无法建模成功。VTD的建模工作量较大，但灵活性更高。理想的建模能力应该从其中寻找一个平衡，<strong>既有封装好的基于GUI拖曳使用的模型库，又需要开放足够的底层设计接口。</strong></p>
+<p>自动驾驶仿真软件也需要开放一些典型接口。比如SktechUp等建筑学软件，</p>
+<p>另外，自动驾驶仿真软件也需要支持一些业内的标准，如用于生成高精度地图的OpenDRIVE，场景建模语言OpenSCENARIO，以及OpenCRG等。这些标准必将会是未来自动驾驶仿真测试的标准，各公司要提前准备了。</p>
+<h4 id="传感器模型"><a href="#传感器模型" class="headerlink" title="传感器模型"></a><font color="blue">传感器模型</font></h4><p>传感器模型是感知系统仿真的核心。好的自动驾驶仿真软件传感器模型应该具有以下几个特点。<br>-类型丰富。就视觉传感器而言，需要提供普通的RGB摄像头、深度摄像头、鱼眼摄像头、甚至语义摄像头，激光雷达(LIDAR)、雷达(radar)、超声波雷达、毫米波雷达(这个仿真比较困难)、红外线传感器，V2X传感器等等。并且提供充足的选项配置。</p>
 <ul>
-<li>类型多样。就视觉传感器而言，需要提供普通的RGB摄像头、深度摄像头、甚至语义摄像机，激光雷达(LIDAR)、雷达(RADAR)、超声波雷达、毫米波雷达(这个仿真比较困难)、红外线传感器，V2X传感器等等。并且提供充足的选项配置。</li>
-<li>在提供<strong>理想传感器</strong>的同时，除了一些基本功能外，还需要提供一些特性的补充，如添加噪声的功能、畸变选项、色差选项等</li>
+<li>在提供<strong>理想传感器</strong>的同时，除了一些基本功能外，还需要补充一些特性，如噪声选项、畸变选项、色差选项等</li>
 <li>对于开发者需要提供更底层的接口，让开发者配置自己的传感器模型。</li>
 </ul>
 <h4 id="动力学仿真"><a href="#动力学仿真" class="headerlink" title="动力学仿真"></a><font color="blue">动力学仿真</font></h4><p>车辆的核心是系统动力学，没有高精度的系统动力学的仿真终究只是过家家。IV2018最佳的论文所进行的硬件在环，使用的是ROS，做的很完整，但是动力学模型比较简单，因而也就限制了它的实用价值。 </p>
 <p>可以思考一下工作过程，如果车辆只能有非常简单的动力学模型，比如单轨模型或四自由度模型，这也意味着他和实际的状态相别较大，理想的工作状态是车辆接受环境信息，控制车辆移动，新的车辆位置和角度带来新的感知视角。那么如果车辆不能按照本来的规划决策效果执行动作，后边的一切其实也就失去了意义。 </p>
-<p>因此，自动驾驶仿真软件必须要有支持高精度动力学模型的功能，直接且高效的方案是与动力学仿真软件进行联合仿真，典型的如carsim，其提供多自由度的动力学模型。在这一方面，Prescan、VTD等商业软件都做的很好，Carla、Arisim则表现较差，他们只有简单的动力学仿真特向。 </p>
+<p>因此，自动驾驶仿真软件必须要有支持高精度动力学模型的功能，直接且高效的方案是与动力学仿真软件进行联合仿真，典型的如carsim，其提供多自由度的动力学模型。在这一方面，Prescan、VTD等商业软件都做的很好，Carla、Arisim则表现较差，他们只有简单的动力学仿真特性。但基于Unreal可以去开发联合仿真的模型。 </p>
 <h4 id="交通流仿真"><a href="#交通流仿真" class="headerlink" title="交通流仿真"></a><font color="blue">交通流仿真</font></h4><p>交通流仿真基本可包括车辆仿真和行人仿真，它也是自动驾驶仿真要重点关注的模块，车辆不可能永远跑在实验室和封闭园区内，它要处理的任务终究不会只是非常有限的行人和车辆。自动驾驶车辆一定要能处理很多交互的任务。这时候如果人流和车辆信息流是反常规的，或者是随机的，那这对于算法的训练和实际的测试都是很有害的。 </p>
 <p>自动驾驶仿真工具应该有自己的交通流仿真功能。可以开发自己的交通流模块，如VTD开发有自己的I-Traffic模块，Prescan有自己开发的Intelligent Traffic Module模块，但跟前文提到的动力学仿真相似，自身开发的模块毕竟总体上不如专业的仿真工具，因此软件最好有自己的仿真接口，目前交通流仿真的主要工具是PTV公司的Vissim，还有开源工具SUMO。（Prescan已经可以和Vissim进行联合仿真，但目前仍有一些局限） </p>
 <p>交通流应该尽量与实际交通流保持一致，要有可靠性和准确性，可用的手段有： </p>
@@ -471,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/自动驾驶仿真-Unity.html" rel="next" title="自动驾驶仿真 | Unity">
-                <i class="fa fa-chevron-left"></i> 自动驾驶仿真 | Unity
+              <a href="/自动驾驶测试主题博客-推荐.html" rel="next" title="自动驾驶测试主题博客 | 推荐">
+                <i class="fa fa-chevron-left"></i> 自动驾驶测试主题博客 | 推荐
               </a>
             
           </div>
@@ -480,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/自动驾驶中的黑天鹅问题-浅谈Edge-Case-边缘测试用例.html" rel="prev" title="自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例">
-                自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2018-10-30-初稿"><span class="nav-number">1.</span> <span class="nav-text">2018.10.30 初稿 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2019-04-28-第一次修改"><span class="nav-number">2.</span> <span class="nav-text">2019.04.28 第一次修改 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">3.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">4.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">5.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">6.</span> <span class="nav-text">交通流仿真</span></a></li></ol></div>
             
 
           </div>
@@ -651,7 +646,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">168.9k </span>
+    <span title="Site words total count">168.8k </span>
   
 </div>
 
@@ -834,7 +829,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1540912920000', 
+            id: '1556464920000', 
             owner: 'sheepwxy',
             repo: 'tjwxy.github.io',
             
