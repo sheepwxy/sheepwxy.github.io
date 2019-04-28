@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="2018.10.30 初稿 2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta name="description" content="2018.10.30 初稿  2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 <meta name="keywords" content="自动驾驶仿真,测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶仿真工具需求">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶仿真工具需求.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="2018.10.30 初稿 2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta property="og:description" content="2018.10.30 初稿  2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-28T05:59:57.458Z">
+<meta property="og:updated_time" content="2019-04-28T06:29:03.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶仿真工具需求">
-<meta name="twitter:description" content="2018.10.30 初稿 2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta name="twitter:description" content="2018.10.30 初稿  2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 
 
 
@@ -396,7 +396,8 @@
       
 
       
-        <h4 id="2018-10-30-初稿"><a href="#2018-10-30-初稿" class="headerlink" title="2018.10.30 初稿 "></a><font color="green">2018.10.30 初稿 </font></h4><h4 id="2019-04-28-第一次修改"><a href="#2019-04-28-第一次修改" class="headerlink" title="2019.04.28 第一次修改 "></a><font color="green">2019.04.28 第一次修改 </font></h4><p>自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。<br><a id="more"></a><br>再看仿真，从词义上就可以看到，没有<strong>“真”</strong>是不行的。仿真的需求首要就是对真实性的需求。没有真实性的<strong>坏数据</strong>无法训练出适用于真实环境的算法，在进行自动驾驶测试时也没有可靠性。再来看<strong>“仿”</strong>这个字，仿真本事上是实现现实世界到计算机虚拟空间的映射，在转化过程中性质已经完全转变成其他维度，掌握具体过程的工作原理可帮助我们表征出关键特征维度。但从另外一个方面来讲，表现出真实环境中所有特征维度也是不现实的，建模成本过高。未来在有限的资源范围内做出高仿真场景应该是相关软件迭代的方向。</p>
+        <p><font color="green">2018.10.30 初稿 </font></p>
+<p><font color="green">2019.04.28 第一次修改 </font><br>自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。<br><a id="more"></a><br>再看仿真，从词义上就可以看到，没有<strong>“真”</strong>是不行的。仿真的需求首要就是对真实性的需求。没有真实性的<strong>坏数据</strong>无法训练出适用于真实环境的算法，在进行自动驾驶测试时也没有可靠性。再来看<strong>“仿”</strong>这个字，仿真本事上是实现现实世界到计算机虚拟空间的映射，在转化过程中性质已经完全转变成其他维度，掌握具体过程的工作原理可帮助我们表征出关键特征维度。但从另外一个方面来讲，表现出真实环境中所有特征维度也是不现实的，建模成本过高。未来在有限的资源范围内做出高仿真场景应该是相关软件迭代的方向。</p>
 <p>接下来让我们从<strong>“真”</strong>的角度进行一番思考。</p>
 <h4 id="静态场景建模"><a href="#静态场景建模" class="headerlink" title="静态场景建模 "></a><font color="blue">静态场景建模 </font></h4><p>静态场景有不同的真实程度，51VR的L1级别环境是简单的同质化设计，L2等级会基于数据库进行一些分割以及渲染，L3等级的渲染甚至会考虑整体上光能量的守恒，以下是<a href="http://www.51hitech.com/" target="_blank" rel="noopener">demo视频</a> </p>
 <p>一个典型的交通静态场景需要什么，全局性的因素有<strong>天气条件、光线</strong>等，好的仿真工具首先需要有强大的图形渲染能力来渲染这些环境。对于自动驾驶视觉仿真来说，CG渲染能力几乎决定了一切。</p>
@@ -612,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2018-10-30-初稿"><span class="nav-number">1.</span> <span class="nav-text">2018.10.30 初稿 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2019-04-28-第一次修改"><span class="nav-number">2.</span> <span class="nav-text">2019.04.28 第一次修改 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">3.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">4.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">5.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">6.</span> <span class="nav-text">交通流仿真</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li></ol></div>
             
 
           </div>
