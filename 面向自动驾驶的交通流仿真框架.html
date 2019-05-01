@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="自动驾驶仿真,自动驾驶测试," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="在开车过程中，驾驶员必须与不同的车辆系统进行交互，例如智能交通系统、高级驾驶员辅助系统(ADAS)和车内信息系统。这些系统影响司机的行为和他们处理交通状况的能力。网络化交通流模拟可以用于未来的研究和开发领域，这些领域可服务于汽车应用，典型例子包括:智能网联车辆系统的开发、驾驶员联合培训和驾驶员合作行为调查。">
+<meta name="keywords" content="自动驾驶仿真,自动驾驶测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动驾驶仿真 | 交通流仿真框架">
+<meta property="og:url" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架.html">
+<meta property="og:site_name" content="吴旭阳的博客">
+<meta property="og:description" content="在开车过程中，驾驶员必须与不同的车辆系统进行交互，例如智能交通系统、高级驾驶员辅助系统(ADAS)和车内信息系统。这些系统影响司机的行为和他们处理交通状况的能力。网络化交通流模拟可以用于未来的研究和开发领域，这些领域可服务于汽车应用，典型例子包括:智能网联车辆系统的开发、驾驶员联合培训和驾驶员合作行为调查。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/TrafficSimulationFramework.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/TrafficInitialisation.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/DynamicWindows.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/DynamicWindowsDemo.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/OverallDemo.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/TrafficObserver.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/CriticalSituation.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/TrafficControl.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/VehicleGeneration.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/VehicleGenerationDemo.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/DriverModel.jpg">
+<meta property="og:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/TrafficModel.jpg">
+<meta property="og:updated_time" content="2019-05-01T04:41:43.688Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自动驾驶仿真 | 交通流仿真框架">
+<meta name="twitter:description" content="在开车过程中，驾驶员必须与不同的车辆系统进行交互，例如智能交通系统、高级驾驶员辅助系统(ADAS)和车内信息系统。这些系统影响司机的行为和他们处理交通状况的能力。网络化交通流模拟可以用于未来的研究和开发领域，这些领域可服务于汽车应用，典型例子包括:智能网联车辆系统的开发、驾驶员联合培训和驾驶员合作行为调查。">
+<meta name="twitter:image" content="http://iamwxy.com/面向自动驾驶的交通流仿真框架/TrafficSimulationFramework.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/面向自动驾驶的交通流仿真框架.html"/>
+
+
+
+
+
+  <title>自动驾驶仿真 | 交通流仿真框架 | 吴旭阳的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">吴旭阳的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/面向自动驾驶的交通流仿真框架.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴旭阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">自动驾驶仿真 | 交通流仿真框架</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-01T10:45:14+08:00">
+                2019-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/面向自动驾驶的交通流仿真框架.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/面向自动驾驶的交通流仿真框架.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在开车过程中，驾驶员必须与不同的车辆系统进行交互，例如智能交通系统、高级驾驶员辅助系统(ADAS)和车内信息系统。这些系统影响司机的行为和他们处理交通状况的能力。网络化交通流模拟可以用于未来的研究和开发领域，这些领域可服务于汽车应用，典型例子包括:智能网联车辆系统的开发、驾驶员联合培训和驾驶员合作行为调查。<br><a id="more"></a></p>
+<h4 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h4><p>在驾驶模拟器中模拟周围车辆对驾驶员体验真实的交通状况至关重要。然而，模拟驾驶模拟器车辆前方或后方几英里处的交通状况是比较低效率的。本文提出了一种面向网络化驾驶模拟器环境的交通仿真框架的概念和结构。<strong>该框架使用户能够选择目标模拟器车辆，并仅在其附近生成其他交通参与者</strong>。</p>
+<h4 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h4><p>根据文献综述，在驾驶模拟器的交通仿真领域有很多研究工作。</p>
+<h5 id="学术界工作"><a href="#学术界工作" class="headerlink" title="学术界工作"></a>学术界工作</h5><ol>
+<li>Espie and Auberlet(2007)中提出了交通仿真的符号视觉模型。该模型允许每辆交通车辆观察其周围环境的各种要素，如其他交通车辆、路标、车道标志等。因此，每个交通对象都可以根据交通状况以及感知到的道路环境来调整自己的行为。</li>
+<li>Bonakdarian等人(1998)提出了一种使用分层并发状态机(HCSM)的方法。该模型允许每辆交通车辆检查情况，从而在不同的决策之间自动切换，如车道跟踪或改变、目标跟踪、交通避碰、静态目标避碰等。</li>
+<li>(Wright et al.(2002))提出了一种利用模糊逻辑方法进行交通仿真的模型。通过引入一定程度的不确定性，该模型模拟了典型人类驾驶员的行为。</li>
+<li>为了减少计算量，在(Olstam(2003))中引入了交通车辆在指定候选区域仿真的概念。</li>
+<li>Olstam (2005a))对过往交通模拟方法进行了一个比较全面的综述。<h5 id="产业界相关工作"><a href="#产业界相关工作" class="headerlink" title="产业界相关工作"></a>产业界相关工作</h5></li>
+<li>来自DLR的SUMO是一个开放和灵活的套件，用于模拟包括道路车辆和行人在内的交通系统(Behrisch et al.(2011))。</li>
+<li>来自dSPACE的ASM交通是一个由Simulink模型组成的框架来模拟道路交通(Amelunxen(2015))。该模型模拟了一辆试验车和多达15辆独立交通车辆，可用于交互式驾驶仿真。</li>
+<li>IPG Automotive的IPGTraffic为驾驶模拟器提供模型来表示交通车辆之间的交互作用(Miquet et al.(2010))。可以创建无限数量的流量对象，其中可以为每个流量对象分别分配操作。</li>
+<li>一些商业解决方案在驾驶模拟器车辆周围定义了一个模拟区域，在那里生成交通对象。VIRES Simulation Technology的v-TRAFFIC是一个交通和场景仿真引擎，可以与驾驶模拟器一起模拟周围的交通对象(Neumann-Cosel et al.， 2009)。基本上，可以创建的流量对象的数量没有限制。此外，v-TRAFFIC利用模拟区域/窗口概念来减少计算量</li>
+<li>大多数商业解决方案的一个问题是，它们模拟整个地理区域。对于较宽的区域或较长的道路，许多交通车辆都必须进行仿真，尤其是在进行长时间驾驶模拟器实验时。这对算力的要求太高了。</li>
+</ol>
+<h4 id="交通流仿真框架总览"><a href="#交通流仿真框架总览" class="headerlink" title="交通流仿真框架总览"></a>交通流仿真框架总览</h4><p>与传统交通流仿真的区别在于，该框架中车辆对象中其中一辆或多辆是由人控制的，也就是说，交通车辆不仅要对彼此做出反应，还的对人工车辆做出反应。<br><img src="/面向自动驾驶的交通流仿真框架/TrafficSimulationFramework.jpg"><br>交通仿真框架接收每个参与驾驶模拟器的位置、方向和速度信息，输出仿真交通车辆的位置和方向。这些工作由模拟管理站处理，<strong>由它来管理交通参与者之间的数据转发和同步</strong>。交通仿真框架的输出也被转发到相关的驾驶模拟器。</p>
+<h4 id="仿真框架功能单元和数据接口"><a href="#仿真框架功能单元和数据接口" class="headerlink" title="仿真框架功能单元和数据接口"></a>仿真框架功能单元和数据接口</h4><p>整个仿真框架使用matlab/simulink开发，以下介绍了各个子模块输出，以及它们的关系.</p>
+<h5 id="初始化模块"><a href="#初始化模块" class="headerlink" title="初始化模块"></a>初始化模块</h5><p>初始化功能表示用户和交通仿真框架之间的接口。框架用户可以在仿真会话开始和仿真运行时设置一些参数，如驾驶员的视线距离、交通密度等级等。下图显示了交通初始化功能及其输出<br><img src="/面向自动驾驶的交通流仿真框架/TrafficInitialisation.jpg"></p>
+<h5 id="动态窗口生成模块"><a href="#动态窗口生成模块" class="headerlink" title="动态窗口生成模块"></a>动态窗口生成模块</h5><p>为了减少运算成本，该框架不是模拟整个地理区域，而是开发了模型和方法来仅在模拟车辆的最近邻近区域生成交通车(Olstam(2005b))。在本工作中，我们考虑了一个多驱动模拟器的环境。交通车辆只会在选定的模拟车辆的邻近范围内进行模拟，即目标模拟器车辆。<strong>该邻域以目标模拟器车辆为中心，其运动速度相同;它被称为仿真窗口。为了避免交通车辆的突然出现和消失，仿真窗口的设计要求至少与目标仿真车辆前后的视线距离一样长</strong></p>
+<p>一般来说，道路设计中的视线距离被定义为驾驶员可以看到的道路长度(Hang et al.(2008))。与现实生活中的情况一样，三维环境中的道路几何形状是影响仿真驾驶员视程可用性的因素之一。为了简单起见，我们选择了一条没有十字路口和坡道的道路;这是一条在每个方向上都有两条车道的直线。动态窗口生成功能接收所有参与模拟器车辆的位置，一个指示目标模拟器车辆的信号，以及设定的视距。后两个信号从流量初始化函数接收。该功能不仅为目标模拟器车辆定义了邻域，而且还为每个参与模拟器车辆定义了邻域。在这种情况下，邻近区域称为移动窗口，下图为动态窗口生成函数的主要输入/输出信号<br><img src="/面向自动驾驶的交通流仿真框架/DynamicWindows.jpg"><br><img src="/面向自动驾驶的交通流仿真框架/DynamicWindowsDemo.jpg"></p>
+<p>交通车辆只在仿真车辆所在的仿真窗口生成。考虑到不能使司机经历不切实际的交通行为。将目标仿真车与其他参与仿真车之间的距离与设定的视距进行连续比较。当仿真车的移动窗口开始与目标仿真车的仿真窗口重叠时，将目标仿真车的仿真窗口调整为将两辆仿真车包围起来，从而将两辆仿真车在所谓的整体仿真窗口内进行仿真。<br><img src="/面向自动驾驶的交通流仿真框架/OverallDemo.jpg"></p>
+<p>但是，如果模拟器车辆驶离目标模拟器车辆，则会重置整个仿真窗口。在这种情况下，整个仿真窗口将与目标模拟器车辆的仿真窗口完全相同。也就是说，在只考虑目标模拟器车辆的情况下生成交通车辆。虽然只考虑了一个目标模拟器驾驶员进行交通仿真，但仿真窗口的动态调整使其他模拟器驾驶员都能体验到真实流畅的交通行为。然而，通过动态调整仿真窗口可能会出现一些关键情况。这些可能导致不切实际的交通行为，例如，交通车辆突然消失在模拟车辆附近。因此，需要一个观察者来检测。</p>
+<h5 id="交通观察者模块"><a href="#交通观察者模块" class="headerlink" title="交通观察者模块"></a>交通观察者模块</h5><p>交通观察者检测关键情况，以防止生成不真实的交通行为。下图为交通观察者功能的主要输入/输出信号。<br><img src="/面向自动驾驶的交通流仿真框架/TrafficObserver.jpg"><br>该函数接收目标仿真车的信息，所有仿真车的运动窗口，交通车辆的位置，以及交通车辆的最大长度。该功能的主要任务是连续监测哪些交通车辆位于哪个移动窗口。针对不同的情况，将使用不同值的标志。<br>例如，考虑下图所示的情况，其中目标模拟器车辆正在加速，整个仿真窗口正在重置。如果交通车辆偶然停留在非目标模拟器车辆的移动窗口内，这些车辆不得丢弃。<br><img src="/面向自动驾驶的交通流仿真框架/CriticalSituation.jpg"></p>
+<p>如果目标模拟器车辆停止，则升起旗子，表示前方不应生成任何交通车辆，除非迎面驶来的交通车辆。同样，如果目标车辆的行驶速度超过了预先定义的最高速度，则会升起标志，表示不应该从后面生成任何交通车辆。<br>在所有情况下，交通观测器的标志都被转发给车辆生成/丢弃功能(稍后讨论)，以便它采取适当的行动防止不切实际的交通行为。</p>
+<h5 id="交通速度、密度控制模块"><a href="#交通速度、密度控制模块" class="headerlink" title="交通速度、密度控制模块"></a>交通速度、密度控制模块</h5><p>该功能根据交通初始化功能那个提供的相应特征来调整交通速度和/或密度(见图9)。每个交通特征定义了三个层次:低、中、高。<br><img src="/面向自动驾驶的交通流仿真框架/TrafficControl.jpg"><br>根据所需的速度和密度水平，该功能调整交通车辆的偏移速度和/或目标模拟器车辆前后每视距的交通车辆数量。此信息被转发到下面小节讨论的车辆生成/丢弃功能。</p>
+<h5 id="交通生成、舍弃模块"><a href="#交通生成、舍弃模块" class="headerlink" title="交通生成、舍弃模块"></a>交通生成、舍弃模块</h5><p>车辆生成/丢弃功能的目标是让交通车辆只存在于仿真窗口内。该功能接收关于仿真窗口、所需的交通特性、当前交通车辆位置和最终关键情况的信息。下图为车辆产生/丢弃功能的输入/输出信号<br><img src="/面向自动驾驶的交通流仿真框架/VehicleGeneration.jpg"><br>一般来说，后面生成的交通车辆要比目标模拟器车辆快，而前面生成的比较慢。具体地说，生成的交通车辆的速度等于目标模拟器车辆的速度+/-设置偏移速度。为了避免不真实的交通队列，该函数观察模拟交通车辆的当前位置，使其能够合理地分布在道路车道之间。另一方面，在同一方向上行驶速度比仿真车慢或快的交通车辆最终会走出仿真窗口。同样，当迎面而来的车辆通过模拟器车辆后面的可视距离时，在仿真窗口中就不存在迎面而来的车辆。在考虑前面讨论的交通观察者的最终紧急情况标志时，交通车辆一离开仿真窗口就被丢弃，<br><img src="/面向自动驾驶的交通流仿真框架/VehicleGenerationDemo.jpg"></p>
+<h5 id="驾驶员模块"><a href="#驾驶员模块" class="headerlink" title="驾驶员模块"></a>驾驶员模块</h5><p>驾驶员模型根据感知到的交通状况来控制交通车辆的行为。交通仿真有几种行为模型，如:车辆跟随、速度适应、变道、超车、从旁经过(passing)和迎面避让(Yu et al.(2013))。在这项工作中，驾驶员模型是通过汽车跟随行为模式实现的.</p>
+<p>车辆跟随模型控制交通车辆相对于同一车道上前面车辆的行为(Wenga和Wu(2001))。当一辆交通车辆前面有一辆车辆在同一车道上行驶，以期望的或当前的速度行驶会导致碰撞时，交通车辆被认为是跟在后面的。文献中有各种各样的追车模型;他们使用不同的逻辑，可能做出不同的假设。例如，Gazis-Herman-Rothery模型表明，后面车辆的加速度与前面车辆的速度、速度差和空间车头时距成正比(Bevrani et al.(2012))。心理-物理的汽车跟踪模型使用阈值来表示跟随车辆和前面车辆之间的最小感知速度差异(Schulze和Fliess(1997))。安全-距离模型基于如下假设:从动车辆与前面车辆保持安全距离(Luo et al.(2011))。(Aycin and Benekohal(2014))对不同的汽车跟随模型进行了比较。为了简便起见，本文考虑了安全距离法。下图为采用汽车跟随行为模型的驾驶员模型的主要输入/输出信号。<br><img src="/面向自动驾驶的交通流仿真框架/DriverModel.jpg"></p>
+<p>驾驶员模型接收所有仿真交通车辆的当前位置和速度，以及仿真车辆的当前位置和速度。将车辆之间的距离与所需的安全距离进行比较。根据距离比较，交通车辆将处于两种状态之一:自由驾驶或跟随。在自由驾驶状态下的交通车辆是不受约束的。因此，驱动程序模型转发设置的速度。对于处于下一状态的交通车辆，驾驶员模型将车速调整为与前一辆车相等，以保持安全距离。虽然在本研究中实现了一个具有车辆跟随行为的驾驶员模型，但所开发的交通仿真框架可以扩展到其他行为模型，例如变道模型。下一节描述交通车辆模型。</p>
+<h5 id="交通模块"><a href="#交通模块" class="headerlink" title="交通模块"></a>交通模块</h5><p>交通车辆模型的研究主要有两种方法:宏观模型和微观模型。<strong>宏观模型</strong>从总体或平均的角度处理交通。它们需要相对简单的计算。然而，交通车辆的特性不能单独控制(Nakrachi和Popescu(2010))。相反，<strong>微观模型</strong>考虑单个车辆的行为。然而，每个模拟车辆都需要一个单独的模型(Jaworski et al.(2012))。这增加了计算工作量，特别是在需要大量车辆的情况下。</p>
+<p>本文选择了微观模型。一方面，由于只在有限的区域内进行交通模拟，所以只需要少量的车辆就可以达到合理的交通密度。一方面，人类驾驶员参与模拟，他们通常会改变他们的行为。因此，有必要根据仿真车的位置和速度对每辆交通车辆进行单独的控制。用一个简单的一阶滞后因子和PI、PID控制器对每辆交通车辆进行建模。该模型基本上可以根据所需的车辆数量和可用的计算能力任意复制。<br><img src="/面向自动驾驶的交通流仿真框架/TrafficModel.jpg"></p>
+<p>如果驾驶员模型没有检测到前面的车辆，则交通车辆模型接收设置的速度，并激活PIcontroller来保持该速度。<br>如果前面的车辆被驾驶员模型检测到，则交通车辆模型接收被检测车辆的当前位置，并激活附加的pid控制器以保持安全距离。在这两种情况下，交通车辆模型都类似于一个典型的延迟速度行为，该行为被集成在一起来推断交通车辆的位置。通过适当的模型和控制器参数化，实现了流量控制。</p>
+<h4 id="未来工作"><a href="#未来工作" class="headerlink" title="未来工作"></a>未来工作</h4><ol>
+<li>进一步发展交通模拟架构，以模拟每辆模拟车辆邻近的交通车辆。</li>
+<li>其他驾驶模式，如换道将被添加。</li>
+<li>将考虑到更为复杂的道路网。</li>
+<li>所开发的交通仿真框架将集成在网络化驾驶仿真器环境中。因此，可以使用测试人员(即、交互式仿真。</li>
+<li>比较采用或不采用该方法维持一定的交通密度时的计算量。</li>
+<li>结合微观和宏观交通仿真的优势，(Ma et al.(2011))。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    老肥羊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/面向自动驾驶的交通流仿真框架.html" title="自动驾驶仿真 | 交通流仿真框架">http://iamwxy.com/面向自动驾驶的交通流仿真框架.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶仿真/" rel="tag"># 自动驾驶仿真</a>
+          
+            <a href="/tags/自动驾驶测试/" rel="tag"># 自动驾驶测试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/自动驾驶测试挑战和研究方向.html" rel="next" title="自动驾驶测试挑战和研究方向">
+                <i class="fa fa-chevron-left"></i> 自动驾驶测试挑战和研究方向
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/自动驾驶仿真-超车行为建模.html" rel="prev" title="自动驾驶仿真 | 超车行为建模">
+                自动驾驶仿真 | 超车行为建模 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="老肥羊" />
+            
+              <p class="site-author-name" itemprop="name">老肥羊</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#研究意义"><span class="nav-number">1.</span> <span class="nav-text">研究意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关工作"><span class="nav-number">2.</span> <span class="nav-text">相关工作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#学术界工作"><span class="nav-number">2.1.</span> <span class="nav-text">学术界工作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#产业界相关工作"><span class="nav-number">2.2.</span> <span class="nav-text">产业界相关工作</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真框架总览"><span class="nav-number">3.</span> <span class="nav-text">交通流仿真框架总览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#仿真框架功能单元和数据接口"><span class="nav-number">4.</span> <span class="nav-text">仿真框架功能单元和数据接口</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#初始化模块"><span class="nav-number">4.1.</span> <span class="nav-text">初始化模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#动态窗口生成模块"><span class="nav-number">4.2.</span> <span class="nav-text">动态窗口生成模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#交通观察者模块"><span class="nav-number">4.3.</span> <span class="nav-text">交通观察者模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#交通速度、密度控制模块"><span class="nav-number">4.4.</span> <span class="nav-text">交通速度、密度控制模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#交通生成、舍弃模块"><span class="nav-number">4.5.</span> <span class="nav-text">交通生成、舍弃模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#驾驶员模块"><span class="nav-number">4.6.</span> <span class="nav-text">驾驶员模块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#交通模块"><span class="nav-number">4.7.</span> <span class="nav-text">交通模块</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#未来工作"><span class="nav-number">5.</span> <span class="nav-text">未来工作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老肥羊</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">173.9k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1556678714000', 
+            owner: 'sheepwxy',
+            repo: 'tjwxy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'e56c250e2cc5d67d8f0ec6973f7a1cf032529e73',
+            
+                client_id: '0b21c5c1820d4915dd21'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
