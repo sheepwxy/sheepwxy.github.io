@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%B5%8B%E8%AF%95%E6%8C%91%E6%88%98%E5%92%8C%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91.html</loc>
+    <lastmod>2019-05-08T01:20:22.510Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶测试挑战和研究方向</title>
+        <pubTime>2019-04-30T05:34:51.000Z</pubTime>
+        
+        <tag>自动驾驶测试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/DARPA%E5%9F%8E%E5%B8%82%E6%8C%91%E6%88%98%E8%B5%9B%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87.html</loc>
+    <lastmod>2019-05-08T01:19:40.772Z</lastmod>
+    <data>
+        <display>
+        <title>DARPA论文总结</title>
+        <pubTime>2018-08-13T09:17:18.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/DeepTest-%E9%9D%A2%E5%90%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%B5%8B%E8%AF%95.html</loc>
     <lastmod>2019-05-08T01:16:28.462Z</lastmod>
     <data>
@@ -11,9 +45,9 @@
         <title>DeepTest-面向深度学习的测试</title>
         <pubTime>2018-08-02T02:47:54.000Z</pubTime>
         
-        <tag>深度学习</tag>
-         
         <tag>自动驾驶测试</tag>
+         
+        <tag>深度学习</tag>
          
          
            
@@ -170,9 +204,9 @@
         <title>R语言学习笔记二 | 绘图</title>
         <pubTime>2018-08-20T14:46:01.000Z</pubTime>
         
-        <tag>数据可视化</tag>
-         
         <tag>工具</tag>
+         
+        <tag>数据可视化</tag>
          
          
            
@@ -189,9 +223,9 @@
         <title>R语言学习笔记</title>
         <pubTime>2018-08-16T02:29:27.000Z</pubTime>
         
-        <tag>数据可视化</tag>
-         
         <tag>工具</tag>
+         
+        <tag>数据可视化</tag>
          
          
            
@@ -225,9 +259,9 @@
         <title>自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例</title>
         <pubTime>2018-11-01T02:36:16.000Z</pubTime>
         
-        <tag>机器学习</tag>
-         
         <tag>自动驾驶测试</tag>
+         
+        <tag>机器学习</tag>
          
          
            
@@ -296,25 +330,6 @@
         <pubTime>2019-04-28T15:22:00.000Z</pubTime>
         
         <tag>自动驾驶仿真</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%B5%8B%E8%AF%95%E6%8C%91%E6%88%98%E5%92%8C%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91.html</loc>
-    <lastmod>2019-05-08T01:05:11.211Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶测试挑战和研究方向</title>
-        <pubTime>2019-04-30T05:34:51.000Z</pubTime>
-        
-        <tag>自动驾驶仿真</tag>
-         
-        <tag>自动驾驶测试</tag>
          
          
            
@@ -1824,29 +1839,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/DARPA%E5%9F%8E%E5%B8%82%E6%8C%91%E6%88%98%E8%B5%9B%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87.html</loc>
-    <lastmod>2018-08-15T13:36:07.152Z</lastmod>
-    <data>
-        <display>
-        <title>DARPA论文总结</title>
-        <pubTime>2018-08-13T09:17:18.000Z</pubTime>
-        
-        <tag>总结</tag>
-         
-        <tag>自动驾驶</tag>
-         
-        <tag>读书</tag>
-         
-        <tag>DARPA</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E6%95%B4%E7%90%86.html</loc>
     <lastmod>2018-08-15T03:23:32.126Z</lastmod>
     <data>
@@ -2088,9 +2080,9 @@
         <title>信息论随笔三</title>
         <pubTime>2018-07-10T13:27:00.000Z</pubTime>
         
-        <tag>信息论</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>信息论</tag>
          
          
            
@@ -2195,9 +2187,9 @@
         <title>数据可视化 | 工具</title>
         <pubTime>2018-08-04T05:32:56.000Z</pubTime>
         
-        <tag>数据可视化</tag>
-         
         <tag>工具</tag>
+         
+        <tag>数据可视化</tag>
          
          
            
@@ -2214,9 +2206,9 @@
         <title>AirSim配置</title>
         <pubTime>2018-07-07T06:42:25.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>自动驾驶仿真</tag>
+         
+        <tag>工具</tag>
          
          
            
