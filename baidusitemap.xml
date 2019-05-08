@@ -4,18 +4,16 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%B5%8B%E8%AF%95%E6%8C%91%E6%88%98%E5%92%8C%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91.html</loc>
-    <lastmod>2019-05-01T04:43:07.220Z</lastmod>
+    <loc>http://iamwxy.com/DeepTest-%E9%9D%A2%E5%90%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%B5%8B%E8%AF%95.html</loc>
+    <lastmod>2019-05-08T01:16:28.462Z</lastmod>
     <data>
         <display>
-        <title>自动驾驶测试挑战和研究方向</title>
-        <pubTime>2019-04-30T05:34:51.000Z</pubTime>
+        <title>DeepTest-面向深度学习的测试</title>
+        <pubTime>2018-08-02T02:47:54.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
+        <tag>深度学习</tag>
          
-        <tag>自动驾驶</tag>
-         
-        <tag>测试</tag>
+        <tag>自动驾驶测试</tag>
          
          
            
@@ -25,14 +23,209 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-%E8%B6%85%E8%BD%A6%E8%A1%8C%E4%B8%BA%E5%BB%BA%E6%A8%A1.html</loc>
-    <lastmod>2019-05-01T04:42:24.407Z</lastmod>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E9%AA%8C%E8%AF%81%E7%9A%84%E6%8C%91%E6%88%98.html</loc>
+    <lastmod>2019-05-08T01:15:33.661Z</lastmod>
     <data>
         <display>
-        <title>自动驾驶仿真 | 超车行为建模</title>
-        <pubTime>2019-05-01T04:25:24.000Z</pubTime>
+        <title>自动驾驶测试与验证的挑战</title>
+        <pubTime>2018-10-05T14:01:03.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
+        <tag>自动驾驶测试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2-%E4%B8%89.html</loc>
+    <lastmod>2019-05-08T01:15:11.810Z</lastmod>
+    <data>
+        <display>
+        <title>统计|数理统计简史(三)</title>
+        <pubTime>2018-10-17T12:22:02.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%BC%80%E7%AF%87.html</loc>
+    <lastmod>2019-05-08T01:14:56.593Z</lastmod>
+    <data>
+        <display>
+        <title>数据可视化 | 开篇</title>
+        <pubTime>2018-07-20T10:53:18.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>数据可视化</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/BOSS%E6%97%A0%E4%BA%BA%E8%BD%A6-DARPA%E5%9F%8E%E5%B8%82%E6%8C%91%E6%88%98%E8%B5%9B.html</loc>
+    <lastmod>2019-05-08T01:14:27.054Z</lastmod>
+    <data>
+        <display>
+        <title>BOSS无人车 | DARPA论文</title>
+        <pubTime>2018-08-14T16:34:22.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E8%A7%84%E5%88%92%E7%AF%87.html</loc>
+    <lastmod>2019-05-08T01:14:12.267Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶 | 规划篇</title>
+        <pubTime>2018-11-13T13:36:34.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E6%8E%A7%E5%88%B6%E7%AF%87.html</loc>
+    <lastmod>2019-05-08T01:14:00.033Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶 | 控制篇</title>
+        <pubTime>2018-11-14T12:45:23.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%80%81%E8%82%A5%E7%BE%8A%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-DARPA%E5%9F%8E%E5%B8%82%E6%8C%91%E6%88%98%E8%B5%9B2009.html</loc>
+    <lastmod>2019-05-08T01:13:33.306Z</lastmod>
+    <data>
+        <display>
+        <title>DARPA论文总结</title>
+        <pubTime>2018-08-13T09:17:18.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E4%B8%80%E9%97%A8%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80.html</loc>
+    <lastmod>2019-05-08T01:10:37.818Z</lastmod>
+    <data>
+        <display>
+        <title>如何学习一门编程语言</title>
+        <pubTime>2019-05-08T00:55:24.000Z</pubTime>
+        
+        <tag>编程</tag>
+         
+        <tag>高效学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C-%E7%BB%98%E5%9B%BE.html</loc>
+    <lastmod>2019-05-08T01:08:19.044Z</lastmod>
+    <data>
+        <display>
+        <title>R语言学习笔记二 | 绘图</title>
+        <pubTime>2018-08-20T14:46:01.000Z</pubTime>
+        
+        <tag>数据可视化</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</loc>
+    <lastmod>2019-05-08T01:08:02.948Z</lastmod>
+    <data>
+        <display>
+        <title>R语言学习笔记</title>
+        <pubTime>2018-08-16T02:29:27.000Z</pubTime>
+        
+        <tag>数据可视化</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%B9%A6%E6%91%98-%E5%A4%8D%E6%9D%82-%E7%B1%B3%E6%AD%87%E5%B0%94.html</loc>
+    <lastmod>2019-05-08T01:07:33.975Z</lastmod>
+    <data>
+        <display>
+        <title>书摘 | 复杂-米歇尔</title>
+        <pubTime>2019-03-26T13:33:12.000Z</pubTime>
+        
+        <tag>读书</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%B8%AD%E7%9A%84%E9%BB%91%E5%A4%A9%E9%B9%85%E9%97%AE%E9%A2%98-%E6%B5%85%E8%B0%88Edge-Case-%E8%BE%B9%E7%BC%98%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.html</loc>
+    <lastmod>2019-05-08T01:07:19.763Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例</title>
+        <pubTime>2018-11-01T02:36:16.000Z</pubTime>
+        
+        <tag>机器学习</tag>
          
         <tag>自动驾驶测试</tag>
          
@@ -45,11 +238,79 @@
     
   <url>
     <loc>http://iamwxy.com/%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E4%BA%A4%E9%80%9A%E6%B5%81%E4%BB%BF%E7%9C%9F%E6%A1%86%E6%9E%B6.html</loc>
-    <lastmod>2019-05-01T04:41:43.688Z</lastmod>
+    <lastmod>2019-05-08T01:06:49.778Z</lastmod>
     <data>
         <display>
         <title>自动驾驶仿真 | 交通流仿真框架</title>
         <pubTime>2019-05-01T02:45:14.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-%E8%B6%85%E8%BD%A6%E8%A1%8C%E4%B8%BA%E5%BB%BA%E6%A8%A1.html</loc>
+    <lastmod>2019-05-08T01:06:29.720Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶仿真 | 超车行为建模</title>
+        <pubTime>2019-05-01T04:25:24.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-Unity.html</loc>
+    <lastmod>2019-05-08T01:05:59.232Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶仿真资源素材 | Unity</title>
+        <pubTime>2018-10-28T14:52:53.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E5%85%B7%E9%9C%80%E6%B1%82.html</loc>
+    <lastmod>2019-05-08T01:05:22.743Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶仿真工具需求</title>
+        <pubTime>2019-04-28T15:22:00.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%B5%8B%E8%AF%95%E6%8C%91%E6%88%98%E5%92%8C%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91.html</loc>
+    <lastmod>2019-05-08T01:05:11.211Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶测试挑战和研究方向</title>
+        <pubTime>2019-04-30T05:34:51.000Z</pubTime>
         
         <tag>自动驾驶仿真</tag>
          
@@ -63,18 +324,377 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-Unity.html</loc>
-    <lastmod>2019-04-28T11:06:34.436Z</lastmod>
+    <loc>http://iamwxy.com/%E6%AD%A6%E5%8A%9F%E7%A7%98%E7%B1%8D.html</loc>
+    <lastmod>2019-05-08T01:04:38.734Z</lastmod>
     <data>
         <display>
-        <title>自动驾驶仿真资源素材 | Unity</title>
-        <pubTime>2018-10-28T14:52:53.000Z</pubTime>
+        <title>武功秘籍</title>
+        <pubTime>2018-07-26T09:12:53.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E4%B8%80.html</loc>
+    <lastmod>2019-05-08T01:04:25.078Z</lastmod>
+    <data>
+        <display>
+        <title>信息论随笔一</title>
+        <pubTime>2018-07-08T15:17:16.000Z</pubTime>
+        
+        <tag>信息论</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E4%BA%8C.html</loc>
+    <lastmod>2019-05-08T01:04:13.186Z</lastmod>
+    <data>
+        <display>
+        <title>信息论随笔二</title>
+        <pubTime>2018-07-09T15:21:23.000Z</pubTime>
+        
+        <tag>信息论</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E4%BA%94.html</loc>
+    <lastmod>2019-05-08T01:04:01.971Z</lastmod>
+    <data>
+        <display>
+        <title>信息论随笔五</title>
+        <pubTime>2018-08-19T09:46:00.000Z</pubTime>
+        
+        <tag>信息论</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/leetcode-%E5%BC%80%E7%AF%87%E6%9D%82%E8%B0%88.html</loc>
+    <lastmod>2019-05-08T01:03:43.083Z</lastmod>
+    <data>
+        <display>
+        <title>leetcode | 开篇杂谈</title>
+        <pubTime>2018-12-24T15:28:54.000Z</pubTime>
+        
+        <tag>编程</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E3%80%81%E6%B5%8B%E9%87%8F.html</loc>
+    <lastmod>2019-05-08T01:02:57.931Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习 | 正态分布、测量</title>
+        <pubTime>2018-09-30T03:11:34.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%83.html</loc>
+    <lastmod>2019-05-08T01:02:56.317Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习 | 高斯分布</title>
+        <pubTime>2018-09-27T10:25:47.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E4%B9%A6%E6%91%98-%E8%B5%A4%E8%A3%B8%E8%A3%B8%E7%9A%84%E7%BB%9F%E8%AE%A1.html</loc>
+    <lastmod>2019-05-08T01:02:53.912Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习 | 书摘 | 赤裸裸的统计</title>
+        <pubTime>2019-02-17T13:34:40.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E5%9B%9B.html</loc>
+    <lastmod>2019-05-08T01:02:50.983Z</lastmod>
+    <data>
+        <display>
+        <title>信息论随笔四</title>
+        <pubTime>2018-08-12T11:51:39.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>随笔</tag>
+         
+        <tag>信息论</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E6%8B%9B%E8%81%98%E9%9C%80%E6%B1%82-%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E7%A8%8B%E5%B8%88.html</loc>
+    <lastmod>2019-05-08T01:02:49.497Z</lastmod>
+    <data>
+        <display>
+        <title>招聘需求 | 自动驾驶仿真工程师</title>
+        <pubTime>2018-12-09T13:59:14.000Z</pubTime>
         
         <tag>自动驾驶仿真</tag>
          
         <tag>自动驾驶</tag>
          
-        <tag>测试</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/2018%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.html</loc>
+    <lastmod>2019-05-08T01:02:48.123Z</lastmod>
+    <data>
+        <display>
+        <title>2018年终总结</title>
+        <pubTime>2019-01-04T03:08:28.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E4%BA%94.html</loc>
+    <lastmod>2019-05-08T01:02:46.183Z</lastmod>
+    <data>
+        <display>
+        <title>转载-新理解矩阵(五)</title>
+        <pubTime>2019-04-20T08:59:37.000Z</pubTime>
+        
+        <tag>线性代数</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E4%BA%8C.html</loc>
+    <lastmod>2019-05-08T01:02:45.083Z</lastmod>
+    <data>
+        <display>
+        <title>转载-新理解矩阵(二)</title>
+        <pubTime>2019-04-09T07:59:03.000Z</pubTime>
+        
+        <tag>线性代数</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E4%B8%89.html</loc>
+    <lastmod>2019-05-08T01:02:43.441Z</lastmod>
+    <data>
+        <display>
+        <title>转载-新理解矩阵(三)</title>
+        <pubTime>2019-04-12T08:15:06.000Z</pubTime>
+        
+        <tag>线性代数</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E5%9B%9B.html</loc>
+    <lastmod>2019-05-08T01:02:42.217Z</lastmod>
+    <data>
+        <display>
+        <title>转载-新理解矩阵(四)</title>
+        <pubTime>2019-04-14T08:30:17.000Z</pubTime>
+        
+        <tag>线性代数</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5%EF%BC%88%E4%B8%80%EF%BC%89.html</loc>
+    <lastmod>2019-05-08T01:02:40.994Z</lastmod>
+    <data>
+        <display>
+        <title>转载 | 新理解矩阵（一）</title>
+        <pubTime>2019-04-08T03:15:04.000Z</pubTime>
+        
+        <tag>线性代数</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E7%9B%B8%E5%85%B3%E6%80%A7.html</loc>
+    <lastmod>2019-05-08T01:02:39.846Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习 | 相关性</title>
+        <pubTime>2018-09-28T15:00:25.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%9B%9E%E9%A1%BE.html</loc>
+    <lastmod>2019-05-08T01:02:38.260Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习 | 基础概念回顾</title>
+        <pubTime>2018-09-27T15:02:17.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%C2%96%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E4%B9%A6%E6%91%98-%E8%B5%A4%E8%A3%B8%E8%A3%B8%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E4%BA%8C.html</loc>
+    <lastmod>2019-05-08T01:02:35.573Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习 | 书摘 | 赤裸裸的统计学(二)</title>
+        <pubTime>2019-03-23T14:08:33.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%85%A5%E9%97%A8-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2.html</loc>
+    <lastmod>2019-05-08T01:02:33.834Z</lastmod>
+    <data>
+        <display>
+        <title>统计入门 | 数理统计学简史</title>
+        <pubTime>2018-10-05T15:24:55.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2-%E4%BA%8C.html</loc>
+    <lastmod>2019-05-08T01:02:31.535Z</lastmod>
+    <data>
+        <display>
+        <title>统计 | 数理统计简史(二)</title>
+        <pubTime>2018-10-06T06:31:08.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2-%E4%B8%80.html</loc>
+    <lastmod>2019-05-08T01:02:29.503Z</lastmod>
+    <data>
+        <display>
+        <title>统计 | 数理统计简史(一)</title>
+        <pubTime>2018-10-06T06:30:14.000Z</pubTime>
+        
+        <tag>统计学</tag>
          
          
            
@@ -135,101 +755,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E5%85%B7%E9%9C%80%E6%B1%82.html</loc>
-    <lastmod>2019-04-28T06:29:03.347Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶仿真工具需求</title>
-        <pubTime>2019-04-28T15:22:00.000Z</pubTime>
-        
-        <tag>自动驾驶仿真</tag>
-         
-        <tag>测试</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E4%BA%8C.html</loc>
-    <lastmod>2019-04-27T09:41:07.278Z</lastmod>
-    <data>
-        <display>
-        <title>转载-新理解矩阵(二)</title>
-        <pubTime>2019-04-09T07:59:03.000Z</pubTime>
-        
-        <tag>数据科学</tag>
-         
-        <tag>线性代数</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E4%B8%89.html</loc>
-    <lastmod>2019-04-27T09:41:05.753Z</lastmod>
-    <data>
-        <display>
-        <title>转载-新理解矩阵(三)</title>
-        <pubTime>2019-04-12T08:15:06.000Z</pubTime>
-        
-        <tag>数据科学</tag>
-         
-        <tag>线性代数</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E5%9B%9B.html</loc>
-    <lastmod>2019-04-27T09:41:02.839Z</lastmod>
-    <data>
-        <display>
-        <title>转载-新理解矩阵(四)</title>
-        <pubTime>2019-04-14T08:30:17.000Z</pubTime>
-        
-        <tag>数据科学</tag>
-         
-        <tag>线性代数</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E4%BA%94.html</loc>
-    <lastmod>2019-04-27T09:41:01.815Z</lastmod>
-    <data>
-        <display>
-        <title>转载-新理解矩阵(五)</title>
-        <pubTime>2019-04-20T08:59:37.000Z</pubTime>
-        
-        <tag>数据科学</tag>
-         
-        <tag>线性代数</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E9%9A%8F%E7%AC%94.html</loc>
     <lastmod>2019-04-27T09:41:00.520Z</lastmod>
     <data>
@@ -238,42 +763,6 @@
         <pubTime>2019-02-22T09:28:46.000Z</pubTime>
         
         <tag>自动驾驶仿真</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%BD%AC%E8%BD%BD-%E6%96%B0%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5%EF%BC%88%E4%B8%80%EF%BC%89.html</loc>
-    <lastmod>2019-04-08T03:21:03.726Z</lastmod>
-    <data>
-        <display>
-        <title>转载 | 新理解矩阵（一）</title>
-        <pubTime>2019-04-08T03:15:04.000Z</pubTime>
-        
-        <tag>数据科学</tag>
-         
-        <tag>线性代数</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%C2%96%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E4%B9%A6%E6%91%98-%E8%B5%A4%E8%A3%B8%E8%A3%B8%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E4%BA%8C.html</loc>
-    <lastmod>2019-04-01T14:24:18.372Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习 | 书摘 | 赤裸裸的统计学(二)</title>
-        <pubTime>2019-03-23T14:08:33.000Z</pubTime>
-        
-        <tag>统计学</tag>
          
          
            
@@ -293,44 +782,6 @@
         <tag>自动驾驶仿真</tag>
          
         <tag>自动驾驶</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E4%B9%A6%E6%91%98-%E5%A4%8D%E6%9D%82-%E7%B1%B3%E6%AD%87%E5%B0%94.html</loc>
-    <lastmod>2019-03-26T13:58:44.130Z</lastmod>
-    <data>
-        <display>
-        <title>书摘 | 复杂-米歇尔</title>
-        <pubTime>2019-03-26T13:33:12.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E6%8B%9B%E8%81%98%E9%9C%80%E6%B1%82-%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E7%A8%8B%E5%B8%88.html</loc>
-    <lastmod>2019-03-24T07:09:24.781Z</lastmod>
-    <data>
-        <display>
-        <title>招聘需求 | 自动驾驶仿真工程师</title>
-        <pubTime>2018-12-09T13:59:14.000Z</pubTime>
-        
-        <tag>自动驾驶仿真</tag>
-         
-        <tag>自动驾驶</tag>
-         
-        <tag>就业信息</tag>
          
          
            
@@ -444,23 +895,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E4%B9%A6%E6%91%98-%E8%B5%A4%E8%A3%B8%E8%A3%B8%E7%9A%84%E7%BB%9F%E8%AE%A1.html</loc>
-    <lastmod>2019-02-17T13:41:09.729Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习 | 书摘 | 赤裸裸的统计</title>
-        <pubTime>2019-02-17T13:34:40.000Z</pubTime>
-        
-        <tag>统计学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BC%A0%E6%84%9F%E5%99%A8-%E8%A7%86%E8%A7%89%E4%BC%A0%E6%84%9F%E5%99%A8-%E4%BA%8C.html</loc>
     <lastmod>2019-01-25T03:00:39.517Z</lastmod>
     <data>
@@ -525,45 +959,9 @@
         <title>读书笔记 | 《如何阅读一本书》</title>
         <pubTime>2018-08-18T13:36:01.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>总结</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/2018%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.html</loc>
-    <lastmod>2019-01-04T13:32:55.865Z</lastmod>
-    <data>
-        <display>
-        <title>2018年终总结</title>
-        <pubTime>2019-01-04T03:08:28.000Z</pubTime>
-        
-        <tag>年终总结</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/leetcode-%E5%BC%80%E7%AF%87%E6%9D%82%E8%B0%88.html</loc>
-    <lastmod>2018-12-24T08:42:44.140Z</lastmod>
-    <data>
-        <display>
-        <title>leetcode | 开篇杂谈</title>
-        <pubTime>2018-12-24T15:28:54.000Z</pubTime>
-        
-        <tag>leetcode</tag>
-         
-        <tag>编程</tag>
+        <tag>读书</tag>
          
          
            
@@ -580,9 +978,9 @@
         <title>自动驾驶 | 感知篇（下）</title>
         <pubTime>2018-12-20T08:53:37.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -599,30 +997,9 @@
         <title>自动驾驶 | 感知篇（上）</title>
         <pubTime>2018-12-12T13:25:30.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E6%8E%A7%E5%88%B6%E7%AF%87.html</loc>
-    <lastmod>2018-12-10T09:01:50.361Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶 | 控制篇</title>
-        <pubTime>2018-11-14T12:45:23.000Z</pubTime>
-        
         <tag>自动驾驶</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>DARPA</tag>
          
          
            
@@ -673,30 +1050,9 @@
         <title>自动驾驶学习资源整理</title>
         <pubTime>2018-11-25T14:07:25.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6-%E8%A7%84%E5%88%92%E7%AF%87.html</loc>
-    <lastmod>2018-11-17T10:15:35.156Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶 | 规划篇</title>
-        <pubTime>2018-11-13T13:36:34.000Z</pubTime>
-        
         <tag>自动驾驶</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>DARPA</tag>
          
          
            
@@ -799,29 +1155,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%B8%AD%E7%9A%84%E9%BB%91%E5%A4%A9%E9%B9%85%E9%97%AE%E9%A2%98-%E6%B5%85%E8%B0%88Edge-Case-%E8%BE%B9%E7%BC%98%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.html</loc>
-    <lastmod>2018-11-03T12:45:09.619Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例</title>
-        <pubTime>2018-11-01T02:36:16.000Z</pubTime>
-        
-        <tag>自动驾驶</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>机器学习</tag>
-         
-        <tag>自动驾驶测试</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E4%B9%A6%E8%AF%84-%E3%80%8A%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E%E3%80%8B.html</loc>
     <lastmod>2018-10-30T14:26:11.918Z</lastmod>
     <data>
@@ -846,9 +1179,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -916,9 +1249,9 @@
         <title>自动驾驶学习 | 算法第四版</title>
         <pubTime>2018-09-17T15:15:27.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -1019,29 +1352,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2-%E4%B8%89.html</loc>
-    <lastmod>2018-10-17T12:47:04.330Z</lastmod>
-    <data>
-        <display>
-        <title>统计|数理统计简史(三)</title>
-        <pubTime>2018-10-17T12:22:02.000Z</pubTime>
-        
-        <tag>读书</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E8%A1%A8%E8%BE%BE%E8%83%BD%E5%8A%9B%EF%BC%88%E4%BA%8C%EF%BC%89.html</loc>
     <lastmod>2018-10-14T15:31:41.746Z</lastmod>
     <data>
@@ -1105,172 +1415,6 @@
         <tag>机器学习</tag>
          
         <tag>线性代数</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2-%E4%BA%8C.html</loc>
-    <lastmod>2018-10-06T14:50:12.504Z</lastmod>
-    <data>
-        <display>
-        <title>统计 | 数理统计简史(二)</title>
-        <pubTime>2018-10-06T06:31:08.000Z</pubTime>
-        
-        <tag>读书</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1-%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2-%E4%B8%80.html</loc>
-    <lastmod>2018-10-06T14:48:34.467Z</lastmod>
-    <data>
-        <display>
-        <title>统计 | 数理统计简史(一)</title>
-        <pubTime>2018-10-06T06:30:14.000Z</pubTime>
-        
-        <tag>读书</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%85%A5%E9%97%A8-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E7%AE%80%E5%8F%B2.html</loc>
-    <lastmod>2018-10-06T06:33:46.532Z</lastmod>
-    <data>
-        <display>
-        <title>统计入门 | 数理统计学简史</title>
-        <pubTime>2018-10-05T15:24:55.000Z</pubTime>
-        
-        <tag>读书</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E3%80%81%E6%B5%8B%E9%87%8F.html</loc>
-    <lastmod>2018-10-05T15:30:00.266Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习 | 正态分布、测量</title>
-        <pubTime>2018-09-30T03:11:34.000Z</pubTime>
-        
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%83.html</loc>
-    <lastmod>2018-10-05T15:00:20.754Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习 | 高斯分布</title>
-        <pubTime>2018-09-27T10:25:47.000Z</pubTime>
-        
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E7%9B%B8%E5%85%B3%E6%80%A7.html</loc>
-    <lastmod>2018-10-05T15:00:10.187Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习 | 相关性</title>
-        <pubTime>2018-09-28T15:00:25.000Z</pubTime>
-        
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%9B%9E%E9%A1%BE.html</loc>
-    <lastmod>2018-10-05T14:59:59.895Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习 | 基础概念回顾</title>
-        <pubTime>2018-09-27T15:02:17.000Z</pubTime>
-        
-        <tag>统计学</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E9%AA%8C%E8%AF%81%E7%9A%84%E6%8C%91%E6%88%98.html</loc>
-    <lastmod>2018-10-05T14:59:33.460Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶测试与验证的挑战</title>
-        <pubTime>2018-10-05T14:01:03.000Z</pubTime>
-        
-        <tag>自动驾驶</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>测试</tag>
          
          
            
@@ -1429,9 +1573,9 @@
         <title>从搭建博客想到的</title>
         <pubTime>2018-09-06T13:31:55.000Z</pubTime>
         
-        <tag>高效学习</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -1505,9 +1649,9 @@
         
         <tag>总结</tag>
          
-        <tag>高效学习</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -1613,11 +1757,11 @@
         <title>自动驾驶仿真整理</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
+        <tag>总结</tag>
+         
         <tag>自动驾驶仿真</tag>
          
         <tag>自动驾驶</tag>
-         
-        <tag>总结</tag>
          
          
            
@@ -1663,67 +1807,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E4%BA%94.html</loc>
-    <lastmod>2018-08-21T03:03:01.311Z</lastmod>
-    <data>
-        <display>
-        <title>信息论随笔五</title>
-        <pubTime>2018-08-19T09:46:00.000Z</pubTime>
-        
-        <tag>信息论</tag>
-         
-        <tag>脑洞</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C-%E7%BB%98%E5%9B%BE.html</loc>
-    <lastmod>2018-08-20T14:47:19.233Z</lastmod>
-    <data>
-        <display>
-        <title>R语言学习笔记二 | 绘图</title>
-        <pubTime>2018-08-20T14:46:01.000Z</pubTime>
-        
-        <tag>工具</tag>
-         
-        <tag>高效学习</tag>
-         
-        <tag>数据可视化</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</loc>
-    <lastmod>2018-08-19T03:01:17.291Z</lastmod>
-    <data>
-        <display>
-        <title>R语言学习笔记</title>
-        <pubTime>2018-08-16T02:29:27.000Z</pubTime>
-        
-        <tag>工具</tag>
-         
-        <tag>高效学习</tag>
-         
-        <tag>数据可视化</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E8%A8%80%E4%B8%8D%E5%8F%AF%E5%8F%8A-%E6%9E%A3%E5%AD%90.html</loc>
     <lastmod>2018-08-17T14:55:27.368Z</lastmod>
     <data>
@@ -1741,41 +1824,18 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%80%81%E8%82%A5%E7%BE%8A%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-DARPA%E5%9F%8E%E5%B8%82%E6%8C%91%E6%88%98%E8%B5%9B2009.html</loc>
+    <loc>http://iamwxy.com/DARPA%E5%9F%8E%E5%B8%82%E6%8C%91%E6%88%98%E8%B5%9B%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87.html</loc>
     <lastmod>2018-08-15T13:36:07.152Z</lastmod>
     <data>
         <display>
         <title>DARPA论文总结</title>
         <pubTime>2018-08-13T09:17:18.000Z</pubTime>
         
+        <tag>总结</tag>
+         
         <tag>自动驾驶</tag>
          
         <tag>读书</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>DARPA</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/BOSS%E6%97%A0%E4%BA%BA%E8%BD%A6-DARPA%E5%9F%8E%E5%B8%82%E6%8C%91%E6%88%98%E8%B5%9B.html</loc>
-    <lastmod>2018-08-15T05:25:07.381Z</lastmod>
-    <data>
-        <display>
-        <title>BOSS无人车 | DARPA论文</title>
-        <pubTime>2018-08-14T16:34:22.000Z</pubTime>
-        
-        <tag>自动驾驶</tag>
-         
-        <tag>读书</tag>
-         
-        <tag>总结</tag>
          
         <tag>DARPA</tag>
          
@@ -1794,10 +1854,10 @@
         <title>自动驾驶高精度地图总结</title>
         <pubTime>2018-07-30T14:25:26.000Z</pubTime>
         
+        <tag>总结</tag>
+         
         <tag>自动驾驶</tag>
          
-        <tag>总结</tag>
-         
          
            
         </display>
@@ -1805,25 +1865,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E5%9B%9B.html</loc>
-    <lastmod>2018-08-12T12:13:20.474Z</lastmod>
-    <data>
-        <display>
-        <title>信息论随笔四</title>
-        <pubTime>2018-08-12T11:51:39.000Z</pubTime>
-        
-        <tag>总结</tag>
-         
-        <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://iamwxy.com/%E8%AF%BB%E4%B9%A6-%E5%8D%88%E5%A4%9C%E5%87%B6%E9%93%83.html</loc>
@@ -1870,50 +1911,6 @@
         <tag>随笔</tag>
          
         <tag>生活</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%BC%80%E7%AF%87.html</loc>
-    <lastmod>2018-08-10T11:28:32.794Z</lastmod>
-    <data>
-        <display>
-        <title>数据可视化 | 开篇</title>
-        <pubTime>2018-07-20T10:53:18.000Z</pubTime>
-        
-        <tag>总结</tag>
-         
-        <tag>数据可视化</tag>
-         
-        <tag>数据科学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/DeepTest-%E9%9D%A2%E5%90%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%B5%8B%E8%AF%95.html</loc>
-    <lastmod>2018-08-10T11:28:15.932Z</lastmod>
-    <data>
-        <display>
-        <title>DeepTest-面向深度学习的测试</title>
-        <pubTime>2018-08-02T02:47:54.000Z</pubTime>
-        
-        <tag>自动驾驶</tag>
-         
-        <tag>测试</tag>
-         
-        <tag>深度学习</tag>
-         
-        <tag>机器学习</tag>
          
          
            
@@ -1998,9 +1995,9 @@
         <title>谈古龙</title>
         <pubTime>2018-07-19T12:15:22.000Z</pubTime>
         
-        <tag>读书</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>读书</tag>
          
          
            
@@ -2091,9 +2088,9 @@
         <title>信息论随笔三</title>
         <pubTime>2018-07-10T13:27:00.000Z</pubTime>
         
-        <tag>高效学习</tag>
-         
         <tag>信息论</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -2198,66 +2195,9 @@
         <title>数据可视化 | 工具</title>
         <pubTime>2018-08-04T05:32:56.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>数据可视化</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E6%AD%A6%E5%8A%9F%E7%A7%98%E7%B1%8D.html</loc>
-    <lastmod>2018-07-28T09:19:39.166Z</lastmod>
-    <data>
-        <display>
-        <title>武功秘籍</title>
-        <pubTime>2018-07-26T09:12:53.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-        <tag>脑洞</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E4%BA%8C.html</loc>
-    <lastmod>2018-07-13T13:50:16.794Z</lastmod>
-    <data>
-        <display>
-        <title>信息论随笔二</title>
-        <pubTime>2018-07-09T15:21:23.000Z</pubTime>
-        
-        <tag>信息论</tag>
-         
-        <tag>脑洞</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E4%BF%A1%E6%81%AF%E8%AE%BA%E9%9A%8F%E7%AC%94%E4%B8%80.html</loc>
-    <lastmod>2018-07-13T13:50:01.609Z</lastmod>
-    <data>
-        <display>
-        <title>信息论随笔一</title>
-        <pubTime>2018-07-08T15:17:16.000Z</pubTime>
-        
-        <tag>信息论</tag>
-         
-        <tag>脑洞</tag>
+        <tag>工具</tag>
          
          
            
@@ -2274,9 +2214,9 @@
         <title>AirSim配置</title>
         <pubTime>2018-07-07T06:42:25.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>工具</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
