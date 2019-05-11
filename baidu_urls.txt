@@ -1,3 +1,4 @@
+http://iamwxy.com/交通流建模经典书籍-Fundamentals-of-Traffic-Simulation.html
 http://iamwxy.com/如何学习一门编程语言.html
 http://iamwxy.com/自动驾驶仿真-超车行为建模.html
 http://iamwxy.com/面向自动驾驶的交通流仿真框架.html
@@ -17,4 +18,3 @@ http://iamwxy.com/统计学习-书摘-赤裸裸的统计.html
 http://iamwxy.com/2018年终总结.html
 http://iamwxy.com/leetcode-开篇杂谈.html
 http://iamwxy.com/亦师亦友亦情人.html
-http://iamwxy.com/自动驾驶-感知篇（下）.html
