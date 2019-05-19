@@ -4,8 +4,93 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86.html</loc>
+    <lastmod>2019-05-19T16:02:44.171Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶学习资源整理</title>
+        <pubTime>2019-05-19T14:07:25.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E4%BA%A4%E9%80%9A%E6%B5%81%E4%BB%BF%E7%9C%9F%E6%A1%86%E6%9E%B6.html</loc>
+    <lastmod>2019-05-16T12:04:10.190Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶仿真 | 交通流仿真框架</title>
+        <pubTime>2019-05-01T02:45:14.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%BF%91%E6%9C%9F%E6%80%9D%E8%80%83.html</loc>
+    <lastmod>2019-05-16T05:12:02.357Z</lastmod>
+    <data>
+        <display>
+        <title>近期思考</title>
+        <pubTime>2019-03-24T11:50:51.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E4%B9%A6%E4%B9%8B%E9%81%90%E6%80%9D.html</loc>
+    <lastmod>2019-05-14T15:18:10.679Z</lastmod>
+    <data>
+        <display>
+        <title>书之遐思</title>
+        <pubTime>2019-02-02T07:51:47.000Z</pubTime>
+        
+        <tag>读书</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E9%9D%A2%E8%AF%95%E7%95%99%E6%A1%A3.html</loc>
+    <lastmod>2019-05-14T14:00:38.108Z</lastmod>
+    <data>
+        <display>
+        <title>面试留档</title>
+        <pubTime>2019-01-01T11:40:18.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E4%BA%A4%E9%80%9A%E6%B5%81%E5%BB%BA%E6%A8%A1%E7%BB%8F%E5%85%B8%E4%B9%A6%E7%B1%8D-Fundamentals-of-Traffic-Simulation.html</loc>
-    <lastmod>2019-05-11T05:32:51.135Z</lastmod>
+    <lastmod>2019-05-11T05:34:31.249Z</lastmod>
     <data>
         <display>
         <title>交通流建模经典书籍-Fundamentals of Traffic Simulation</title>
@@ -279,23 +364,6 @@
         <tag>自动驾驶测试</tag>
          
         <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E4%BA%A4%E9%80%9A%E6%B5%81%E4%BB%BF%E7%9C%9F%E6%A1%86%E6%9E%B6.html</loc>
-    <lastmod>2019-05-08T01:06:49.778Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶仿真 | 交通流仿真框架</title>
-        <pubTime>2019-05-01T02:45:14.000Z</pubTime>
-        
-        <tag>自动驾驶仿真</tag>
          
          
            
@@ -893,23 +961,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%BF%91%E6%9C%9F%E6%80%9D%E8%80%83.html</loc>
-    <lastmod>2019-03-24T05:29:16.389Z</lastmod>
-    <data>
-        <display>
-        <title>近期思考</title>
-        <pubTime>2019-03-24T11:50:51.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E6%99%BA%E8%83%BD%E6%B1%BD%E8%BD%A6%E7%A0%94%E7%A9%B6%E6%89%80-%E5%85%AC%E4%BC%97%E5%8F%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html</loc>
     <lastmod>2019-03-24T05:22:58.061Z</lastmod>
     <data>
@@ -1010,9 +1061,9 @@
         <title>自动驾驶 | 感知篇（下）</title>
         <pubTime>2018-12-20T08:53:37.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -1029,9 +1080,9 @@
         <title>自动驾驶 | 感知篇（上）</title>
         <pubTime>2018-12-12T13:25:30.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -1066,25 +1117,6 @@
         <pubTime>2018-11-29T08:20:15.000Z</pubTime>
         
         <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86.html</loc>
-    <lastmod>2018-11-25T15:35:13.098Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶学习资源整理</title>
-        <pubTime>2018-11-25T14:07:25.000Z</pubTime>
-        
-        <tag>总结</tag>
-         
-        <tag>自动驾驶</tag>
          
          
            
@@ -1281,9 +1313,9 @@
         <title>自动驾驶学习 | 算法第四版</title>
         <pubTime>2018-09-17T15:15:27.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -1789,9 +1821,9 @@
         <title>自动驾驶仿真整理</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>总结</tag>
          
         <tag>自动驾驶仿真</tag>
          
@@ -1863,9 +1895,9 @@
         <title>自动驾驶高精度地图总结</title>
         <pubTime>2018-07-30T14:25:26.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>总结</tag>
          
          
            
@@ -2004,9 +2036,9 @@
         <title>谈古龙</title>
         <pubTime>2018-07-19T12:15:22.000Z</pubTime>
         
-        <tag>随笔</tag>
-         
         <tag>读书</tag>
+         
+        <tag>随笔</tag>
          
          
            
