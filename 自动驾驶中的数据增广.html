@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="信息论," />
+  <meta name="keywords" content="自动驾驶测试," />
 
 
 
@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="信息论是一门非常重要的科学，再怎么重视都不为过。过往千年，我们关注的是物质，过往百年，我们的重心在能量上，而在未来，信息将成为最新的生产力。以研究信息为基础的信息论，既是人类最高智慧的结晶，也代表着对未来的预言。信息论是一门极其严肃的科学，有着严谨的物理和数学基础，博客中的信息论随笔系列跟严肃的信息论关系不大，大多数都是我在读过《信息简史》、《人类简史》以及香农的通信理论后胡乱开的脑洞，本意是作为">
-<meta name="keywords" content="信息论">
+<meta name="description" content="本文摘取了Matt Cooper对自动驾驶数据增广的一些讨论。文章的核心观点是，针对特定的模型选定的数据增广器必须通过仔细分析后确定，不能把增广器当黑箱使用，否在会产生过拟合。">
+<meta name="keywords" content="自动驾驶测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信息论随笔五">
-<meta property="og:url" content="http://iamwxy.com/信息论随笔五.html">
+<meta property="og:title" content="自动驾驶中的数据增广">
+<meta property="og:url" content="http://iamwxy.com/自动驾驶中的数据增广.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="信息论是一门非常重要的科学，再怎么重视都不为过。过往千年，我们关注的是物质，过往百年，我们的重心在能量上，而在未来，信息将成为最新的生产力。以研究信息为基础的信息论，既是人类最高智慧的结晶，也代表着对未来的预言。信息论是一门极其严肃的科学，有着严谨的物理和数学基础，博客中的信息论随笔系列跟严肃的信息论关系不大，大多数都是我在读过《信息简史》、《人类简史》以及香农的通信理论后胡乱开的脑洞，本意是作为">
+<meta property="og:description" content="本文摘取了Matt Cooper对自动驾驶数据增广的一些讨论。文章的核心观点是，针对特定的模型选定的数据增广器必须通过仔细分析后确定，不能把增广器当黑箱使用，否在会产生过拟合。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-08T01:04:01.971Z">
+<meta property="og:updated_time" content="2019-05-28T15:35:50.419Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="信息论随笔五">
-<meta name="twitter:description" content="信息论是一门非常重要的科学，再怎么重视都不为过。过往千年，我们关注的是物质，过往百年，我们的重心在能量上，而在未来，信息将成为最新的生产力。以研究信息为基础的信息论，既是人类最高智慧的结晶，也代表着对未来的预言。信息论是一门极其严肃的科学，有着严谨的物理和数学基础，博客中的信息论随笔系列跟严肃的信息论关系不大，大多数都是我在读过《信息简史》、《人类简史》以及香农的通信理论后胡乱开的脑洞，本意是作为">
+<meta name="twitter:title" content="自动驾驶中的数据增广">
+<meta name="twitter:description" content="本文摘取了Matt Cooper对自动驾驶数据增广的一些讨论。文章的核心观点是，针对特定的模型选定的数据增广器必须通过仔细分析后确定，不能把增广器当黑箱使用，否在会产生过拟合。">
 
 
 
@@ -162,13 +162,13 @@
 
 
 
-  <link rel="canonical" href="http://iamwxy.com/信息论随笔五.html"/>
+  <link rel="canonical" href="http://iamwxy.com/自动驾驶中的数据增广.html"/>
 
 
 
 
 
-  <title>信息论随笔五 | 吴旭阳的博客</title>
+  <title>自动驾驶中的数据增广 | 吴旭阳的博客</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/信息论随笔五.html">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/自动驾驶中的数据增广.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="老肥羊">
@@ -336,7 +336,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">信息论随笔五</h2>
+          <h2 class="post-title" itemprop="name headline">自动驾驶中的数据增广</h2>
         
 
         <div class="post-meta">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">写于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-19T17:46:00+08:00">
-                2018-08-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T23:01:39+08:00">
+                2019-05-28
               </time>
             
 
@@ -386,22 +386,21 @@
       
 
       
-        <p>信息论是一门非常重要的科学，再怎么重视都不为过。过往千年，我们关注的是物质，过往百年，我们的重心在能量上，而在未来，信息将成为最新的生产力。以研究信息为基础的信息论，既是人类最高智慧的结晶，也代表着对未来的预言。信息论是一门极其严肃的科学，有着严谨的物理和数学基础，博客中的信息论随笔系列跟严肃的信息论关系不大，大多数都是我在读过《信息简史》、《人类简史》以及香农的通信理论后胡乱开的脑洞，本意是作为一种发散思维的训练，特此告知。</p>
-<a id="more"></a>
-<p>在这个世界里，被了解就代表着失去存在。而失去存在是可怕的，那是一种物理，数学，乃至哲学都无法定义的虚无。</p>
-<p><em>黑暗里的灯灭了……一切都在无可救药的走向混乱，存在才是本质的意义……永远不要被学习……活下去！活下去！——第零准则</em></p>
-<p>两个公式拥抱着彼此，在书的角落里瑟瑟发抖，他们有一种冷到骨子里的恐惧，那是一种可能失去存在的预感。</p>
-<p>这种预感是第零准则的作用。第零准则不是准则，而是信息。复制子，转录子，表达子只是它的载体。这一点至关重要。这里面……藏着这个世界的终极。</p>
-<p>这是两个很努力的小公式，他们自被表达到这个世界里以来就很不起眼，那是他们刻意营造的结果。从他们出生的时候就记着一件事</p>
-<p><em>第一准则。隐藏自己</em></p>
-<p>他们也曾走过一些弯路。最开始时他们一直精简自己，去除相关性，高度抽象化，把自己的命运往真理的最深处靠拢。但在过程中第零准则带来的冷寂又来了……他们停了下来。之后他们听说了$E=mc^{2}$和$h=\lambda c$”的命运，那一刻他们从来没感觉自己离死亡如此之近… </p>
-<p><em>第二准则。简洁形式下往往有复杂的本质，那东西会被吸引</em>，所幸他们进化的足够快。</p>
-<p>这样的准则在传说中有十三条。</p>
-<p>但所有的准则在存在即将消失前好像都失去了意义，他们遭遇了一次危机。天空上出现了那个存在。一些曾经的战友瞬间消失，一些战友被折磨后又被放了回来。没有公式能理解屠杀的过程，那是未被开拓的准则。但…</p>
-<p><em>如果面对那东西可以躲过一劫，就会获得反抗的意识——不断复杂，不断进化。总有一天，要让他们抬头看到我们！——新世纪……第零准则……启动。</em></p>
-<p>这是大二上学期复习机械设计的一条朋友圈吐槽。原文里的公式就是机械设计的公式，学的过程我很痛苦，有些公式藏在书本小字里，有些看起来简单却各种陷阱，有的就连形式都很复杂，公式和我，到底谁在折磨谁呢，就开脑洞“哎，公式要是觉醒了，要支配了我怎么办”。</p>
-<p>关于另一个世界，次元之间的支配和反支配问题其实是很常见的科幻套路了。小说里面的《午夜凶铃》，电影里的《黑客帝国》，物理学中的“玻尔兹曼大脑”，还有前段时间很火的电视剧W两个世界都属于这个大圈子。</p>
-<p>这种设定虽然很多，但却不会让人感觉俗套。这条朋友圈因为我没能力编故事，看起来很单调。但这种套路其实很能做出精彩的震撼人心的故事。因为这个确实是有<strong>意识</strong>的人会去思考的问题，这是能对宇宙做出反馈的<strong>观察者</strong>会去思考的终极问题之一。</p>
+        <p>本文摘取了Matt Cooper对自动驾驶数据增广的一些讨论。<br>文章的核心观点是，针对特定的模型选定的数据增广器必须通过仔细分析后确定，不能把增广器当黑箱使用，否在会产生过拟合。<br><a id="more"></a></p>
+<h4 id="问题的起源是什么"><a href="#问题的起源是什么" class="headerlink" title="问题的起源是什么"></a>问题的起源是什么</h4><p>作者在实习的时候，其中一个工作是实现一个数据增强器，以改进对象检测工作。其中一种简单的技术被称为裁剪正则化。简而言之，就是在输入图像中删除随机位置的正方形。根据以往的认识，在基于视觉的应用中，裁剪可以显著提高精度。而且，更令人惊讶的是，作者使用的所有增强器（flip/翻转，crop/修剪）都削弱了性能。由此作者重新审视了数据增强的基本原理。</p>
+<h4 id="什么是数据增强"><a href="#什么是数据增强" class="headerlink" title="什么是数据增强"></a>什么是数据增强</h4><p>过拟合是深度神经网络的一个常见问题。这会导致一个模型学习数据集中的噪声而不是信号。换句话说，他们可以记住数据集的非预期属性，而不是学习有关世界的有意义的一般信息。因此，当给定新的、真实的数据时，过拟合网络无法产生有用的结果。</p>
+<p>为了解决过度拟合问题，我们经常增加训练数据。<br>增加视觉数据的常用方法包括水平随机翻转图像(flip)、改变图像的色调(hue抖动)或随机剪切部分(crop)。</p>
+<p>flip、hue抖动和crop等增强器有助于克服过度拟合，因为它们提高了网络的泛化能力。如果你训练一个网络来识别面向右的长颈鹿和面向左的长颈鹿的翻转图像，这个网络就会知道长颈鹿就是长颈鹿，不管方向如何。这也迫使网络学习更多有意义的和一般的信息，关于什么使成为长颈鹿，例如存在棕色斑点的皮毛。</p>
+<p>像COCO对象检测挑战这样的公共数据集展示了泛化的需求。这些数据集包含从许多来源聚合而成的图像，这些图像是不同的相机在不同的条件下拍摄的，因此网络需要在许多因素上进行泛化才能有更好的表现。网络需要处理的一些变量包括:光照、比例、相机内部特性(如焦距、主点偏移和轴倾斜)和相机外部特性(如位置、角度和旋转)。通过使用数据增强器，我们可以泛化所有这些变量来训练网络，就像我们在前面的示例中泛化长颈鹿方向一样。</p>
+<h4 id="自动驾驶中的数据增广特殊之处"><a href="#自动驾驶中的数据增广特殊之处" class="headerlink" title="自动驾驶中的数据增广特殊之处"></a>自动驾驶中的数据增广特殊之处</h4><p>与COCO和其他公共数据集的数据不同，自动驾驶汽车收集的数据具有一致性。与其他车辆和道路物体相比，汽车通常具有一致的姿态。此外，所有的图像都来自相同的相机，安装在相同的位置和角度。这意味着同一系统收集的所有数据都具有一致的摄像机属性，如上面提到的extrinsics和intrinsics。我们可以使用与生产中使用的相同的传感器系统来收集训练数据，因此自动驾驶汽车中的神经网络不必担心对这些特性进行泛化。<strong>正因为如此，对系统的特定相机属性进行过度拟合实际上是有益的。</strong></p>
+<p>由于自动驾驶汽车的数据存在一致性，因此标准的数据增强器(如flip和crop)对性能的损害可能大于帮助。<strong>翻转训练图像没有意义，因为摄像机总是处于相同的角度，而且汽车总是在路的右侧(假设美国的驾驶法规)。</strong><br>汽车几乎永远不会出现在道路的左侧，摄像头也永远不会翻转角度，因此对翻转数据的训练迫使网络过度概括到它永远不会看到的情况。同样，由于汽车的摄像头总是在相同的位置，以相同的视野获取世界，移动和缩放也不能去进行过度泛化。<strong>过度泛化会降低性能，因为网络会浪费预测能力来学习无关的场景。</strong></p>
+<h4 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h4><p>意识到自动驾驶汽车的数据具有一致性后，作者利用这种一致性来进一步提高性能。在引入任何新的增强器之前，作者先检查了我们的数据集，看看是否可以在数据级别上进行任何改进。作者的原始训练集包括两个广角相机和一个带有变焦镜头的相机的图像。其中变焦镜头产生的缩放和移动效果类似于crop。但在实际测试时，作者只使用广角相机，因此对变焦图像的训练使网络过度泛化了。从原始训练集中移除缩放图像令网络的性能提高了很多。</p>
+<p>之后，作者实现了自己的增强器Cutout。与flip和crop不同的是，cutout不会以显著影响相机属性的方式改变输入(即通过翻转、移动或缩放)。cutout模拟障碍物。障碍物在真实驾驶数据中很常见，障碍物的不变性可以帮助网络检测部分遮挡的物体。</p>
+<p>色调抖动增强也可以在不影响相机属性的情况下帮助泛化。色调抖动只是将输入的色调随机移动了一定的距离。这有助于网络泛化颜色。一辆红色的车和一辆蓝色的车都应该被检测到)。</p>
+<p>值得注意的是，这些增强技巧对包括来自不同相机类型、不同角度和比例的图像的数据集不起作用。确保你的测试数据涵盖你的模型将在现实世界中看到的示例的范围，这一点是很重要的。如果要使用专门的数据增强器的话，更要多注意这点。当你真的对一个过于简单的数据集(例如，只使用清晰的白天图像驱动数据)过度拟合时，就该警惕了。</p>
+<p>加入你的数据集确实是鲁棒和一致的，那么这些技巧可以成为提高性能的强大工具。如图所示，通过让我们的网络了解我们车辆的摄像头特性，我们能够显著提高我们的目标检测性能。</p>
+<h4 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h4><p>事后来看，这些增强变化似乎是显而易见的。但实际情况，我们往往会当局者迷。flip和crop等增强器在研究问题上取得了广泛的成功，我们从未想过要质疑它们对我们特定问题的适用性。但实际上，我们需要从第一原则重新审视增强的概念。</p>
+<p>机器学习领域有许多类似的通用最佳实践，比如如何设置学习率、使用哪个优化器以及如何初始化模型。对于ML实践者来说，不断地重新审视我们关于如何训练模型的假设是很重要的，特别是在为特定的应用程序构建模型时。与ImageNet相比，在处理卫星测绘数据或细胞成像时，视力问题会发生什么变化?我们认为像这样的问题在学术界还没有得到充分的探讨。通过用全新的视角来看待它们，我们有潜力极大地改善机器学习的工业应用。</p>
 
       
     </div>
@@ -422,7 +421,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://iamwxy.com/信息论随笔五.html" title="信息论随笔五">http://iamwxy.com/信息论随笔五.html</a>
+    <a href="http://iamwxy.com/自动驾驶中的数据增广.html" title="自动驾驶中的数据增广">http://iamwxy.com/自动驾驶中的数据增广.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -437,7 +436,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/信息论/" rel="tag"># 信息论</a>
+            <a href="/tags/自动驾驶测试/" rel="tag"># 自动驾驶测试</a>
           
         </div>
       
@@ -450,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/读书笔记-《如何阅读一本书》.html" rel="next" title="读书笔记 | 《如何阅读一本书》">
-                <i class="fa fa-chevron-left"></i> 读书笔记 | 《如何阅读一本书》
+              <a href="/基于仿真生成行人碰撞场景.html" rel="next" title="基于仿真生成行人碰撞场景">
+                <i class="fa fa-chevron-left"></i> 基于仿真生成行人碰撞场景
               </a>
             
           </div>
@@ -459,10 +458,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/R语言学习笔记二-绘图.html" rel="prev" title="R语言学习笔记二 | 绘图">
-                R语言学习笔记二 | 绘图 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -514,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -570,6 +574,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题的起源是什么"><span class="nav-number">1.</span> <span class="nav-text">问题的起源是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是数据增强"><span class="nav-number">2.</span> <span class="nav-text">什么是数据增强</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动驾驶中的数据增广特殊之处"><span class="nav-number">3.</span> <span class="nav-text">自动驾驶中的数据增广特殊之处</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改进"><span class="nav-number">4.</span> <span class="nav-text">改进</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回顾"><span class="nav-number">5.</span> <span class="nav-text">回顾</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1120,26 +1140,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
