@@ -4,11 +4,28 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A2%9E%E5%B9%BF.html</loc>
-    <lastmod>2019-05-28T15:35:50.419Z</lastmod>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E8%93%9D%E7%9A%AE%E4%B9%A6.html</loc>
+    <lastmod>2019-05-30T12:40:28.144Z</lastmod>
     <data>
         <display>
-        <title>自动驾驶中的数据增广</title>
+        <title>自动驾驶仿真蓝皮书</title>
+        <pubTime>2019-05-30T12:03:51.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A2%9E%E5%B9%BF.html</loc>
+    <lastmod>2019-05-29T08:57:03.092Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶中的数据增强</title>
         <pubTime>2019-05-28T15:01:39.000Z</pubTime>
         
         <tag>自动驾驶测试</tag>
@@ -1277,9 +1294,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -1857,9 +1874,9 @@
         
         <tag>自动驾驶</tag>
          
-        <tag>自动驾驶仿真</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -2163,9 +2180,9 @@
         <title>信息论随笔三</title>
         <pubTime>2018-07-10T13:27:00.000Z</pubTime>
         
-        <tag>信息论</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>信息论</tag>
          
          
            
