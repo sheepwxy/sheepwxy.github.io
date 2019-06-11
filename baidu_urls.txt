@@ -1,3 +1,4 @@
+http://iamwxy.com/近期工作-201906.html
 http://iamwxy.com/自动驾驶仿真蓝皮书.html
 http://iamwxy.com/自动驾驶中的数据增广.html
 http://iamwxy.com/基于仿真生成行人碰撞场景.html
@@ -17,4 +18,3 @@ http://iamwxy.com/书摘-复杂-米歇尔.html
 http://iamwxy.com/近期思考.html
 http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html
 http://iamwxy.com/言不可及-回忆-二.html
-http://iamwxy.com/自动驾驶仿真随笔.html
