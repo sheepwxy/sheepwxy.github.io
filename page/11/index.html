@@ -318,6 +318,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/登楼.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴旭阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/登楼.html" itemprop="url">登楼</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-08T17:34:57+08:00">
+                2018-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>几天前的中午，在太阳下行走，感觉每分每秒都是折磨。想起来了几年前的夏天，想起了登楼。那时也是这样的天气，那时是不同的心境。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/登楼.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://iamwxy.com/待写文章.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1257,14 +1381,37 @@
 
       
         
-          <p>在实际路测时，袋鼠往车上跳，天上下冰雹都是可遇不可求的，所幸自动驾驶仿真可以帮助车辆遇到这些场景。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/自动驾驶仿真整理.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p>当真正部署自动驾驶产品时，需要考虑各种各样的场景。处理非斑马线处行人横穿马路是需要考虑的典型交通场景，更进一步，在美国还有袋鼠往车窗上跳的案例。因此在部署产品前必须进行完备的自动驾驶测试。</p>
+<p>而在整个自动驾驶测试流程中，仿真测试扮演着重要角色。以我的个人观点，仿真测试在“量”上应该占据百分之九十以上的份额，从“质”上，仿真测试应该承担全部的边缘（危险）场景测试，以及典型场景的泛化测试。</p>
+<h5 id="仿真优势"><a href="#仿真优势" class="headerlink" title="仿真优势"></a>仿真优势</h5><ul>
+<li>相比通过在真实的道路上拍摄视频，仿真数据产生更快、成本更低。</li>
+<li>在仿真中，注释很容易获得，因为游戏能提供对象列表。</li>
+<li>仿真可以提供大量的测试场景，极大的拓宽了测试的参数空间。比如，同济大学嘉定校区的天气条件有限。但在仿真中，可以给嘉定随时提供雨雪冰雹或其他东西。</li>
+<li>仿真支持在很多不同的条件下使用相同的场景进行训练，相同条件下的重复试验可以更有效地帮助迭代算法。</li>
+<li>在实际进行仿真训练时，单仿真图像的变异值和训练值一般低于单真实图像。现实世界中的光照、颜色和纹理变化都比仿真数据的要大，因此需要更多的仿真图像来实现合理的性能。关键就在于生成仿真图像只需要计算资源，一旦云基础设施就位，就可以生成任意数量的映像。从单个模拟的图像中不好得到更多价值，但质量可以通过数量补足，这是一种资源密集型的思路。</li>
+<li>经过模拟训练的网络上更善于识别距离较远或难以看清的汽车等，也更善于避免误报。换句话说，它更善于处理极端（边缘）情况，这可能是因为这些仿真数据能为训练提供更多样化的输入。</li>
+</ul>
+<h5 id="仿真劣势"><a href="#仿真劣势" class="headerlink" title="仿真劣势"></a>仿真劣势</h5><p>计算机仿真有自己的局限性，因此对仿真结果的权威性我们应该持谨慎态度。仿真在某种程度上简化了真实世界，在模拟中能正常工作不能保证在现实中正常工作。</p>
+<ul>
+<li>模拟世界与现实世界并不完全相同</li>
+<li>模拟车辆（包括传感器、动力学模型等）与现实情况并不完全相同</li>
+<li>很难模拟难以预测的(紧急)情况，比如2016年5月的特斯拉事故</li>
+</ul>
+<h5 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h5><p>针对上面劣势，关键点之一在于尽可能复制真实世界出现的状况(包括世界模型、车辆模型和事故场景等)。</p>
+<ul>
+<li>使用更为精确的世界物理模型<ul>
+<li>使用高精度的扫描技术生成真实道路库</li>
+<li>制作更逼真的图像（可借助游戏行业）</li>
+</ul>
+</li>
+<li>构建车辆模型时，在理想模型和物理模型之间取得折衷</li>
+<li>分析模拟仿真结果的置信度</li>
+<li>建立相应的虚拟仿真测试场景库，包括极端场景等</li>
+</ul>
+<h5 id="求职要求"><a href="#求职要求" class="headerlink" title="求职要求"></a>求职要求</h5><p>参考本博客另外一条链接：<font color="green"><a href="https://iamwxy.com/%E6%8B%9B%E8%81%98%E9%9C%80%E6%B1%82-%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E7%A8%8B%E5%B8%88.html">自动驾驶仿真工程师需求</a></font></p>
+
+          
         
       
     </div>
@@ -1422,131 +1569,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/英语学习记录.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="老肥羊">
-      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="吴旭阳的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/英语学习记录.html" itemprop="url">英语学习记录</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">写于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-29T22:23:55+08:00">
-                2018-07-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>我的英语实在是太差了，我深深知道它的重要性却没有做好它，这让我感觉不好。不管怎样，开一个专门的英语学习记录吧。</p>
-<p>还是那个目的，以记录，以警醒。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/英语学习记录.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1601,7 +1623,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">132</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1665,7 +1687,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">183.8k </span>
+    <span title="Site words total count">184.7k </span>
   
 </div>
 

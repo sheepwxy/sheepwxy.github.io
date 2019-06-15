@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="2018.10.30 初稿  2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta name="description" content="2018.10.30 初稿  2019.04.28 第一次修改  2019.06.12 第二次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 <meta name="keywords" content="自动驾驶仿真">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶仿真工具需求">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶仿真工具需求.html">
 <meta property="og:site_name" content="吴旭阳的博客">
-<meta property="og:description" content="2018.10.30 初稿  2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta property="og:description" content="2018.10.30 初稿  2019.04.28 第一次修改  2019.06.12 第二次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-08T01:05:22.743Z">
+<meta property="og:updated_time" content="2019-06-12T02:58:30.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶仿真工具需求">
-<meta name="twitter:description" content="2018.10.30 初稿  2019.04.28 第一次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta name="twitter:description" content="2018.10.30 初稿  2019.04.28 第一次修改  2019.06.12 第二次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
 
 
 
@@ -387,7 +387,8 @@
 
       
         <p><font color="green">2018.10.30 初稿 </font></p>
-<p><font color="green">2019.04.28 第一次修改 </font><br>自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。<br><a id="more"></a><br>再看仿真，从词义上就可以看到，没有<strong>“真”</strong>是不行的。仿真的需求首要就是对真实性的需求。没有真实性的<strong>坏数据</strong>无法训练出适用于真实环境的算法，在进行自动驾驶测试时也没有可靠性。再来看<strong>“仿”</strong>这个字，仿真本事上是实现现实世界到计算机虚拟空间的映射，在转化过程中性质已经完全转变成其他维度，掌握具体过程的工作原理可帮助我们表征出关键特征维度。但从另外一个方面来讲，表现出真实环境中所有特征维度也是不现实的，建模成本过高。未来在有限的资源范围内做出高仿真场景应该是相关软件迭代的方向。</p>
+<p><font color="green">2019.04.28 第一次修改 </font></p>
+<p><font color="green">2019.06.12 第二次修改 </font><br>自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。<br><a id="more"></a><br>再看仿真，从词义上就可以看到，没有<strong>“真”</strong>是不行的。仿真的需求首要就是对真实性的需求。没有真实性的<strong>坏数据</strong>无法训练出适用于真实环境的算法，在进行自动驾驶测试时也没有可靠性。再来看<strong>“仿”</strong>这个字，仿真本事上是实现现实世界到计算机虚拟空间的映射，在转化过程中性质已经完全转变成其他维度，掌握具体过程的工作原理可帮助我们表征出关键特征维度。但从另外一个方面来讲，表现出真实环境中所有特征维度也是不现实的，建模成本过高。未来在有限的资源范围内做出高仿真场景应该是相关软件迭代的方向。</p>
 <p>接下来让我们从<strong>“真”</strong>的角度进行一番思考。</p>
 <h4 id="静态场景建模"><a href="#静态场景建模" class="headerlink" title="静态场景建模 "></a><font color="blue">静态场景建模 </font></h4><p>静态场景有不同的真实程度，51VR的L1级别环境是简单的同质化设计，L2等级会基于数据库进行一些分割以及渲染，L3等级的渲染甚至会考虑整体上光能量的守恒，以下是<a href="http://www.51hitech.com/" target="_blank" rel="noopener">demo视频</a> </p>
 <p>一个典型的交通静态场景需要什么，全局性的因素有<strong>天气条件、光线</strong>等，好的仿真工具首先需要有强大的图形渲染能力来渲染这些环境。对于自动驾驶视觉仿真来说，CG渲染能力几乎决定了一切。</p>
@@ -398,7 +399,7 @@
 <h4 id="传感器模型"><a href="#传感器模型" class="headerlink" title="传感器模型"></a><font color="blue">传感器模型</font></h4><p>传感器模型是感知系统仿真的核心。好的自动驾驶仿真软件传感器模型应该具有以下几个特点。<br>-类型丰富。就视觉传感器而言，需要提供普通的RGB摄像头、深度摄像头、鱼眼摄像头、甚至语义摄像头，激光雷达(LIDAR)、雷达(radar)、超声波雷达、毫米波雷达(这个仿真比较困难)、红外线传感器，V2X传感器等等。并且提供充足的选项配置。</p>
 <ul>
 <li>在提供<strong>理想传感器</strong>的同时，除了一些基本功能外，还需要补充一些特性，如噪声选项、畸变选项、色差选项等</li>
-<li>对于开发者需要提供更底层的接口，让开发者配置自己的传感器模型。</li>
+<li>提供标准化的传感器仿真接口和特定传感器配置环境</li>
 </ul>
 <h4 id="动力学仿真"><a href="#动力学仿真" class="headerlink" title="动力学仿真"></a><font color="blue">动力学仿真</font></h4><p>车辆的核心是系统动力学，没有高精度的系统动力学的仿真终究只是过家家。IV2018最佳的论文所进行的硬件在环，使用的是ROS，做的很完整，但是动力学模型比较简单，因而也就限制了它的实用价值。 </p>
 <p>可以思考一下工作过程，如果车辆只能有非常简单的动力学模型，比如单轨模型或四自由度模型，这也意味着他和实际的状态相别较大，理想的工作状态是车辆接受环境信息，控制车辆移动，新的车辆位置和角度带来新的感知视角。那么如果车辆不能按照本来的规划决策效果执行动作，后边的一切其实也就失去了意义。 </p>
@@ -411,6 +412,8 @@
 <li>导入交通学中的交通流模型，并引入数学概率分布数学模型。这样的交通流模型包括宏观交通流模型和微观模型，相应的数学概率分布模型应该以高斯模型为主。 </li>
 <li>将真人开车的数据导入其中，主要利用虚拟驾驶模拟器实现，但这在更大程度上是保证单车的真实，对于宏观交通流价值没有想象中大，更多的是形成微观交通流模型。</li>
 </ul>
+<h4 id="标准场景格式支持"><a href="#标准场景格式支持" class="headerlink" title="标准场景格式支持"></a><font color="blue">标准场景格式支持</font></h4><p>场景自动化测试以及场景复用是自动驾驶测试的大势所趋，而这两项都需要标准场景文件的支持。目前国际通用标准是以VTD发起，由ASAM主导的OpenDRIVE、OpenCRG、OpenSCENARIO标准格式。OpenDRIVE主要解决静态场景描述问题，OpenCRG主要解决路面状态问题，OpenSCENARIO主要解决动态场景描述问题。</p>
+<p>由于Open系列标准也在发展中，目前只有VIRES Test Drive（VTD）提供对以上标准格式的支持，以后的各方仿真工具也应该配备相应的场景文件解析接口，这是绕不开的事。</p>
 
       
     </div>
@@ -552,7 +555,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">132</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -598,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准场景格式支持"><span class="nav-number">5.</span> <span class="nav-text">标准场景格式支持</span></a></li></ol></div>
             
 
           </div>
@@ -632,7 +635,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">183.8k </span>
+    <span title="Site words total count">184.7k </span>
   
 </div>
 
