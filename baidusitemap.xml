@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E5%9F%BA%E4%BA%8E%E4%BB%BF%E7%9C%9F%E7%94%9F%E6%88%90%E8%A1%8C%E4%BA%BA%E7%A2%B0%E6%92%9E%E5%9C%BA%E6%99%AF.html</loc>
+    <lastmod>2019-06-28T08:52:07.332Z</lastmod>
+    <data>
+        <display>
+        <title>基于仿真生成行人碰撞场景</title>
+        <pubTime>2019-05-24T04:47:05.000Z</pubTime>
+        
+        <tag>自动驾驶测试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E9%9A%8F%E7%AC%94.html</loc>
     <lastmod>2019-06-20T09:03:11.721Z</lastmod>
     <data>
@@ -132,11 +149,11 @@
         <title>自动驾驶仿真整理</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
+        <tag>总结</tag>
+         
         <tag>自动驾驶仿真</tag>
          
         <tag>自动驾驶</tag>
-         
-        <tag>总结</tag>
          
          
            
@@ -214,23 +231,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E5%9F%BA%E4%BA%8E%E4%BB%BF%E7%9C%9F%E7%94%9F%E6%88%90%E8%A1%8C%E4%BA%BA%E7%A2%B0%E6%92%9E%E5%9C%BA%E6%99%AF.html</loc>
-    <lastmod>2019-05-24T05:00:13.550Z</lastmod>
-    <data>
-        <display>
-        <title>基于仿真生成行人碰撞场景</title>
-        <pubTime>2019-05-24T04:47:05.000Z</pubTime>
-        
-        <tag>自动驾驶测试</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86.html</loc>
     <lastmod>2019-05-19T16:08:03.708Z</lastmod>
     <data>
@@ -238,9 +238,9 @@
         <title>自动驾驶学习资源整理</title>
         <pubTime>2019-05-19T14:07:25.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -1203,9 +1203,9 @@
         <title>自动驾驶 | 感知篇（下）</title>
         <pubTime>2018-12-20T08:53:37.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -1222,9 +1222,9 @@
         <title>自动驾驶 | 感知篇（上）</title>
         <pubTime>2018-12-12T13:25:30.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -1385,9 +1385,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -1455,9 +1455,9 @@
         <title>自动驾驶学习 | 算法第四版</title>
         <pubTime>2018-09-17T15:15:27.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -2016,9 +2016,9 @@
         <title>自动驾驶高精度地图总结</title>
         <pubTime>2018-07-30T14:25:26.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
