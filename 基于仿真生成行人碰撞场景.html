@@ -130,7 +130,7 @@
 <meta property="og:description" content="本篇文章主要观点来自Susan T. Chrysler。 有行人参与的场景是一种重点测试场景，也是仿真能发挥优势的关键领域。这篇文章面向的测试对象是驾驶员，但它基于仿真的场景设计方法是有很多可借鉴之处的。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://iamwxy.com/基于仿真生成行人碰撞场景/factors.jpg">
-<meta property="og:updated_time" content="2019-06-28T08:52:07.332Z">
+<meta property="og:updated_time" content="2019-07-17T10:37:38.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于仿真生成行人碰撞场景">
 <meta name="twitter:description" content="本篇文章主要观点来自Susan T. Chrysler。 有行人参与的场景是一种重点测试场景，也是仿真能发挥优势的关键领域。这篇文章面向的测试对象是驾驶员，但它基于仿真的场景设计方法是有很多可借鉴之处的。">
@@ -389,17 +389,23 @@
 
       
         <p>本篇文章主要观点来自Susan T. Chrysler。 有行人参与的场景是一种重点测试场景，也是仿真能发挥优势的关键领域。这篇文章面向的测试对象是驾驶员，但它基于仿真的场景设计方法是有很多可借鉴之处的。<br><a id="more"></a></p>
-<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>本文提出了一种场景开发方法，讨论了在仿真环境下进行行人碰撞研究的实验设计和控制问题。驾驶模拟器提供了一个安全的环境来测试驾驶员的反应，拥有虚拟行人模型是它的优势，这些模型可以真实地移动，而不像测试轨道研究那样，测试轨道研究本质上必须在某些移动轨道上使用行人假人。</p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p>通过对行人碰撞轨迹、速度、路边特征和行人行为的分析，本研究只考虑了汽车直线行驶的情况，共创造了18种典型的碰撞场景，</p>
-<p>场景设计时，layout有十字路口和中间街区的交叉路口，场景也考虑了<strong>引导驾驶员的视觉注意力朝向或远离交叉路口的行人的视觉特征</strong>这三个场景覆盖了多种路边环境和速度:一个20 - 30英里/小时的住宅区，一个55英里/小时的农村未分割公路，和一个40英里/小时的城区。</p>
+<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>本文提出了一种场景开发方法，讨论了在仿真环境下进行行人碰撞研究的实验设计和控制问题。驾驶模拟器提供了一个安全的环境来测试驾驶员的反应，另外驾驶模拟器提供的虚拟行人模型可以更真实地移动，它不用像在场地测试的假人那样，受特定移动轨道的限制。</p>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p>通过对行人碰撞轨迹、速度、路边特征和行人行为的分析，这篇文章共创造了18种独特的碰撞场景，它们代表了最常见和最昂贵的碰撞类型。本研究只考虑了汽车直线行驶的情况，因为它们是行人冲撞事故中最典型的汽车模式。</p>
 <p>如下图给出了具体需要考虑的因素<br><img src="/基于仿真生成行人碰撞场景/factors.jpg"></p>
-<p>在目前的研究中，研究团队利用行人碰撞频率和严重程度的分析，设计了18种不同的即将发生碰撞的场景，用于驾驶模拟器实验。其中16个场景是白天的场景，行人穿过垂直于汽车行驶方向的车道。其中两个场景是夜间场景，行人走在路肩上，与过往车辆的行进方向相同。</p>
-<p>该研究的另一个目标是操纵(manipulate)驾驶员对行人存在的期望值，以评估其对驾驶员反应时间的影响。我们通过提供(或不提供)道路线索来实现这一点，例如人行横道警告标志、人行横道标记、十字路口、人行道和附近的其他行人活动。</p>
-<p>一些值得注意的点。</p>
-<p>场景设计中的一个关键因素是危险预判时间或距离。我们的仿真软件允许我们指定到达时间作为触发器，这样当驱动程序到达某个位置的阈值时间(基于瞬时速度)时，就可以触发事件。<strong>在本研究中，目标位置是车道中心的一个理论点，当车辆和行人保持匀速直线行驶时，会在这个理论点上发生碰撞</strong>。到达该点的时间根据每个行人活动地点的道路几何形状而变化，范围从3.5秒到11秒不等。这并不意味着行人在整个时间内都是可见的。在一些场景中，行人物体隐藏在建筑物后面，但必须触发它开始移动，以便在更短的时间内看到碰撞。需要大量的试点测试来调整每个事件位置的时间，目标是使行人目标在理论碰撞点之前可见35秒。模拟行人运动的另一个复杂之处是步行速度不是恒定的。因为DI-Guy(2012)行人模型的运动是基于实际的人体运动捕捉，所以在行人达到目标步行速度之前有一个轻微的启动时间。同样，为了适应这种情况，需要进行试点测试。在某些情况下，除了起始位置外，行人的行走/奔跑速度也必须调整。</p>
-<p>另一个设计决定是保持行人的路径和速度不变(初始启动后)。虽然我们的软件支持基于触发器的路径和速度的变化，这些都是为了简化实验设计。未来的研究应该考虑当车辆接近时，行人改变他们的行为机制。</p>
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>在选择和开发场景时，本文考虑了多种碰撞情况的变量，包括车辆和行人的运动;道路及路边设施;环境条件;<br>以及行人、司机和车辆的特征。通过对场景进行迭代测试，去调整行人到达触发器的时间。本文还讨论了创建模拟器场景背后的基本原理，以及进行此类研究时的一些考虑。</p>
-<p>（待修改）</p>
+<p>在目前的研究中，研究团队通过分析行人碰撞频率和碰撞严重程度，设计了18种不同的即将发生碰撞的场景，用于驾驶模拟器实验。其中16个场景是白天的场景，行人穿过垂直于汽车行驶方向的车道。其中两个场景是夜间场景，行人走在路肩上，与过往车辆的行进方向相同。</p>
+<p>该研究的另一个目标是通过管理manipulate驾驶员对行人存在的期望值，以评估其对驾驶员反应时间的影响。我们通过提供(或不提供)道路线索来实现这一点，这里的道路线索包括人行横道警告标志、人行横道标记、十字路口、人行道和附近的其他行人活动。</p>
+<h5 id="crossing"><a href="#crossing" class="headerlink" title="crossing"></a>crossing</h5><p>碰撞数据显示，大多数行人受伤发生在十字路口。但考虑实验的平衡性、统计功效和路线规划等因素，一半的行人事件发生在十字路口，另一半发生在街区中间。在这些地点中，有些人行横道用标准的美国平行线标记，还有一些没有标记。标记类型已经被证明会影响人行横道的可见距离(Fitzpatrick等，2011)。</p>
+<h5 id="side-of-the-road"><a href="#side-of-the-road" class="headerlink" title="side of the road"></a>side of the road</h5><p>为了降低行人行为的可预测性，一半的行人从司机的左边过马路，另一半从右边过马路。这也提供了在关键停车视线距离下行人角度大小的自然变化。在较大的驾驶员建模项目中，驾驶员感知部分依赖于角度大小和变化率，因此跨目标角度范围收集驾驶员的响应数据非常重要。</p>
+<h5 id="expected-Gaze-Direction"><a href="#expected-Gaze-Direction" class="headerlink" title="expected Gaze Direction"></a>expected Gaze Direction</h5><p>在每一个事件中，视线的方向都是通过在与行人相同或相对的一侧放置一个分散注意力的物体来控制的。干扰物的作用是在事件开始前吸引司机的目光。本文作者试图通过在场景中放置其他动画和静态对象来控制驾驶员的视线。这些物体包括成群行走或说话的其他行人、紧急车辆、停下的车辆和动物。从更广泛的意义上说，本文作者认为提供丰富的、活跃的驾驶场景可以提高驾驶员对仿真的参与度和沉浸感。</p>
+<h5 id="pedestrian-walking-speed"><a href="#pedestrian-walking-speed" class="headerlink" title="pedestrian walking speed"></a>pedestrian walking speed</h5><p>行走速度设定为1.21$m/s$,奔跑速度设置为$1.86m/s$这些值来自于在有标记和无标记人行横道上的观察(Brewer et al. 2006)，并比用于设置交通信号行人相位计时的速度略快。<br>我们错误地选择了一个速度更快的行人，因为我们觉得这代表了一个更有挑战性的反应场景，减少了碰撞的时间。在这项研究中，一半的行人在走路，另一半在跑步。</p>
+<h5 id="general-considerations-for-scenarios-and-procedures"><a href="#general-considerations-for-scenarios-and-procedures" class="headerlink" title="general considerations for scenarios and procedures"></a>general considerations for scenarios and procedures</h5><p>对于整个场景，根据之前驾驶模拟器研究的经验制定了几个设计目标。我们希望总驾驶时间为45-60分钟，因为过去的研究表明，超过这个时间点后，司机会感到轻微疲劳和注意力不集中。我们希望驾驶行为是连续的，而不是一系列由模拟器启动和停止中断的充满事件的短片段。连续驾驶增加沉浸感，促进自然驾驶行为。我们的设想被设计得尽可能自然和可信。</p>
+<p>场景设计的第一步是在我们的实验设计中列出所需的18个事件的每个轨迹。为了减少总体编程时间，使用了由住宅、农村和城市部分组成的现有可视化数据库。开发了一条通过这些区域的路由，提供适当的事件间隔和包含每个目标事件。一个5到10分钟的热身驾驶，没有事件，硬停，和最小的转弯被包括在内，以使司机习惯于车辆处理和视觉</p>
+<h4 id="场景设计时的注意事项"><a href="#场景设计时的注意事项" class="headerlink" title="场景设计时的注意事项"></a>场景设计时的注意事项</h4><p>场景设计中的一个关键因素是危险预判时间或距离。我们的仿真软件允许我们指定到达时间作为触发器，这样当驱动程序到达某个位置的阈值时间(基于瞬时速度)时，就可以触发事件。</p>
+<p><strong>在本研究中，目标位置是车道中心的一个理论点，当车辆和行人保持匀速直线行驶时，会在这个理论点上发生碰撞</strong>。到达该点的时间会根据每个行人活动地点所在的道路的几何拓扑结构而发生变化，范围从3.5秒到11秒不等。</p>
+<p>但这并不意味着行人在整个时间内都是可见的。在一些场景中，行人会隐藏在建筑物后面，但必须触发它开始移动，以便在更短的时间内看到碰撞。需要大量的试点测试来调整每个事件位置的时间，目标是使行人目标在理论碰撞点之前可见。</p>
+<p>模拟行人运动的另一个复杂之处是步行速度不是恒定的。DI-Guy(2012)行人模型的运动是基于实际的人体运动捕捉，所以在行人达到目标步行速度之前有一个轻微的启动时间。同样，为了适应这种情况，需要进行试点测试。在某些情况下，除了起始位置外，行人的行走/奔跑速度也必须调整。</p>
+<p>为了简化实验设计，另一个设计决策是保持行人的路径和速度不变，即使我们的软件支持基于触发器的路径和速度的变化。未来的研究应该考虑当车辆接近时，行人会改变他们的行为机制。</p>
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>在选择和开发场景时，本文考虑了多种碰撞情况的变量，包括车辆和行人的运动;道路及路边设施;环境条件;以及行人、司机和车辆的特征。通过对场景进行迭代测试，去调整行人到达触发器的时间。</p>
 
       
     </div>
@@ -541,7 +547,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">132</span>
+                  <span class="site-state-item-count">133</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -587,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Methods"><span class="nav-number">2.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果"><span class="nav-number">3.</span> <span class="nav-text">结果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Methods"><span class="nav-number">2.</span> <span class="nav-text">Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#crossing"><span class="nav-number">2.1.</span> <span class="nav-text">crossing</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#side-of-the-road"><span class="nav-number">2.2.</span> <span class="nav-text">side of the road</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#expected-Gaze-Direction"><span class="nav-number">2.3.</span> <span class="nav-text">expected Gaze Direction</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pedestrian-walking-speed"><span class="nav-number">2.4.</span> <span class="nav-text">pedestrian walking speed</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#general-considerations-for-scenarios-and-procedures"><span class="nav-number">2.5.</span> <span class="nav-text">general considerations for scenarios and procedures</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#场景设计时的注意事项"><span class="nav-number">3.</span> <span class="nav-text">场景设计时的注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果"><span class="nav-number">4.</span> <span class="nav-text">结果</span></a></li></ol></div>
             
 
           </div>
@@ -621,7 +627,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">186.1k </span>
+    <span title="Site words total count">186.8k </span>
   
 </div>
 
