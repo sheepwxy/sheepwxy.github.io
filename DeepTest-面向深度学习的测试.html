@@ -129,16 +129,16 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="这是一篇非常优秀的论文，主要论述了面向基于深度学习的自动驾驶系统的测试方法。内容较为丰富，展开很有条理，稍微有一些深度学习和自动驾驶的基础就能读懂。作者观点也极有启发性，很多都可以作为以后科研的灵感。因此我翻译了这篇论文，希望能和大家多多交流。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试/demo.png">
-<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试/DNNdemo.png">
-<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试/CNN.png">
-<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试/suanfa.png">
-<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试/table3.png">
+<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试.htm/demo.png">
+<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试.htm/DNNdemo.png">
+<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试.htm/CNN.png">
+<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试.htm/suanfa.png">
+<meta property="og:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试.htm/table3.png">
 <meta property="og:updated_time" content="2019-05-08T01:16:28.462Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DeepTest-面向深度学习的测试">
 <meta name="twitter:description" content="这是一篇非常优秀的论文，主要论述了面向基于深度学习的自动驾驶系统的测试方法。内容较为丰富，展开很有条理，稍微有一些深度学习和自动驾驶的基础就能读懂。作者观点也极有启发性，很多都可以作为以后科研的灵感。因此我翻译了这篇论文，希望能和大家多多交流。">
-<meta name="twitter:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试/demo.png">
+<meta name="twitter:image" content="http://iamwxy.com/DeepTest-面向深度学习的测试.htm/demo.png">
 
 
 
@@ -422,11 +422,11 @@
 <li><p>我们说明了不同的现实图像转换，例如对比度的变化，雾的存在等，可以用来生成增加神经元覆盖率的合成测试用例。我们利用特定关系来自动检测错误行为。我们的实验还表明，合成图像可以用于再训练，并使DNNs对表现出更好的转向效果。</p>
 </li>
 <li><p>我们在DeepTest中应用了我们所提出的技术，系统地测试了Udacity驱动挑战中的三个顶级DNN模型，发现了数千种错误行为，其中许多错误行为可能导致潜在的致命冲突，如图1所示。</p>
-<img src="/DeepTest-面向深度学习的测试/demo.png" title="图1 通过DeepTest发现的一个危险行为">
+<img src="/DeepTest-面向深度学习的测试.htm/demo.png" title="图1 通过DeepTest发现的一个危险行为">
 </li>
 </ul>
 <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><h5 id="自主驾驶深度学习"><a href="#自主驾驶深度学习" class="headerlink" title="自主驾驶深度学习"></a>自主驾驶深度学习</h5><p>自动车辆的关键部件是由底层深层神经网络(DNN)控制的感知模块。DNN接收来自不同传感器的输入，如相机、光探测和测距传感器(LiDAR)和红外传感器，该传感器测量环境，输出转向角、制动等，以使汽车安全处于安全的低电流状态，如图2所示。本文重点讨论了摄像机输入和转向角输出。</p>
- <img src="/DeepTest-面向深度学习的测试/DNNdemo.png" title="图2 自动驾驶DNN示例">
+ <img src="/DeepTest-面向深度学习的测试.htm/DNNdemo.png" title="图2 自动驾驶DNN示例">
 <p> 一个典型的前馈DNN由多个处理层组成，它们叠加在一起以提取输入的不同表示。DNN的每一层都越来越抽象输入，例如，从原始像素到语义概念。例如，自动汽车DNN的前几层提取了一些低级特征，如边缘和方向，而较深的层则识别诸如停车标志和其他汽车等物体，而最后几层则输出转向决策(例如，向左或向右)。</p>
 <p>DNN的每一层都由一个称为神经元的单个计算单元组成。不同层次的神经元通过边缘相互连接。每条边都有相应的权重(图2中所示)。每个神经元在其输入上应用一个非线性激活函数，并将输出发送给后续的神经元，如图2所示。受欢迎的激活函数包括ReLU(整流线性单元)，sigmoid等。DNN的边权值在DNN的训练过程中根据标记的训练数据进行推断。大多数现有的DNNs都是通过反向传播的梯度下降来训练的。一旦训练完毕，DNN可以用于预测，而不会对权重进行任何进一步的改变。</p>
 <p>图2展示了自动驾驶汽车感知模块中的一个基本DNN。本质上，DNN是一个线性变换(例如，每条边的权重参数之间的点积和该边缘的源神经元的输出值)和非线性激活(例如，每个神经元中的ReLU)的序列。最近的研究结果表明，经过良好训练的DNN f可以准确地预测与人类驾驶员接近的转向角。</p>
@@ -434,7 +434,7 @@
 <ul>
 <li><strong>CNN的架构</strong><br>一个CNN和一个完全连接的DNN之间最大的区别就是一个卷积层的存在。卷积层的神经元只连接到下一层的某些神经元，而不同神经元之间的多重连接也有相同的权重。共享相同权重的连接的集合本质上是一个卷积核。它对上一层的一组神经元的输出应用相同的卷积运算。图3(上一行)演示了三个卷积层的卷积运算。这种简化的体系结构与实践中使用的体系结构类似。</li>
 </ul>
-<p>卷积层有两个主要好处。首先，他们通过允许在多个连接之间共享权重，从而极大地减少了可训练的重量，从而显著缩短了训练时间。第二，卷积核的应用是一种自然的图像识别技术，因为它类似于人类视觉系统，它提取视觉输入的分层表示。<br>  <img src="/DeepTest-面向深度学习的测试/CNN.png" title="图3 CNN&DNN"></p>
+<p>卷积层有两个主要好处。首先，他们通过允许在多个连接之间共享权重，从而极大地减少了可训练的重量，从而显著缩短了训练时间。第二，卷积核的应用是一种自然的图像识别技术，因为它类似于人类视觉系统，它提取视觉输入的分层表示。<br>  <img src="/DeepTest-面向深度学习的测试.htm/CNN.png" title="图3 CNN&DNN"></p>
 <ul>
 <li><strong>RNN的架构</strong><br>与CNN不同，RNN允许在网络中循环。具体地说，每一层的输出不仅被馈送到下一层，而且还流回上一层。这样的安排使先前输入的预测输出(例如，视频序列的先前帧)也能被考虑用于预测当前输入。图3(下一行)演示了一个简化版本的RNN架构。与其他类型的DNN类似，RNN也利用梯度下降和反向传播进行训练。然而，众所周知，当在RNN中通过多个循环传播时，梯度可能会消失到零或爆炸到非常大的值，因此可能导致一个不准确的模型。长短时记忆(LSTM)，一种流行的RNN子群，旨在解决这个消失/爆炸的梯度问题。</li>
 </ul>
@@ -456,7 +456,7 @@
 <p><strong>调整亮度和对比度都是线性变换。 </strong>图像的亮度取决于该图像的像素值有多大。 图像的亮度可以通过对每个像素的当前值加/减一个常数参数β来调节。 对比度表示图像中不同像素之间亮度的差异。 可以通过将每个像素值乘以恒定参数α来调整图像的对比度。</p>
 <p><strong>平移，缩放，水平剪切和旋转都是不同类型的仿射变换。</strong> 一个仿射变换是两个图像之间的线性映射（旋转+平移）。 在图像处理中经常使用仿射变换来消除摄像机角度变化造成的失真。 在本文中，我们利用反转变换来反演，即模拟不同的真实世界相机视角或物体的移动，并检查自驱动DNN对这些变化的鲁棒性。</p>
 <p><strong>模糊和增加雾/雨效应都是卷积变换，</strong>即它们使用不同的变换特定内核对输入像素执行卷积运算。 卷积操作将输入图像的每个像素（由内核加权）添加到其本地邻居。 我们使用四种不同类型的模糊滤波器：平均，高斯，中位数和双边。 我们在输入图像上组合Adobe Photoshop提供的多个滤镜，以模拟逼真的雾和雨效应。</p>
-<h5 id="结合转换增加覆盖率"><a href="#结合转换增加覆盖率" class="headerlink" title="结合转换增加覆盖率"></a>结合转换增加覆盖率</h5><p>单个图像变换增加神经元覆盖率，一个显而易见的问题是它们是否可以组合以进一步增加神经元覆盖率。 我们的研究结果表明，不同的图像转换倾向于激活不同的神经元，即它们可以堆叠在一起以进一步增加神经元覆盖。 但是，不同变换的所有可能组合的状态空间太大而无法彻底探索。 我们提供了神经元覆盖引导的贪婪搜索技术，可以有效地找到影像转换组合，从而获得更高的覆盖率（请参阅算法1）<br> <img src="/DeepTest-面向深度学习的测试/suanfa.png" title="算法伪代码"><br>该算法将一组种子图像I，变换列表T及其对应参数作为输入。 该算法背后的关键思想是跟踪成功增加给定图像的神经元覆盖范围的转换，并根据给定图像生成更多合成图像的优先次序。这个过程以深度第一的方式重复所有图像。</p>
+<h5 id="结合转换增加覆盖率"><a href="#结合转换增加覆盖率" class="headerlink" title="结合转换增加覆盖率"></a>结合转换增加覆盖率</h5><p>单个图像变换增加神经元覆盖率，一个显而易见的问题是它们是否可以组合以进一步增加神经元覆盖率。 我们的研究结果表明，不同的图像转换倾向于激活不同的神经元，即它们可以堆叠在一起以进一步增加神经元覆盖。 但是，不同变换的所有可能组合的状态空间太大而无法彻底探索。 我们提供了神经元覆盖引导的贪婪搜索技术，可以有效地找到影像转换组合，从而获得更高的覆盖率（请参阅算法1）<br> <img src="/DeepTest-面向深度学习的测试.htm/suanfa.png" title="算法伪代码"><br>该算法将一组种子图像I，变换列表T及其对应参数作为输入。 该算法背后的关键思想是跟踪成功增加给定图像的神经元覆盖范围的转换，并根据给定图像生成更多合成图像的优先次序。这个过程以深度第一的方式重复所有图像。</p>
 <p>在测试基于DNN的复杂系统（如自动驾驶汽车）时面临的主要挑战之一是手动创建系统的规格/规范/格式，以便对系统的行为进行检查。为这样的系统创建详细的规范是具有挑战性的，因为它基本上涉及重建人类驾驶员的逻辑。</p>
 <p>为了规避这个问题，我们利用在汽车行为在不同合成图像之间的变质关系<strong>(metamorphic relations)</strong>。<strong>这里的关键是，即使很难为每个转换后的图像指定自动驾驶汽车的正确行为，人们可以确定汽车面对某些类型的转换中时，所表现的行为之间的关系</strong>。例如，自动汽车的转向角度不应该在任何照明/天气条件下，模糊，或任何带有小参数值的仿射转换时，在相同的图像上变化。</p>
 <p>因此，如果DNN模型推断输入种子图像$I_{o}$的转向角$\theta_{o}$和通过将变换$T$应用于$I_{o}$而生成的新合成图像It的转向角$\theta_{t}$，则可以定义简单的变形关系，其中$\theta_{o}$和$\theta_{o}$是相同的。</p>
@@ -465,7 +465,7 @@
 <p>利用这个属性，我们重新定义了一种新的变形关系</p>
 <script type="math/tex; mode=display">MSE_{orig}=\frac{1}{n}\sum_{i=1}^{n}(\hat\theta_{i}-\theta_{o_{i}})^2</script><p>上述等式假设作为输入的变换图像的模型产生的误差应该在 由原始图像集产生的MSE的λ倍的范围内。 在这里，λ是一个易于理解的参数，可以让我们在假阳性和假阴性之间取得平衡.</p>
 <script type="math/tex; mode=display">(\hat\theta_{i}-\theta_{o_{i}})^2<=\lambda *MSE_{orig}</script><h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><h5 id="应用模型"><a href="#应用模型" class="headerlink" title="应用模型"></a>应用模型</h5><p>我们在三个DNN模型中评估了我们的技术，这些模型在Udacity自驾车挑战中获得了最高排名：Rambo(第二名),Chauffeur(第三名)和Epoch(第六名)。 我们选择这三种模型，因为它们的实现基于我们目前的DeepTest原型支持的Keras框架.表3总结了DNN模型和数据集的细节。</p>
- <img src="/DeepTest-面向深度学习的测试/table3.png" title="表3 3种DNN示例">
+ <img src="/DeepTest-面向深度学习的测试.htm/table3.png" title="表3 3种DNN示例">
 <p> 如表3的右图所示，转向角被定义为车辆的前进方向（垂直线）与方向盘车轴（即，通常为前轮）的前进方向之间的旋转角度。 负转向角表示左转，正值表示左转。 根据不同汽车的硬件，汽车的最大转向角度会有所不同。 本文中使用的Udacity自驾车挑战数据集最大转向角为+/- 25度。 然后将转向角度缩放1/25，以使预测值落在-1和1之间</p>
 <p><strong>Rambo模型</strong>由三个CNN组成，其输出使用一个最终层合并。 其中两个CNN受到NVIDIA自主驾驶汽车架构的启发，第三个CNN基于comma.ai的转向模型[9]。 与其他以单个图像作为输入的模型相反，Rambo将三幅连续图像中的差异作为输入。该模型使用Keras 和Theano 框架。</p>
 <p><strong>Chauffeur模型</strong>包括一个用于从图像中提取特征的CNN模型和一个用于预测转向角度的LSTM模型。 CNN模型的输入是图像，而LSTM模型的输入是由CNN模型从先前的100个连续图像中提取的100个特征的拼接。 Chauffeur使用Keras 和Tensor流框架。</p>
@@ -741,7 +741,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">184.8k </span>
+    <span title="Site words total count">186.1k </span>
   
 </div>
 

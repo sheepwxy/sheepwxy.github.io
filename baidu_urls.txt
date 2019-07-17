@@ -1,3 +1,4 @@
+http://iamwxy.com/自动驾驶仿真-超车行为建模.html
 http://iamwxy.com/我为什么选择plusAI.html
 http://iamwxy.com/近期工作-201906.html
 http://iamwxy.com/自动驾驶仿真蓝皮书.html
@@ -6,7 +7,6 @@ http://iamwxy.com/基于仿真生成行人碰撞场景.html
 http://iamwxy.com/自动驾驶学习资源整理.html
 http://iamwxy.com/交通流建模经典书籍-Fundamentals-of-Traffic-Simulation.html
 http://iamwxy.com/如何学习一门编程语言.html
-http://iamwxy.com/自动驾驶仿真-超车行为建模.html
 http://iamwxy.com/自动驾驶测试挑战和研究方向.html
 http://iamwxy.com/自动驾驶仿真工具需求.html
 http://iamwxy.com/转载-新理解矩阵-五.html

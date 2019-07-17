@@ -129,15 +129,15 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="一个特质与另一个特质的关系，因和果之间的联系，都可以通过数学的技巧揭示">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/统计学习-相关性/hack11.png">
-<meta property="og:image" content="http://iamwxy.com/统计学习-相关性/kafang.png">
-<meta property="og:image" content="http://iamwxy.com/统计学习-相关性/tvalue.png">
-<meta property="og:image" content="http://iamwxy.com/统计学习-相关性/biaozhunwucha.png">
+<meta property="og:image" content="http://iamwxy.com/统计学习-相关性.htm/hack11.png">
+<meta property="og:image" content="http://iamwxy.com/统计学习-相关性.htm/kafang.png">
+<meta property="og:image" content="http://iamwxy.com/统计学习-相关性.htm/tvalue.png">
+<meta property="og:image" content="http://iamwxy.com/统计学习-相关性.htm/biaozhunwucha.png">
 <meta property="og:updated_time" content="2019-05-08T01:02:39.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="统计学习 | 相关性">
 <meta name="twitter:description" content="一个特质与另一个特质的关系，因和果之间的联系，都可以通过数学的技巧揭示">
-<meta name="twitter:image" content="http://iamwxy.com/统计学习-相关性/hack11.png">
+<meta name="twitter:image" content="http://iamwxy.com/统计学习-相关性.htm/hack11.png">
 
 
 
@@ -397,7 +397,7 @@
 <li>相关性无处不在，描述关系大小的数字叫做<strong>相关系数</strong></li>
 <li>相关系数计算公式$\frac{\sum(z_xz_y)}{N-1}$,$Z_x$是指分数离平均数的距离。</li>
 <li>相关系数值在$-1 \sim +1$之间，它提供了两个变量之间线性关系强度的标准度量。强相关也可以是负的。</li>
-<li>只有在样本数足够大的时候，样本的相关性才能表征总体的相关性。有下表。<img src="/统计学习-相关性/hack11.png"></li>
+<li>只有在样本数足够大的时候，样本的相关性才能表征总体的相关性。有下表。<img src="/统计学习-相关性.htm/hack11.png"></li>
 <li>相关性不能作为因果关系的证据，虽然二者有关联。</li>
 <li>在相关性分析中，线性回归是一个重要话题</li>
 </ul>
@@ -419,7 +419,7 @@
 <h5 id="单因素卡方检验"><a href="#单因素卡方检验" class="headerlink" title="单因素卡方检验"></a>单因素卡方检验</h5><ul>
 <li>1982年伦敦出生男孩女孩数量相同吗？一天中不同时段罪案数量相同吗？单因素卡方检验用来解决<strong>多类别中每一类所包含的“事物”数量较之正常状态下随机发生的数量是否有所不同</strong>这样的问题，其用来<strong>识别非预期结果</strong></li>
 <li>卡方值计算公式：$\sum{\frac{(观望频次-期望频次）^2}{期望频次}}$</li>
-<li>显著性为0.05时需要的卡方值。<img src="/统计学习-相关性/kafang.png"></li>
+<li>显著性为0.05时需要的卡方值。<img src="/统计学习-相关性.htm/kafang.png"></li>
 <li>卡方适用于类别数据，数字越大，用偶然性单独解释事情的可能性越低。卡方检验的使用框架是:研究者怀有某个预期，以此方法检验观测数据是否与预期相符。</li>
 <li>卡方是一种直接的模型检验，一种拟合优度检验。</li>
 </ul>
@@ -432,7 +432,7 @@
 <h5 id="t检验"><a href="#t检验" class="headerlink" title="t检验"></a>t检验</h5><pre><code>- t检验可以用来比较两组，t越大，差异为随机出现可能性越低。
 </code></pre><ul>
 <li><script type="math/tex; mode=display">t= \frac{第一组平均数-第二组平均数}{ \sqrt{ \frac{第一组方差}{第一组样本大小}+\frac{第二组方差}{第二组样本大小 }} }</script></li>
-<li>随机出现几率小于5%的值<img src="/统计学习-相关性/tvalue.png"></li>
+<li>随机出现几率小于5%的值<img src="/统计学习-相关性.htm/tvalue.png"></li>
 <li>样本差异性究竟能不能反映总体差异性，t检验回答了这个问题。其公式里的平均分数提供了样本分数的分部信息，方差表示了可能偏离总体平均数的程度，样本量提供了估计的准确性。</li>
 </ul>
 <h5 id="标准误差"><a href="#标准误差" class="headerlink" title="标准误差"></a>标准误差</h5><ul>
@@ -446,7 +446,7 @@
 <li>平均数标准误差 = $\frac{标准差}{\sqrt{样本大小}}$,其本质是众多样本的平均数与其总体平均数距离的平均数。样本数量越准确。可以把样本量想象成独立观测，观测越多越准确。</li>
 <li>比例标准误差 =$\sqrt{\frac{(比例)(1-比例)}{样本大小}}$。注意到样本中比例偏离0.5的程度越大，比例的标准误差越低。</li>
 <li>$ 估计标准误差 = 标准差\sqrt{1-相关系数^2}$标准差指的是预测的变量(效标变量)的标准差，相关系数是预测变量和饿效标变量的相关。</li>
-<li>因为取样误差是正态分布的，因此使用标准误差可以在一定把握上去判断真相(总体的值)落在哪个区间，示例如下图<img src="/统计学习-相关性/biaozhunwucha.png"></li>
+<li>因为取样误差是正态分布的，因此使用标准误差可以在一定把握上去判断真相(总体的值)落在哪个区间，示例如下图<img src="/统计学习-相关性.htm/biaozhunwucha.png"></li>
 <li>标准误差之所以生效，其一是因为<strong>取样误差是正态分布的</strong>，其二是因为<strong>取样误差是无偏的</strong>，这意味着样本值大于或小于总体可能性相同。</li>
 </ul>
 <h5 id="取样"><a href="#取样" class="headerlink" title="取样"></a>取样</h5><ul>
@@ -690,7 +690,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">184.8k </span>
+    <span title="Site words total count">186.1k </span>
   
 </div>
 

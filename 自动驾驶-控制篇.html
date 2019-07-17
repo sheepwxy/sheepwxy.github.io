@@ -129,13 +129,13 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="自动驾驶系统的运动控制控制，是将意图转化为行动的过程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶-控制篇/control.png">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶-控制篇/roles.png">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶-控制篇.htm/control.png">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶-控制篇.htm/roles.png">
 <meta property="og:updated_time" content="2019-05-08T01:14:00.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶 | 控制篇">
 <meta name="twitter:description" content="自动驾驶系统的运动控制控制，是将意图转化为行动的过程。">
-<meta name="twitter:image" content="http://iamwxy.com/自动驾驶-控制篇/control.png">
+<meta name="twitter:image" content="http://iamwxy.com/自动驾驶-控制篇.htm/control.png">
 
 
 
@@ -395,7 +395,7 @@
 <p>经典反馈控制最常见的形式是比例-积分-微分(PID)控制器。PID控制器是过程控制工业中应用最广泛的控制器。</p>
 <p>其概念比较简单。它不需要系统模型，控制律以误差信号为基础，如下公式，其中e为误差信号，$k_p ,k_i和k_d$分别为控制器的比例增益，积分增益和导数增益.</p>
 <script type="math/tex; mode=display">u(t) = k_d\dot{e} + k_pe + k_i \int e(t)dt</script><p>然而，在控制器中仅使用反馈项可能会受到一些限制。第一个重要限制是它延迟了对错误的响应，因为它只在错误发生时才响应。纯反馈控制器还存在耦合响应问题，因为对扰动、建模误差和测量噪声的响应都是由同一机构计算的。对各项进行独立的响应才是更符合逻辑的。</p>
-<p>通过在控制器中增加一个前馈项，可以向控制器添加一个新的自由度，这个控制器体系结构如下图所示。在控制器中加入前馈项有助于克服反馈控制的局限性。前馈项被添加到控制信号中，不需要考虑控制系统的任何测量。但是，前馈项可能涉及到干扰的测量等。设计前馈控制需要对物理系统有更全面的了解，因此，常常需要使用模型参考作为前馈控制器。<br>在控制器中结合前馈和反馈项的方法也称为二自由度控制器<br><img src="/自动驾驶-控制篇/control.png"><br>下表总结了前馈和反馈控制的作用<br><img src="/自动驾驶-控制篇/roles.png"></p>
+<p>通过在控制器中增加一个前馈项，可以向控制器添加一个新的自由度，这个控制器体系结构如下图所示。在控制器中加入前馈项有助于克服反馈控制的局限性。前馈项被添加到控制信号中，不需要考虑控制系统的任何测量。但是，前馈项可能涉及到干扰的测量等。设计前馈控制需要对物理系统有更全面的了解，因此，常常需要使用模型参考作为前馈控制器。<br>在控制器中结合前馈和反馈项的方法也称为二自由度控制器<br><img src="/自动驾驶-控制篇.htm/control.png"><br>下表总结了前馈和反馈控制的作用<br><img src="/自动驾驶-控制篇.htm/roles.png"></p>
 <h4 id="状态空间控制"><a href="#状态空间控制" class="headerlink" title="状态空间控制"></a>状态空间控制</h4><p>其通常被称为现代控制，它通过检查系统的状态，尝试把系统的整个向量来作为一个单元进行控制。<br>状态空间控制领域是一个非常大的领域，在这一领域还有很多积极的研究。</p>
 <p>线性状态空间模型可以写成如下公式，其中 $x(t)$是系统状态向量，$u(t)$是控制输入向量，$y(t)$是系统输出向量。</p>
 <script type="math/tex; mode=display">\dot{x}(t) = A(t)x(t) + B(t)u(t)y(t) = C(t)x(t) + D(t)u(t)</script><p>自动驾驶系统的观测结果大多是非线性的，需要先通过线性化系统的状态空间方程，来获得非线性系统的线性模型。</p>
@@ -650,7 +650,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">184.8k </span>
+    <span title="Site words total count">186.1k </span>
   
 </div>
 
