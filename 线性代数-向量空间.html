@@ -129,16 +129,16 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="向量空间是线性代数里最重要的概念，没有之一。它是后续许多知识的基础，也是帮助我们理解线性代数本质的重要工具。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间.htm/xiaoyuan.PNG">
-<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间.htm/xiaoyuan2.PNG">
-<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间.htm/xiaoyuan3.PNG">
-<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间.htm/rowspace.png">
-<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间.htm/example.png">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan2.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan3.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/rowspace.png">
+<meta property="og:image" content="http://iamwxy.com/线性代数-向量空间/example.png">
 <meta property="og:updated_time" content="2018-08-21T11:02:02.307Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数 | 向量空间">
 <meta name="twitter:description" content="向量空间是线性代数里最重要的概念，没有之一。它是后续许多知识的基础，也是帮助我们理解线性代数本质的重要工具。">
-<meta name="twitter:image" content="http://iamwxy.com/线性代数-向量空间.htm/xiaoyuan.PNG">
+<meta name="twitter:image" content="http://iamwxy.com/线性代数-向量空间/xiaoyuan.PNG">
 
 
 
@@ -422,11 +422,11 @@
 <h5 id="零空间"><a href="#零空间" class="headerlink" title="零空间"></a>零空间</h5><p> 我们仍然用上文的矩阵举例。令$b=0,Ax = 0$我们关注x向量，x在此例中是$R^3$的子空间(注：x有三个分量)。列空间是$R^4$的子空间，在本例中零向量在零空间里，$(1,1,-1)$也是解。综合起来既是$c(1,1,-1)$, 用图像来表示的话是一条直线，即这里的零空间是$R^3$的一维子空间，即是一条直线。</p>
 <p>$Ax=0$的解构成一个子空间。证明： 对于一个解$x$和$x_1$, 其对加法和数乘封闭。<br> $Ax = 0$且$Ax_1=0$. 则$A(x+x_1)=0$,$A(kx)=0$</p>
 <p>假设改变了b，从而导致所有的解x中不包含零向量的话，解x就不可能是向量空间，这些解组成一个不过原点的平面，或者不过原点的直线。我们始终是强调应该过原点的。</p>
-<h4 id="Ax-0-主变量-特解"><a href="#Ax-0-主变量-特解" class="headerlink" title="Ax = 0 主变量 特解"></a>Ax = 0 主变量 特解</h4><p>一般通过对A矩阵进行消元求解，如下图,矩阵A是长方形矩阵,对其进行消元。注意在消元过程中零空间不变，改变的是列空间。  <img src="/线性代数-向量空间.htm/xiaoyuan.PNG"></p>
+<h4 id="Ax-0-主变量-特解"><a href="#Ax-0-主变量-特解" class="headerlink" title="Ax = 0 主变量 特解"></a>Ax = 0 主变量 特解</h4><p>一般通过对A矩阵进行消元求解，如下图,矩阵A是长方形矩阵,对其进行消元。注意在消元过程中零空间不变，改变的是列空间。  <img src="/线性代数-向量空间/xiaoyuan.PNG"></p>
 <p>第二个本应是主元的位置此时是0，这说明第二列和它前面的列线性相关。<br>最后得到阶梯形式的矩阵U，主元的数量是2，这就是矩阵的秩。有主元（红框）的列是主列，其他是自由列。自由对应计算是可以对对应的x任意分配数据，一般是0,1。另外指，它可以由主列组合起来。</p>
 <p>消元后变成Ux = 0寻找主列。对自由列，先随意选取两个数字（1,0）  然后进行回带，算出解，再取（0,1）算 出解。因为分配了特定值，所以是特解。再通过线性组合就得到了该方程的全部解。</p>
-<p>指的注意的是，U还能继续简化 在MATLAB中用矩阵rref可以完成这个问题。我们交汇主行和主列，能得到一个单位阵，不在交汇中的列称为自由列。原方程组Ax=0，中间方程组Ux =0，最后Rx=0<br><img src="/线性代数-向量空间.htm/xiaoyuan2.PNG"></p>
-<p>我们再用代数推导一下这个过程<br><img src="/线性代数-向量空间.htm/xiaoyuan3.PNG"></p>
+<p>指的注意的是，U还能继续简化 在MATLAB中用矩阵rref可以完成这个问题。我们交汇主行和主列，能得到一个单位阵，不在交汇中的列称为自由列。原方程组Ax=0，中间方程组Ux =0，最后Rx=0<br><img src="/线性代数-向量空间/xiaoyuan2.PNG"></p>
+<p>我们再用代数推导一下这个过程<br><img src="/线性代数-向量空间/xiaoyuan3.PNG"></p>
 <h4 id="Ax-b-解的结构-算法"><a href="#Ax-b-解的结构-算法" class="headerlink" title="Ax = b  解的结构 算法"></a>Ax = b  解的结构 算法</h4><ul>
 <li><p>解的结构：唯一解还是无穷多解。</p>
 </li>
@@ -471,8 +471,8 @@
 <li>列空间在m维实空间里，维数是r，一组基是r的主列。</li>
 <li>左零空间在m维实空间,维数是m-r，一组基是特殊解</li>
 </ul>
-<p>它们的关系如下图所示，这里把空间画成垂直的是有特别的含义的，代表着正交，互相垂直的两个空间，维数之和又和行数、列数一一对应，相当于行空间和零空间分割了n维空间，真是奇妙。<br><img src="/线性代数-向量空间.htm/rowspace.png"></p>
-<p>以下图为核心进行分析<img src="/线性代数-向量空间.htm/example.png"></p>
+<p>它们的关系如下图所示，这里把空间画成垂直的是有特别的含义的，代表着正交，互相垂直的两个空间，维数之和又和行数、列数一一对应，相当于行空间和零空间分割了n维空间，真是奇妙。<br><img src="/线性代数-向量空间/rowspace.png"></p>
+<p>以下图为核心进行分析<img src="/线性代数-向量空间/example.png"></p>
 <p><strong>行空间</strong><br>经过初等行变换后，形成单位阵，自由列，全零行的组合，注意R的列空间和A的列空间不同（R是A转变的），但行空间不发生改变（改变后的最简形的行也是线性组合得出来的），所以其基是前r列。</p>
 <p><strong>左零空间</strong><br>$A^T<em>y=0$ ，y就在左零空间里。两边转置，$y^T</em>A=0^T$，$y^T$是一个行向量，因此也叫做左零空间。由A求最简形R，一般做法是构造矩阵[A,I]对前面一部分消元，得到R，I记录了行变换，变成了E。所有这些初等行变化等价于左乘一个E，即$EA = R$。对照左零空间的变换式，想找的是让行空间产生全零的向量，而这个向量可以通过E得到，进而得到左零空间的维数，在本个例子，它是E的最后一行，这个左零空间维数是1。</p>
 <p>不必掌握四个空间的推导，我的习惯是掌握列空间和零空间的定义，另外两个空间只是对应的转置而已。</p>

@@ -129,13 +129,13 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="子空间投影是理解正交的重要途径，后者又是整个线性代数的核心概念之一。投影也可以帮助我们更深入的理解优化过程。本章的核心概念就是投影，这是以前被我忽视的重要章节。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影.htm/touying.PNG">
-<meta property="og:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影.htm/touying2.png">
+<meta property="og:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影/touying.PNG">
+<meta property="og:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影/touying2.png">
 <meta property="og:updated_time" content="2018-08-30T05:48:03.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数 | 正交向量  子空间投影">
 <meta name="twitter:description" content="子空间投影是理解正交的重要途径，后者又是整个线性代数的核心概念之一。投影也可以帮助我们更深入的理解优化过程。本章的核心概念就是投影，这是以前被我忽视的重要章节。">
-<meta name="twitter:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影.htm/touying.PNG">
+<meta name="twitter:image" content="http://iamwxy.com/线性代数-正交向量-子空间投影/touying.PNG">
 
 
 
@@ -406,7 +406,7 @@
 <p>对该做法的解释会在下一节。</p>
 <h4 id="子空间投影"><a href="#子空间投影" class="headerlink" title="子空间投影"></a>子空间投影</h4><p>在原学习视频上，这一节被称为可名留青史的一节课。<strong>所谓投影，就是找到在某个标准上的最近点，这个最近是广义上的最近，泛指最符合标准，误差最小等。</strong>这里蕴含着一种最优化的思想。</p>
 <h5 id="二维投影举例"><a href="#二维投影举例" class="headerlink" title="二维投影举例"></a>二维投影举例</h5><p>下面以向量b在向量a上投影举例，示意图如下。</p>
-<p>其中向量E为误差向量，其与向量a垂直;向量p是投影向量，假设$p=xa$，$x$为一标量参数;P代表着最终的投影矩阵。<br><img src="/线性代数-正交向量-子空间投影.htm/touying.PNG"></p>
+<p>其中向量E为误差向量，其与向量a垂直;向量p是投影向量，假设$p=xa$，$x$为一标量参数;P代表着最终的投影矩阵。<br><img src="/线性代数-正交向量-子空间投影/touying.PNG"></p>
 <script type="math/tex; mode=display">a^TE=0 (1) \ \ \ \ \ \ \ E=b-p=b-xa (2)</script><script type="math/tex; mode=display">a^T(b-xa)=0 (3)\ \ \ \ \ \ \  a^Tb=xa^Ta (4)</script><script type="math/tex; mode=display">x=\frac{a^Tb}{a^Ta}(5)\ \ \ \  p=ax=a\frac{a^Tb}{a^Ta} = \frac{aa^T}{a^Ta}b=Pb(6)</script><script type="math/tex; mode=display">P=\frac{aa^T}{a^Ta}(7)</script><p>整理一下投影问题，求投影p本质是求一个投影矩阵作用于指定的向量。在当前例子里，投影矩阵是P，向量是b。$p = Pb$ 。如果a是n维，那么根据P的求法所示：P是一个$n*n$的矩阵。</p>
 <h5 id="投影矩阵P的性质"><a href="#投影矩阵P的性质" class="headerlink" title="投影矩阵P的性质"></a>投影矩阵P的性质</h5><ul>
 <li>P的列空间是过a的直线，因为$Pb=p$，对P矩阵中列的组合落在了直线a上。</li>
@@ -424,7 +424,7 @@
 <li>$(A^TA)^{-1}$不能展开，因为A不一定是可逆矩阵。</li>
 <li>如果A是一个n*n可逆矩阵，那么其列空间就是整个n维空间。向量在内部投影就是向量本身，投影矩阵是单位阵。</li>
 <li>思考$Pb=0$的逻辑，b的投影是0，说明b垂直于A的列空间，说明b是$A^T$的零空间，即$A^Tb=0$,则$Pb=A(A^TA)^{-1}A^Tb=0$</li>
-<li>如此再观察b的投影，其可以分别投影到A的列空间和$A^T$的零空间，即A的左零空间中，投影矩阵分别是P和I-p。<img src="/线性代数-正交向量-子空间投影.htm/touying2.png">
+<li>如此再观察b的投影，其可以分别投影到A的列空间和$A^T$的零空间，即A的左零空间中，投影矩阵分别是P和I-p。<img src="/线性代数-正交向量-子空间投影/touying2.png">
 <h4 id="投影矩阵和最小二乘法"><a href="#投影矩阵和最小二乘法" class="headerlink" title="投影矩阵和最小二乘法"></a>投影矩阵和最小二乘法</h4>最小二乘法是极其重要的。下面来举一个简单例子，在二维平面上有一些点，现在想寻找能拟合这些点的最优直线。这个“最优”其实就可以理解为误差最小，最小二乘法把这个误差定义为原始点到拟合直线上相应点的误差的平方和。<br><script type="math/tex">Ax=b \ \ \ A^TAx=A^Tb</script> 这是最小二乘法的核心，通过乘以一个A的转置得到了可解的情况。需要注意的是，只有当A各列线性无关时，$A^TA$才是可逆的，证明如下。<blockquote>
 <p>令$A^TAx=0$,进行一个小的技巧变换，可得$x^TA^TAx=0 \rightarrow (Ax)^TAx=0$, 根据长度和模的概念有，$Ax=0$,又因为A的各列线性无关，所以x只可能是零向量，则$A^TA$是可逆的。</p>
 </blockquote>

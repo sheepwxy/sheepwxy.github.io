@@ -129,17 +129,17 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="除了百度的Apollo，在GitHub的Autonomous Driving话题里，就数AirSim的star多了。这可能是因为Airsim既能支持无人车仿真也能支持无人机仿真，也可能是因为Airsim提供了足够多的辅助教程，能帮助新手快速入门。 不管怎样，它是一个非常值得学习的开源项目。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/AirSim配置.htm/unreal.png">
-<meta property="og:image" content="http://iamwxy.com/AirSim配置.htm/C.png">
-<meta property="og:image" content="http://iamwxy.com/AirSim配置.htm/x64.png">
-<meta property="og:image" content="http://iamwxy.com/AirSim配置.htm/bulid.png">
-<meta property="og:image" content="http://iamwxy.com/AirSim配置.htm/asis.png">
-<meta property="og:image" content="http://iamwxy.com/AirSim配置.htm/success.png">
+<meta property="og:image" content="http://iamwxy.com/AirSim配置/unreal.png">
+<meta property="og:image" content="http://iamwxy.com/AirSim配置/C.png">
+<meta property="og:image" content="http://iamwxy.com/AirSim配置/x64.png">
+<meta property="og:image" content="http://iamwxy.com/AirSim配置/bulid.png">
+<meta property="og:image" content="http://iamwxy.com/AirSim配置/asis.png">
+<meta property="og:image" content="http://iamwxy.com/AirSim配置/success.png">
 <meta property="og:updated_time" content="2019-06-19T14:14:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AirSim配置">
 <meta name="twitter:description" content="除了百度的Apollo，在GitHub的Autonomous Driving话题里，就数AirSim的star多了。这可能是因为Airsim既能支持无人车仿真也能支持无人机仿真，也可能是因为Airsim提供了足够多的辅助教程，能帮助新手快速入门。 不管怎样，它是一个非常值得学习的开源项目。">
-<meta name="twitter:image" content="http://iamwxy.com/AirSim配置.htm/unreal.png">
+<meta name="twitter:image" content="http://iamwxy.com/AirSim配置/unreal.png">
 
 
 
@@ -398,10 +398,10 @@
 <p>本篇教程选择在win10系统上搭建AirSim平台，这也是少有的可以在Win上运行的开源项目了。整体应用的是最新版本的AirSim建议的配置，win10+VS2017Community。</p>
 <font size="4">**安装步骤**</font>
 
-<p><strong>第一步，下载Unreal</strong><br>先下载Epic Games Launcher。打开后，按如下图红色方框，点击选择Unreal版本4.18.3，下载。<br><img src="/AirSim配置.htm/unreal.png"></p>
-<p> <strong>第二步，配置VS2017</strong><br>首先确保其安装VC++。其次确保安装Windows SDK 8.1。打开vs2017，选择工具中的“获取工具和功能”。选中“单个组件”选项夹，在“SDK、库和框架”中选择Windows8.1SDK勾选安装。<br><img src="/AirSim配置.htm/C.png"></p>
-<p><strong>第三步， 编译程序</strong><br>首先新建文件夹，把<a href="https://github.com/Microsoft/AirSim" target="_blank" rel="noopener">https://github.com/Microsoft/AirSim</a> 中源代码下载或者clone到本地，我个人是把文件下载到了“E:\SOFT\airsim\air”的文件路径里。之后在win10左下角找到Visual Studio的安装目录，选择“适用于VS 2017的 x64本地工具”打开。<br><img src="/AirSim配置.htm/x64.png"></p>
-<p>接着，进入你放着airsim源程序的文件夹，运行build.cmd文件夹。Airsim的配置结束。<br><img src="/AirSim配置.htm/bulid.png"></p>
+<p><strong>第一步，下载Unreal</strong><br>先下载Epic Games Launcher。打开后，按如下图红色方框，点击选择Unreal版本4.18.3，下载。<br><img src="/AirSim配置/unreal.png"></p>
+<p> <strong>第二步，配置VS2017</strong><br>首先确保其安装VC++。其次确保安装Windows SDK 8.1。打开vs2017，选择工具中的“获取工具和功能”。选中“单个组件”选项夹，在“SDK、库和框架”中选择Windows8.1SDK勾选安装。<br><img src="/AirSim配置/C.png"></p>
+<p><strong>第三步， 编译程序</strong><br>首先新建文件夹，把<a href="https://github.com/Microsoft/AirSim" target="_blank" rel="noopener">https://github.com/Microsoft/AirSim</a> 中源代码下载或者clone到本地，我个人是把文件下载到了“E:\SOFT\airsim\air”的文件路径里。之后在win10左下角找到Visual Studio的安装目录，选择“适用于VS 2017的 x64本地工具”打开。<br><img src="/AirSim配置/x64.png"></p>
+<p>接着，进入你放着airsim源程序的文件夹，运行build.cmd文件夹。Airsim的配置结束。<br><img src="/AirSim配置/bulid.png"></p>
 <font size="4">**疑难问题汇总**</font>
 
 <p><strong>症状1</strong><br>任何rpclib相关问题。</p>
@@ -412,10 +412,10 @@
 <p><strong>药方</strong><br>首先检查SDK8.1有没有正常安装。其次在VS2017的“获取工具和功能”选项夹中选择“单个组件”，再在“编译器、生成工具和运行时”下选择“Windows通用CRTSDK”，勾选安装。重启电脑，重新build。</p>
 <p><strong>症状3</strong><br>没有生成object文件。</p>
 <p><strong>病情分析</strong><br>如cmd中报错显示，是文件编码的问题。</p>
-<p><strong>药方</strong><br>按照报错提示，直接打开“… repos\repo_avt\airsim-master\airlib\deps\eigen3\eigen\src\core\arch\cuda\half.h ”文件，如图所示，把里面的全角符号改成半角。<br><img src="/AirSim配置.htm/asis.png"></p>
+<p><strong>药方</strong><br>按照报错提示，直接打开“… repos\repo_avt\airsim-master\airlib\deps\eigen3\eigen\src\core\arch\cuda\half.h ”文件，如图所示，把里面的全角符号改成半角。<br><img src="/AirSim配置/asis.png"></p>
 <p><font size="4"><strong>参考资源</strong></font><br><a href="https://github.com/Microsoft/AirSim/blob/master/docs/build_windows.md" target="_blank" rel="noopener">https://github.com/Microsoft/AirSim/blob/master/docs/build_windows.md</a></p>
 <p><font size="4"><strong>一点感想</strong></font><br>在配置airsim时虽然已经有中文教程，但还是不断在踩坑，中间有两次都想放弃了。比如对于corect.h问题，我不知道怎么去重定向解决方案，刚开始试着在VisualStudio中编译文件，以期望得到重定项窗口，但没有成功。之后直接baidu，google搜索怎么修改项目的sdk版本，但得到的大多都是关于Android的问答，很难去准确定位信息。后来我选择直接以airsim，corect.h为关键词搜索，发现在项目的issue里确实有这个问题，但开发者只说是sdk版本的问题。最后在偶然去搜索corect.h时，在stackflow里找到了一个这样问答，<a href="https://stackoverflow.com/questions/38290169/cannot-find-corecrt-h-universalcrt-includepath-is-wrong/40164843" target="_blank" rel="noopener">https://stackoverflow.com/questions/38290169/cannot-find-corecrt-h-universalcrt-includepath-is-wrong/40164843</a> 得到了解决方案。</p>
-<img src="/AirSim配置.htm/success.png">
+<img src="/AirSim配置/success.png">
 <p>Bingo ，如上图，AirSim配置成功，完成了本想放弃的事，感觉还不错。</p>
 
       

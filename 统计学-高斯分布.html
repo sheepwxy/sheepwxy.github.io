@@ -129,14 +129,14 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="工程领域很多研究问题本质上都是信息处理问题。这里可以举一个广义的例子，就自动驾驶系统的感知过程而言，环境就是信息源，传感器编码环境信息，认知算法对信息进行解码获得能完成驾驶任务的信息。 信息处理中一个经典问题是对不确定性建模，而推开不确定性的神圣青铜门，我们会发现高斯分布坐在正中间。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/统计学-高斯分布.htm/gaosi.png">
-<meta property="og:image" content="http://iamwxy.com/统计学-高斯分布.htm/zhengtai.png">
-<meta property="og:image" content="http://iamwxy.com/统计学-高斯分布.htm/gaoerdun.png">
+<meta property="og:image" content="http://iamwxy.com/统计学-高斯分布/gaosi.png">
+<meta property="og:image" content="http://iamwxy.com/统计学-高斯分布/zhengtai.png">
+<meta property="og:image" content="http://iamwxy.com/统计学-高斯分布/gaoerdun.png">
 <meta property="og:updated_time" content="2019-05-08T01:02:56.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="统计学习 | 高斯分布">
 <meta name="twitter:description" content="工程领域很多研究问题本质上都是信息处理问题。这里可以举一个广义的例子，就自动驾驶系统的感知过程而言，环境就是信息源，传感器编码环境信息，认知算法对信息进行解码获得能完成驾驶任务的信息。 信息处理中一个经典问题是对不确定性建模，而推开不确定性的神圣青铜门，我们会发现高斯分布坐在正中间。">
-<meta name="twitter:image" content="http://iamwxy.com/统计学-高斯分布.htm/gaosi.png">
+<meta name="twitter:image" content="http://iamwxy.com/统计学-高斯分布/gaosi.png">
 
 
 
@@ -392,7 +392,7 @@
       
         <p>工程领域很多研究问题本质上都是信息处理问题。这里可以举一个广义的例子，就自动驾驶系统的感知过程而言，环境就是信息源，传感器编码环境信息，认知算法对信息进行解码获得能完成驾驶任务的信息。</p>
 <p>信息处理中一个经典问题是对不确定性建模，而推开不确定性的神圣青铜门，我们会发现高斯分布坐在正中间。<br><a id="more"></a></p>
-<h5 id="正态分布数学定义"><a href="#正态分布数学定义" class="headerlink" title="正态分布数学定义"></a>正态分布数学定义</h5><p>正态分布对应的密度函数表达式<script type="math/tex">f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}</script><br>归一化后的密度函数表达式<script type="math/tex">f(x) = \frac{1}{\sqrt{2 \pi} } e^{-\frac{x^2}{2}}</script><br><img src="/统计学-高斯分布.htm/gaosi.png" title="高斯分布"></p>
+<h5 id="正态分布数学定义"><a href="#正态分布数学定义" class="headerlink" title="正态分布数学定义"></a>正态分布数学定义</h5><p>正态分布对应的密度函数表达式<script type="math/tex">f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}</script><br>归一化后的密度函数表达式<script type="math/tex">f(x) = \frac{1}{\sqrt{2 \pi} } e^{-\frac{x^2}{2}}</script><br><img src="/统计学-高斯分布/gaosi.png" title="高斯分布"></p>
 <h5 id="正态分布产生历史"><a href="#正态分布产生历史" class="headerlink" title="正态分布产生历史"></a>正态分布产生历史</h5><ul>
 <li>由赌徒问题得到的二项分布问题，需要求解$2npqb(n,p,np)$的值，在此过程中逐渐发展出<strong>中心极限定理</strong>。即二项分布在n趋近于无穷的时候，其极限分布都有正态的性质。<script type="math/tex; mode=display">\lim_{n\rightarrow\infty}P\left( \frac{X_n – np}{\sqrt{np(1-p)}} \le x \right)= \int_{-\infty}^x \frac{1}{\sqrt{2\pi}} e^{\frac{-t^2}{2}}dt</script></li>
 <li><strong>勒让德发明最小二乘法</strong>，用来解决线性矛盾方程组的问题。即累积误差等于观测值减去理论值之后的平方和，之后令累计误差最小来计算参数，它的优点如下:<ul>
@@ -430,8 +430,8 @@
 </li>
 </ul>
 <h5 id="正态分布的通用性解释"><a href="#正态分布的通用性解释" class="headerlink" title="正态分布的通用性解释"></a>正态分布的通用性解释</h5><ul>
-<li>正态分布之所以有这么高的地位，一个很重要的原因是随着中心极限定理发展，我们发现，<strong>随意的一个概率分布中生成的随机变量，在序列和 (或者等价的求算术平均) 的操作之下，表现出如此一致的行为，统一的规约到正态分布</strong><img src="/统计学-高斯分布.htm/zhengtai.png"></li>
-<li><strong>高尔顿钉板</strong>,这说明在自然界各种随机因素的影响下，最终会形成正态分布。而对于典型的遗传现象，我们可以认为是隔断的正态分布。<img src="/统计学-高斯分布.htm/gaoerdun.png"></li>
+<li>正态分布之所以有这么高的地位，一个很重要的原因是随着中心极限定理发展，我们发现，<strong>随意的一个概率分布中生成的随机变量，在序列和 (或者等价的求算术平均) 的操作之下，表现出如此一致的行为，统一的规约到正态分布</strong><img src="/统计学-高斯分布/zhengtai.png"></li>
+<li><strong>高尔顿钉板</strong>,这说明在自然界各种随机因素的影响下，最终会形成正态分布。而对于典型的遗传现象，我们可以认为是隔断的正态分布。<img src="/统计学-高斯分布/gaoerdun.png"></li>
 <li>正态分布具有稳定的性质,如下前三个保证正态分布一旦形成，就具有稳定的性质。后两个说明在自然庆情况下，其它分布会逐渐趋近于正态分布。<ol>
 <li>两个正态分布密度的乘积还是正态分布</li>
 <li>两个正态分布密度的卷积还是正态分布，也就是两个独立正态分布的和还是正态分布</li>

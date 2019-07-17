@@ -129,17 +129,17 @@
 <meta property="og:site_name" content="肥羊与他的生活">
 <meta property="og:description" content="超车行为在交通中是复杂的，交通信息是异构的，目前的虚拟现实交通仿真研究很少关注超车行为的建模，考虑到不同的交通状况。为了更好地理解交通状况，并在交通仿真中辅助超车行为分析，本文总结了一种智能车辆模型。在此基础上，详细介绍了基于智能车辆的超车行为模型，分析了作为超车行为基础的变道行为模型。 此外，超车行为是通过基于agent的多控制器协调机制来实现的，该协调机制结合不同的交通情况来探索交通中的超车行">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模.htm/AgentFramework.jpg">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模.htm/MultiControl.jpg">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模.htm/LaneChangeProcess.jpg">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模.htm/LaneIntention.jpg">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模.htm/TrafficSituation.jpg">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模.htm/FlowChart.jpg">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模/AgentFramework.jpg">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模/MultiControl.jpg">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模/LaneChangeProcess.jpg">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模/LaneIntention.jpg">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模/TrafficSituation.jpg">
+<meta property="og:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模/FlowChart.jpg">
 <meta property="og:updated_time" content="2019-07-17T05:25:28.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶仿真 | 超车行为建模">
 <meta name="twitter:description" content="超车行为在交通中是复杂的，交通信息是异构的，目前的虚拟现实交通仿真研究很少关注超车行为的建模，考虑到不同的交通状况。为了更好地理解交通状况，并在交通仿真中辅助超车行为分析，本文总结了一种智能车辆模型。在此基础上，详细介绍了基于智能车辆的超车行为模型，分析了作为超车行为基础的变道行为模型。 此外，超车行为是通过基于agent的多控制器协调机制来实现的，该协调机制结合不同的交通情况来探索交通中的超车行">
-<meta name="twitter:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模.htm/AgentFramework.jpg">
+<meta name="twitter:image" content="http://iamwxy.com/自动驾驶仿真-超车行为建模/AgentFramework.jpg">
 
 
 
@@ -401,15 +401,15 @@
 <li>使用模糊控制器模拟人类在超车过程中的行为和反应，并提供了一个规则来估计超车的距离。</li>
 <li>基于元胞自动机(CA)的双车道交通流模型，研究了车辆密度和信号周期时间对交通流的影响。提出了一种用于两车自动超车机动的非线性自适应控制器。</li>
 </ol>
-<h4 id="Agent建模"><a href="#Agent建模" class="headerlink" title="Agent建模"></a>Agent建模</h4><h5 id="Agent设计框架"><a href="#Agent设计框架" class="headerlink" title="Agent设计框架"></a>Agent设计框架</h5><img src="/自动驾驶仿真-超车行为建模.htm/AgentFramework.jpg">
+<h4 id="Agent建模"><a href="#Agent建模" class="headerlink" title="Agent建模"></a>Agent建模</h4><h5 id="Agent设计框架"><a href="#Agent设计框架" class="headerlink" title="Agent设计框架"></a>Agent设计框架</h5><img src="/自动驾驶仿真-超车行为建模/AgentFramework.jpg">
 <p><strong>感知模块监控来自人和其他车辆的信息，识别虚拟现实交通仿真系统中的相关事件</strong>。在虚拟现实交通仿真系统中，存在虚拟世界和与智能车相对应的三维车辆。感知模块可以通过三维模型之间的交互作用，如碰撞检测，获取周围环境的信息。车辆之间的距离可以方便的计算出来。通过该模块，智能车辆可以感知交通信息和环境信息，然后将这些信息发送到内部属性和认知行为模块，进行进一步的决策。</p>
 <p><strong>运动模块是智能车辆的运动实现。该模块实现了车辆动力学模型和车辆控制模型</strong>，并将其解耦为纵向运动模型和横向运动模型。纵向运动模型由协调节流阀和模糊控制器以及纵向车辆动态模型组成。横向运动模型由多模型模糊控制器和横向车辆动力学模型组成。通过这些模型和控制器，车辆通过修改和作用于车辆的控制参数(转向、节流阀和刹车)来运动。</p>
-<p><strong>认知和行为模块是智能车的大脑，它可以根据交通状况和环境信息完成更复杂的任务，如行为选择、导航和驾驶员决策等</strong>。智能车要处理的的交通状况和微观行为是复杂的。因此，将认知行为模块建模为基于agent的多控制器，而不是单一的控制算法，通过不同层次agent的协作来实现智能车辆的微观行为，如下图所示。<br><img src="/自动驾驶仿真-超车行为建模.htm/MultiControl.jpg"></p>
+<p><strong>认知和行为模块是智能车的大脑，它可以根据交通状况和环境信息完成更复杂的任务，如行为选择、导航和驾驶员决策等</strong>。智能车要处理的的交通状况和微观行为是复杂的。因此，将认知行为模块建模为基于agent的多控制器，而不是单一的控制算法，通过不同层次agent的协作来实现智能车辆的微观行为，如下图所示。<br><img src="/自动驾驶仿真-超车行为建模/MultiControl.jpg"></p>
 <p>智能汽车是一个顶层控制器，由纵向控制器和横向控制器两个子控制器组成。纵向控制器分为速度控制器、跟随控制器和刹车控制器。</p>
 <p><strong>内部属性反映了人格对认知和行为模块的影响</strong>。内部属性包括驱动程序类型和驱动程序状态。根据驾驶员的攻击性程度，驾驶员可分为被动型、中度型和主动型。驾驶员的状态可根据驾驶员的身体状况分为睡眠状态、疲劳状态和正常状态。</p>
 <h4 id="超车行为"><a href="#超车行为" class="headerlink" title="超车行为"></a>超车行为</h4><p>超车是复杂的交通行为。超车动作包括三个步骤:(1)从原车道转向，(2)在相邻车道直行，(3)返回原车道。从这三个短语可以看出，变道与超车的关系是显而易见的，变道是超车过程的重要组成部分，是超车的基础。因此，本文将考虑变道行为模型。</p>
 <h5 id="换道模型"><a href="#换道模型" class="headerlink" title="换道模型"></a>换道模型</h5><p>变道行为模型是微观交通行为的重要组成部分。本文的变道行为模型是通过纵向控制器和横向控制器的协调来实现的。在交通仿真中，纵向控制器始终处于动态状态，而当变道可行性满足时，横向控制器处于动态状态。下面会详细讨论变道过程和变道的可行性。</p>
-<p><strong>换道过程</strong><br>换道过程的图像如下图所示。被控车辆定义为主体车辆;在同一车道上行驶在被试车辆前方的车辆定义为前车;在相邻车道上，行驶在被试车辆前后的车辆定义为前车和后车。基于这一过程,需要输入给智能车（主车）的信息包括在原车道上的主车的速度$(V_s)$和前车的速度$(V_l)$和与前车的距离$(S(t))$,在相邻车道上车辆的速度$(V)$,与前车的距离$(S_f(t))$和与后车之间的距离$(S_b(t))$。输出的信息是所需的速度，横向位置和偏航角。<br><img src="/自动驾驶仿真-超车行为建模.htm/LaneChangeProcess.jpg"></p>
+<p><strong>换道过程</strong><br>换道过程的图像如下图所示。被控车辆定义为主体车辆;在同一车道上行驶在被试车辆前方的车辆定义为前车;在相邻车道上，行驶在被试车辆前后的车辆定义为前车和后车。基于这一过程,需要输入给智能车（主车）的信息包括在原车道上的主车的速度$(V_s)$和前车的速度$(V_l)$和与前车的距离$(S(t))$,在相邻车道上车辆的速度$(V)$,与前车的距离$(S_f(t))$和与后车之间的距离$(S_b(t))$。输出的信息是所需的速度，横向位置和偏航角。<br><img src="/自动驾驶仿真-超车行为建模/LaneChangeProcess.jpg"></p>
 <p><strong>换道可行性</strong><br>在换道模型的背景下，如果目标车道上存在足够大的间隙，车辆能够安全进入目标车道，在与目标车道上的其他车辆配合的前提下，认为变道是可行的。为了确定变道行为的可行性，首先在相邻车道上进行搜索，找到前车和后车。如果换道可行，则分别成为被试车辆的新leader和新follower。</p>
 <p>根据上文所述的换道过程，本文将换道的可行性分为两种情况</p>
 <p>（1）$V_s &lt; V$对于前车，换道发生在 <script type="math/tex">S_{f}(t) \geq S_{f}(\min )=L</script>。<br>对于后车，则换道发生在</p>
@@ -417,18 +417,18 @@
 S_{b}(t) \geq S_{b}(\min )=\frac{V^{2}-V_{s}^{2}}{2 j_{h}}+\tau V+L</script><p>（1）$V_s &gt; V$ 对于后车，则换道发生在<script type="math/tex">S_{b}(t) \geq S_{b}(\min )=L</script><br>对于前车，则换道发生在</p>
 <script type="math/tex; mode=display">
 S_{f}(t) \geq S_{f}(\min )=\frac{V^{2}-V_{s}^{2}}{2 j_{h}}+\tau V_{s}+L</script><p>$S_{f}(\min )$避免碰撞前车的最小距离,$S_{b}(\min )$避免碰撞后车的最小距离,$j_b$是后车的最大减速度，$j$是主车的最大减速度,$\tau$是司机的反应时间,$L$是两车停下时的最终距离。</p>
-<p><strong>纵向控制器和横向控制器的协调</strong><br>在实际交通中，如果车辆或前车的速度低于所要求的速度，驾驶员更愿意将车道改为高速车道。<br>因此，通过对新车道交通状况的评估来提高车速，或者进行超车行为，是可取的。<br>纵向控制器与横向控制器的协调如下图所示。<br><img src="/自动驾驶仿真-超车行为建模.htm/LaneIntention.jpg"></p>
+<p><strong>纵向控制器和横向控制器的协调</strong><br>在实际交通中，如果车辆或前车的速度低于所要求的速度，驾驶员更愿意将车道改为高速车道。<br>因此，通过对新车道交通状况的评估来提高车速，或者进行超车行为，是可取的。<br>纵向控制器与横向控制器的协调如下图所示。<br><img src="/自动驾驶仿真-超车行为建模/LaneIntention.jpg"></p>
 <p>与其他换道模型一样，侧移控制器在考虑换道过程的可取性和可行性的前提下进行控制。纵向控制器一直处于运动状态，但用于协调纵向控制器的信息随着换车道过程的变化而变化.</p>
 <p><strong>交通状况模型</strong><br>为了评估不同交通状况下的变道模型，我们用交通状况模型确定了相邻车道车辆之间的速度和空间。<br>交通态势模型是基于Skycomp开发的用来分类表征道路交通拥堵状况的模型，该模型通过对不同高速公路航测交通数据的分析，提供相应的服务水平(LOS).</p>
 <p>为保证相邻车道的安全，交通态势模型假设车辆只能在前面没有车辆的情况下加速或在后面没有车辆的情况下减速。</p>
-<p>根据拥堵等级划分，交通态势模型如表I所示:<br><img src="/自动驾驶仿真-超车行为建模.htm/TrafficSituation.jpg"></p>
+<p>根据拥堵等级划分，交通态势模型如表I所示:<br><img src="/自动驾驶仿真-超车行为建模/TrafficSituation.jpg"></p>
 <h5 id="跟车模型"><a href="#跟车模型" class="headerlink" title="跟车模型"></a>跟车模型</h5><p>在变道过程中，纵向控制器用于控制纵向速度，以保持目标车辆与前车之间的安全距离。所需的安全跟随距离$l_{FD}$是通过人工距离策略定义的，可以是二次曲线的形式</p>
 <script type="math/tex; mode=display">
 l_{F D}=\gamma \frac{v_{i}^{2}}{2 a_{i \max }}+L+\tau v_{i}</script><p>其中$v_i$是被试车辆纵向速度，$L$为安全裕度，表示两车停车时的距离，$a_{imax}$为最大减速度，$\tau$为驾驶员s反应时间，$\gamma$为安全系数，与路况相关。</p>
 <p>根据所要求的安全跟随距离$l_{FD}$，所要求的加速度为</p>
 <script type="math/tex; mode=display">
 a_{i}=-\left(\lambda \delta_{i}+v_{i}-v_{i-1}\right) /\left(\tau+\frac{\gamma}{a_{i \max }} v_{i}\right)</script><p>其中，$\delta_{i}=x_{i}-x_{i-1}+l_{F D}$其中$x_i$和$x_{i-1}$为被控车辆与前车的位置，$v_{i-1}$为前车的速度，$\lambda$是正控制增益</p>
-<h5 id="超车动作流程图"><a href="#超车动作流程图" class="headerlink" title="超车动作流程图"></a>超车动作流程图</h5><p>每一个超车动作都包括两个变道和一个跟车部件。因此，需要对智能车辆的速度和转向进行管理。<br>在此基础上，考虑了控制器的部分解耦问题。采用基于agent的多控制器协调实现复杂的超车机动。<br>根据变道行为模型，超车机动流程图如下图所示<br><img src="/自动驾驶仿真-超车行为建模.htm/FlowChart.jpg"></p>
+<h5 id="超车动作流程图"><a href="#超车动作流程图" class="headerlink" title="超车动作流程图"></a>超车动作流程图</h5><p>每一个超车动作都包括两个变道和一个跟车部件。因此，需要对智能车辆的速度和转向进行管理。<br>在此基础上，考虑了控制器的部分解耦问题。采用基于agent的多控制器协调实现复杂的超车机动。<br>根据变道行为模型，超车机动流程图如下图所示<br><img src="/自动驾驶仿真-超车行为建模/FlowChart.jpg"></p>
 
       
     </div>
