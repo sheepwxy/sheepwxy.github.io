@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="2018.10.30 初稿  2019.04.28 第一次修改  2019.06.12 第二次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta name="description" content="2018.10.30 初稿  2019.04.28 第一次更新 修改部分描述 2019.06.12 第二次更新 增加论述 “对标准场景格式的支持”自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
 <meta name="keywords" content="自动驾驶仿真">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶仿真工具需求">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶仿真工具需求.html">
 <meta property="og:site_name" content="肥羊与他的生活">
-<meta property="og:description" content="2018.10.30 初稿  2019.04.28 第一次修改  2019.06.12 第二次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta property="og:description" content="2018.10.30 初稿  2019.04.28 第一次更新 修改部分描述 2019.06.12 第二次更新 增加论述 “对标准场景格式的支持”自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-12T02:58:30.609Z">
+<meta property="og:updated_time" content="2019-07-19T07:56:51.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶仿真工具需求">
-<meta name="twitter:description" content="2018.10.30 初稿  2019.04.28 第一次修改  2019.06.12 第二次修改 自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。">
+<meta name="twitter:description" content="2018.10.30 初稿  2019.04.28 第一次更新 修改部分描述 2019.06.12 第二次更新 增加论述 “对标准场景格式的支持”自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
 
 
 
@@ -387,9 +387,10 @@
 
       
         <p><font color="green">2018.10.30 初稿 </font></p>
-<p><font color="green">2019.04.28 第一次修改 </font></p>
-<p><font color="green">2019.06.12 第二次修改 </font><br>自动驾驶仿真在我看来主要有两个目的，开发与验证。现在常用的自动驾驶仿真工具有Prescan、VTD、Carla、Arisim等。<br><a id="more"></a><br>再看仿真，从词义上就可以看到，没有<strong>“真”</strong>是不行的。仿真的需求首要就是对真实性的需求。没有真实性的<strong>坏数据</strong>无法训练出适用于真实环境的算法，在进行自动驾驶测试时也没有可靠性。再来看<strong>“仿”</strong>这个字，仿真本事上是实现现实世界到计算机虚拟空间的映射，在转化过程中性质已经完全转变成其他维度，掌握具体过程的工作原理可帮助我们表征出关键特征维度。但从另外一个方面来讲，表现出真实环境中所有特征维度也是不现实的，建模成本过高。未来在有限的资源范围内做出高仿真场景应该是相关软件迭代的方向。</p>
-<p>接下来让我们从<strong>“真”</strong>的角度进行一番思考。</p>
+<p><font color="green">2019.04.28 第一次更新 修改部分描述</font></p>
+<p><font color="green">2019.06.12 第二次更新 增加论述 “对标准场景格式的支持”</font><br>自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。<br><a id="more"></a><br>先看看仿真这两个字，从词义上就可以看到，没有“真”是不行的。仿真的需求离不开真实性的需求。不能满足真实性的坏数据无法训练出真正有效的模型，也不能保证自动驾驶测试的可靠性。再来看“仿”，仿真本事上是完成现实世界到计算机虚拟空间的映射，在转化过程中核心性质已经完全转变，掌握这个具体映射过程的工作原理和细节可帮助我们抽象/表征出关键特征维度。但表现出真实环境中所有特征维度是不现实的，建模成本过高了些。在有限的资源范围内做出高仿真场景应该是未来相关软件迭代的方向之一。</p>
+<p>目前市面上与自动驾驶仿真相关的软件很多。第一类是专门的自动驾驶模拟仿真软件，如Prescan、VTD、51sim-one、Panosim、GaiA等等。第二类是基于游戏引擎做的自动驾驶仿真软件，主要代表是基于Unity的Lgscl Simulator、baidu-Unity，基于Unreal的Carla、Carsim等。第三类是基于一些机器人仿真软件做的自动驾驶仿真器，如基于ROS的Gazebo、rviz开发的仿真平台，基于blender开发的平台等等。</p>
+<p>不同类型的软件都有自己的优势和劣势。一般来说，商业软件对自动驾驶仿真各种需求的支持会比较均衡，但一般费用较高，且对于开发者而言，灵活性会受到一定限制。开源软件则会有一些相反的特性。目前市面上还没有一款赢家通吃的自动驾驶仿真器。作为一名开发者，我对“完美”的自动驾驶仿真器有如下的期待。</p>
 <h4 id="静态场景建模"><a href="#静态场景建模" class="headerlink" title="静态场景建模 "></a><font color="blue">静态场景建模 </font></h4><p>静态场景有不同的真实程度，51VR的L1级别环境是简单的同质化设计，L2等级会基于数据库进行一些分割以及渲染，L3等级的渲染甚至会考虑整体上光能量的守恒，以下是<a href="http://www.51hitech.com/" target="_blank" rel="noopener">demo视频</a> </p>
 <p>一个典型的交通静态场景需要什么，全局性的因素有<strong>天气条件、光线</strong>等，好的仿真工具首先需要有强大的图形渲染能力来渲染这些环境。对于自动驾驶视觉仿真来说，CG渲染能力几乎决定了一切。</p>
 <p>非全局性的环境因素有<strong>道路、交通设施（交通标志、标识牌、红绿灯）、建筑物、篱笆护栏等等</strong>。对于他们，我们需要考虑它们的形状、表面材质、反射率等属性。换句话说，感知系统在工作过程中需要考虑的因素都应该被我们主动建模出来。</p>
@@ -414,6 +415,7 @@
 </ul>
 <h4 id="标准场景格式支持"><a href="#标准场景格式支持" class="headerlink" title="标准场景格式支持"></a><font color="blue">标准场景格式支持</font></h4><p>场景自动化测试以及场景复用是自动驾驶测试的大势所趋，而这两项都需要标准场景文件的支持。目前国际通用标准是以VTD发起，由ASAM主导的OpenDRIVE、OpenCRG、OpenSCENARIO标准格式。OpenDRIVE主要解决静态场景描述问题，OpenCRG主要解决路面状态问题，OpenSCENARIO主要解决动态场景描述问题。</p>
 <p>由于Open系列标准也在发展中，目前只有VIRES Test Drive（VTD）提供对以上标准格式的支持，以后的各方仿真工具也应该配备相应的场景文件解析接口，这是绕不开的事。</p>
+<h4 id="方便-灵活-标准化的仿真接口"><a href="#方便-灵活-标准化的仿真接口" class="headerlink" title="方便/灵活/标准化的仿真接口"></a><font color="blue">方便/灵活/标准化的仿真接口</font></h4><p>待续</p>
 
       
     </div>
@@ -555,7 +557,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">132</span>
+                  <span class="site-state-item-count">133</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -601,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准场景格式支持"><span class="nav-number">5.</span> <span class="nav-text">标准场景格式支持</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准场景格式支持"><span class="nav-number">5.</span> <span class="nav-text">标准场景格式支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方便-灵活-标准化的仿真接口"><span class="nav-number">6.</span> <span class="nav-text">方便/灵活/标准化的仿真接口</span></a></li></ol></div>
             
 
           </div>
@@ -635,7 +637,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">187.4k </span>
+    <span title="Site words total count">189.2k </span>
   
 </div>
 

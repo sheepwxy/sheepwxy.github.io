@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="自动驾驶,传感器," />
+  <meta name="keywords" content="总结,自动驾驶,自动驾驶测试," />
 
 
 
@@ -121,20 +121,18 @@
 
 
 
-<meta name="description" content="一个典型的视觉传感器系统，包括光源、镜头、传感器芯片和图像信号处理器和其他相关芯片 等，后三者也可以称为摄像头，此外计算机视觉芯片也是软件算法的主要载体。">
-<meta name="keywords" content="自动驾驶,传感器">
+<meta name="description" content="本文主要内容来自Simon Chauvin,在进行翻译时融入了我自己学习过程中的认知和思考。  如何描述交通场景，用什么格式或语言？ 如何找到频繁出现的碰撞场景，人类驾驶员通常在哪里失败？ 如何生成关键场景来测试边缘用例？ 哪些数据集可以用来学习和测试用于预测和决策的算法？">
+<meta name="keywords" content="总结,自动驾驶,自动驾驶测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自动驾驶传感器 | 视觉传感器(二)">
-<meta property="og:url" content="http://iamwxy.com/自动驾驶传感器-视觉传感器-二.html">
+<meta property="og:title" content="自动驾驶场景思考">
+<meta property="og:url" content="http://iamwxy.com/自动驾驶场景思考.html">
 <meta property="og:site_name" content="肥羊与他的生活">
-<meta property="og:description" content="一个典型的视觉传感器系统，包括光源、镜头、传感器芯片和图像信号处理器和其他相关芯片 等，后三者也可以称为摄像头，此外计算机视觉芯片也是软件算法的主要载体。">
+<meta property="og:description" content="本文主要内容来自Simon Chauvin,在进行翻译时融入了我自己学习过程中的认知和思考。  如何描述交通场景，用什么格式或语言？ 如何找到频繁出现的碰撞场景，人类驾驶员通常在哪里失败？ 如何生成关键场景来测试边缘用例？ 哪些数据集可以用来学习和测试用于预测和决策的算法？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://iamwxy.com/自动驾驶传感器-视觉传感器-二/shexiangtou.png">
-<meta property="og:updated_time" content="2019-01-25T03:00:39.517Z">
+<meta property="og:updated_time" content="2019-07-19T09:41:04.430Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自动驾驶传感器 | 视觉传感器(二)">
-<meta name="twitter:description" content="一个典型的视觉传感器系统，包括光源、镜头、传感器芯片和图像信号处理器和其他相关芯片 等，后三者也可以称为摄像头，此外计算机视觉芯片也是软件算法的主要载体。">
-<meta name="twitter:image" content="http://iamwxy.com/自动驾驶传感器-视觉传感器-二/shexiangtou.png">
+<meta name="twitter:title" content="自动驾驶场景思考">
+<meta name="twitter:description" content="本文主要内容来自Simon Chauvin,在进行翻译时融入了我自己学习过程中的认知和思考。  如何描述交通场景，用什么格式或语言？ 如何找到频繁出现的碰撞场景，人类驾驶员通常在哪里失败？ 如何生成关键场景来测试边缘用例？ 哪些数据集可以用来学习和测试用于预测和决策的算法？">
 
 
 
@@ -164,13 +162,13 @@
 
 
 
-  <link rel="canonical" href="http://iamwxy.com/自动驾驶传感器-视觉传感器-二.html"/>
+  <link rel="canonical" href="http://iamwxy.com/自动驾驶场景思考.html"/>
 
 
 
 
 
-  <title>自动驾驶传感器 | 视觉传感器(二) | 肥羊与他的生活</title>
+  <title>自动驾驶场景思考 | 肥羊与他的生活</title>
   
 
 
@@ -321,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/自动驾驶传感器-视觉传感器-二.html">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/自动驾驶场景思考.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="老肥羊">
@@ -338,7 +336,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">自动驾驶传感器 | 视觉传感器(二)</h2>
+          <h2 class="post-title" itemprop="name headline">自动驾驶场景思考</h2>
         
 
         <div class="post-meta">
@@ -350,8 +348,8 @@
               
                 <span class="post-meta-item-text">写于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-07T22:38:23+08:00">
-                2018-11-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-19T16:03:54+08:00">
+                2019-07-19
               </time>
             
 
@@ -388,14 +386,39 @@
       
 
       
-        <p>一个典型的视觉传感器系统，包括光源、镜头、传感器芯片和图像信号处理器和其他相关芯片 等，后三者也可以称为摄像头，此外计算机视觉芯片也是软件算法的主要载体。<br><a id="more"></a><br><img src="/自动驾驶传感器-视觉传感器-二/shexiangtou.png"></p>
-<h5 id="光源"><a href="#光源" class="headerlink" title="光源"></a>光源</h5><p>光源作为视觉传感器系统的输入因素，能直接影响图片质量，进而影响最终的应用效果，它是成像的基础。 光源有可见光和不可见光两种类型，车载摄像头处理的主要是可见光，它有不能保持稳定的显著缺点。自主泊车系统面临的光源状况是极其复杂的，典型的光源类型有可自主发光的光源类型和依靠反射光的光源类型两种。前者有太阳、路灯、车灯等，后者有车辆和路面的反光灯。种类繁多，光照强度不一，打光方式、光线的角度也较为复杂，这会形成极其复杂的光线工况，对自主泊车的视觉传感器系统会形成极大的挑战。</p>
-<h5 id="镜头"><a href="#镜头" class="headerlink" title="镜头"></a>镜头</h5><p>镜头对成像有很重要的作用，是光线转变成图像的重要媒介，对应人类它相当于人眼中的晶状体。镜头是利用折射原理， 让景物光线通过镜头进入摄像机模组之中，在聚焦平面上形成图像。镜头一般是由多片透镜组成相应的透镜结构，从材料上来分主要有塑料镜头和玻璃镜头两大类。</p>
-<h5 id="sensor"><a href="#sensor" class="headerlink" title="sensor"></a>sensor</h5><p>传感器（sensor） 是摄像头的核心，它的主要作用是完成从光到数字的转换，具体过程是先通过镜头把光信息转换成电信息， 之后再经过内部的数字处理芯片转换为数字信息。 </p>
-<p>转换成电荷，再经过相应处理转换为具体的电信号。作为感光单位都是独立的高感光度的半导体，当外界光线通过摄像头透射到 CCD表面时，每个感光单位都会被激发出相应的电荷，不同部位的不同信号整合一起形成最终的图像。CMOS（Complementary Metal-Oxide Semiconductor）， 全称互补性氧化金属半导体。它的主要材料是硅锗半导体。光线透射进来时，CMOS芯片上会形成带着正负电荷的半导体，进而形成互补效应。在这个过程中产生的电流会被记录。</p>
-<p>CCD 和 CMOS有各自的优点和缺点，CCD形成的图像，图像灵敏度、对比度都较高，但由于它不能像 CMOS一样直接访问每个像素，而且不能直接在芯片上处理信号，因而信息处理速度较慢。相比较而言， CMOS 传感器的体积更小，在芯片上它可以直接处理信号，功耗相对来说更低，帧率比较高，能满足自主泊车系统所需要的速度要求。更关键的是，CMOS芯片有更高的动态范围，能处理实际自动驾驶环境中的复杂光线问题。其缺点在于光灵敏度较差，且由于信噪比较低，噪声影响很大。由于自主泊车系统对实时性要求比较高，又需要处理极其复杂的光线难题，因而需要高的动态范围，因而实际应用于自动驾驶系统上的芯片是 CMOS 芯片。</p>
-<h5 id="处理芯片"><a href="#处理芯片" class="headerlink" title="处理芯片"></a>处理芯片</h5><p>图像处理芯片是自动驾驶芯片的一部分，目前主流的自动驾驶芯片有 <strong>GPU、 FPGA、 DSP和 ASIC</strong> 四种。</p>
-<p>图像处理芯片中的图像信号处理器（ISP）相当于传感器的控制器，它进行的前面光数转换的逆过程，即把数字信息转换为图像信息。从另外一个角度上讲，图像处理芯片的主要是在传感器中把原始信转换为可查看的形式，在图像的范畴中，其对应的主要是图像增强部分的内容。解码、去噪和高动态范围处理都是这一阶段的主要工作。</p>
+        <p>本文主要内容来自<font color="green"><a href="https://github.com/chauvinSimon" target="_blank" rel="noopener">Simon Chauvin</a></font>,在进行翻译时融入了我自己学习过程中的认知和思考。</p>
+<ul>
+<li>如何描述交通场景，用什么格式或语言？</li>
+<li>如何找到频繁出现的碰撞场景，人类驾驶员通常在哪里失败？</li>
+<li>如何生成关键场景来测试边缘用例？</li>
+<li>哪些数据集可以用来学习和测试用于预测和决策的算法？</li>
+</ul>
+<a id="more"></a>
+<h4 id="场景语言格式"><a href="#场景语言格式" class="headerlink" title="场景语言格式"></a>场景语言格式</h4><p>(Queiroz, Berger, and Czarnecki 2019)指出现在还没有一种语言来正式描述涵盖道路交通情况复杂性的测试场景。这阻碍了测试的重现性，并破坏了工具之间的可交换性。为了解决这个问题，他们引入了一种用于场景表示的领域特定语言GeoScenario。该语言构建在开放街道地图(OSM)原语之上。GeoScenario的目标类似于文件格式OpenSCENARIO（OpenSCENARIO描述了驱动仿真应用程序中的动态内容，并经常与OpenDRIVE一起用于静态内容。）</p>
+<p>另一个工具<font color="green"><a href="https://commonroad.in.tum.de/" target="_blank" rel="noopener">CommonRoad</a></font>被多次使用，特别是因为它从NGSIM US 101数据集中实现了高速公路场景。这一系列应用于道路规划的可组合的benchmark目的是为研究人员提供一种评估和比较他们的规划器的方法。</p>
+<p>为了在场景中表示道路网络，<font color="green"><a href="https://commonroad.in.tum.de/" target="_blank" rel="noopener">Lanelets地图</a></font>(OSM格式的一个开放扩展)被广泛使用(例如GeoScenario和CommonRoad)。<font color="green"><a href="https://commonroad.in.tum.de/" target="_blank" rel="noopener">Lanelets2</a></font>用于(Naumann et al. 2019)设计具有遮挡的场景。他们的实验是基于修改版的CommonROAD。</p>
+<h4 id="经常出现的关键场景"><a href="#经常出现的关键场景" class="headerlink" title="经常出现的关键场景"></a>经常出现的关键场景</h4><p>最常见的车祸场景可以从美国国家公路交通安全管理局(NHTSA)的车祸数据中检索到。<font color="green"><a href="https://carlachallenge.org/challenge/nhtsa/" target="_blank" rel="noopener">CARLA AD challenge</a></font>使用<font color="green"><a href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/pre-crash_scenario_typology-final_pdf_version_5-2-07.pdf" target="_blank" rel="noopener">NHTSA pre-crash</a></font>的来测试面向常见关键场景的agent表现。</p>
+<p>(Pusse和Klusch 2019)使用<font color="green"><a href="https://www.gidas.org/willkommen/" target="_blank" rel="noopener">GIDAS</a></font>分析了德国发生的数千起事故，以此作为基准。然后使用开源的3D驾驶模拟器<font color="green"><a href="https://opends.dfki.de/" target="_blank" rel="noopener">OpenDS </a></font>对场景进行虚拟模拟。</p>
+<h4 id="生成边界情况的场景"><a href="#生成边界情况的场景" class="headerlink" title="生成边界情况的场景"></a>生成边界情况的场景</h4><p>(Klischat和Althoff 2019)提出了一种方法来生成关键场景，用于在复杂的城市交通情况下测试运动规划者。<br>这部分会是我的硕士论文，此处保密。</p>
+<h4 id="对新数据集的需求"><a href="#对新数据集的需求" class="headerlink" title="对新数据集的需求"></a>对新数据集的需求</h4><p>在许多论文中，对真实世界的实验都被放在未来的工作中了。其中一个原因是，很难将模拟或手工场景的模型转换到真实的汽车。这就产生了两种需求:</p>
+<ul>
+<li>需要更逼真的模拟器。</li>
+<li>需要更丰富的流量数据集与关键场景。</li>
+</ul>
+<p>但是考虑那个先有鸡还是先有蛋的问题:验证模拟器可能比验证算法本身更困难。</p>
+<p>现实世界中的驾驶数据集对于基于学习的方法非常重要，这些方法试图对人类驾驶风格和行为建模。它们的多样性和完整性对于预测和决策模型的一般化也是必不可少的。</p>
+<p>根据(Kang, Yin，和Berger 2018)或scale.ai列出的，存在一些基于真实交通的场景记录集合。但大多数还是主要涉及感知。</p>
+<p>研究与易受伤害的道路用户(即行人和骑自行车者)进行交互的工作可以使用<font color="green"><a href="http://cvgl.stanford.edu/projects/uav_data/" target="_blank" rel="noopener">Stanford Drone数据集</a></font>、<font color="green"><a href="http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Tsinghua-Daimler_Cyclist_Detec/tsinghua-daimler_cyclist_detec.html" target="_blank" rel="noopener">清华-戴姆勒TDC数据集</a></font>、<font color="green"><a href="http://data.nvision2.eecs.yorku.ca/JAAD_dataset/" target="_blank" rel="noopener">JAAD数据集</a></font>或<font color="green"><a href="https://eurocity-dataset.tudelft.nl/" target="_blank" rel="noopener">Eurocity PersonsECP数据集</a></font></p>
+<p>对于高速公路和十字路口场景，<font color="green"><a href="https://www.highd-dataset.com/" target="_blank" rel="noopener">HighD</a></font>和<font color="green"><a href="https://catalog.data.gov/dataset/next-generation-simulation-ngsim-vehicle-trajectories" target="_blank" rel="noopener">NGSIM</a></font>经常被提及。HighD的车辆轨迹是用一架无人机在德国高速公路上记录下来的，而NGSIM数据集包含了安装在旧金山湾区一幢建筑物顶部的摄像头45分钟内记录下来的车辆轨迹数据。如果广泛使用这一真实的公路交通数据，SIPD研讨会的参与者认为这些数据“被过度使用”，“完全无聊”，因为它们缺乏复杂的操作。</p>
+<p>不同的团队对数据集的需求是不同的。有些人想要全知全能的鸟瞰图，特别是为了提取遮挡。有些人更喜欢从车辆上记录的数据(Pool, Kooij，和Gavrila2019)，这些数据可以捕捉上下文线索，在计划前推断意图，比如骑自行车的人在转弯前举起手臂。这些特殊需求的一个例子是，在IV19上展示的许多工作都是使用自己的运动驾驶模拟器或构建自己的数据集。然而，这些个体的发展使得实验难以复制、比较和基准。此外，大多数手工制作的数据集都非常小，这对于基于学习的模型的培训并不理想，并且不包含许多不同的情况。</p>
+<p>结论很清楚:<strong>我们缺少一个数据集，它具有多种多样的、复杂的和关键的情况，且可用于交互感知的预测和决策。</strong></p>
+<p>SIPD研讨会的联合组织者Wei Zhan借此机会宣布发布了一个新的数据集，名为<font color="green"><a href="http://interaction-dataset.com/" target="_blank" rel="noopener">交互数据集</a></font>，用于社会互动预测和决策。以下是一些要点：</p>
+<ul>
+<li>在不同的地点(如美国、德国、中国)，不同的驾驶文化，不同的交通规则，对于类似的场景(合并、绕行等)，无人机都有记录。</li>
+<li>包括了一些关键的情况，例如近碰撞情况和轻微碰撞事故，这对于测试边缘情况非常有趣。</li>
+<li>另一个有前途的特点是，涵盖了带有谈判的复杂的驾驶行为和不明确的路权(通行权)</li>
+<li>最后，所有场景都带有一个基于lanelet2的带有语义信息的HD-map。模型中也会有遮挡作为ground truth，这是测试社会认知的关键。</li>
+</ul>
 
       
     </div>
@@ -416,7 +439,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://iamwxy.com/自动驾驶传感器-视觉传感器-二.html" title="自动驾驶传感器 | 视觉传感器(二)">http://iamwxy.com/自动驾驶传感器-视觉传感器-二.html</a>
+    <a href="http://iamwxy.com/自动驾驶场景思考.html" title="自动驾驶场景思考">http://iamwxy.com/自动驾驶场景思考.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -431,9 +454,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
             <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
           
-            <a href="/tags/传感器/" rel="tag"># 传感器</a>
+            <a href="/tags/自动驾驶测试/" rel="tag"># 自动驾驶测试</a>
           
         </div>
       
@@ -446,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/自动驾驶传感器-视觉传感器-一.html" rel="next" title="自动驾驶传感器 | 视觉传感器(一)">
-                <i class="fa fa-chevron-left"></i> 自动驾驶传感器 | 视觉传感器(一)
+              <a href="/自动驾驶仿真-超车行为建模.html" rel="next" title="自动驾驶仿真 | 超车行为建模">
+                <i class="fa fa-chevron-left"></i> 自动驾驶仿真 | 超车行为建模
               </a>
             
           </div>
@@ -455,10 +480,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/自动驾驶传感器-视觉传感器-三.html" rel="prev" title="自动驾驶传感器 | 视觉传感器(三)">
-                自动驾驶传感器 | 视觉传感器(三) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -585,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#光源"><span class="nav-number">1.</span> <span class="nav-text">光源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#镜头"><span class="nav-number">2.</span> <span class="nav-text">镜头</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sensor"><span class="nav-number">3.</span> <span class="nav-text">sensor</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#处理芯片"><span class="nav-number">4.</span> <span class="nav-text">处理芯片</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#场景语言格式"><span class="nav-number">1.</span> <span class="nav-text">场景语言格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#经常出现的关键场景"><span class="nav-number">2.</span> <span class="nav-text">经常出现的关键场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成边界情况的场景"><span class="nav-number">3.</span> <span class="nav-text">生成边界情况的场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对新数据集的需求"><span class="nav-number">4.</span> <span class="nav-text">对新数据集的需求</span></a></li></ol></div>
             
 
           </div>
