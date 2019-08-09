@@ -121,20 +121,20 @@
 
 
 
-<meta name="description" content="在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的，因为它能提供很多安全冗余。">
+<meta name="description" content="在写具体测试场景时，我突然发现了地图的作用。 一个场景里的大部分静态信息，道路拓扑结构，以及包括信号灯、标识牌、标志线在内的主要环境信号都可由地图提供。如果没有地图，导航级别的任务先不谈，以上谈及的具体信息识别就是个问题。 在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的。我甚至认为它不是提供安全冗余的打辅助的角色。而是那个the key core。 基于此，我想对自己所了解的">
 <meta name="keywords" content="总结,自动驾驶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶高精度地图总结">
 <meta property="og:url" content="http://iamwxy.com/高精度地图整理.html">
 <meta property="og:site_name" content="肥羊与他的生活">
-<meta property="og:description" content="在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的，因为它能提供很多安全冗余。">
+<meta property="og:description" content="在写具体测试场景时，我突然发现了地图的作用。 一个场景里的大部分静态信息，道路拓扑结构，以及包括信号灯、标识牌、标志线在内的主要环境信号都可由地图提供。如果没有地图，导航级别的任务先不谈，以上谈及的具体信息识别就是个问题。 在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的。我甚至认为它不是提供安全冗余的打辅助的角色。而是那个the key core。 基于此，我想对自己所了解的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://iamwxy.com/高精度地图整理/hdp.jpg">
 <meta property="og:image" content="http://iamwxy.com/高精度地图整理/standard.jpg">
-<meta property="og:updated_time" content="2018-08-15T03:23:32.126Z">
+<meta property="og:updated_time" content="2019-08-09T10:39:15.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶高精度地图总结">
-<meta name="twitter:description" content="在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的，因为它能提供很多安全冗余。">
+<meta name="twitter:description" content="在写具体测试场景时，我突然发现了地图的作用。 一个场景里的大部分静态信息，道路拓扑结构，以及包括信号灯、标识牌、标志线在内的主要环境信号都可由地图提供。如果没有地图，导航级别的任务先不谈，以上谈及的具体信息识别就是个问题。 在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的。我甚至认为它不是提供安全冗余的打辅助的角色。而是那个the key core。 基于此，我想对自己所了解的">
 <meta name="twitter:image" content="http://iamwxy.com/高精度地图整理/hdp.jpg">
 
 
@@ -399,8 +399,10 @@
       
 
       
-        <p>在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的，因为它能提供很多安全冗余。</p>
-<a id="more"></a>
+        <p>在写具体测试场景时，我突然发现了地图的作用。</p>
+<p>一个场景里的大部分静态信息，道路拓扑结构，以及包括信号灯、标识牌、标志线在内的主要环境信号都可由地图提供。如果没有地图，导航级别的任务先不谈，以上谈及的具体信息识别就是个问题。</p>
+<p>在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的。我甚至认为它不是提供安全冗余的打辅助的角色。而是那个the key core。</p>
+<p>基于此，我想对自己所了解的高精度地图知识进行一个总结。<br><a id="more"></a></p>
 <h5 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h5><p>自动驾驶的终极话题是安全，因而冗余性和鲁棒性无论何时都需要考虑。传统提高鲁棒性的技术手段有多传感器融合，典型的如相机、激光雷达、毫米波雷达的融合。这种融合技术比较偏向动态的感知，而高精度地图对鲁棒性的贡献主要在静态感知层面，它能解决很多单靠传感器和规划技术不能解决的问题。在我个人看来，想实现L4及以上级别的自动驾驶，高精度地图是不可或缺的。</p>
 <h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p>高精地图是用于自动驾驶的专题地图，包含更多图层和道路数据且有不同的分类方法，方法之一将地图划分为矢量的语义信息层和栅格图这样的特征图层。前者主要是包括<strong>车道模型、道路部件（Object）、道路属性</strong>三类语义矢量信息，后者主要是用于多传感器定位的<strong>特征（feature）图层</strong>。</p>
 <ul>
@@ -529,8 +531,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/自动驾驶仿真整理.html" rel="prev" title="自动驾驶仿真整理">
-                自动驾驶仿真整理 <i class="fa fa-chevron-right"></i>
+              <a href="/自动驾驶仿真整理.html" rel="prev" title="自动驾驶仿真论">
+                自动驾驶仿真论 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -612,7 +614,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">133</span>
+                  <span class="site-state-item-count">136</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -692,7 +694,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">189.4k </span>
+    <span title="Site words total count">189.5k </span>
   
 </div>
 

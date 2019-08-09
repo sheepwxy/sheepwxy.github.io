@@ -1,3 +1,6 @@
+http://iamwxy.com/基于ROS的自动驾驶汽车架构和一些相关细节.html
+http://iamwxy.com/当我说学习时-我真正想说什么.html
+http://iamwxy.com/对自动驾驶测试场景格式的一些思考.html
 http://iamwxy.com/自动驾驶场景思考.html
 http://iamwxy.com/自动驾驶仿真-超车行为建模.html
 http://iamwxy.com/我为什么选择plusAI.html
@@ -15,6 +18,3 @@ http://iamwxy.com/转载-新理解矩阵-四.html
 http://iamwxy.com/转载-新理解矩阵-三.html
 http://iamwxy.com/转载-新理解矩阵-二.html
 http://iamwxy.com/转载-新理解矩阵（一）.html
-http://iamwxy.com/书摘-复杂-米歇尔.html
-http://iamwxy.com/近期思考.html
-http://iamwxy.com/统计学习-书摘-赤裸裸的统计学-二.html
