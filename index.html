@@ -347,7 +347,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/基于ROS的自动驾驶汽车架构和一些相关细节.html" itemprop="url">基于ROS的自动驾驶汽车架构和一些相关细节</a></h2>
+                <a class="post-title-link" href="/基于ROS的自动驾驶汽车架构和一些相关细节.html" itemprop="url">ROS总结(一)</a></h2>
         
 
         <div class="post-meta">
@@ -399,7 +399,35 @@
       
         
           
-            
+            <p>目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。</p>
+<h4 id="ROS简介"><a href="#ROS简介" class="headerlink" title="ROS简介"></a>ROS简介</h4><ol>
+<li>通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系 </li>
+<li>工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视化、登录、测试、终止分布式计算系统； </li>
+<li>能力：具有控制，规划，预测，定位操纵等功能； </li>
+<li>生态系统：ROS的支持与发展依托着一个强大的社区。ros.org尤其关注兼容性和支持文档，提供了一套“一站式”的方案使得用户得以搜索并学习来自全球开发者数以千计的ROS程序包。</li>
+</ol>
+<h4 id="ROS特性"><a href="#ROS特性" class="headerlink" title="ROS特性"></a>ROS特性</h4><ol>
+<li>点对点设计：ROS的点对点设计以及服务和节点管理器等机制可以分散由计算机视觉和语音识别等功能带来的实时计算压力，能够适应多机器人遇到的挑战。</li>
+<li>分布式设计：程序可以在多核计算机中运行，并且可以通过网络来通信。</li>
+<li>多语言：ROS现在支持许多种不同的语言，例如C++、Python、Octave和LISP，也包含其他语言的多种接口实现。语言无关的消息处理，让多种语言可以自由的混合和匹配使用。</li>
+<li>轻量级：鼓励将所有的驱动和算法逐渐发展成为和ROS没有依赖性单独的库。ROS建立的系统具有模块化的特点，各模块中的代码可以单独编译，而且编译使用的CMake工具使它很容易的就实现精简的理念。ROS基本将复杂的代码封装在库里，只是创建了一些小的应用程序为ROS显示库的功能，就允许了对简单的代码超越原型进行移植和重新使用。</li>
+<li>免费且开源：ROS大多数的源代码都是公开发布的。</li>
+</ol>
+<h4 id="ROS概念"><a href="#ROS概念" class="headerlink" title="ROS概念"></a>ROS概念</h4><ul>
+<li>master(主机)</li>
+<li>node（节点）</li>
+<li>topic（主题）</li>
+<li>message（消息） </li>
+</ul>
+<h5 id="master"><a href="#master" class="headerlink" title="master"></a>master</h5><p>用于管理节点间的通信，ROS Master 通过RPC（Remote Procedure Call Protocol，远程过程调用）提供了登记列表和对其他计算图表的查找。没有控制器，节点将无法找到其他节点，交换消息或调用服务。<br>开启Master命令：roscore</p>
+<h5 id="node（节点）"><a href="#node（节点）" class="headerlink" title="node（节点）"></a>node（节点）</h5><p>节点就是一些独立编译，执行运算任务的进程。ROS利用规模可增长的方式使代码模块化：一个系统就是典型的由很多节点组成的。在这里，节点也可以被称之为“软件模块”。我们使用“节点”使得基于ROS的系统在运行的时候更加形象化：当许多节点同时运行时，可以很方便的将端对端的通讯绘制成一个图表，在这个图表中，进程就是图中的节点，而端对端的连接关系就是其中弧线连接。</p>
+<p>运行节点，rosrun package_name node_name</p>
+<p>查看激活节点列表，rosnode list</p>
+<p>检索有关节点信息，rosnode info node_name</p>
+<h5 id="topics-主题"><a href="#topics-主题" class="headerlink" title="topics 主题"></a>topics 主题</h5><p>在ROS中消息以一种发布/订阅的方式传递。一个节点可以在一个给定的主题中发布消息。一个节点针对某个主题关注与订阅特定类型的数据。可能同时有多个节点发布或者订阅同一个主题的消息。总体上，发布者和订阅者不了解彼此的存在。</p>
+<p>查看激活主题：rostopic list<br>订阅和打印一个主题的内容：rostopic echo /topic<br>显示主题相关信息： rostopic info /topic</p>
+<p>（未完待续）</p>
+
           
         
       
@@ -447,7 +475,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/当我说学习时-我真正想说什么.html">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/ROS总结(一).html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="老肥羊">
@@ -466,7 +494,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/当我说学习时-我真正想说什么.html" itemprop="url">当我说学习时 我真正想说什么</a></h2>
+                <a class="post-title-link" href="/ROS总结(一).html" itemprop="url">ROS总结(一)</a></h2>
         
 
         <div class="post-meta">
@@ -478,7 +506,7 @@
               
                 <span class="post-meta-item-text">写于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-09T17:14:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-09T18:41:08+08:00">
                 2019-08-09
               </time>
             
@@ -518,7 +546,32 @@
       
         
           
-            
+            <p>目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。</p>
+<h4 id="ROS简介"><a href="#ROS简介" class="headerlink" title="ROS简介"></a>ROS简介</h4><ol>
+<li>通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系 </li>
+<li>工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视化、登录、测试、终止分布式计算系统； </li>
+<li>能力：具有控制，规划，预测，定位操纵等功能； </li>
+<li>生态系统：ROS的支持与发展依托着一个强大的社区。ros.org尤其关注兼容性和支持文档，提供了一套“一站式”的方案使得用户得以搜索并学习来自全球开发者数以千计的ROS程序包。</li>
+</ol>
+<h4 id="ROS特性"><a href="#ROS特性" class="headerlink" title="ROS特性"></a>ROS特性</h4><ol>
+<li>点对点设计：ROS的点对点设计以及服务和节点管理器等机制可以分散由计算机视觉和语音识别等功能带来的实时计算压力，能够适应多机器人遇到的挑战。</li>
+<li>分布式设计：程序可以在多核计算机中运行，并且可以通过网络来通信。</li>
+<li>多语言：ROS现在支持许多种不同的语言，例如C++、Python、Octave和LISP，也包含其他语言的多种接口实现。语言无关的消息处理，让多种语言可以自由的混合和匹配使用。</li>
+<li>轻量级：鼓励将所有的驱动和算法逐渐发展成为和ROS没有依赖性单独的库。ROS建立的系统具有模块化的特点，各模块中的代码可以单独编译，而且编译使用的CMake工具使它很容易的就实现精简的理念。ROS基本将复杂的代码封装在库里，只是创建了一些小的应用程序为ROS显示库的功能，就允许了对简单的代码超越原型进行移植和重新使用。</li>
+<li>免费且开源：ROS大多数的源代码都是公开发布的。</li>
+</ol>
+<h4 id="ROS概念"><a href="#ROS概念" class="headerlink" title="ROS概念"></a>ROS概念</h4><ul>
+<li>master(主机)</li>
+<li>node（节点）</li>
+<li>topic（主题）</li>
+<li>message（消息） </li>
+</ul>
+<h5 id="master"><a href="#master" class="headerlink" title="master"></a>master</h5><p>用于管理节点间的通信，ROS Master 通过RPC（Remote Procedure Call Protocol，远程过程调用）提供了登记列表和对其他计算图表的查找。没有控制器，节点将无法找到其他节点，交换消息或调用服务。<br>开启Master命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##### node（节点）</span><br><span class="line">节点就是一些独立编译，执行运算任务的进程。ROS利用规模可增长的方式使代码模块化：一个系统就是典型的由很多节点组成的。在这里，节点也可以被称之为“软件模块”。我们使用“节点”使得基于ROS的系统在运行的时候更加形象化：当许多节点同时运行时，可以很方便的将端对端的通讯绘制成一个图表，在这个图表中，进程就是图中的节点，而端对端的连接关系就是其中弧线连接。</span><br><span class="line"></span><br><span class="line">运行节点，```rosrun package_name node_name</span><br></pre></td></tr></table></figure></p>
+<p>查看激活节点列表，<figure class="highlight plain"><figcaption><span>list```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">检索有关节点信息，```rosnode info node_name</span><br></pre></td></tr></table></figure></p>
+<h5 id="topics-主题"><a href="#topics-主题" class="headerlink" title="topics 主题"></a>topics 主题</h5><p>在ROS中消息以一种发布/订阅的方式传递。一个节点可以在一个给定的主题中发布消息。一个节点针对某个主题关注与订阅特定类型的数据。可能同时有多个节点发布或者订阅同一个主题的消息。总体上，发布者和订阅者不了解彼此的存在。</p>
+<p>查看激活主题：rostopic list<br>订阅和打印一个主题的内容：rostopic echo /topic<br>显示主题相关信息： rostopic info /topic</p>
+<p>（未完待续）</p>
+
           
         
       
@@ -637,7 +690,13 @@
       
         
           
-            
+            <p>建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。</p>
+<p>对于自动驾驶场景格式，需要解决静态场景和动态场景的编码方法，这可以对标OPEN系列的OpenDRIVE和OpenSCENARIO，按Open系列的想法，还得需要一个提供道路不平度的场景格式。</p>
+<p>静态场景格式是测试场景格式的基础，它跟高精度地图有着很深的关系，需要提供测试场景所需的道路拓扑结构以及更具体的道路几何信息，除此之外，一些必须的环境信号信息也需要由它提供，典型的是道路标志、标识牌、信号灯信息。目前可参考的是OpenDRIVE和后起之秀Lanlets，后者是基于OpenStreetMap构建的。</p>
+<p>动态场景格式的格式更复杂一些，它的设计可以参考一些泛化的，不是针对“自动驾驶”的场景理论基础，如经典文章《the blind men and the elephant: Views of scenario-based system design》，这篇文章可以提供关于动态场景设计格式的上层方法论。从已有的场景格式来看，目前可以参考的动态场景格式主要是OpenSCENARIO，GeoSCENARIO，由common roads提供的场景格式也可以思考。从设计语言上看，xml和json等格式化原因具有很强的优势，前者是目前已有场景格式的语言，但json因为其易于传输的特性，也在慢慢兴起。</p>
+<p>对于场景格式的设计，应该满足简洁、高效、可扩展性强的特点。我目前正在研究自动驾驶场景格式设计，有对这个领域感兴趣的可以发邮件和我交流。</p>
+<p>（未完待续）</p>
+
           
         
       
@@ -1692,7 +1751,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">188.5k </span>
+    <span title="Site words total count">191.0k </span>
   
 </div>
 

@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="自动驾驶，自动驾驶仿真，自动驾驶仿真软件，智能车辆，无人驾驶，同济智能汽车研究所，高效学习，机器学习，生活随笔，线性代数，深度学习，SLAM，自动驾驶测试，同济" />
+  <meta name="keywords" content="自动驾驶,ROS," />
 
 
 
@@ -121,16 +121,18 @@
 
 
 
-<meta name="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="肥羊与他的生活">
-<meta property="og:url" content="http://iamwxy.com/tags/总结/page/3/index.html">
+<meta name="description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。 ROS简介 通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系  工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视">
+<meta name="keywords" content="自动驾驶,ROS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROS总结(一)">
+<meta property="og:url" content="http://iamwxy.com/ROS总结(一).html">
 <meta property="og:site_name" content="肥羊与他的生活">
-<meta property="og:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta property="og:description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。 ROS简介 通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系  工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-18T13:52:43.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="肥羊与他的生活">
-<meta name="twitter:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+<meta name="twitter:title" content="ROS总结(一)">
+<meta name="twitter:description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。 ROS简介 通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系  工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视">
 
 
 
@@ -160,13 +162,13 @@
 
 
 
-  <link rel="canonical" href="http://iamwxy.com/tags/总结/page/3/"/>
+  <link rel="canonical" href="http://iamwxy.com/ROS总结(一).html"/>
 
 
 
 
 
-  <title>标签: 总结 | 肥羊与他的生活</title>
+  <title>ROS总结(一) | 肥羊与他的生活</title>
   
 
 
@@ -185,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,58 +315,195 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>总结<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/ROS总结(一).html">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老肥羊">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="肥羊与他的生活">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/数据可视化-开篇.html" itemprop="url">
-              
-                <span itemprop="name">数据可视化 | 开篇</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">ROS总结(一)</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-20T18:53:18+08:00"
-              content="2018-07-20" >
-          07-20
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-09T18:41:08+08:00">
+                2019-08-09
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。</p>
+<h4 id="ROS简介"><a href="#ROS简介" class="headerlink" title="ROS简介"></a>ROS简介</h4><ol>
+<li>通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系 </li>
+<li>工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视化、登录、测试、终止分布式计算系统； </li>
+<li>能力：具有控制，规划，预测，定位操纵等功能； </li>
+<li>生态系统：ROS的支持与发展依托着一个强大的社区。ros.org尤其关注兼容性和支持文档，提供了一套“一站式”的方案使得用户得以搜索并学习来自全球开发者数以千计的ROS程序包。</li>
+</ol>
+<h4 id="ROS特性"><a href="#ROS特性" class="headerlink" title="ROS特性"></a>ROS特性</h4><ol>
+<li>点对点设计：ROS的点对点设计以及服务和节点管理器等机制可以分散由计算机视觉和语音识别等功能带来的实时计算压力，能够适应多机器人遇到的挑战。</li>
+<li>分布式设计：程序可以在多核计算机中运行，并且可以通过网络来通信。</li>
+<li>多语言：ROS现在支持许多种不同的语言，例如C++、Python、Octave和LISP，也包含其他语言的多种接口实现。语言无关的消息处理，让多种语言可以自由的混合和匹配使用。</li>
+<li>轻量级：鼓励将所有的驱动和算法逐渐发展成为和ROS没有依赖性单独的库。ROS建立的系统具有模块化的特点，各模块中的代码可以单独编译，而且编译使用的CMake工具使它很容易的就实现精简的理念。ROS基本将复杂的代码封装在库里，只是创建了一些小的应用程序为ROS显示库的功能，就允许了对简单的代码超越原型进行移植和重新使用。</li>
+<li>免费且开源：ROS大多数的源代码都是公开发布的。</li>
+</ol>
+<h4 id="ROS概念"><a href="#ROS概念" class="headerlink" title="ROS概念"></a>ROS概念</h4><ul>
+<li>master(主机)</li>
+<li>node（节点）</li>
+<li>topic（主题）</li>
+<li>message（消息） </li>
+</ul>
+<h5 id="master"><a href="#master" class="headerlink" title="master"></a>master</h5><p>用于管理节点间的通信，ROS Master 通过RPC（Remote Procedure Call Protocol，远程过程调用）提供了登记列表和对其他计算图表的查找。没有控制器，节点将无法找到其他节点，交换消息或调用服务。<br>开启Master命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##### node（节点）</span><br><span class="line">节点就是一些独立编译，执行运算任务的进程。ROS利用规模可增长的方式使代码模块化：一个系统就是典型的由很多节点组成的。在这里，节点也可以被称之为“软件模块”。我们使用“节点”使得基于ROS的系统在运行的时候更加形象化：当许多节点同时运行时，可以很方便的将端对端的通讯绘制成一个图表，在这个图表中，进程就是图中的节点，而端对端的连接关系就是其中弧线连接。</span><br><span class="line"></span><br><span class="line">运行节点，```rosrun package_name node_name</span><br></pre></td></tr></table></figure></p>
+<p>查看激活节点列表，<figure class="highlight plain"><figcaption><span>list```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">检索有关节点信息，```rosnode info node_name</span><br></pre></td></tr></table></figure></p>
+<h5 id="topics-主题"><a href="#topics-主题" class="headerlink" title="topics 主题"></a>topics 主题</h5><p>在ROS中消息以一种发布/订阅的方式传递。一个节点可以在一个给定的主题中发布消息。一个节点针对某个主题关注与订阅特定类型的数据。可能同时有多个节点发布或者订阅同一个主题的消息。总体上，发布者和订阅者不了解彼此的存在。</p>
+<p>查看激活主题：rostopic list<br>订阅和打印一个主题的内容：rostopic echo /topic<br>显示主题相关信息： rostopic info /topic</p>
+<p>（未完待续）</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    老肥羊
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/ROS总结(一).html" title="ROS总结(一)">http://iamwxy.com/ROS总结(一).html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+            <a href="/tags/ROS/" rel="tag"># ROS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/对自动驾驶测试场景格式的一些思考.html" rel="next" title="对自动驾驶测试场景格式的一些思考">
+                <i class="fa fa-chevron-left"></i> 对自动驾驶测试场景格式的一些思考
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/基于ROS的自动驾驶汽车架构和一些相关细节.html" rel="prev" title="ROS总结(一)">
+                ROS总结(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/tags/总结/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/tags/总结/">1</a><a class="page-number" href="/tags/总结/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -372,6 +511,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -392,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -412,7 +564,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">136</span>
+                  <span class="site-state-item-count">135</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -449,6 +601,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS简介"><span class="nav-number">1.</span> <span class="nav-text">ROS简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS特性"><span class="nav-number">2.</span> <span class="nav-text">ROS特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS概念"><span class="nav-number">3.</span> <span class="nav-text">ROS概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#master"><span class="nav-number">3.1.</span> <span class="nav-text">master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#topics-主题"><span class="nav-number">3.2.</span> <span class="nav-text">topics 主题</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -476,7 +644,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">189.5k </span>
+    <span title="Site words total count">191.0k </span>
   
 </div>
 
@@ -605,6 +773,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -994,26 +1166,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
