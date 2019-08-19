@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。 ROS简介 通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系  工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视">
+<meta name="description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。">
 <meta name="keywords" content="自动驾驶,ROS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ROS总结(一)">
 <meta property="og:url" content="http://iamwxy.com/ROS总结(一).html">
 <meta property="og:site_name" content="肥羊与他的生活">
-<meta property="og:description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。 ROS简介 通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系  工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视">
+<meta property="og:description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-18T13:52:43.222Z">
+<meta property="og:updated_time" content="2019-08-19T01:05:37.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ROS总结(一)">
-<meta name="twitter:description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。 ROS简介 通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系  工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视">
+<meta name="twitter:description" content="目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。">
 
 
 
@@ -396,7 +396,7 @@
       
 
       
-        <p>目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。</p>
+        <p>目前无人驾驶系统的实际实现仍然依赖于ROS，作为一个相对成熟的机器人软件平台，ROS虽然存在一些缺点，在无人驾驶系统的系统实现上，ROS仍然是开源框架中最好的选择，这也是为什么诸如Apollo，Autoware等无人驾驶开源项目会选择ROS。<br><a id="more"></a></p>
 <h4 id="ROS简介"><a href="#ROS简介" class="headerlink" title="ROS简介"></a>ROS简介</h4><ol>
 <li>通道：ROS提供了一种发布-订阅式的通信框架用以简单、快速地构建分布式计算系 </li>
 <li>工具：ROS提供了大量的工具组合用以配置、启动、自检、调试、可视化、登录、测试、终止分布式计算系统； </li>
@@ -416,8 +416,11 @@
 <li>topic（主题）</li>
 <li>message（消息） </li>
 </ul>
-<h5 id="master"><a href="#master" class="headerlink" title="master"></a>master</h5><p>用于管理节点间的通信，ROS Master 通过RPC（Remote Procedure Call Protocol，远程过程调用）提供了登记列表和对其他计算图表的查找。没有控制器，节点将无法找到其他节点，交换消息或调用服务。<br>开启Master命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##### node（节点）</span><br><span class="line">节点就是一些独立编译，执行运算任务的进程。ROS利用规模可增长的方式使代码模块化：一个系统就是典型的由很多节点组成的。在这里，节点也可以被称之为“软件模块”。我们使用“节点”使得基于ROS的系统在运行的时候更加形象化：当许多节点同时运行时，可以很方便的将端对端的通讯绘制成一个图表，在这个图表中，进程就是图中的节点，而端对端的连接关系就是其中弧线连接。</span><br><span class="line"></span><br><span class="line">运行节点，```rosrun package_name node_name</span><br></pre></td></tr></table></figure></p>
-<p>查看激活节点列表，<figure class="highlight plain"><figcaption><span>list```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">检索有关节点信息，```rosnode info node_name</span><br></pre></td></tr></table></figure></p>
+<h5 id="master"><a href="#master" class="headerlink" title="master"></a>master</h5><p>用于管理节点间的通信，ROS Master 通过RPC（Remote Procedure Call Protocol，远程过程调用）提供了登记列表和对其他计算图表的查找。没有控制器，节点将无法找到其他节点，交换消息或调用服务。<br>开启Master命令：roscore</p>
+<h5 id="node（节点）"><a href="#node（节点）" class="headerlink" title="node（节点）"></a>node（节点）</h5><p>节点就是一些独立编译，执行运算任务的进程。ROS利用规模可增长的方式使代码模块化：一个系统就是典型的由很多节点组成的。在这里，节点也可以被称之为“软件模块”。我们使用“节点”使得基于ROS的系统在运行的时候更加形象化：当许多节点同时运行时，可以很方便的将端对端的通讯绘制成一个图表，在这个图表中，进程就是图中的节点，而端对端的连接关系就是其中弧线连接。</p>
+<p>运行节点，rosrun package_name node_name</p>
+<p>查看激活节点列表，rosnode list</p>
+<p>检索有关节点信息，rosnode info node_name</p>
 <h5 id="topics-主题"><a href="#topics-主题" class="headerlink" title="topics 主题"></a>topics 主题</h5><p>在ROS中消息以一种发布/订阅的方式传递。一个节点可以在一个给定的主题中发布消息。一个节点针对某个主题关注与订阅特定类型的数据。可能同时有多个节点发布或者订阅同一个主题的消息。总体上，发布者和订阅者不了解彼此的存在。</p>
 <p>查看激活主题：rostopic list<br>订阅和打印一个主题的内容：rostopic echo /topic<br>显示主题相关信息： rostopic info /topic</p>
 <p>（未完待续）</p>
@@ -480,10 +483,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/基于ROS的自动驾驶汽车架构和一些相关细节.html" rel="prev" title="ROS总结(一)">
-                ROS总结(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -564,7 +563,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">135</span>
+                  <span class="site-state-item-count">134</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -610,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS简介"><span class="nav-number">1.</span> <span class="nav-text">ROS简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS特性"><span class="nav-number">2.</span> <span class="nav-text">ROS特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS概念"><span class="nav-number">3.</span> <span class="nav-text">ROS概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#master"><span class="nav-number">3.1.</span> <span class="nav-text">master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#topics-主题"><span class="nav-number">3.2.</span> <span class="nav-text">topics 主题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS简介"><span class="nav-number">1.</span> <span class="nav-text">ROS简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS特性"><span class="nav-number">2.</span> <span class="nav-text">ROS特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROS概念"><span class="nav-number">3.</span> <span class="nav-text">ROS概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#master"><span class="nav-number">3.1.</span> <span class="nav-text">master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#node（节点）"><span class="nav-number">3.2.</span> <span class="nav-text">node（节点）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#topics-主题"><span class="nav-number">3.3.</span> <span class="nav-text">topics 主题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -644,7 +643,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">191.0k </span>
+    <span title="Site words total count">190.0k </span>
   
 </div>
 
