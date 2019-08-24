@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://iamwxy.com/GeoSCENARIO-%E7%94%A8%E4%BA%8E%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%9C%BA%E6%99%AF%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%BC%80%E6%94%BE%E5%BC%8FDSL.html</loc>
+    <lastmod>2019-08-24T09:27:02.017Z</lastmod>
+    <data>
+        <display>
+        <title>GeoSCENARIO: 用于自动驾驶场景表示的开放式DSL</title>
+        <pubTime>2019-08-24T08:58:49.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶测试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/ROS%E6%80%BB%E7%BB%93(%E4%B8%80).html</loc>
     <lastmod>2019-08-19T01:05:37.161Z</lastmod>
     <data>
@@ -107,9 +126,9 @@
         <title>自动驾驶仿真论</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>自动驾驶仿真</tag>
+         
+        <tag>总结</tag>
          
         <tag>自动驾驶</tag>
          
@@ -1485,9 +1504,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>工具</tag>
+         
+        <tag>总结</tag>
          
          
            
