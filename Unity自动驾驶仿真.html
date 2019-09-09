@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="自动驾驶仿真," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，参见此处。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。">
+<meta name="keywords" content="自动驾驶仿真">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity自动驾驶仿真">
+<meta property="og:url" content="http://iamwxy.com/Unity自动驾驶仿真.html">
+<meta property="og:site_name" content="南浔遇雨">
+<meta property="og:description" content="关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，参见此处。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-09T13:46:36.240Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity自动驾驶仿真">
+<meta name="twitter:description" content="关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，参见此处。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/Unity自动驾驶仿真.html"/>
+
+
+
+
+
+  <title>Unity自动驾驶仿真 | 南浔遇雨</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">南浔遇雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/Unity自动驾驶仿真.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鲨鱼观海">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&Engineer">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南浔遇雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Unity自动驾驶仿真</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T22:52:53+08:00">
+                2018-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>关于自动驾驶仿真，以前的博客已经有过一个概略介绍,，比较偏向理论层面，<a href="http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E6%95%B4%E7%90%86.html">参见此处</a>。 本篇主要关注基于Unity的自动驾驶仿真开源资源，从wiki和其他网络资源收集而来，重点放在工具总结上面,希望可以作为一个粗略的资源列表。<br><a id="more"></a></p>
+<h4 id="为什么要做一个新的模拟器"><a href="#为什么要做一个新的模拟器" class="headerlink" title="为什么要做一个新的模拟器"></a><font color="blue">为什么要做一个新的模拟器</font></h4><p>市面上有一些优秀的商业软件，如Prescan，VTD等，但它们非常昂贵。也已有一些开源项目，但它们往往不是基于现代引擎开发的，因而它的图形和通用软件环境可能有些过时。所以就自己搭建一个吧，搭建时需要注意以下几点：</p>
+<ul>
+<li>不要重复造轮子，要在游戏引擎的基础上构建</li>
+<li>要利用成熟的3D游戏工作流、技术、硬件和技术社区</li>
+<li>开源</li>
+<li>要有可扩展性</li>
+<li>要模块化(包括各种输入输出设备，AI，传感器等)</li>
+<li>能足够灵活进行原型设计，驱动评估，自动测试</li>
+</ul>
+<h4 id="为什么选择Unity"><a href="#为什么选择Unity" class="headerlink" title="为什么选择Unity"></a><font color="blue">为什么选择Unity</font></h4><p>因为它是Unity，就是这么简单，好吧，我们认真来说，因为Unity</p>
+<ul>
+<li>版本迭代稳定，目前已到第四版本</li>
+<li>已经有很多基于Unity的项目，有众多游戏和开源项目使用的都是Unity</li>
+<li>集成有动画、粒子系统、导航网格、物理、occlusion等各种功能</li>
+<li>可以使用C#，Mono等成熟的脚本</li>
+<li>可以在win/Linux/Mac等多平台上使用</li>
+<li>有良好的社区氛围(众多开发者和素材)</li>
+<li>有好的文档支持，包括但不限于官方文档，论坛，第三方教程，youtube等</li>
+<li>是创新硬件产品的首选平台(Oculus Rift一种虚拟现实设备, Hydra Razer体感控制器, Leap)</li>
+<li>免费/价格较低</li>
+<li>不开源，但是可扩展(编写脚本，low level dll等)</li>
+</ul>
+<h4 id="为什么建立在游戏平台上"><a href="#为什么建立在游戏平台上" class="headerlink" title="为什么建立在游戏平台上"></a><font color="blue">为什么建立在游戏平台上</font></h4><p>游戏是3D软件中最先进的一种形式，它会不断挑战极限，不断为引擎加速迭代代码。功能如可编程着色器、物理引擎、预照明、导航网格、动画混合系统都是等等都是游戏引擎支持的，或者可以让以实时帧率运行。游戏产业也推动了硬件创新，比如英特尔的GPU开发、罗技G27车轮、TrackIR头部跟踪器、Leap手势传感器、Oculus Rift和低延迟传感器等输入控制器硬件。利用这种低成本的硬件进行模拟也将允许更多的观众访问功能合理、价格合理的模拟器。</p>
+<h4 id="资源-环境搭建"><a href="#资源-环境搭建" class="headerlink" title="资源 环境搭建"></a><font color="blue">资源 环境搭建</font></h4><h5 id="地形构建"><a href="#地形构建" class="headerlink" title="地形构建"></a>地形构建</h5><p>对自动驾驶仿真来说，这一项优先级较低</p>
+<ul>
+<li>Terrain Toolkit，<a href="http://www.youtube.com/watch?v=YnO9RtarzHE" target="_blank" rel="noopener">Youtube视频</a> </li>
+<li>WorldComposer,可以从真实环境中构建数据<h5 id="城市-建筑物-构建"><a href="#城市-建筑物-构建" class="headerlink" title="城市(建筑物)构建"></a>城市(建筑物)构建</h5></li>
+<li>CityEngine 快速生成城市模型的软件，功能很强大</li>
+<li>ViziCIties  它使用了开放地图数据，结合3d生成的建筑物进行缩放，混合了从英国政府、环保机构到Twitter等各种来源的大数据。</li>
+<li>VTP 主要用于基于路网建设的城市，支持较多道路设计文件格式。<h5 id="路网-道路-构建"><a href="#路网-道路-构建" class="headerlink" title="路网(道路)构建"></a>路网(道路)构建</h5></li>
+<li>Road  Architect 以动态交叉口、桥梁等多种道路物体为特色，是非常专业的道路建设软件</li>
+<li>EasyRoads3D  特点是能建立众多跟道路相关的对象如栅栏，墙，树等。</li>
+<li>从OSM中直接导入较为困难，可以考虑OSM-CityEngine-Unity3D 的工具链</li>
+<li>从点云信息，3D地图建立，发展中。</li>
+</ul>
+<h4 id="建模-具体建筑物、车辆等"><a href="#建模-具体建筑物、车辆等" class="headerlink" title="建模(具体建筑物、车辆等)"></a>建模(具体建筑物、车辆等)</h4><p>Unity本身并不是一个建模工具。它是一个“场景装配”工具和实时游戏引擎。所以详细的3D建模一般都需要在其他工具中完成。</p>
+<p>Unity中现成的素材可以很容易地统一起来。在“ 3D Models Category of the Unity Asset store”里可以用免费或很少的钱购买到Unity中的大量产品。:如果你正在寻找一些相关的模型,在资产存储搜索“pack”,例如. Vegetation pack, City pack等等。</p>
+<p>作者还将提供一个在线演示的基于嵌入式网页unity播放器的demo等。</p>
+<p>对于资源包的搜索，网上有大量的整理博客，这里就不再赘述了。当然，你也可以自己建模解决问题。</p>
+<h4 id="交通流架构"><a href="#交通流架构" class="headerlink" title="交通流架构"></a>交通流架构</h4><p>交通流对自动驾驶仿真来说是极其重要的，自动驾驶车终究不能永远活在实验室里，它终究要上路，要面临那些复杂的工况。所以交流通仿真在构建测试场景中是极其重要的。</p>
+<h5 id="一些online资源网站"><a href="#一些online资源网站" class="headerlink" title="一些online资源网站"></a>一些online资源网站</h5><ul>
+<li><a href="http://www.joeweinhoffer.com/Weinhoffer_Yang_Final_Paper.pdf" target="_blank" rel="noopener">Vehicle Traffic Simulation with Unity</a></li>
+<li><a href="http://www.mtreiber.de/" target="_blank" rel="noopener">Martin Treibe</a> 交通计量经济学、建模与统计研究所</li>
+<li><a href="http://gamma.cs.unc.edu/research/traffic/" target="_blank" rel="noopener">资源无限，请自己多关注这个网站</a></li>
+<li><a href="http://www.digitalurban.org/2013/05/15000-agents.html" target="_blank" rel="noopener">Unity中的A*算法</a></li>
+</ul>
+<h5 id="关于交通流仿真的书"><a href="#关于交通流仿真的书" class="headerlink" title="关于交通流仿真的书"></a>关于交通流仿真的书</h5><ul>
+<li>《Fundamentals of Traffic Simulation》</li>
+<li>《Verkehrsdynamik und -simulation: Daten, Modelle und Anwendungen der Verkehrsflussdynamik》</li>
+<li>《Traffic Flow Dynamics》<h5 id="非Unity的交通流仿真工具"><a href="#非Unity的交通流仿真工具" class="headerlink" title="非Unity的交通流仿真工具"></a>非Unity的交通流仿真工具</h5></li>
+<li>PTV VISSIM<ul>
+<li>PTV VisWalk可以提供给行人仿真(包括人群，对象，路径规划，冲撞避免等)。</li>
+<li>PTV Balance提供了基于绿波的实时交通数据的自适应信号控制，</li>
+<li>PTV Optima 大规模交通可视化，态势感知，预测，事件检测。</li>
+<li>PTV Visum Safety 事故数据分析与检测，分析事故集群。</li>
+</ul>
+</li>
+<li>SUMO<br>SUMO是一种开源的、微观的、多模式的交通模拟仿真器，它允许模拟由单个车辆组成的给定交通流如何通过给定的路网。该模拟允许处理大量的交通情景。它是纯微观的:每一辆车都被明确建模，有自己的路线，并单独通过网络移动。</li>
+</ul>
+<p>假如你下载SUMO的包，你会发现它包含许多除去SUMO之外的应用，这是用来导入和预处理路网的，以及它能为SUMO提供一些前期数据准备。</p>
+<h5 id="Unity自带的交通流工具"><a href="#Unity自带的交通流工具" class="headerlink" title="Unity自带的交通流工具"></a>Unity自带的交通流工具</h5><ul>
+<li>iRDS</li>
+<li>UnitySteer</li>
+<li>Auto21 Traffic Modeling and Simulation》</li>
+<li>Verkeerstalent</li>
+</ul>
+<h4 id="天气天时架构"><a href="#天气天时架构" class="headerlink" title="天气天时架构"></a>天气天时架构</h4><p>Unity中提供了一些简单的天时控制和天气控制</p>
+<h5 id="天时特点"><a href="#天时特点" class="headerlink" title="天时特点"></a>天时特点</h5><ul>
+<li>太阳位置(仰角，方位角)控制</li>
+<li>阳光的颜色和强度由角度和大气散射调制</li>
+<li>太阳在低角度会产生眩光效应</li>
+<li>天空背景沙河动画(或者至少白天黑夜之间有差别)</li>
+<li>通常至少有几个云层</li>
+<li>云可以由程序生成和形成动画<h5 id="天气特点"><a href="#天气特点" class="headerlink" title="天气特点"></a>天气特点</h5></li>
+<li>降雨效应</li>
+<li>地面效应(滴溅系统、颗粒系统)(积雪融化)</li>
+<li>更多效果(吹风，树叶降落)</li>
+<li>闪电和纹理(有疑问，不懂)</li>
+<li>各种天气的声音</li>
+</ul>
+<h4 id="车辆-amp-物理-动力学"><a href="#车辆-amp-物理-动力学" class="headerlink" title="车辆&amp;物理(动力学)"></a>车辆&amp;物理(动力学)</h4><h4 id="NPC触发"><a href="#NPC触发" class="headerlink" title="NPC触发"></a>NPC触发</h4><h4 id="传感器仿真"><a href="#传感器仿真" class="headerlink" title="传感器仿真"></a>传感器仿真</h4><p>仿真自动驾驶时，传感器仿真是不可或缺的，radar、Lidar、</p>
+<h4 id="数据记录"><a href="#数据记录" class="headerlink" title="数据记录"></a>数据记录</h4><h4 id="其他的开源项目"><a href="#其他的开源项目" class="headerlink" title="其他的开源项目"></a>其他的开源项目</h4><ul>
+<li>C.I.T.Y. Simulator in Unity</li>
+<li>CASA</li>
+</ul>
+<p>当前的几大车企也都有自己的驾驶模拟实验室，各自服务于不同的研究工作。比如Stanford REVS/CHIme。研究的最初目标是为了处理下面个现象。人类可能会过度信任自动驾驶汽车，人机共驾其实是一种非常危险的状况。因此建立这个实验室去研究人机长时间共驾时以及驾驶任务切换时的驾驶员状态。此外还有Toyoto、University of Leeds</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    鲨鱼观海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/Unity自动驾驶仿真.html" title="Unity自动驾驶仿真">http://iamwxy.com/Unity自动驾驶仿真.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶仿真/" rel="tag"># 自动驾驶仿真</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/书评-《数学之美》.html" rel="next" title="书评 | 《数学之美》">
+                <i class="fa fa-chevron-left"></i> 书评 | 《数学之美》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/自动驾驶中的黑天鹅问题-浅谈Edge-Case-边缘测试用例.html" rel="prev" title="自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例">
+                自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="鲨鱼观海" />
+            
+              <p class="site-author-name" itemprop="name">鲨鱼观海</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&Engineer</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">139</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要做一个新的模拟器"><span class="nav-number">1.</span> <span class="nav-text">为什么要做一个新的模拟器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么选择Unity"><span class="nav-number">2.</span> <span class="nav-text">为什么选择Unity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么建立在游戏平台上"><span class="nav-number">3.</span> <span class="nav-text">为什么建立在游戏平台上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源-环境搭建"><span class="nav-number">4.</span> <span class="nav-text">资源 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#地形构建"><span class="nav-number">4.1.</span> <span class="nav-text">地形构建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#城市-建筑物-构建"><span class="nav-number">4.2.</span> <span class="nav-text">城市(建筑物)构建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#路网-道路-构建"><span class="nav-number">4.3.</span> <span class="nav-text">路网(道路)构建</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建模-具体建筑物、车辆等"><span class="nav-number">5.</span> <span class="nav-text">建模(具体建筑物、车辆等)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流架构"><span class="nav-number">6.</span> <span class="nav-text">交通流架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一些online资源网站"><span class="nav-number">6.1.</span> <span class="nav-text">一些online资源网站</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于交通流仿真的书"><span class="nav-number">6.2.</span> <span class="nav-text">关于交通流仿真的书</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非Unity的交通流仿真工具"><span class="nav-number">6.3.</span> <span class="nav-text">非Unity的交通流仿真工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Unity自带的交通流工具"><span class="nav-number">6.4.</span> <span class="nav-text">Unity自带的交通流工具</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#天气天时架构"><span class="nav-number">7.</span> <span class="nav-text">天气天时架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#天时特点"><span class="nav-number">7.1.</span> <span class="nav-text">天时特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#天气特点"><span class="nav-number">7.2.</span> <span class="nav-text">天气特点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#车辆-amp-物理-动力学"><span class="nav-number">8.</span> <span class="nav-text">车辆&amp;物理(动力学)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NPC触发"><span class="nav-number">9.</span> <span class="nav-text">NPC触发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器仿真"><span class="nav-number">10.</span> <span class="nav-text">传感器仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据记录"><span class="nav-number">11.</span> <span class="nav-text">数据记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他的开源项目"><span class="nav-number">12.</span> <span class="nav-text">其他的开源项目</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">鲨鱼观海</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">196.9k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span> <a href="http://www.beian.miit.gov.cn/" style="font-weight: bold">豫ICP备19024762号</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

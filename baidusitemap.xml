@@ -4,8 +4,117 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E6%B5%85%E8%B0%88RSS%E8%B4%A3%E4%BB%BB%E6%95%8F%E6%84%9F%E5%AE%89%E5%85%A8%E6%A8%A1%E5%9E%8B.html</loc>
+    <lastmod>2019-09-09T14:48:46.143Z</lastmod>
+    <data>
+        <display>
+        <title>浅谈RSS责任敏感安全模型</title>
+        <pubTime>2019-09-09T12:46:01.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E5%86%8D%E8%B0%88%E4%BA%A4%E9%80%9A%E6%B5%81%E6%A8%A1%E6%8B%9F.html</loc>
+    <lastmod>2019-09-09T14:46:16.005Z</lastmod>
+    <data>
+        <display>
+        <title>再谈交通流模拟</title>
+        <pubTime>2019-09-09T11:03:51.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
+         
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-Unity.html</loc>
+    <lastmod>2019-09-09T14:19:17.939Z</lastmod>
+    <data>
+        <display>
+        <title>Unity自动驾驶仿真</title>
+        <pubTime>2019-06-27T14:52:53.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/Unity%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F.html</loc>
+    <lastmod>2019-09-09T13:46:36.240Z</lastmod>
+    <data>
+        <display>
+        <title>Unity自动驾驶仿真</title>
+        <pubTime>2018-10-28T14:52:53.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%B5%8B%E8%AF%95%E5%9C%BA%E6%99%AF%E6%A0%BC%E5%BC%8F.html</loc>
+    <lastmod>2019-09-03T06:19:54.410Z</lastmod>
+    <data>
+        <display>
+        <title>自动驾驶测试场景格式</title>
+        <pubTime>2019-08-09T09:12:20.000Z</pubTime>
+        
+        <tag>自动驾驶仿真</tag>
+         
+        <tag>自动驾驶</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9PlusAI.html</loc>
+    <lastmod>2019-08-27T11:50:20.472Z</lastmod>
+    <data>
+        <display>
+        <title>我为什么选择PlusAI</title>
+        <pubTime>2019-06-27T11:19:53.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E8%BF%91%E6%9C%9F%E5%B7%A5%E4%BD%9C-201906.html</loc>
-    <lastmod>2019-08-27T11:36:05.536Z</lastmod>
+    <lastmod>2019-08-27T11:50:03.330Z</lastmod>
     <data>
         <display>
         <title>近期工作 | 201909</title>
@@ -31,23 +140,6 @@
         <tag>自动驾驶</tag>
          
         <tag>自动驾驶测试</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9PlusAI.html</loc>
-    <lastmod>2019-08-27T11:33:41.052Z</lastmod>
-    <data>
-        <display>
-        <title>我为什么选择PlusAI</title>
-        <pubTime>2019-06-27T11:19:53.000Z</pubTime>
-        
-        <tag>总结</tag>
          
          
            
@@ -129,7 +221,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://iamwxy.com/Ubuntu%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86.html</loc>
@@ -746,23 +837,6 @@
         <tag>自动驾驶测试</tag>
          
         <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-Unity.html</loc>
-    <lastmod>2019-05-08T01:05:59.232Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶仿真资源素材 | Unity</title>
-        <pubTime>2018-10-28T14:52:53.000Z</pubTime>
-        
-        <tag>自动驾驶仿真</tag>
          
          
            
