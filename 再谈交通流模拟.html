@@ -129,7 +129,7 @@
 <meta property="og:site_name" content="南浔遇雨">
 <meta property="og:description" content="自动驾驶仿真离不来交通流模拟，但后者绝不只仅仅是为前者服务的。 实际上，交通流模拟也是构建智慧交通、发展智慧城市的必备手段。这篇博文会总结一下近期我对交通流的新的认识。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-09T14:46:16.005Z">
+<meta property="og:updated_time" content="2019-09-11T14:08:11.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再谈交通流模拟">
 <meta name="twitter:description" content="自动驾驶仿真离不来交通流模拟，但后者绝不只仅仅是为前者服务的。 实际上，交通流模拟也是构建智慧交通、发展智慧城市的必备手段。这篇博文会总结一下近期我对交通流的新的认识。">
@@ -398,6 +398,8 @@
       
         <p>自动驾驶仿真离不来交通流模拟，但后者绝不只仅仅是为前者服务的。 实际上，交通流模拟也是构建智慧交通、发展智慧城市的必备手段。这篇博文会总结一下近期我对交通流的新的认识。<br><a id="more"></a></p>
 <p>关于交通流模拟，在以前的博客里，我们也进行了一些探讨。<br>在<a href="https://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E5%B7%A5%E5%85%B7%E9%9C%80%E6%B1%82.html">自动驾驶仿真工具需求</a>我对交通流仿真的需求和可采用的手段进行了一个简略的整体论述。在<a href="https://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F-Unity.html">自动驾驶Unity资源素材</a>这篇文章下面的交通流架构下面，我列举了比较多高质量的关于学习、设计交通流的资源。<a href="https://iamwxy.com/%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E4%BA%A4%E9%80%9A%E6%B5%81%E4%BB%BF%E7%9C%9F%E6%A1%86%E6%9E%B6.html">交通流仿真框架</a>一文则介绍了面向自动驾驶的交通流设计时需要特意注意的trick，这篇文章的模拟器是用simulink开发的，但其中关于每个模块的接口设计是通用的。另外博客里还推过一本书<a href="https://iamwxy.com/%E4%BA%A4%E9%80%9A%E6%B5%81%E5%BB%BA%E6%A8%A1%E7%BB%8F%E5%85%B8%E4%B9%A6%E7%B1%8D-Fundamentals-of-Traffic-Simulation.html">Fundamentals of Traffic Simulation</a></p>
+<p>对于自动驾驶的仿真测试而言，交通流模拟在不同的阶段应该有不同的层次。一开始就去搞虚拟城市，无限接近于真实的交通流可能会导致低效率。对于系统功能还不是十分成熟的规划器，就该用特定的交通参与者行为来验证特定的行为。比如对于跟车规划器的验证应该主要调整的是前车行为。在自动驾驶各单独规划器功能都已经测试成熟的情况下，我们可以引入交通流模型。在这个阶段，我们可以选用SUMO或VISSIM等工具进行联合仿真，也可以手动构建数学交通流模型。再之后，考虑现实交通行为的复杂性，我们可以给交通流模型引入一些不确定性，比如构建高斯模型或正则模型等。</p>
+<p>当然，到了最后阶段，我们的追求还是仿真整个世界，自动驾驶车辆的始终是在实际环境中运行的，如果只是用数学模型去构建交通流的行为，可能会给车辆功能提升带来不好的引导。在这个阶段，我们可以使用AI来进行行为建模，即behavior modeling. 这个过程中，主要可以参考使用的是LSTM、强化学习等。这样的环境能帮助我们找到最后的cornercase。 因此是必不可缺的。</p>
 <p>（未完待续）</p>
 
       
@@ -535,7 +537,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">139</span>
+                  <span class="site-state-item-count">138</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -548,7 +550,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -599,7 +601,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">196.9k </span>
+    <span title="Site words total count">197.9k </span>
   
 </div>
 
