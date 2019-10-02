@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。 对于自动驾驶场景格式，需要解决静态场景和动态场景的编码方法，这可以对标OPEN系列的OpenDRIVE和OpenSCENARIO，按Open系列的想法，还得需要一个提供道路不平度的场景格式。 静态场景格式是测试场景格式的基础，它跟高精度地">
+<meta name="description" content="建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。">
 <meta name="keywords" content="自动驾驶,自动驾驶测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶场景格式">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶场景格式.html">
 <meta property="og:site_name" content="南浔遇雨">
-<meta property="og:description" content="建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。 对于自动驾驶场景格式，需要解决静态场景和动态场景的编码方法，这可以对标OPEN系列的OpenDRIVE和OpenSCENARIO，按Open系列的想法，还得需要一个提供道路不平度的场景格式。 静态场景格式是测试场景格式的基础，它跟高精度地">
+<meta property="og:description" content="建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T11:35:33.630Z">
+<meta property="og:updated_time" content="2019-10-02T15:20:36.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶场景格式">
-<meta name="twitter:description" content="建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。 对于自动驾驶场景格式，需要解决静态场景和动态场景的编码方法，这可以对标OPEN系列的OpenDRIVE和OpenSCENARIO，按Open系列的想法，还得需要一个提供道路不平度的场景格式。 静态场景格式是测试场景格式的基础，它跟高精度地">
+<meta name="twitter:description" content="建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。">
 
 
 
@@ -396,8 +396,7 @@
       
 
       
-        <p>建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。</p>
-<p>对于自动驾驶场景格式，需要解决静态场景和动态场景的编码方法，这可以对标OPEN系列的OpenDRIVE和OpenSCENARIO，按Open系列的想法，还得需要一个提供道路不平度的场景格式。</p>
+        <p>建立自动驾驶场景格式有以下几个用处。其一，通过使用计算机可读的语言，实现测试的自动化，为大规模仿真测试提供基础。其二，标准化测试场景，提高多工具链下的仿真效率。<br><a id="more"></a><br>对于自动驾驶场景格式，需要解决静态场景和动态场景的编码方法，这可以对标OPEN系列的OpenDRIVE和OpenSCENARIO，按Open系列的想法，还得需要一个提供道路不平度的场景格式。</p>
 <p>静态场景格式是测试场景格式的基础，它跟高精度地图有着很深的关系，需要提供测试场景所需的道路拓扑结构以及更具体的道路几何信息，除此之外，一些必须的环境信号信息也需要由它提供，典型的是道路标志、标识牌、信号灯信息。目前可参考的是OpenDRIVE和后起之秀Lanlets，后者是基于OpenStreetMap构建的。</p>
 <p>动态场景格式的格式更复杂一些，它的设计可以参考一些泛化的，不是针对“自动驾驶”的场景理论基础，如经典文章《the blind men and the elephant: Views of scenario-based system design》，这篇文章可以提供关于动态场景设计格式的上层方法论。从已有的场景格式来看，目前可以参考的动态场景格式主要是OpenSCENARIO，GeoSCENARIO，由common roads提供的场景格式也可以思考。从设计语言上看，xml和json等格式化原因具有很强的优势，前者是目前已有场景格式的语言，但json因为其易于传输的特性，也在慢慢兴起。</p>
 <p>对于场景格式的设计，应该满足简洁、高效、可扩展性强的特点。我目前正在研究自动驾驶场景格式设计，有对这个领域感兴趣的可以发邮件和我交流。</p>
@@ -536,7 +535,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">140</span>
+                  <span class="site-state-item-count">141</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -600,7 +599,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">198.2k </span>
+    <span title="Site words total count">199.8k </span>
   
 </div>
 
