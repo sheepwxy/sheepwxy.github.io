@@ -129,7 +129,7 @@
 <meta property="og:site_name" content="南浔遇雨">
 <meta property="og:description" content="秋招算尘埃落定。又是一路坎坷，又是结果尚好。先大致总结一下自动驾驶行业求职需要做的准备。大家如有补充，欢迎邮箱/微信与我联系，我把建议补充到这篇文章里。辅助后来人。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-23T02:18:12.773Z">
+<meta property="og:updated_time" content="2019-10-23T02:21:31.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶找工作&#x2F;求职准备">
 <meta name="twitter:description" content="秋招算尘埃落定。又是一路坎坷，又是结果尚好。先大致总结一下自动驾驶行业求职需要做的准备。大家如有补充，欢迎邮箱/微信与我联系，我把建议补充到这篇文章里。辅助后来人。">
@@ -256,7 +256,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
             
             关于
           </a>
@@ -401,7 +401,7 @@
 <ol>
 <li><strong>vehicle simulation</strong>在将来会有更大的市场，尤其是multi-agent的interaction，甚至drl apply在vehicle上。可以在Carla平台上做一些项目。</li>
 <li><strong>perception</strong>，应该是目前最火的方向，基于camera的computer vision和lidar的point cloud processing，一些传统算法像3D reconstruction, optical flow, LK tracking要了解，能用python或C++实现。lidar的看看PCL上的tutorial<br>像YOLO这些state-of-art的算法可以从Github上drag一个下来跑一跑。数据集可以在kitti dataset上找。还有可以学一些sensor fusion的算法，在ROS上把lidar data和camera data register到一起。<br>SLAM， 尤其是visual SLAM可以先了解下</li>
-<li>prediction &amp; motion planning，这两者是不分家的，可以学习下RRT算法和一堆衍生算法，与控制紧密相关，车辆工程的学生可以重点关注一下</li>
+<li><strong>prediction &amp; motion planning</strong>，这两者是不分家的，可以学习下RRT算法和一堆衍生算法，与控制紧密相关，车辆工程的学生可以重点关注一下</li>
 <li>Control, 经典的PID和业界较常用的LQR，一般和硬件打交道都是C++，所以要把C++学好，光java或py好是远远不够的。同上。</li>
 <li>machine learning，这个就不用说了，Andrew Ng的课可以看看，pattern recognition那本书也很推荐，要把数学基础打好不能只会套用框架。熟练掌握一种框架，推荐新手入手Pytorch</li>
 <li>Hardware,可以了解各类传感器的特点和优缺点，如何sensor fusion弥补信息的差异</li>
