@@ -5,13 +5,34 @@
     
   <url>
     <loc>http://iamwxy.com/%E5%BE%85%E5%86%99%E6%96%87%E7%AB%A0.html</loc>
-    <lastmod>2019-12-11T07:47:44.606Z</lastmod>
+    <lastmod>2019-12-13T15:55:59.556Z</lastmod>
     <data>
         <display>
         <title>待写文章</title>
         <pubTime>2019-10-02T14:10:54.000Z</pubTime>
         
         <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E9%9D%A2%E5%90%91%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E4%BA%A4%E9%80%9A%E6%B5%81%E4%BB%BF%E7%9C%9F%E5%B0%8F%E7%BB%93.html</loc>
+    <lastmod>2019-12-13T14:59:07.262Z</lastmod>
+    <data>
+        <display>
+        <title>面向自动驾驶的交通流仿真小结</title>
+        <pubTime>2019-09-09T11:03:51.000Z</pubTime>
+        
+        <tag>自动驾驶</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
          
            
@@ -191,27 +212,6 @@
         <tag>自动驾驶</tag>
          
         <tag>自动驾驶测试</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E5%86%8D%E8%B0%88%E4%BA%A4%E9%80%9A%E6%B5%81%E6%A8%A1%E6%8B%9F.html</loc>
-    <lastmod>2019-10-02T15:20:32.378Z</lastmod>
-    <data>
-        <display>
-        <title>再谈交通流模拟</title>
-        <pubTime>2019-09-09T11:03:51.000Z</pubTime>
-        
-        <tag>自动驾驶</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>自动驾驶仿真</tag>
          
          
            
