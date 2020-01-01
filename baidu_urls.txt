@@ -1,3 +1,4 @@
+http://iamwxy.com/控制论.html
 http://iamwxy.com/夏与冬.html
 http://iamwxy.com/锤和钉.html
 http://iamwxy.com/自动驾驶找工作-求职准备.html
@@ -17,4 +18,3 @@ http://iamwxy.com/ROS总结(一).html
 http://iamwxy.com/自动驾驶场景思考.html
 http://iamwxy.com/超车行为建模.html
 http://iamwxy.com/近期工作-201906.html
-http://iamwxy.com/我为什么选择PlusAI.html
