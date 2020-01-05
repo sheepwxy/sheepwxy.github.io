@@ -129,7 +129,7 @@
 <meta property="og:site_name" content="南浔遇雨">
 <meta property="og:description" content="本文主要内容来自Simon Chauvin,在进行翻译时融入了我自己学习过程中的认知和思考。  如何描述交通场景，用什么格式或语言？ 如何找到频繁出现的碰撞场景，人类驾驶员通常在哪里失败？ 如何生成关键场景来测试边缘用例？ 哪些数据集可以用来学习和测试用于预测和决策的算法？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-19T09:41:04.430Z">
+<meta property="og:updated_time" content="2020-01-05T12:36:54.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶场景思考">
 <meta name="twitter:description" content="本文主要内容来自Simon Chauvin,在进行翻译时融入了我自己学习过程中的认知和思考。  如何描述交通场景，用什么格式或语言？ 如何找到频繁出现的碰撞场景，人类驾驶员通常在哪里失败？ 如何生成关键场景来测试边缘用例？ 哪些数据集可以用来学习和测试用于预测和决策的算法？">
@@ -407,9 +407,18 @@
 <h4 id="场景语言格式"><a href="#场景语言格式" class="headerlink" title="场景语言格式"></a>场景语言格式</h4><p>(Queiroz, Berger, and Czarnecki 2019)指出现在还没有一种语言来正式描述涵盖道路交通情况复杂性的测试场景。这阻碍了测试的重现性，并破坏了工具之间的可交换性。为了解决这个问题，他们引入了一种用于场景表示的领域特定语言GeoScenario。该语言构建在开放街道地图(OSM)原语之上。GeoScenario的目标类似于文件格式OpenSCENARIO（OpenSCENARIO描述了驱动仿真应用程序中的动态内容，并经常与OpenDRIVE一起用于静态内容。）</p>
 <p>另一个工具<font color="green"><a href="https://commonroad.in.tum.de/" target="_blank" rel="noopener">CommonRoad</a></font>被多次使用，特别是因为它从NGSIM US 101数据集中实现了高速公路场景。这一系列应用于道路规划的可组合的benchmark目的是为研究人员提供一种评估和比较他们的规划器的方法。</p>
 <p>为了在场景中表示道路网络，<font color="green"><a href="https://commonroad.in.tum.de/" target="_blank" rel="noopener">Lanelets地图</a></font>(OSM格式的一个开放扩展)被广泛使用(例如GeoScenario和CommonRoad)。<font color="green"><a href="https://commonroad.in.tum.de/" target="_blank" rel="noopener">Lanelets2</a></font>用于(Naumann et al. 2019)设计具有遮挡的场景。他们的实验是基于修改版的CommonROAD。</p>
+<blockquote>
+<p>译者注：场景基本上可以分为静态和动态。静态需要地图，对于实际开发中的测试而言，可以把系统中使用的地图作为底层，对于测试阶段而言，需要使用标准地图。OpenDrive当然是目前流传度的最高的，作者这边提的Lanlet有自己的优势，但本质上跟OpenDrive是相同的。对于动态场景，目前的标准比较少，与OpenDrive配套的OpenSCENARIO感觉快一统天下了，GeoScenario基本就是学术界做的东西了。<br>当然，要重现做一个类似于OpenDrive和OpenSCENARIO的东西是不难的，但正如作者提到的，我们在这里想要的是一个标准化的格式，是可以帮忙减少切换仿真工具的使用开销，方便统一标准化场景库的格式。目前对OpenDrive和OpenSCENARIO支持最好的是VTD，它们是这几项语言的原创者，后来又把这个标准立项交给了标准化组织ASAM。这个转交对长期发展来说是有益的，标准推广开了才有价值。<br>国内目前也正在推广这里，华为、上汽集团、中汽中心数据资源中心、51VR、腾讯科技、亮道智能有参与C-ASAM的工作，参与的公司都很聪明，一流公司定标准嘛。<br>另外还有点，OpenDrive、lanlet、OSM都是可以通过解析脚本相互转换的，通过这些转换关系可以复用很多其他软件的建模工作，这里就不多提了。另外，支持OpenSCENARIO的软件，我目前看到的有VTD和Carla，其他仿真软件也可以快点支持这个功能，毕竟写一个解析器也不是太难的事，但却是很有用的事。<br>OpenDrive和OpenSCENARIO这些标准也带来了一些衍生问题，如大大增加了建场景的时间成本等，这就又需要新的解决方案。关于这个话题，还是有很多可以聊下去的东西的。</p>
+</blockquote>
 <h4 id="经常出现的关键场景"><a href="#经常出现的关键场景" class="headerlink" title="经常出现的关键场景"></a>经常出现的关键场景</h4><p>最常见的车祸场景可以从美国国家公路交通安全管理局(NHTSA)的车祸数据中检索到。<font color="green"><a href="https://carlachallenge.org/challenge/nhtsa/" target="_blank" rel="noopener">CARLA AD challenge</a></font>使用<font color="green"><a href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/pre-crash_scenario_typology-final_pdf_version_5-2-07.pdf" target="_blank" rel="noopener">NHTSA pre-crash</a></font>的来测试面向常见关键场景的agent表现。</p>
 <p>(Pusse和Klusch 2019)使用<font color="green"><a href="https://www.gidas.org/willkommen/" target="_blank" rel="noopener">GIDAS</a></font>分析了德国发生的数千起事故，以此作为基准。然后使用开源的3D驾驶模拟器<font color="green"><a href="https://opends.dfki.de/" target="_blank" rel="noopener">OpenDS </a></font>对场景进行虚拟模拟。</p>
+<blockquote>
+<p>译者注：对于经常出现的关键场景，这其实就是我们常说的“数据”的价值。有自动驾驶功能（或数据搜集功能）的车辆大规模部署的最直观好处是什么？就是各种各样的数据啊，特斯拉的autopilot之所以能另辟蹊径，让人不容忽视，那已经卖出的车送回来的数据绝对是第一大功。数据能帮我们分析出各种不常见的情况，也能帮助统计不同地区不同行为的参数规律，这些数据经过分析后，凝练成关键场景，也可以针对性地测试系统的表现，提高系统的表现能力。如何定义经常出现，如何定义关键，也是个很值得说道的问题。这个要具体产品具体分析，没有神器子弹了。定义好了这些，也就定义好了产品开发过程中的场景测试体系，之后可以考虑把这部分做到CI中，形成完整的开发流。</p>
+</blockquote>
 <h4 id="生成边界情况的场景"><a href="#生成边界情况的场景" class="headerlink" title="生成边界情况的场景"></a>生成边界情况的场景</h4><p>(Klischat和Althoff 2019)提出了一种方法来生成关键场景，用于在复杂的城市交通情况下测试运动规划者。<br>这部分会是我的硕士论文，此处保密。</p>
+<blockquote>
+<p>译者注：上面一节提到的关键场景，更像是从数据角度论述。这节的话，更偏向与从知识分析的角度论述，但是很遗憾，作者都提的很少。但这其实是很重要的一部分。懂得做场景后，是低效率，还是高效率，其实就是看这部分。特斯拉收集的数据也不是完全上传的，也分析不过来呀。对特斯拉而言，可能把“系统做出的决策和当前驾驶员做出决策不同的sitiuation”下的数据上传，这是特斯拉定义的“边界”或“关键”了，是个很好的思路。</p>
+</blockquote>
 <h4 id="对新数据集的需求"><a href="#对新数据集的需求" class="headerlink" title="对新数据集的需求"></a>对新数据集的需求</h4><p>在许多论文中，对真实世界的实验都被放在未来的工作中了。其中一个原因是，很难将模拟或手工场景的模型转换到真实的汽车。这就产生了两种需求:</p>
 <ul>
 <li>需要更逼真的模拟器。</li>
@@ -429,6 +438,9 @@
 <li>另一个有前途的特点是，涵盖了带有谈判的复杂的驾驶行为和不明确的路权(通行权)</li>
 <li>最后，所有场景都带有一个基于lanelet2的带有语义信息的HD-map。模型中也会有遮挡作为ground truth，这是测试社会认知的关键。</li>
 </ul>
+<blockquote>
+<p>译者注：HighD和NGSIM确实有些无聊了，交互数据集的提出很及时，这个数据集也很有价值，建议大家看看。</p>
+</blockquote>
 
       
     </div>
@@ -654,7 +666,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">241.7k </span>
+    <span title="Site words total count">243.0k </span>
   
 </div>
 
