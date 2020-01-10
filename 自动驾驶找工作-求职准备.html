@@ -129,7 +129,7 @@
 <meta property="og:site_name" content="南浔遇雨">
 <meta property="og:description" content="秋招算尘埃落定。又是一路坎坷，又是结果尚好。先大致总结一下自动驾驶行业求职需要做的准备。大家如有补充，欢迎邮箱/微信与我联系，我把建议补充到这篇文章里。辅助后来人。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-29T03:31:01.123Z">
+<meta property="og:updated_time" content="2020-01-06T13:11:35.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶找工作&#x2F;求职准备">
 <meta name="twitter:description" content="秋招算尘埃落定。又是一路坎坷，又是结果尚好。先大致总结一下自动驾驶行业求职需要做的准备。大家如有补充，欢迎邮箱/微信与我联系，我把建议补充到这篇文章里。辅助后来人。">
@@ -397,20 +397,20 @@
 
       
         <p>秋招算尘埃落定。又是一路坎坷，又是结果尚好。先大致总结一下自动驾驶行业求职需要做的准备。大家如有补充，欢迎邮箱/微信与我联系，我把建议补充到这篇文章里。辅助后来人。<br><a id="more"></a></p>
-<h4 id="泛泛而谈"><a href="#泛泛而谈" class="headerlink" title="泛泛而谈"></a>泛泛而谈</h4><p>自动驾驶目前已经处于下行期，这也是好事，可以避免劣币驱逐良币的事情发生。</p>
-<h4 id="敲定方向"><a href="#敲定方向" class="headerlink" title="敲定方向"></a>敲定方向</h4><p>个人建议你去一些公司的career里看看position的requirement，像PonyAI、TuSimple、PlusAI、Nuro、Argo AI这些，看看你得具备那些技能。之后专精一个方向，辅助一个方向即可。楼主本人是Simulation+System.</p>
+<h4 id="泛泛而谈"><a href="#泛泛而谈" class="headerlink" title="泛泛而谈"></a>泛泛而谈</h4><p>自动驾驶目前已经处于下行期，这也是好事，可以避免劣币驱逐良币的事情发生。选公司时，可以参考我的另外一篇文章<a href="https://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%E8%A7%82%E5%AF%9F.html">自动驾驶科技公司观察</a></p>
+<h4 id="敲定方向-会看JD"><a href="#敲定方向-会看JD" class="headerlink" title="敲定方向,会看JD"></a>敲定方向,会看JD</h4><p>自动驾驶方向太多了，容易挑花眼。首先一个建议是，你要敲定自己的求职方向。如果不知道有哪些求职方向，那可以去看看一些自动驾驶公司的岗位需求和岗位要求，像<a href="https://www.pony.ai/" target="_blank" rel="noopener">PonyAI</a>、<a href="http://www.zhijiakeji.com.cn/" target="_blank" rel="noopener">Plus.ai</a>、<a href="https://www.momenta.cn/" target="_blank" rel="noopener">Momenta</a>、<a href="https://www.tusimple.com/cn/" target="_blank" rel="noopener">Tusimple</a>这些。之后专精一个方向，根据岗位的要求复习。一般来说主要有以下几种岗位。</p>
 <ol>
-<li><strong>vehicle simulation</strong>在将来会有更大的市场，尤其是multi-agent的interaction，甚至drl apply在vehicle上。可以在Carla平台上做一些项目。</li>
-<li><strong>perception</strong>，应该是目前最火的方向，基于camera的computer vision和lidar的point cloud processing，一些传统算法像3D reconstruction, optical flow, LK tracking要了解，能用python或C++实现。lidar的看看PCL上的tutorial<br>像YOLO这些state-of-art的算法可以从Github上drag一个下来跑一跑。数据集可以在kitti dataset上找。还有可以学一些sensor fusion的算法，在ROS上把lidar data和camera data register到一起。<br>SLAM， 尤其是visual SLAM可以先了解下</li>
+<li><strong>感知工程师</strong><br>应该是目前最火的方向，基于camera的computer vision和lidar的point cloud processing，一些传统算法像3D reconstruction, optical flow, LK tracking要了解，能用python或C++实现。lidar的看看PCL上的tutorial<br>像YOLO这些state-of-art的算法可以从Github上drag一个下来跑一跑。数据集可以在kitti dataset上找。还有可以学一些sensor fusion的算法，在ROS上把lidar data和camera data register到一起。SLAM， 尤其是visual SLAM可以先了解下</li>
 <li><strong>prediction &amp; motion planning</strong>，这两者是不分家的，可以学习下RRT算法和一堆衍生算法，与控制紧密相关，车辆工程的学生可以重点关注一下</li>
 <li>Control, 经典的PID和业界较常用的LQR，一般和硬件打交道都是C++，所以要把C++学好，光java或py好是远远不够的。同上。</li>
 <li>machine learning，这个就不用说了，Andrew Ng的课可以看看，pattern recognition那本书也很推荐，要把数学基础打好不能只会套用框架。熟练掌握一种框架，推荐新手入手Pytorch</li>
 <li>Hardware,可以了解各类传感器的特点和优缺点，如何sensor fusion弥补信息的差异</li>
 <li>System， basis是编译原理，操作系统，计算机系统，相对来说更适合车辆工程，有先求广再求深的特性。</li>
+<li><strong>vehicle simulation</strong>在将来会有更大的市场，尤其是multi-agent的interaction，甚至drl apply在vehicle上。可以在Carla平台上做一些项目。</li>
 </ol>
 <h4 id="基础准备"><a href="#基础准备" class="headerlink" title="基础准备"></a>基础准备</h4><ol>
-<li>C++11/14 ，multithreading ，cocurrency control，smartpointer，virtual，C++重要性no.1，不然早晚会挂</li>
-<li>面试前狂刷leetcode，最少得400题以上。</li>
+<li>C++11/14 ，C++重要性no.1，不然早晚会挂</li>
+<li>面试前狂刷leetcode，最少得400题以上，这个的</li>
 <li>git/linux等</li>
 </ol>
 <h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><ol>
@@ -468,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/待写文章.html" rel="next" title="待写文章">
-                <i class="fa fa-chevron-left"></i> 待写文章
+              <a href="/舍近以求远-我们需要怎样的交流方式.html" rel="next" title="舍近以求远 | 我们需要怎样的交流方式">
+                <i class="fa fa-chevron-left"></i> 舍近以求远 | 我们需要怎样的交流方式
               </a>
             
           </div>
@@ -561,7 +561,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">146</span>
+                  <span class="site-state-item-count">151</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -607,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛泛而谈"><span class="nav-number">1.</span> <span class="nav-text">泛泛而谈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#敲定方向"><span class="nav-number">2.</span> <span class="nav-text">敲定方向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础准备"><span class="nav-number">3.</span> <span class="nav-text">基础准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充"><span class="nav-number">4.</span> <span class="nav-text">补充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛泛而谈"><span class="nav-number">1.</span> <span class="nav-text">泛泛而谈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#敲定方向-会看JD"><span class="nav-number">2.</span> <span class="nav-text">敲定方向,会看JD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础准备"><span class="nav-number">3.</span> <span class="nav-text">基础准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充"><span class="nav-number">4.</span> <span class="nav-text">补充</span></a></li></ol></div>
             
 
           </div>
@@ -641,7 +641,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">243.0k </span>
+    <span title="Site words total count">242.7k </span>
   
 </div>
 
