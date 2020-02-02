@@ -59,25 +59,6 @@
 
     
   <url>
-    <loc>http://iamwxy.com/%E7%A7%8B%E6%8B%9B.html</loc>
-    <lastmod>2020-02-02T13:20:03.007Z</lastmod>
-    <data>
-        <display>
-        <title>秋招</title>
-        <pubTime>2019-10-15T15:22:50.000Z</pubTime>
-        
-        <tag>自动驾驶</tag>
-         
-        <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://iamwxy.com/%E8%A8%80%E4%B8%8D%E5%8F%AF%E5%8F%8A-%E5%9B%B4%E7%82%89%E5%A4%9C%E8%AF%9D.html</loc>
     <lastmod>2020-01-10T15:25:00.981Z</lastmod>
     <data>
@@ -227,9 +208,9 @@
         <title>面向自动驾驶的交通流仿真小结</title>
         <pubTime>2019-09-09T11:03:51.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
         <tag>自动驾驶</tag>
          
@@ -851,9 +832,9 @@
         <title>自动驾驶仿真论</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
-        <tag>自动驾驶仿真</tag>
-         
         <tag>总结</tag>
+         
+        <tag>自动驾驶仿真</tag>
          
         <tag>自动驾驶</tag>
          
@@ -1915,9 +1896,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>总结</tag>
+         
+        <tag>工具</tag>
          
          
            
