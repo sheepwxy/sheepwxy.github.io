@@ -1,3 +1,4 @@
+http://iamwxy.com/待写文章.html
 http://iamwxy.com/批评与自我批评.html
 http://iamwxy.com/控制论.html
 http://iamwxy.com/厚积和薄发-谈论文中期.html
@@ -5,6 +6,7 @@ http://iamwxy.com/夏与冬.html
 http://iamwxy.com/锤和钉.html
 http://iamwxy.com/自动驾驶找工作-求职准备.html
 http://iamwxy.com/秋招.html
+http://iamwxy.com/秋招总结.html
 http://iamwxy.com/舍近以求远-我们需要怎样的交流方式.html
 http://iamwxy.com/一地鸡毛迎风起.html
 http://iamwxy.com/自动驾驶科技公司观察.html
@@ -16,5 +18,3 @@ http://iamwxy.com/面向自动驾驶的交通流仿真小结.html
 http://iamwxy.com/Work-Hard-Play-Hard.html
 http://iamwxy.com/GeoSCENARIO-用于自动驾驶场景表示的开放式DSL.html
 http://iamwxy.com/科研感悟.html
-http://iamwxy.com/自动驾驶场景格式.html
-http://iamwxy.com/ROS总结(一).html

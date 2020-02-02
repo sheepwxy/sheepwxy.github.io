@@ -4,12 +4,50 @@
 
     
   <url>
+    <loc>http://iamwxy.com/%E6%89%B9%E8%AF%84%E4%B8%8E%E8%87%AA%E6%88%91%E6%89%B9%E8%AF%84.html</loc>
+    <lastmod>2020-02-02T13:20:28.676Z</lastmod>
+    <data>
+        <display>
+        <title>批评与自我批评</title>
+        <pubTime>2020-01-02T15:12:17.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://iamwxy.com/%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93.html</loc>
+    <lastmod>2020-02-02T13:20:26.691Z</lastmod>
+    <data>
+        <display>
+        <title>秋招总结</title>
+        <pubTime>2019-10-13T13:19:21.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>自动驾驶</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://iamwxy.com/%E5%BE%85%E5%86%99%E6%96%87%E7%AB%A0.html</loc>
-    <lastmod>2020-02-01T14:10:54.000Z</lastmod>
+    <lastmod>2020-02-02T13:20:20.294Z</lastmod>
     <data>
         <display>
         <title>待写文章</title>
-        <pubTime>2019-01-15T14:10:54.000Z</pubTime>
+        <pubTime>2020-01-15T14:10:54.000Z</pubTime>
         
         <tag>随笔</tag>
          
@@ -22,7 +60,7 @@
     
   <url>
     <loc>http://iamwxy.com/%E7%A7%8B%E6%8B%9B.html</loc>
-    <lastmod>2020-01-28T14:10:54.000Z</lastmod>
+    <lastmod>2020-02-02T13:20:03.007Z</lastmod>
     <data>
         <display>
         <title>秋招</title>
@@ -97,23 +135,6 @@
         <display>
         <title>舍近以求远 | 我们需要怎样的交流方式</title>
         <pubTime>2019-10-10T15:18:27.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E6%89%B9%E8%AF%84%E4%B8%8E%E8%87%AA%E6%88%91%E6%89%B9%E8%AF%84.html</loc>
-    <lastmod>2020-01-10T15:14:57.600Z</lastmod>
-    <data>
-        <display>
-        <title>批评与自我批评</title>
-        <pubTime>2020-01-02T15:12:17.000Z</pubTime>
         
         <tag>随笔</tag>
          
@@ -206,11 +227,11 @@
         <title>面向自动驾驶的交通流仿真小结</title>
         <pubTime>2019-09-09T11:03:51.000Z</pubTime>
         
+        <tag>自动驾驶仿真</tag>
+         
         <tag>总结</tag>
          
         <tag>自动驾驶</tag>
-         
-        <tag>自动驾驶仿真</tag>
          
          
            
@@ -280,9 +301,9 @@
         
         <tag>总结</tag>
          
-        <tag>自动驾驶测试</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶测试</tag>
          
          
            
@@ -455,9 +476,9 @@
         <title>自动驾驶场景格式</title>
         <pubTime>2019-08-16T11:29:27.000Z</pubTime>
         
-        <tag>自动驾驶测试</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶测试</tag>
          
          
            
@@ -544,9 +565,9 @@
         <title>自动驾驶仿真系统设计框架</title>
         <pubTime>2018-12-10T08:05:41.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>自动驾驶仿真</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -620,9 +641,9 @@
         <title>信息论随笔三</title>
         <pubTime>2018-07-10T13:27:00.000Z</pubTime>
         
-        <tag>信息论</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>信息论</tag>
          
          
            
@@ -775,9 +796,9 @@
         <title>自动驾驶仿真工程师</title>
         <pubTime>2018-12-09T13:59:14.000Z</pubTime>
         
-        <tag>自动驾驶</tag>
-         
         <tag>自动驾驶仿真</tag>
+         
+        <tag>自动驾驶</tag>
          
          
            
@@ -830,11 +851,11 @@
         <title>自动驾驶仿真论</title>
         <pubTime>2018-07-31T01:26:31.000Z</pubTime>
         
+        <tag>自动驾驶仿真</tag>
+         
         <tag>总结</tag>
          
         <tag>自动驾驶</tag>
-         
-        <tag>自动驾驶仿真</tag>
          
          
            
@@ -885,9 +906,9 @@
         <title>GeoSCENARIO: 用于自动驾驶场景表示的开放式DSL</title>
         <pubTime>2019-08-24T08:58:49.000Z</pubTime>
         
-        <tag>自动驾驶测试</tag>
-         
         <tag>自动驾驶</tag>
+         
+        <tag>自动驾驶测试</tag>
          
          
            
@@ -1894,9 +1915,9 @@
         <title>博客搭建进阶</title>
         <pubTime>2018-10-24T15:50:20.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>工具</tag>
+         
+        <tag>总结</tag>
          
          
            
