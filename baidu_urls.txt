@@ -1,4 +1,5 @@
 http://iamwxy.com/待写文章.html
+http://iamwxy.com/2019年终总结.html
 http://iamwxy.com/批评与自我批评.html
 http://iamwxy.com/控制论.html
 http://iamwxy.com/厚积和薄发-谈论文中期.html
@@ -17,4 +18,3 @@ http://iamwxy.com/面向自动驾驶的交通流仿真小结.html
 http://iamwxy.com/Work-Hard-Play-Hard.html
 http://iamwxy.com/GeoSCENARIO-用于自动驾驶场景表示的开放式DSL.html
 http://iamwxy.com/科研感悟.html
-http://iamwxy.com/自动驾驶场景格式.html

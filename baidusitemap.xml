@@ -3,14 +3,13 @@
 
 
     
-    
   <url>
     <loc>http://iamwxy.com/%E5%BE%85%E5%86%99%E6%96%87%E7%AB%A0.html</loc>
-    <lastmod>2020-02-02T13:45:54.707Z</lastmod>
+    <lastmod>2020-02-04T12:01:41.372Z</lastmod>
     <data>
         <display>
         <title>待写文章</title>
-        <pubTime>2020-01-15T14:10:54.000Z</pubTime>
+        <pubTime>2020-02-04T14:10:54.000Z</pubTime>
         
         <tag>随笔</tag>
          
@@ -23,7 +22,7 @@
     
   <url>
     <loc>http://iamwxy.com/%E6%89%B9%E8%AF%84%E4%B8%8E%E8%87%AA%E6%88%91%E6%89%B9%E8%AF%84.html</loc>
-    <lastmod>2020-02-02T13:20:28.676Z</lastmod>
+    <lastmod>2020-02-04T12:01:16.262Z</lastmod>
     <data>
         <display>
         <title>批评与自我批评</title>
@@ -39,6 +38,24 @@
 
     
   <url>
+    <loc>http://iamwxy.com/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.html</loc>
+    <lastmod>2020-02-04T11:27:18.128Z</lastmod>
+    <data>
+        <display>
+        <title>2019年终总结</title>
+        <pubTime>2020-02-04T11:18:13.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://iamwxy.com/%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93.html</loc>
     <lastmod>2020-02-02T13:20:26.691Z</lastmod>
     <data>
@@ -46,11 +63,11 @@
         <title>秋招总结</title>
         <pubTime>2019-10-13T13:19:21.000Z</pubTime>
         
+        <tag>随笔</tag>
+         
         <tag>总结</tag>
          
         <tag>自动驾驶</tag>
-         
-        <tag>随笔</tag>
          
          
            
@@ -188,9 +205,9 @@
         <title>科研感悟</title>
         <pubTime>2019-08-22T13:48:34.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>总结</tag>
          
         <tag>高效学习</tag>
          
@@ -601,9 +618,9 @@
         <title>信息论随笔四</title>
         <pubTime>2018-08-12T11:51:39.000Z</pubTime>
         
-        <tag>总结</tag>
-         
         <tag>随笔</tag>
+         
+        <tag>总结</tag>
          
         <tag>信息论</tag>
          
@@ -622,9 +639,9 @@
         <title>信息论随笔三</title>
         <pubTime>2018-07-10T13:27:00.000Z</pubTime>
         
-        <tag>高效学习</tag>
-         
         <tag>信息论</tag>
+         
+        <tag>高效学习</tag>
          
          
            
@@ -1205,9 +1222,9 @@
         <title>如何学习一门编程语言</title>
         <pubTime>2019-05-08T00:55:24.000Z</pubTime>
         
-        <tag>编程</tag>
-         
         <tag>高效学习</tag>
+         
+        <tag>编程</tag>
          
          
            
@@ -1279,9 +1296,9 @@
         <title>自动驾驶中的黑天鹅问题 | 浅谈Edge Case 边缘测试用例</title>
         <pubTime>2018-11-01T02:36:16.000Z</pubTime>
         
-        <tag>自动驾驶测试</tag>
-         
         <tag>机器学习</tag>
+         
+        <tag>自动驾驶测试</tag>
          
          
            
