@@ -3,6 +3,24 @@
 
 
     
+    
+  <url>
+    <loc>http://iamwxy.com/%E5%BE%85%E5%86%99%E6%96%87%E7%AB%A0.html</loc>
+    <lastmod>2020-02-02T13:45:54.707Z</lastmod>
+    <data>
+        <display>
+        <title>待写文章</title>
+        <pubTime>2020-01-15T14:10:54.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://iamwxy.com/%E6%89%B9%E8%AF%84%E4%B8%8E%E8%87%AA%E6%88%91%E6%89%B9%E8%AF%84.html</loc>
     <lastmod>2020-02-02T13:20:28.676Z</lastmod>
@@ -32,23 +50,6 @@
          
         <tag>自动驾驶</tag>
          
-        <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E5%BE%85%E5%86%99%E6%96%87%E7%AB%A0.html</loc>
-    <lastmod>2020-02-02T13:20:20.294Z</lastmod>
-    <data>
-        <display>
-        <title>待写文章</title>
-        <pubTime>2020-01-15T14:10:54.000Z</pubTime>
-        
         <tag>随笔</tag>
          
          
@@ -413,7 +414,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://iamwxy.com/%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E4%B9%A0.html</loc>
@@ -945,23 +945,6 @@
         <pubTime>2019-05-24T04:47:05.000Z</pubTime>
         
         <tag>自动驾驶测试</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://iamwxy.com/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E4%BB%BF%E7%9C%9F%E9%9A%8F%E7%AC%94.html</loc>
-    <lastmod>2019-06-20T09:03:11.721Z</lastmod>
-    <data>
-        <display>
-        <title>自动驾驶仿真随笔</title>
-        <pubTime>2018-10-22T09:28:46.000Z</pubTime>
-        
-        <tag>自动驾驶仿真</tag>
          
          
            
