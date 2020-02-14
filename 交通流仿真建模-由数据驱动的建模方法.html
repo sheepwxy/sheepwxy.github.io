@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="自动驾驶仿真,自动驾驶," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本节主要介绍基于数据驱动的交通流建模方法，主要包括真实数据收集和建模方法两个方面。">
+<meta name="keywords" content="自动驾驶仿真,自动驾驶">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交通流仿真建模 | 由数据驱动的建模方法">
+<meta property="og:url" content="http://iamwxy.com/交通流仿真建模-由数据驱动的建模方法.html">
+<meta property="og:site_name" content="南浔遇雨">
+<meta property="og:description" content="本节主要介绍基于数据驱动的交通流建模方法，主要包括真实数据收集和建模方法两个方面。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-02-14T11:06:23.141Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="交通流仿真建模 | 由数据驱动的建模方法">
+<meta name="twitter:description" content="本节主要介绍基于数据驱动的交通流建模方法，主要包括真实数据收集和建模方法两个方面。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/交通流仿真建模-由数据驱动的建模方法.html"/>
+
+
+
+
+
+  <title>交通流仿真建模 | 由数据驱动的建模方法 | 南浔遇雨</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">南浔遇雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/交通流仿真建模-由数据驱动的建模方法.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鲨鱼观海">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&Engineer">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南浔遇雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">交通流仿真建模 | 由数据驱动的建模方法</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-14T19:05:13+08:00">
+                2020-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本节主要介绍基于数据驱动的交通流建模方法，主要包括真实数据收集和建模方法两个方面。<br><a id="more"></a></p>
+<h5 id="真实数据收集"><a href="#真实数据收集" class="headerlink" title="真实数据收集"></a>真实数据收集</h5><p>交通传感器有几种形式[lbh10,Led08]。举几个例子，一个固定的传感器是感应环探测器，它通常被放置在高速公路和主要道路上，记录每辆经过的车辆的属性。另一个固定的传感器是摄像机，它也用于监控交通。除了固定的传感器，移动传感器也无处不在:手机和GPS设备被用来记录车辆的速度和位置</p>
+<p>自20世纪60年代初引入感应环探测器以来，它已经成为使用最多的传感器[AKH 12, KMGK06]。<br>它可以检测通过或到达某一点的车辆。人行道上安装了绝缘的导电回路，在检测区域内通过或停车的车辆降低了回路的电感，然后，电子单元感知到频率的降低，并向控制器发送一个脉冲来表示车辆的通过或存在，这种道路传感器通常可以跟踪车辆的通过时间、车道id和速度。</p>
+<p>摄像机也得到了广泛的应用。一个例子是下一代模拟(NGSIM)程序[NGS18]，在该程序中，摄像机安装在道路沿线，以每秒10帧的速度捕捉交通数据。结果数据集包含了详细的车辆轨迹。表1列出了四种流行的NGSIM数据集，包括道路长度、道路类型、记录时间和车辆数量。图8显示了在美国101高速公路上收集数据的一个例子:8个同步摄像机，安装在毗邻高速公路的36层建筑的顶部，记录通过研究区域的车辆。为了处理大量被捕获的数据，开发了NGSIMVIDEO [NGS18]来从图像中自动提取车辆轨迹</p>
+<p>虽然通过道路传感器的传统的交通数据收集方法通常是昂贵的，当前，移动数据，如GPS报告扮演着越来越重要的角色，并已被用于估计全市交通状况[AA06, LNWL17]。出租车和拼车服务商如Uber和Lyft用这些设备装备他们的车队，汽车的位置、速度和方向等属性被发送到中央处理中心。<br>经过处理后，有价值的信息(例如交通状况和其他路线)将广播给道路上的司机[TEBH98]。目前公开的GPS数据集包括Mobile Century [HWH 10]、T-Drive [tdr10]、GeoLife [geo09]和Uber Movement[ube17]。GPS数据虽然很有用，但采样率较低且有噪声，这意味着两个连续的点之间的时间差可能很大(如大于60秒)，并且表现出时空稀疏性，这意味着数据在一定的时间段和区域内可能是稀缺的。因此，为了利用GPS数据重建交通动态，需要几个处理步骤[LNWL17, LJCL18]</p>
+<p>除了单车数据外，许多研究还致力于收集联网车辆的交通数据[HL08,RMR14]。例如，2012年在美国密歇根州的安娜堡启动了安全试点模型部署SPMD计划。大约3000辆车辆装备了GPS天线和DSRC(专用短程通信)设备。每辆车都向附近的车辆和路边的单位广播基本的安全信息，包括它的位置和速度。由于这种类型的数据可以在高频率下采样(如10hz [BS15])，这可能会导致存储和通信系统的巨大成本，因此通常采用下采样但信息保存技术进行处理</p>
+<h5 id="交通重建和合成"><a href="#交通重建和合成" class="headerlink" title="交通重建和合成"></a>交通重建和合成</h5><p>创建符合真实世界条件的交通的数字表征被称为虚拟交通，它是由Van Den Berg等人首先提出的。<br>在他们的工作中，利用交通传感器提供的时空数据重建和可视化一个连续的交通流。如图9所示，传感器(点A、点B、点C)每隔200-400米放置在道路上。对于某一辆车,传感器提供了一个元组$(tiA; liA viA;tiB;liB;viB;liC,liC;viC)$作为数据输入,分别为车辆通过时间t，车道id，车速v。任务是计算在给定车道上，在给定时间，以给定速度启动和到达车辆的轨迹(图9中的蓝色曲线)<br>该方法首先离散可能的状态-时间-空间，并约束车辆的运动到预先计算的路线图。然后，在路线图中为每辆车寻找最优轨迹，使换道次数和加减速度最小化，并与其他车辆的距离最大化，以获得平滑、真实的运动。对于多辆车，采用基于优先级的多机器人路径规划算法[VDBO07]来计算车辆的轨迹。然而，基于优先级的多智能体路由规划算法耗时较长，使得该方法随着搜索空间离散化分辨率的提高而变得难以处理。</p>
+<p>Wilkie等人[WSL13]将稀疏传感器测量的宏观状态估计与基于agent的交通模拟系统相结合，引入了一种实时技术来重建单个车辆的真实运动。作为说明，在图10中，该方法具有一个交通状态估计阶段，在这个阶段，使用Kalman smoothers (EnKS) [Eve03]和一个连续交通模拟器来创建整个道路网络的速度和密度场的估计。然后利用状态估计来驱动一个基于agent的交通仿真模型，生成各个车辆的详细运动。最后，输出与传感器测量的原始交通信号相一致的二维交通流。与Sewall等[SVDBLM11]的交通重建工作相比，该方法具有更高的灵活性和更低的计算成本。然而，这种估计方法除了个别车辆的匹配外，基本上还是一种宏观模型。</p>
+<p>Li等[LWL17]提出了一种利用GPS数据重建城市尺度交通的方法。为了解决数据覆盖不足的问题，该方法以GIS地图和GPS数据为输入，采用双阶段过程重构城市尺度的交通。在初始交通重建的第一阶段，利用统计学习与优化、地图匹配和行程时间估计技术相结合的方法，从稀疏的GPS数据中重建并逐步细化单个路段的交通条件。在动态数据补全的第二阶段，引入了基于元模型的仿真优化，以有效地细化第一阶段的重建结果，同时引入了一个微观仿真器，在数据覆盖不足的区域动态补全缺失的数据。为了保证重建的交通流是正确的，该方法考虑城市范围的边界和从第一阶段重建的交通流，进一步微调模拟。这是通过元模型的公式来计算交通流的误差近似值来实现的</p>
+<p>上述交通重建技术主要用于预测同一场景下具有稀疏输入数据的完整交通流，而其他数据驱动的交通综合方法则旨在从有限的交通轨迹样本中生成新的交通流。Chao等人[CDR 18利用一组有限的车辆轨迹作为输入样本，通过纹理合/材质成和交通行为规则的融合来合成新的车辆轨迹。示例(输入)车辆轨迹集包含多种车道数和流密度的交通流段如图11所示，将交通流时空信息作为二维纹理，可以将新交通流的生成表示为纹理合成过程，通过最小化新开发的交通纹理能量度量有效地解决了这一问题。交通纹理中的每个texel在一定的帧内编码车辆的状态，包括车辆的速度、位置以及与相邻车辆的动态关系。交通纹理能量则度量合成的交通流与给定的交通流样本之间的相似性。通过在输入的交通流样本中寻找最匹配的texel来确定合成交通流中每辆车的速度。合成的输出不仅捕捉了时间和空间的动态输入交通流量，还保证了交通功能，如车辆之间的安全距离和换道规则。</p>
+<p>另外一种方法是使用机器学习算法来学习车辆的详细运动特征，包括纵向加减速和换道过程。<br>Chao等人[CSJ13]提出了一种基于视频的方法，从交通动画视频中学习驾驶员的具体驾驶特性。<br>该方法将每辆车独特驾驶习惯的估计问题转化为寻找微观驾驶模型的最优参数集的问题，并采用自适应遗传算法求解。所学习的特征可用于再现给定视频中的交通流，具有较高的精度，也可应用于任何基于agent的交通仿真系统。Bi等[BMWD16]从车辆轨迹数据中学习变道特性。如图12所示，该方法首先从预先收集的车辆轨迹数据集中提取与换道任务最相关的特征。然后利用所提取的特征对换道决策过程进行建模，并对换道执行过程进行估计。</p>
+<p>上述工作的重点是模拟高速公路或大型城市网络上的车辆。最近，Bi等[BMWD19]提出了一种基于深度学习的交叉口交通仿真框架。<br>为了描述车-环境相互作用的视觉感知效应，建立了一个称为网格地图的网格坐标系统，编码异源之间的车辆与行人混合的相互作用。如图13所示，五个通道的窗口在网格地图上滑动可以为每辆车生成一个环境矩阵。环境矩阵可以捕捉车辆和行人在车辆周围的速度和位置。除了环境矩阵外，基于收集的交叉口交通数据集的车辆标识还被用来描述当前车辆状态，然后利用卷积神经网络和递归神经网络对交叉口处的车辆轨迹模式进行学习。除了模拟路口交通，它还可以通过提供车辆新的目的地和驾驶环境来改变现有的路口交通动画。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    鲨鱼观海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/交通流仿真建模-由数据驱动的建模方法.html" title="交通流仿真建模 | 由数据驱动的建模方法">http://iamwxy.com/交通流仿真建模-由数据驱动的建模方法.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶仿真/" rel="tag"># 自动驾驶仿真</a>
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/交通流仿真建模-路网生成.html" rel="next" title="交通流仿真建模 | 路网生成">
+                <i class="fa fa-chevron-left"></i> 交通流仿真建模 | 路网生成
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/交通流仿真建模-真实度评价方法.html" rel="prev" title="交通流仿真建模 | 真实度评价方法">
+                交通流仿真建模 | 真实度评价方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="鲨鱼观海" />
+            
+              <p class="site-author-name" itemprop="name">鲨鱼观海</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&Engineer</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">157</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#真实数据收集"><span class="nav-number">1.</span> <span class="nav-text">真实数据收集</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#交通重建和合成"><span class="nav-number">2.</span> <span class="nav-text">交通重建和合成</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">鲨鱼观海</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">267.6k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span> <a href="http://www.beian.miit.gov.cn/" style="font-weight: bold">豫ICP备19024762号</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
