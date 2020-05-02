@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="自动驾驶,通信中间件," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="对不同自动驾驶系统所用的通信中间件比较感兴趣。但直接相关的资料比较少。最近看了两篇比较早的论文，大致先总结下里面的内容，之后再逐渐往上补充内容。">
+<meta name="keywords" content="自动驾驶,通信中间件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动驾驶通信中间件">
+<meta property="og:url" content="http://iamwxy.com/自动驾驶通信中间件.html">
+<meta property="og:site_name" content="南浔遇雨">
+<meta property="og:description" content="对不同自动驾驶系统所用的通信中间件比较感兴趣。但直接相关的资料比较少。最近看了两篇比较早的论文，大致先总结下里面的内容，之后再逐渐往上补充内容。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-02T01:02:34.885Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自动驾驶通信中间件">
+<meta name="twitter:description" content="对不同自动驾驶系统所用的通信中间件比较感兴趣。但直接相关的资料比较少。最近看了两篇比较早的论文，大致先总结下里面的内容，之后再逐渐往上补充内容。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":24,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://iamwxy.com/自动驾驶通信中间件.html"/>
+
+
+
+
+
+  <title>自动驾驶通信中间件 | 南浔遇雨</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">南浔遇雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">博观而约取 厚积而薄发</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/自动驾驶通信中间件.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鲨鱼观海">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&Engineer">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南浔遇雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">自动驾驶通信中间件</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-02T08:12:33+08:00">
+                2020-05-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>对不同自动驾驶系统所用的通信中间件比较感兴趣。但直接相关的资料比较少。最近看了两篇比较早的论文，大致先总结下里面的内容，之后再逐渐往上补充内容。<br><a id="more"></a></p>
+<h3 id="为什么需要通信中间件"><a href="#为什么需要通信中间件" class="headerlink" title="为什么需要通信中间件"></a>为什么需要通信中间件</h3><p><strong>现代基本的软件设计原则是模块化。</strong>模块化可以提高可维护性、代码重用性并隔离故障。例如，一个大型机器人系统可以分解成特定的任务，如数据采集、状态估计、任务规划等。为了完成它们的任务，模块必须与其他模块交换信息。在现代操作系统中，将单个模块映射到软件进程非常方便，这些进程可以位于相同的计算设备上，也可以位于物理上独立的计算设备上。<strong>这就把信息交换的任务转化成了深入研究的进程间通信问题 。</strong></p>
+<p><strong>模块化为开发提供了便利，但也引入了对通信中间件的需求</strong>。将模块映射到单独的进程的一个最显著的特性是每个模块接收一个单独的内存地址空间。这一界限的引入带来了许多好处;模块可以在相同或不同的主机设备上运行，可以独立启动和停止，可以用不同的编程语言和不同的操作系统编写，一个模块的灾难性故障不一定会影响另一个模块。与此同时，模块之间的隔离使得共享信息也不再是一项简单的任务。模块设计人员必须仔细考虑在模块之间共享哪些信息，如何将这些信息封送编码到消息中，如何将封送的消息从一个模块传递到另一个模块，以及如何在接收到消息后解码。</p>
+<p><strong>通信中间件的引入整体上可以帮助开发人员提高工作效率</strong>。尽管消息传递系统引入了复杂性，但它也提供了分析和内省的机会，这对开发人员来说可能是无价的。<strong>特别是，可以通过专门设计用于帮助系统开发的模块捕获和分析消息。</strong>这些模块可以将消息记录到磁盘，提供关于带宽、消息速率等方面的统计信息。如果消息是根据正式的类型系统编组（Marshalling）的，那么流量检查模块可以自动解码消息，就像程序调试器可以自动解码正在运行的应用程序的堆栈变量一样。</p>
+<h3 id="通信中间件该满足什么特性"><a href="#通信中间件该满足什么特性" class="headerlink" title="通信中间件该满足什么特性"></a>通信中间件该满足什么特性</h3><p>基于通信中间件的工作流程，<strong>一个中间件应该包括以下几个模块:数据类型规范语言、消息传递系统、日志/回放工具和实时分析工具.</strong></p>
+<p>依据以上主要模块，好的通信中间件应该拥有以上特性：</p>
+<ul>
+<li>数据类型规范语言应独立于平台和具体的编程语言，以消除用户实现编组（Marshalling）代码的需要，同时保证运行时类型的安全性</li>
+<li>消息传递系统需要在不同的进程之间传输消息，并提供低延迟的消息传递功能，且消除对中央通信的依赖</li>
+<li>需要使混合<strong>模拟、记录和实时数据源</strong>的工作更容易。</li>
+<li>需要提供大量的日志记录、回放和流量检查工具，以简化常见的开发和调试任务</li>
+</ul>
+<h3 id="关于通信中间件有什么相关工作"><a href="#关于通信中间件有什么相关工作" class="headerlink" title="关于通信中间件有什么相关工作"></a>关于通信中间件有什么相关工作</h3><p>目前有各种消息传递系统，每个系统都有进行一下权衡。<strong>是否使用可靠或不可靠的数据传输以及是否提供自动数据编组系统。</strong></p>
+<h4 id="Player"><a href="#Player" class="headerlink" title="Player"></a>Player</h4><p>Player project(Player 2.0: Toward a practical robot programming framework)是一个比较著名的系统，它提供了一个机器人控制的客户端/服务器模型。服务器在单个进程中运行,并有一组用户可配置的驱动(Driver)，每个驱动在其自己的线程中。Player发行版包含许多驱动，每个驱动都有一个指定的任务，比如读取摄像机数据或执行轮速命令。用户编写客户端程序来通过服务器与驱动交互，通常是通过在客户端地址空间中的驱动代理(proxy)对象上进行操作。代理对象处理与服务器的通信和数据编组.</p>
+<p>Player为习惯于传统应用程序开发的软件开发人员提供了一个熟悉的编程模型，并尝试简化机器人开发的许多方面。这些努力包括各种各样的驱动，促成了它的广泛成功。然而，这种架构也有其缺点：创建新驱动是一个复杂的过程，一个驱动的失败可能会影响到其他驱动，甚至可能导致整个机器人的失败；单片进程的特性使调试单个组件变得复杂。Player最初是为客户端-驱动通信而设计的;驱动-驱动和客户端-客户端通信的机制已经被添加到player中，但是在组合的自由度上依然存在一定局限性。</p>
+<p>Player默认使用TCP通信。虽然TCP本身是可靠和有序的，但Player添加了一组add-replace规则，如果订阅方无法跟上发布方，这些规则会导致消息被删除。如果没有这样的规定，TCP缓冲区最终将被填满，并导致发布服务器的运行变慢</p>
+<p>在内部，Player使用（XDR）[<a href="http://www.rfc-editor.org/rfc/rfc1832.txt]进行数据编组。Player的内置类型利用并鼓励用户使用XDR。" target="_blank" rel="noopener">http://www.rfc-editor.org/rfc/rfc1832.txt]进行数据编组。Player的内置类型利用并鼓励用户使用XDR。</a></p>
+<h4 id="MOOS"><a href="#MOOS" class="headerlink" title="MOOS"></a>MOOS</h4><p>MOOS(MOOS - mission orientated operating suite)在水下机器人社区中特别流行。它提供了一个发布订阅模型，其中所有通信都通过一个中央服务器路由，客户端以固定的速率(通常为10hz)获取消息。MOOS消息是ASCII字符串，其优点是使消息易于被人类读取，缺点是比二进制编码的消息消耗更多的带宽。</p>
+<h4 id="CARMEN"><a href="#CARMEN" class="headerlink" title="CARMEN"></a>CARMEN</h4><p>CARMEN robotics包(Perspectives on standardization in mobile robot programming: The carnegie mellon navigation (carmen) toolkit)主要使用IPC消息传递系统(Inter-Process Communication)。IPC使用TCP和一个中心来协调模块之间的通信。默认情况下，中央服务器路由所有通信，但也可以将其配置为用于促进客户端到客户端直接通信的撮合服务。在这两种模式中，IPC都实现了发布/订阅模型。与pull系统不同，push系统尽可能快地向订阅者发送消息。IPC提供了一种工具，它可以部分地自动化消息的编组和反编组，但它要求用户手动将类型的ASCII描述与C结构声明保持同步吗，用户必须确保其结构的包装和对齐方式符合ASCII描述，对于不同单词大小的机器，这容易导致出错</p>
+<h4 id="JAUS"><a href="#JAUS" class="headerlink" title="JAUS"></a>JAUS</h4><p>JAUS实现了一个路由消息模型，在这个模型中，单个消息被定位到特定的目的地[The Joint Architecture for Unmanned Systems: Reference Architecture Specification]。JAUS的主要优势不是消息处理系统本身，而是JAUS规范包含了200多个标准化数据类型。原则上，实现这些标准格式的模块可以自由地组合在一起，以构建大型系统。</p>
+<p>JAUS是围绕一个路由消息传递系统设计的，其中每个消息都有一个特定的目的地。</p>
+<p>尽管组件可以在没有相应查询的情况下单方面传输消息(包括广播)，但其也支持基于“query查询“”和“inform通知“”消息的类似rpc的机制。作为这个消息传递框架的一部分，JAUS允许一个通信节点树。JAUS规范本身没有指定传输，但是通常使用UDP。因此，JAUS不保证消息传递。与Player和MOOS相比，消息丢失的机制是不同的，但是效果是非常相似的。</p>
+<p>JAUS没有提供自动生成编组代码的功能:每种数据类型都必须手工编码。此外，消息的类型(命令代码)编码在一个16位小整数中，这些值的赋值由JAUS规范指定。由于这个集合只有一个子空间可用于用户定义类型，开发人员必须确保以无冲突的方式分配这些值。</p>
+<p>虽然JAUS以前支持Java，但是OpenJAUS v3.3中取消了这种支持。JAUS规范的其他限制包括4096字节的消息限制，以及每个节点必须由系统构建器手动分配一个全局惟一标识符。</p>
+<h4 id="ros"><a href="#ros" class="headerlink" title="ros"></a>ros</h4><p>机器人操作系统(ROS)旨在为机器人开发提供一个完整的环境。例如，它提供了一个自动处理依赖项的包管理系统。它的消息传递子系统提供了发布/订阅模型和面向服务的模型。采用match-maker流程来促进客户与客户之间的联系。消息传递接口足够通用，可以使用不同的传输，包括共享内存、TCP、UDP和Spread最初的版本使用TCP作为唯一的消息传输。</p>
+<p>ROS还提供了一种基于类似于c的类型规范语言的数据组服务。这允许在little-endian系统上进行快速而简单的数据编组，但是不支持big-endian系统</p>
+<h4 id="RDS"><a href="#RDS" class="headerlink" title="RDS"></a>RDS</h4><p>Microsoft s Robotics Development Studio (RDS)(Microsoft robotics studio: A technical introduction,)与大多数其他系统的不同之处在于，它没有提供发布/订阅模型，而是采用了服务模型。这个模型可以看作是一种有状态的远程过程调用习惯用法，它基于简单对象访问协议(Simple Object Access Protocol, SOAP)。有几个传输层可用，从简单的内存副本(用于相同内存空间中的服务)到通过Internet连接的服务的XML/RPC。</p>
+<h3 id="对现有中间件的整体总结"><a href="#对现有中间件的整体总结" class="headerlink" title="对现有中间件的整体总结"></a>对现有中间件的整体总结</h3><p>在现有系统中有几个重复出现的主题。发布/订阅模型是最常用的，TCP是最常用的传输。大多数这些系统使用一个集中的中心，不管它是用于消息路由还是仅仅用于匹配。几乎所有这些系统都提供了一个可靠且有序的传输系统，尽管有些系统将UDP传输作为非标准选项提供。</p>
+<p>服务模型提供了一种熟悉的编程模型，但这有其缺点。例如，将以前记录的数据注入基于服务的系统通常比较困难。这种能力在开发感知和其他数据处理算法时特别有用，因为可以使用相同的代码操作日志数据和实时数据。在发布/订阅系统中，这可以通过简单地将以前的消息重新发送到客户机来实现。由于在面向服务的系统中通信是有状态的，因此事件注入需要服务本身的协作。</p>
+<p>这些系统在它们所提供的数据编组支持方面差异很大。二进制格式的消息具有简洁的显著优点，大多数系统都使用这种格式。一些系统使用基于xdr的编组系统，尽管一些实现只提供部分自动代码生成。例如，语言支持通常是有限的，在某些系统中，用户必须手动保持格式化字符串与结构的布局同步</p>
+<h3 id="再看通信中间件需要什么特性"><a href="#再看通信中间件需要什么特性" class="headerlink" title="再看通信中间件需要什么特性"></a>再看通信中间件需要什么特性</h3><ul>
+<li>基本上需要一个push-based发布/订阅模型。</li>
+<li>使用UDP多播作为低延迟但不可靠的传输，从而避免了对集中式sub的需要。</li>
+<li>提供基于正式类型声明语言生成编组代码的工具;此代码可以为大量平台和操作系统生成，并提供运行时类型安全性。</li>
+<li>提供一个相对独立的消息传递系统，以便于集成而不是提供操作环境，包括预定义的数据类型、准备使用的模块、事件循环、消息传递系统、可视化和仿真工具、包管理等等的集合。</li>
+<li>支持灵活的程序调试和运行数据分析的功能。虽然所有的系统都提供了某种机制来将消息从一个模块传递到另一个模块，但是很少有系统提供一种方法来方便地调试和检查实际传输的消息。这样做的通常是以牺牲效率和性能为代价的。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    鲨鱼观海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/自动驾驶通信中间件.html" title="自动驾驶通信中间件">http://iamwxy.com/自动驾驶通信中间件.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+            <a href="/tags/通信中间件/" rel="tag"># 通信中间件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/交通流仿真建模-真实度评价方法.html" rel="next" title="交通流仿真建模 | 真实度评价方法">
+                <i class="fa fa-chevron-left"></i> 交通流仿真建模 | 真实度评价方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="鲨鱼观海" />
+            
+              <p class="site-author-name" itemprop="name">鲨鱼观海</p>
+              <p class="site-description motion-element" itemprop="description">生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&Engineer</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">158</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要通信中间件"><span class="nav-number">1.</span> <span class="nav-text">为什么需要通信中间件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通信中间件该满足什么特性"><span class="nav-number">2.</span> <span class="nav-text">通信中间件该满足什么特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于通信中间件有什么相关工作"><span class="nav-number">3.</span> <span class="nav-text">关于通信中间件有什么相关工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Player"><span class="nav-number">3.1.</span> <span class="nav-text">Player</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MOOS"><span class="nav-number">3.2.</span> <span class="nav-text">MOOS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CARMEN"><span class="nav-number">3.3.</span> <span class="nav-text">CARMEN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JAUS"><span class="nav-number">3.4.</span> <span class="nav-text">JAUS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ros"><span class="nav-number">3.5.</span> <span class="nav-text">ros</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RDS"><span class="nav-number">3.6.</span> <span class="nav-text">RDS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对现有中间件的整体总结"><span class="nav-number">4.</span> <span class="nav-text">对现有中间件的整体总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再看通信中间件需要什么特性"><span class="nav-number">5.</span> <span class="nav-text">再看通信中间件需要什么特性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">鲨鱼观海</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">271.8k </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+  <span> <a href="http://www.beian.miit.gov.cn/" style="font-weight: bold">豫ICP备19024762号</a></span>
+  </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
