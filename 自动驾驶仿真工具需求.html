@@ -121,18 +121,18 @@
 
 
 
-<meta name="description" content="2018/10/30 Create  2019/04/28 First Update 2019/06/12 Second Update 2019/09/15 Third Update自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
+<meta name="description" content="2018/10/30 Create  2019/04/28 First Update 2019/06/12 Second Update 2019/09/15 Third Update 2020/05/12 Fourth Update自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
 <meta name="keywords" content="自动驾驶仿真">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动驾驶仿真工具需求">
 <meta property="og:url" content="http://iamwxy.com/自动驾驶仿真工具需求.html">
 <meta property="og:site_name" content="南浔遇雨">
-<meta property="og:description" content="2018/10/30 Create  2019/04/28 First Update 2019/06/12 Second Update 2019/09/15 Third Update自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
+<meta property="og:description" content="2018/10/30 Create  2019/04/28 First Update 2019/06/12 Second Update 2019/09/15 Third Update 2020/05/12 Fourth Update自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-15T14:23:26.373Z">
+<meta property="og:updated_time" content="2020-05-15T14:15:18.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自动驾驶仿真工具需求">
-<meta name="twitter:description" content="2018/10/30 Create  2019/04/28 First Update 2019/06/12 Second Update 2019/09/15 Third Update自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
+<meta name="twitter:description" content="2018/10/30 Create  2019/04/28 First Update 2019/06/12 Second Update 2019/09/15 Third Update 2020/05/12 Fourth Update自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。">
 
 
 
@@ -399,7 +399,8 @@
         <p><font color="green">2018/10/30 Create </font></p>
 <p><font color="green">2019/04/28 First Update</font></p>
 <p><font color="green">2019/06/12 Second Update</font></p>
-<p><font color="green">2019/09/15 Third Update</font><br>自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。<br><a id="more"></a><br>先看看仿真这两个字，从词义上就可以看到，没有“真”是不行的。仿真的需求离不开真实性的需求。不能满足真实性的坏数据无法训练出真正有效的模型，也不能保证自动驾驶测试的可靠性。再来看“仿”，仿真本事上是完成现实世界到计算机虚拟空间的映射，在转化过程中核心性质已经完全转变，掌握这个具体映射过程的工作原理和细节可帮助我们抽象/表征出关键特征维度。但表现出真实环境中所有特征维度是不现实的，建模成本过高了些。在有限的资源范围内做出高仿真场景应该是未来相关软件迭代的方向之一。</p>
+<p><font color="green">2019/09/15 Third Update</font></p>
+<p><font color="green">2020/05/12 Fourth Update</font><br>自动驾驶仿真是自动驾驶相关产品落地时的重要辅助。<br><a id="more"></a><br>先看看仿真这两个字，从词义上就可以看到，没有“真”是不行的。仿真的需求离不开真实性的需求。不能满足真实性的坏数据无法训练出真正有效的模型，也不能保证自动驾驶测试的可靠性。再来看“仿”，仿真本事上是完成现实世界到计算机虚拟空间的映射，在转化过程中核心性质已经完全转变，掌握这个具体映射过程的工作原理和细节可帮助我们抽象/表征出关键特征维度。但表现出真实环境中所有特征维度是不现实的，建模成本过高了些。在有限的资源范围内做出高仿真场景应该是未来相关软件迭代的方向之一。</p>
 <p>目前市面上与自动驾驶仿真相关的软件很多。第一类是专门的自动驾驶模拟仿真软件，如Prescan、VTD、51sim-one、Panosim、GaiA等等。第二类是基于游戏引擎做的自动驾驶仿真软件，主要代表是基于Unity的Lgscl Simulator、baidu-Unity，基于Unreal的Carla、Carsim等。第三类是基于一些机器人仿真软件做的自动驾驶仿真器，如基于ROS的Gazebo、rviz开发的仿真平台，基于blender开发的平台等等。</p>
 <p>不同类型的软件都有自己的优势和劣势。一般来说，商业软件对自动驾驶仿真各种需求的支持会比较均衡，但一般费用较高，且对于开发者而言，灵活性会受到一定限制。开源软件则会有一些相反的特性。目前市面上还没有一款赢家通吃的自动驾驶仿真器。作为一名开发者，我对“完美”的自动驾驶仿真器有如下的期待。</p>
 <h4 id="静态场景建模"><a href="#静态场景建模" class="headerlink" title="静态场景建模 "></a><font color="blue">静态场景建模 </font></h4><p>静态场景有不同的真实程度，51VR的L1级别环境是简单的同质化设计，L2等级会基于数据库进行一些分割以及渲染，L3等级的渲染甚至会考虑整体上光能量的守恒，以下是<a href="http://www.51hitech.com/" target="_blank" rel="noopener">demo视频</a> </p>
@@ -424,10 +425,10 @@
 <li>导入交通学中的交通流模型，并引入数学概率分布数学模型。这样的交通流模型包括宏观交通流模型和微观模型，相应的数学概率分布模型应该以高斯模型为主。 </li>
 <li>将真人开车的数据导入其中，主要利用虚拟驾驶模拟器实现，但这在更大程度上是保证单车的真实，对于宏观交通流价值没有想象中大，更多的是形成微观交通流模型。</li>
 </ul>
-<h4 id="标准场景格式支持"><a href="#标准场景格式支持" class="headerlink" title="标准场景格式支持"></a><font color="blue">标准场景格式支持</font></h4><p>场景自动化测试以及场景复用是自动驾驶测试的大势所趋，而这两项都需要标准场景文件的支持。目前国际通用标准是以VTD发起，由ASAM主导的OpenDRIVE、OpenCRG、OpenSCENARIO标准格式。OpenDRIVE主要解决静态场景描述问题，OpenCRG主要解决路面状态问题，OpenSCENARIO主要解决动态场景描述问题。</p>
-<p>由于Open系列标准也在发展中，目前只有VIRES Test Drive（VTD）提供对以上标准格式的支持，以后的各方仿真工具也应该配备相应的场景文件解析接口，这是绕不开的事。</p>
-<h4 id="可复现能力"><a href="#可复现能力" class="headerlink" title="可复现能力"></a><font color="blue">可复现能力</font></h4><p>目前仿真工具不能保证实验的可复现性，当然这和系统算法的不稳定有关，但也跟算法与系统的信息传送接口的稳定性有关。好的仿真工具应该保证基本测试的可复现性。</p>
-<h4 id="方便-灵活-标准化的仿真接口"><a href="#方便-灵活-标准化的仿真接口" class="headerlink" title="方便/灵活/标准化的仿真接口"></a><font color="blue">方便/灵活/标准化的仿真接口</font></h4><p>待续</p>
+<h4 id="标准场景格式支持"><a href="#标准场景格式支持" class="headerlink" title="标准场景格式支持"></a><font color="blue">标准场景格式支持</font></h4><p>场景自动化测试、场景复用（场景数据交换）是自动驾驶测试的大势所趋，而这两项都需要标准场景文件的支持。目前国际通用标准是由ASAM主导的OpenX系列，相应地，国内有C-ASAM组织负责相关的标准化工作。OpenX系列包括OpenDRIVE、OpenCRG、OpenSCENARIO、OpenSimulationInterface（OSI）、OpenLABEL、OpenODD等标准。其中，OpenDRIVE主要解决静态场景描述问题，OpenCRG主要解决路面状态问题，OpenSCENARIO主要解决动态场景描述问题，OSI主要解决环境和被测系统之间的仿真数据交换的问题。</p>
+<p>OpenX系列标准在飞速发展中，目前商业仿真平台中VIRES Test Drive（VTD）提供对以上标准格式的支持，开源仿真平台中CARLA提供了部分支持。对于其他仿真工具，可参考学习esmini、CarlaScenarioLoader等开源项目学习怎么解析OpenSCENARIO。</p>
+<p>以后的各方仿真工具也应该配备相应的场景文件解析接口，这是绕不开的事。</p>
+<h4 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a><font color="blue">稳定性</font></h4><p>目前仿真工具不能保证实验的可复现性，当然这和系统算法的不稳定有关，但也跟算法与系统的信息传送接口的稳定性有关。包括Carla在内的大多数仿真工具不能保证信息发送时频率的一致性，这对试验的可复现性是致命的。进而，大规模的回归测试结果可信度也要被打个问号了。</p>
 
       
     </div>
@@ -569,7 +570,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">160</span>
+                  <span class="site-state-item-count">161</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -615,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准场景格式支持"><span class="nav-number">5.</span> <span class="nav-text">标准场景格式支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可复现能力"><span class="nav-number">6.</span> <span class="nav-text">可复现能力</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方便-灵活-标准化的仿真接口"><span class="nav-number">7.</span> <span class="nav-text">方便/灵活/标准化的仿真接口</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态场景建模"><span class="nav-number">1.</span> <span class="nav-text">静态场景建模 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传感器模型"><span class="nav-number">2.</span> <span class="nav-text">传感器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动力学仿真"><span class="nav-number">3.</span> <span class="nav-text">动力学仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交通流仿真"><span class="nav-number">4.</span> <span class="nav-text">交通流仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准场景格式支持"><span class="nav-number">5.</span> <span class="nav-text">标准场景格式支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#稳定性"><span class="nav-number">6.</span> <span class="nav-text">稳定性</span></a></li></ol></div>
             
 
           </div>
@@ -649,7 +650,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">273.4k </span>
+    <span title="Site words total count">275.3k </span>
   
 </div>
 
