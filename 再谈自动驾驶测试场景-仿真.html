@@ -110,7 +110,7 @@
 
 
 
-  <meta name="keywords" content="自动驾驶，自动驾驶仿真，自动驾驶仿真软件，智能车辆，无人驾驶，高效学习，机器学习，生活随笔，线性代数，深度学习，SLAM，自动驾驶测试，读书思考" />
+  <meta name="keywords" content="自动驾驶,自动驾驶仿真," />
 
 
 
@@ -121,16 +121,18 @@
 
 
 
-<meta name="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&amp;Engineer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="南浔遇雨">
-<meta property="og:url" content="http://iamwxy.com/archives/2019/12/index.html">
+<meta name="description" content="再谈自动驾驶仿真测试场景在知乎上，黄浴博士提出了下面这个问题。  自动驾驶研发中模拟仿真的作用有多大？感知定位模块、行为建模预测以及规划控制，甚至包括端到端系统，哪些会收益于模拟仿真？感知系统模拟数据和真实数据的差距可以忽略吗？采用GAN能否弥补模拟数据到真实数据的跳跃？规划控制方法甚至端到端系统是否容易在模拟仿真平台验证？像谷歌所所说的fuzziness，可以帮助产生大量的极端情况验证新算法吗？">
+<meta name="keywords" content="自动驾驶,自动驾驶仿真">
+<meta property="og:type" content="article">
+<meta property="og:title" content="再谈自动驾驶测试场景(仿真)">
+<meta property="og:url" content="http://iamwxy.com/再谈自动驾驶测试场景-仿真.html">
 <meta property="og:site_name" content="南浔遇雨">
-<meta property="og:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&amp;Engineer">
+<meta property="og:description" content="再谈自动驾驶仿真测试场景在知乎上，黄浴博士提出了下面这个问题。  自动驾驶研发中模拟仿真的作用有多大？感知定位模块、行为建模预测以及规划控制，甚至包括端到端系统，哪些会收益于模拟仿真？感知系统模拟数据和真实数据的差距可以忽略吗？采用GAN能否弥补模拟数据到真实数据的跳跃？规划控制方法甚至端到端系统是否容易在模拟仿真平台验证？像谷歌所所说的fuzziness，可以帮助产生大量的极端情况验证新算法吗？">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-18T09:08:11.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="南浔遇雨">
-<meta name="twitter:description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&amp;Engineer">
+<meta name="twitter:title" content="再谈自动驾驶测试场景(仿真)">
+<meta name="twitter:description" content="再谈自动驾驶仿真测试场景在知乎上，黄浴博士提出了下面这个问题。  自动驾驶研发中模拟仿真的作用有多大？感知定位模块、行为建模预测以及规划控制，甚至包括端到端系统，哪些会收益于模拟仿真？感知系统模拟数据和真实数据的差距可以忽略吗？采用GAN能否弥补模拟数据到真实数据的跳跃？规划控制方法甚至端到端系统是否容易在模拟仿真平台验证？像谷歌所所说的fuzziness，可以帮助产生大量的极端情况验证新算法吗？">
 
 
 
@@ -160,13 +162,13 @@
 
 
 
-  <link rel="canonical" href="http://iamwxy.com/archives/2019/12/"/>
+  <link rel="canonical" href="http://iamwxy.com/再谈自动驾驶测试场景-仿真.html"/>
 
 
 
 
 
-  <title>归档 | 南浔遇雨</title>
+  <title>再谈自动驾驶测试场景(仿真) | 南浔遇雨</title>
   
 
 
@@ -185,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,110 +315,183 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-         
-          
-        非常好! 目前共计 162 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2019">2019</h2>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://iamwxy.com/再谈自动驾驶测试场景-仿真.html">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鲨鱼观海">
+      <meta itemprop="description" content="生活随笔 高效学习 自动驾驶 数据分析 交叉领域 读书笔记 Coder&Engineer">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南浔遇雨">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/控制论.html" itemprop="url">
-              
-                <span itemprop="name">控制论</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">再谈自动驾驶测试场景(仿真)</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-29T23:30:30+08:00"
-              content="2019-12-29" >
-          12-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">写于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-18T13:50:21+08:00">
+                2020-05-18
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/厚积和薄发-谈论文中期.html" itemprop="url">
-              
-                <span itemprop="name">厚积和薄发 | 谈论文中期</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-18T23:19:48+08:00"
-              content="2019-12-18" >
-          12-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h3 id="再谈自动驾驶仿真测试场景"><a href="#再谈自动驾驶仿真测试场景" class="headerlink" title="再谈自动驾驶仿真测试场景"></a>再谈自动驾驶仿真测试场景</h3><p>在知乎上，黄浴博士提出了下面这个问题。</p>
+<blockquote>
+<p><strong>自动驾驶研发中模拟仿真的作用有多大？</strong>感知定位模块、行为建模预测以及规划控制，甚至包括端到端系统，哪些会收益于模拟仿真？感知系统模拟数据和真实数据的差距可以忽略吗？采用GAN能否弥补模拟数据到真实数据的跳跃？规划控制方法甚至端到端系统是否容易在模拟仿真平台验证？像谷歌所所说的fuzziness，可以帮助产生大量的极端情况验证新算法吗？</p>
+</blockquote>
+<p>在答案列表里我看到了一篇非常喜欢的回答。经允许后转载至专栏中，与大家一同分享。转载过程中对原答案略有整理，主要是提取出了关于场景的部分，并基于自己的理解增删了部分内容。原答内容更为丰富，可直接点击以下链接阅读。</p>
+<p>作者：明月<br>链接：<a href="https://www.zhihu.com/question/367321729/answer/1165343444" target="_blank" rel="noopener">https://www.zhihu.com/question/367321729/answer/1165343444</a><br><a id="more"></a></p>
+<p>自动驾驶的行业先锋和领头羊Waymo对仿真测试非常上心，从公布的测试数据来看，截止2020年1月，Waymo的道路实测20,000,000（2000万）英里，仿真测试100,000,000,000（100亿），这完全是两个数量级。如果自动驾驶的行业先锋和领头羊Waymo对仿真测试如此上心的话，我们有理由认为仿真在自动驾驶的研发中很重要，更大胆的推测——基至是核心要素之一。</p>
+<p>仿真到底有何用？除了低成本和可针对极端情况进行测试之外，还主要体现在自动驾驶进入市场的三个阶段，分别是<strong>算法研发、系统测试和评测机构安全性验证</strong>。算法开发过程中的可重复性、可配置性、基于人工定义、具有一定覆盖率的测试用例的定义和执行；系统测试过程中的自动生成、高覆盖率的测试用例的定义和执行；评估和评测机构基于“安全”导向对测试用例的定义和执行三个阶段相辅相成、缺一不可！</p>
+<h4 id="针对算法研发的仿真"><a href="#针对算法研发的仿真" class="headerlink" title="针对算法研发的仿真"></a>针对算法研发的仿真</h4><p><strong>针对算法研发的仿真测试用例定义可比喻为教科书练习题</strong>。这相对而言是最基础的仿真应用场景。在这一方面，商业仿真软件中PreScan和VTD的市占率较高。它们拥有相对完备的基于Scenario测试的工具链，包括Vehicle Dynamics，SensorSimulator（主要是Camera）、DatabaseBuilder、ScenarioEditor、ScenarioExecutor和UI，支持自定义地图、创建3D数据库、算法嵌入、自定义并执行场景等基于场景测试核心工具集。不过因为时代的局限性，包括这两个工具在内的大多数市面上的成熟仿真工具用户对象并非是高等级自动驾驶，而是ADAS。整体的工作流可概括为：手动创建地图和3D数据库、手动创建Sc场景、对被测自动驾驶系统行仿真测试，整体逻辑类似单元测试。</p>
+<p>此阶段的测试用例类似教科书每章后的练习题，经过专业人员精心挑选，旨在用最小的精力做最大的产出。这种<strong>自定义</strong>的仿真测试方法在算法研发阶段，可以基本满足ADAS和自动驾驶的需求。此外<strong>一个从路测采集的数据中数字化Scenario的工具</strong>在这一阶段也能发挥很大价值！对于ADAS，由于其复杂度较低，可以通过专家知识设计具有足够高的测试覆盖率的场景库，因此以上测试方法在系统测试和安全性验证阶段也都可担当仿真测试用例来源的主力。但对于高等级自动驾驶系统测试，来源于人工创建以及只基于路测数据的场景还存在一定局限性。</p>
+<h4 id="针对系统测试的仿真"><a href="#针对系统测试的仿真" class="headerlink" title="针对系统测试的仿真"></a>针对系统测试的仿真</h4><p><strong>针对系统测试的仿真测试场景/用例可比喻为五年高考三年模似</strong>。系统测试的重点在于测试用例的<strong>冗余度、持续性和可回归性</strong>。当自动驾驶系统1.0发布之后，怎么说明系统的功能边界？怎么能够持续的添加重复性足够低的测试用例？如果发现并解决了一个bug，怎么确定当前改动没有破坏已有功能？<strong>答案是完备的Scenario数据库和以及具体场景（concrete scenario）自行化生成和执行。</strong></p>
+<p>在此需要特别注意的是，基于PEGASUS的功能场景（functional scenario）-逻辑场景（logical scenario）-具体场景（concrete scenario）体系分析，该场景库中的场景数量可能是一个天文数字，因为这是一个乘法游戏，很容易造成场景参数空间爆炸。假设功能场景的数量为基数$N$，针对每个逻辑场景，我们能获得$n_1<em>n_2 \dots </em>n_i$个具体场景。（<strong>$n_i$是关键场景的离散维度，车道数离散型参数取值较易获得；对于行人过马路时的速度等连续型参数如过马路时速度，进行合适程度的离散化是一个挑战，太粗的离散化可能会导致在测试过程中存在未发现的问题；太细的离散化会产生不必要的测试用例。</strong>）总之，场景库中的具体场景个数$S=N<em>n_1</em>n_2<em>\dots </em>n_i$。假设功能场景有200个，每个功能场景有6个关键参数（保守估计）、每个参数取10个离散维度。则具体场景数量2亿个，单次仿真按30s算，60亿秒=190.26年。当前，在实际测试过程中，可通过此方法降低具体场景的数量，但总数量的恐怖仍可见一斑。</p>
+<p>在此时仿真软件虽然是上述测试的基础，但本身已经不是主战场了，更核心的需求是云仿真、场景执行的性能及并行性和评测系统。另外，关于这方面也可多关注专栏中提到的OpenX系列，这些相关的仿真标准在未来可能是构建这些场景库的基础。</p>
+<p>总的来说，系统测试就像是五年高考三年模拟一样，一方面要把往年的真题（已有的测试场景）收罗进来，另一方面又要根据量纲推除出新（泛化出新的测试用例），甚至能成功压题是最好的。压谁的题？当然是高考啊！</p>
+<h4 id="针对评测机构安全性验证的仿真测试"><a href="#针对评测机构安全性验证的仿真测试" class="headerlink" title="针对评测机构安全性验证的仿真测试"></a>针对评测机构安全性验证的仿真测试</h4><p>安全性验证可以比喻为高考。有权进行安全性验证的是各国的授权机构，像德国的TUEV和中国的中汽研。这些机构的着眼点是“安全”的定义，这个宏大的命题不光涉及到技术问题，还涉及到论理和法律问题。怎么做自动驾驶验证阶段的安全性测试，现在还没有公论，但据推测，基于场景和基于里程的测试方法都是需要的。</p>
+<p>场景数据库作为底线可以保证测试的回归性；基于里程的测试增加了不确定性，是考卷最后的几道大题。此处提到的基于里程的测试并非指实车测试，而是基于仿真的里程测试。让被测自动驾驶系统在虚拟环境里中运行特定的里程，然后分析测试过程、记录关键点并进行评分。每次测试原则上需有一定的随机性，表现在加载的地图、3D的数据库、路上的Agent驾驶行为的随机上。其中的难点在于如何准确高效地模拟驾驶员的行为，也即Micro Traffic Simulation上。关于这一点，学术界有一套“基于规则-基于学习”的方法，后续会继续介绍。总之，授权机构的安全性验证阶段就像高考里的最终递给你的那张考卷一样，使用仿真能大大降低考试时间。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>在自动驾驶领域，算法研发、系统测试和安全验证三个测试阶段中，仿真都是必不可少的，这已经成为了国内外主要玩家的共识。而传统的基于路测数据、现有事故数据库和人工创建的有限的Scenario的测试方式在自动驾驶的测试领域已经远远不够了。自动驾驶公司和相关验证机构应该致力于创建一个具有高度覆盖率的Scenario数据库。除了兼容Euro NCAP的Scenario数据库并研究Logical Scenario的参数化，新一代仿真工具也应该专注于如何快速产生大量的新的Scenario，并能够证明新产生的Scenario是新的有意义的，而在此过程中Micro Traffic Simulation是重中之重。</p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    鲨鱼观海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://iamwxy.com/再谈自动驾驶测试场景-仿真.html" title="再谈自动驾驶测试场景(仿真)">http://iamwxy.com/再谈自动驾驶测试场景-仿真.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自动驾驶/" rel="tag"># 自动驾驶</a>
+          
+            <a href="/tags/自动驾驶仿真/" rel="tag"># 自动驾驶仿真</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/自动驾驶仿真的挑战.html" rel="next" title="自动驾驶仿真的挑战">
+                <i class="fa fa-chevron-left"></i> 自动驾驶仿真的挑战
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -424,6 +499,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -444,8 +523,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -500,6 +588,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#再谈自动驾驶仿真测试场景"><span class="nav-number">1.</span> <span class="nav-text">再谈自动驾驶仿真测试场景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#针对算法研发的仿真"><span class="nav-number">1.1.</span> <span class="nav-text">针对算法研发的仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#针对系统测试的仿真"><span class="nav-number">1.2.</span> <span class="nav-text">针对系统测试的仿真</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#针对评测机构安全性验证的仿真测试"><span class="nav-number">1.3.</span> <span class="nav-text">针对评测机构安全性验证的仿真测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -657,6 +761,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1046,26 +1154,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
